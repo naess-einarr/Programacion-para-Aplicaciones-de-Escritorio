@@ -1,9 +1,8 @@
 
 package com.eurobank.proyectoaplicacionesdeescritorio.dao;
 
-import com.eurobank.model.Sucursal;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.JsonUtil;
-import com.eurobank.util.JsonUtil;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -29,8 +28,8 @@ public class SucursalDAO implements GenericDAO<Sucursal> {
         List<Sucursal> sucursales = obtenerTodos();
         
         // Verificar si ya existe una sucursal con el mismo ID
-        if (buscarPorId(sucursal.obtenerIdSucursal()) != null) {
-            throw new Exception("Ya existe una sucursal con el ID: " + sucursal.obtenerIdSucursal());
+        if (buscarPorId(sucursal.getIdSucursal()) != null) {
+            throw new Exception("Ya existe una sucursal con el ID: " + sucursal.getIdSucursal());
         }
         
         sucursales.add(sucursal);
@@ -42,7 +41,7 @@ public class SucursalDAO implements GenericDAO<Sucursal> {
         List<Sucursal> sucursales = obtenerTodos();
         
         return sucursales.stream()
-                .filter(sucursal -> sucursal.obtenerIdSucursal().equals(idSucursal))
+                .filter(sucursal -> sucursal.getIdSucursal().equals(idSucursal))
                 .findFirst()
                 .orElse(null);
     }
@@ -67,7 +66,7 @@ public class SucursalDAO implements GenericDAO<Sucursal> {
         boolean encontrada = false;
         
         for (int i = 0; i < sucursales.size(); i++) {
-            if (sucursales.get(i).obtenerIdSucursal().equals(sucursalActualizada.obtenerIdSucursal())) {
+            if (sucursales.get(i).getIdSucursal().equals(sucursalActualizada.getIdSucursal())) {
                 sucursales.set(i, sucursalActualizada);
                 encontrada = true;
                 break;
@@ -75,7 +74,7 @@ public class SucursalDAO implements GenericDAO<Sucursal> {
         }
         
         if (!encontrada) {
-            throw new Exception("No se encontró la sucursal con ID: " + sucursalActualizada.obtenerIdSucursal());
+            throw new Exception("No se encontró la sucursal con ID: " + sucursalActualizada.getIdSucursal());
         }
         
         jsonUtil.guardarLista(sucursales, ARCHIVO_SUCURSALES);
@@ -84,7 +83,7 @@ public class SucursalDAO implements GenericDAO<Sucursal> {
     @Override
     public void eliminar(String idSucursal) throws Exception {
         List<Sucursal> sucursales = obtenerTodos();
-        boolean eliminada = sucursales.removeIf(sucursal -> sucursal.obtenerIdSucursal().equals(idSucursal));
+        boolean eliminada = sucursales.removeIf(sucursal -> sucursal.getIdSucursal().equals(idSucursal));
         
         if (!eliminada) {
             throw new Exception("No se encontró la sucursal con ID: " + idSucursal);
@@ -109,7 +108,7 @@ public class SucursalDAO implements GenericDAO<Sucursal> {
         List<Sucursal> resultados = new ArrayList<>();
         
         for (Sucursal sucursal : todasLasSucursales) {
-            if (sucursal.obtenerNombreSucursal().toLowerCase().contains(nombreSucursal.toLowerCase())) {
+            if (sucursal.getNombreSucursal().toLowerCase().contains(nombreSucursal.toLowerCase())) {
                 resultados.add(sucursal);
             }
         }

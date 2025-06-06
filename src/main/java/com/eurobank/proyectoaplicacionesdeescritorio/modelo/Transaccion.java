@@ -1,3 +1,5 @@
+package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
+
 import java.time.LocalDateTime;
 
 /**
@@ -48,93 +50,95 @@ public class Transaccion {
     }
     
     // Getters y Setters
-    public String obtenerIdTransaccion() {
+    public String getIdTransaccion() {
         return idTransaccion;
     }
     
-    public void establecerIdTransaccion(String idTransaccion) {
+    public void setIdTransaccion(String idTransaccion) {
         this.idTransaccion = idTransaccion;
     }
-    
-    public double obtenerMontoTransaccion() {
+
+    public double getMontoTransaccion() {
         return montoTransaccion;
     }
-    
-    public void establecerMontoTransaccion(double montoTransaccion) {
+
+    public void setMontoTransaccion(double montoTransaccion) {
         this.montoTransaccion = montoTransaccion;
     }
-    
-    public LocalDateTime obtenerFechaHoraTransaccion() {
+
+    public LocalDateTime getFechaHoraTransaccion() {
         return fechaHoraTransaccion;
     }
-    
-    public void establecerFechaHoraTransaccion(LocalDateTime fechaHoraTransaccion) {
+
+    public void setFechaHoraTransaccion(LocalDateTime fechaHoraTransaccion) {
         this.fechaHoraTransaccion = fechaHoraTransaccion;
     }
-    
-    public String obtenerTipoTransaccion() {
+
+    public String getTipoTransaccion() {
         return tipoTransaccion;
     }
-    
-    public void establecerTipoTransaccion(String tipoTransaccion) {
+
+    public void setTipoTransaccion(String tipoTransaccion) {
         this.tipoTransaccion = tipoTransaccion;
     }
-    
-    public String obtenerNumeroCuentaOrigen() {
+
+    public String getNumeroCuentaOrigen() {
         return numeroCuentaOrigen;
     }
-    
-    public void establecerNumeroCuentaOrigen(String numeroCuentaOrigen) {
+
+    public void setNumeroCuentaOrigen(String numeroCuentaOrigen) {
         this.numeroCuentaOrigen = numeroCuentaOrigen;
     }
-    
-    public String obtenerNumeroCuentaDestino() {
+
+    public String getNumeroCuentaDestino() {
         return numeroCuentaDestino;
     }
-    
-    public void establecerNumeroCuentaDestino(String numeroCuentaDestino) {
+
+    public void setNumeroCuentaDestino(String numeroCuentaDestino) {
         this.numeroCuentaDestino = numeroCuentaDestino;
     }
-    
-    public String obtenerIdSucursalTransaccion() {
+
+    public String getIdSucursalTransaccion() {
         return idSucursalTransaccion;
     }
-    
-    public void establecerIdSucursalTransaccion(String idSucursalTransaccion) {
+
+    public void setIdSucursalTransaccion(String idSucursalTransaccion) {
         this.idSucursalTransaccion = idSucursalTransaccion;
     }
-    
-    public String obtenerIdEmpleadoResponsable() {
+
+    public String getIdEmpleadoResponsable() {
         return idEmpleadoResponsable;
     }
-    
-    public void establecerIdEmpleadoResponsable(String idEmpleadoResponsable) {
+
+    public void setIdEmpleadoResponsable(String idEmpleadoResponsable) {
         this.idEmpleadoResponsable = idEmpleadoResponsable;
     }
-    
-    public String obtenerDescripcionTransaccion() {
+
+    public String getDescripcionTransaccion() {
         return descripcionTransaccion;
     }
-    
-    public void establecerDescripcionTransaccion(String descripcionTransaccion) {
+
+    public void setDescripcionTransaccion(String descripcionTransaccion) {
         this.descripcionTransaccion = descripcionTransaccion;
     }
-    
-    public String obtenerEstadoTransaccion() {
+
+    public String getEstadoTransaccion() {
         return estadoTransaccion;
     }
-    
-    public void establecerEstadoTransaccion(String estadoTransaccion) {
+
+    public void setEstadoTransaccion(String estadoTransaccion) {
         this.estadoTransaccion = estadoTransaccion;
     }
-    
-    public String obtenerReferenciaTransaccion() {
+
+    public String getReferenciaTransaccion() {
         return referenciaTransaccion;
     }
-    
-    public void establecerReferenciaTransaccion(String referenciaTransaccion) {
+
+    public void setReferenciaTransaccion(String referenciaTransaccion) {
         this.referenciaTransaccion = referenciaTransaccion;
     }
+    
+    
     
     /**
      * Método para verificar si la transacción es una transferencia.

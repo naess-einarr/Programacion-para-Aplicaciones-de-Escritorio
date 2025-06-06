@@ -22,13 +22,11 @@ public class ConstantesUtil {
     public static final String ALERTA_CREDENCIALES_INVALIDAS = "Usuario o contraseña incorrectos";
     public static final String ALERTA_CAMPOS_VACIOS = "Todos los campos son obligatorios";
     
-    // Mensajes para logging
     public static final String LOG_INICIO_SESION = "Usuario ha iniciado sesión: ";
     public static final String LOG_TRANSACCION_EXITOSA = "Transacción completada exitosamente: ";
     public static final String LOG_ERROR_ARCHIVO = "Error al acceder al archivo: ";
     public static final String LOG_CLIENTE_REGISTRADO = "Nuevo cliente registrado: ";
     
-    // Constantes genéricas
     public static final String ERROR = "Error";
     public static final String EXITO = "Éxito";
     public static final String CONFIRMACION = "Confirmación";

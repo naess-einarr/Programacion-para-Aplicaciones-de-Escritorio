@@ -2,6 +2,8 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
@@ -17,6 +19,31 @@ public class MenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
+    
+    @FXML
+    void abrirVentanaAdministrarClientes(ActionEvent event) {
+
+    }
+
+    @FXML
+    void abrirVentanaAdministrarCuentasBancarias(ActionEvent event) {
+
+    }
+
+    @FXML
+    void abrirVentanaAdministrarEmpleados(ActionEvent event) {
+
+    }
+
+    @FXML
+    void abrirVentanaAdministrarSucursales(ActionEvent event) {
+
+    }
+
+    @FXML
+    void abrirVentanaAdministrarTransacciones(ActionEvent event) {
+
+    }
     
 }

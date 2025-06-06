@@ -1,0 +1,13 @@
+[
+  {
+    "idEmpleado": "G001",
+    "nombreCompleto": "Carlos Mendoza",
+    "direccionCompleta": "Av. Central 456, Oficina 302, Ciudad Empresarial",
+    "fechaNacimiento": "1980-03-15",
+    "generoEmpleado": "Masculino",
+    "salarioMensual": 7500.00,
+    "nombreUsuario": "admin",
+    "contrasenaAcceso": "admin",
+    "tipoEmpleado": "Gerente"
+  }
+]

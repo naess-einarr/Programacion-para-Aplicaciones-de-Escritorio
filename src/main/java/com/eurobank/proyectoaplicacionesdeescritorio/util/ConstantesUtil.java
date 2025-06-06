@@ -16,6 +16,7 @@ public class ConstantesUtil {
     public static final String REGEX_NUMERO_CUENTA = "^ACC[0-9]{6}$";
     public static final String REGEX_RFC = "^[A-Z]{4}[0-9]{6}[A-Z0-9]{3}$";
     
+    public static final String ALERTA_CLASE_UTILERIA = "Clase de utilería...";
     public static final String ALERTA_SALDO_INSUFICIENTE = "El saldo de la cuenta es insuficiente para realizar esta operación";
     public static final String ALERTA_CLIENTE_NO_ENCONTRADO = "No se encontró el cliente especificado en el sistema";
     public static final String ALERTA_TRANSACCION_FALLIDA = "La transacción no pudo completarse correctamente";

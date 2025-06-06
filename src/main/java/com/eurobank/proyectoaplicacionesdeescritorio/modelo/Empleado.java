@@ -2,7 +2,7 @@ package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
 import java.time.LocalDate;
 
-public abstract class Empleado {
+public class Empleado {
     
     private String idEmpleado;
     private String nombreCompleto;

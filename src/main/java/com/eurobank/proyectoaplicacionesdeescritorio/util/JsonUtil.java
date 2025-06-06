@@ -2,12 +2,14 @@ package com.eurobank.proyectoaplicacionesdeescritorio.util;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonDeserializer;
 import com.google.gson.reflect.TypeToken;
 import java.io.*;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -21,8 +23,15 @@ public class JsonUtil<T> {
     
     public JsonUtil() {
         this.gson = new GsonBuilder()
-                .setPrettyPrinting()
+                // Adaptador para LocalDate (formato yyyy-MM-dd)
+                .registerTypeAdapter(LocalDate.class,
+                    (JsonDeserializer<LocalDate>) (json, type, context) ->
+                        LocalDate.parse(json.getAsString()))
+                
+                // Formato para java.util.Date (usa horas, minutos, etc.)
                 .setDateFormat("yyyy-MM-dd HH:mm:ss")
+
+                .setPrettyPrinting()
                 .create();
     }
     
@@ -89,6 +98,7 @@ public class JsonUtil<T> {
      */
     public List<T> cargarLista(String rutaArchivo, Class<T> claseObjeto) throws Exception {
         File archivo = new File(rutaArchivo);
+        archivo.getAbsoluteFile();
         if (!archivo.exists()) {
             throw new FileNotFoundException("El archivo no existe: " + rutaArchivo);
         }

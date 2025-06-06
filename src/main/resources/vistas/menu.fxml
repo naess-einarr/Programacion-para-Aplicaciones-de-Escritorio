@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.MenuController">
-    
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="395.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.MenuController">
+   <children>
+      <Label fx:id="labelTitulo" layoutX="158.0" layoutY="14.0" text="Eurobank">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSubtitulo" layoutX="28.0" layoutY="52.0" text="Sistema de administración de transacciones y clientes">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="botonAdministrarSucursales" layoutX="109.0" layoutY="150.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarSucursales" prefHeight="25.0" prefWidth="177.0" text="Sucursales" />
+      <Button fx:id="botonAdministrarCuentasBancarias" layoutX="109.0" layoutY="198.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarCuentasBancarias" prefHeight="25.0" prefWidth="177.0" text="Cuentas Bancarias" />
+      <Button fx:id="botonAdministrarEmpleados" layoutX="109.0" layoutY="245.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarEmpleados" prefHeight="25.0" prefWidth="177.0" text="Empleados" />
+      <Button fx:id="botonAdministrarClientes" layoutX="109.0" layoutY="289.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarClientes" prefHeight="25.0" prefWidth="177.0" text="Clientes" />
+      <Button fx:id="botonAdministrarTransacciones" layoutX="109.0" layoutY="333.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarTransacciones" prefHeight="25.0" prefWidth="177.0" text="Transacciones" />
+      <Label fx:id="labelAdministrar" layoutX="168.0" layoutY="113.0" text="Administrar" />
+   </children>
 </AnchorPane>

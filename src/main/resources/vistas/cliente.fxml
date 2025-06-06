@@ -10,12 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="757.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.ClienteController">
+<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.ClienteController">
    <children>
       <BorderPane layoutX="9.0" layoutY="8.0" maxHeight="800.0" maxWidth="1000.0" prefHeight="405.0" prefWidth="887.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <Label prefHeight="54.0" prefWidth="255.0" text="Administración de clientes" BorderPane.alignment="CENTER">
+            <Label fx:id="labelTitulo" prefHeight="54.0" prefWidth="255.0" text="Administración de clientes" BorderPane.alignment="CENTER">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>

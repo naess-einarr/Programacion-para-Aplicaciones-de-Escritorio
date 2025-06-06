@@ -1,4 +1,4 @@
-package com.eurobank.model;
+package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
 import java.util.List;
 
@@ -35,77 +35,79 @@ public class Sucursal {
     }
     
     // Getters y Setters
-    public String obtenerIdSucursal() {
+
+    public String getIdSucursal() {
         return idSucursal;
     }
-    
-    public void establecerIdSucursal(String idSucursal) {
+
+    public void setIdSucursal(String idSucursal) {
         this.idSucursal = idSucursal;
     }
-    
-    public String obtenerNombreSucursal() {
+
+    public String getNombreSucursal() {
         return nombreSucursal;
     }
-    
-    public void establecerNombreSucursal(String nombreSucursal) {
+
+    public void setNombreSucursal(String nombreSucursal) {
         this.nombreSucursal = nombreSucursal;
     }
-    
-    public String obtenerDireccionSucursal() {
+
+    public String getDireccionSucursal() {
         return direccionSucursal;
     }
-    
-    public void establecerDireccionSucursal(String direccionSucursal) {
+
+    public void setDireccionSucursal(String direccionSucursal) {
         this.direccionSucursal = direccionSucursal;
     }
-    
-    public String obtenerTelefonoSucursal() {
+
+    public String getTelefonoSucursal() {
         return telefonoSucursal;
     }
-    
-    public void establecerTelefonoSucursal(String telefonoSucursal) {
+
+    public void setTelefonoSucursal(String telefonoSucursal) {
         this.telefonoSucursal = telefonoSucursal;
     }
-    
-    public String obtenerCorreoSucursal() {
+
+    public String getCorreoSucursal() {
         return correoSucursal;
     }
-    
-    public void establecerCorreoSucursal(String correoSucursal) {
+
+    public void setCorreoSucursal(String correoSucursal) {
         this.correoSucursal = correoSucursal;
     }
-    
-    public String obtenerNombreGerente() {
+
+    public String getNombreGerente() {
         return nombreGerente;
     }
-    
-    public void establecerNombreGerente(String nombreGerente) {
+
+    public void setNombreGerente(String nombreGerente) {
         this.nombreGerente = nombreGerente;
     }
-    
-    public String obtenerPersonaContacto() {
+
+    public String getPersonaContacto() {
         return personaContacto;
     }
-    
-    public void establecerPersonaContacto(String personaContacto) {
+
+    public void setPersonaContacto(String personaContacto) {
         this.personaContacto = personaContacto;
     }
-    
-    public List<String> obtenerListaCuentasAsociadas() {
+
+    public List<String> getListaCuentasAsociadas() {
         return listaCuentasAsociadas;
     }
-    
-    public void establecerListaCuentasAsociadas(List<String> listaCuentasAsociadas) {
+
+    public void setListaCuentasAsociadas(List<String> listaCuentasAsociadas) {
         this.listaCuentasAsociadas = listaCuentasAsociadas;
     }
-    
-    public List<String> obtenerListaEmpleadosAsociados() {
+
+    public List<String> getListaEmpleadosAsociados() {
         return listaEmpleadosAsociados;
     }
-    
-    public void establecerListaEmpleadosAsociados(List<String> listaEmpleadosAsociados) {
+
+    public void setListaEmpleadosAsociados(List<String> listaEmpleadosAsociados) {
         this.listaEmpleadosAsociados = listaEmpleadosAsociados;
     }
+    
     
     @Override
     public String toString() {

@@ -40,101 +40,103 @@ public class Cliente {
     }
     
     // Getters y Setters
-    public String obtenerIdCliente() {
+
+    public String getIdCliente() {
         return idCliente;
     }
-    
-    public void establecerIdCliente(String idCliente) {
+
+    public void setIdCliente(String idCliente) {
         this.idCliente = idCliente;
     }
-    
-    public String obtenerNombreCompleto() {
+
+    public String getNombreCompleto() {
         return nombreCompleto;
     }
-    
-    public void establecerNombreCompleto(String nombreCompleto) {
+
+    public void setNombreCompleto(String nombreCompleto) {
         this.nombreCompleto = nombreCompleto;
     }
-    
-    public String obtenerApellidosCompletos() {
+
+    public String getApellidosCompletos() {
         return apellidosCompletos;
     }
-    
-    public void establecerApellidosCompletos(String apellidosCompletos) {
+
+    public void setApellidosCompletos(String apellidosCompletos) {
         this.apellidosCompletos = apellidosCompletos;
     }
-    
-    public String obtenerNacionalidadCliente() {
+
+    public String getNacionalidadCliente() {
         return nacionalidadCliente;
     }
-    
-    public void establecerNacionalidadCliente(String nacionalidadCliente) {
+
+    public void setNacionalidadCliente(String nacionalidadCliente) {
         this.nacionalidadCliente = nacionalidadCliente;
     }
-    
-    public LocalDate obtenerFechaNacimiento() {
+
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
-    
-    public void establecerFechaNacimiento(LocalDate fechaNacimiento) {
+
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
-    
-    public String obtenerRfcCliente() {
+
+    public String getRfcCliente() {
         return rfcCliente;
     }
-    
-    public void establecerRfcCliente(String rfcCliente) {
+
+    public void setRfcCliente(String rfcCliente) {
         this.rfcCliente = rfcCliente;
     }
-    
-    public String obtenerCurpCliente() {
+
+    public String getCurpCliente() {
         return curpCliente;
     }
-    
-    public void establecerCurpCliente(String curpCliente) {
+
+    public void setCurpCliente(String curpCliente) {
         this.curpCliente = curpCliente;
     }
-    
-    public String obtenerDireccionCompleta() {
+
+    public String getDireccionCompleta() {
         return direccionCompleta;
     }
-    
-    public void establecerDireccionCompleta(String direccionCompleta) {
+
+    public void setDireccionCompleta(String direccionCompleta) {
         this.direccionCompleta = direccionCompleta;
     }
-    
-    public String obtenerTelefonoContacto() {
+
+    public String getTelefonoContacto() {
         return telefonoContacto;
     }
-    
-    public void establecerTelefonoContacto(String telefonoContacto) {
+
+    public void setTelefonoContacto(String telefonoContacto) {
         this.telefonoContacto = telefonoContacto;
     }
-    
-    public String obtenerCorreoElectronico() {
+
+    public String getCorreoElectronico() {
         return correoElectronico;
     }
-    
-    public void establecerCorreoElectronico(String correoElectronico) {
+
+    public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
     }
-    
-    public List<String> obtenerListaCuentasAsociadas() {
+
+    public List<String> getListaCuentasAsociadas() {
         return listaCuentasAsociadas;
     }
-    
-    public void establecerListaCuentasAsociadas(List<String> listaCuentasAsociadas) {
+
+    public void setListaCuentasAsociadas(List<String> listaCuentasAsociadas) {
         this.listaCuentasAsociadas = listaCuentasAsociadas;
     }
-    
-    public List<String> obtenerListaTarjetasAsociadas() {
+
+    public List<String> getListaTarjetasAsociadas() {
         return listaTarjetasAsociadas;
     }
-    
-    public void establecerListaTarjetasAsociadas(List<String> listaTarjetasAsociadas) {
+
+    public void setListaTarjetasAsociadas(List<String> listaTarjetasAsociadas) {
         this.listaTarjetasAsociadas = listaTarjetasAsociadas;
     }
+    
     
     @Override
     public String toString() {

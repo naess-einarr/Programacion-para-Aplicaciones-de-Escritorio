@@ -1,7 +1,6 @@
-
 package com.eurobank.proyectoaplicacionesdeescritorio.dao;
 
-
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.CuentaBancaria;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.JsonUtil;
 import java.util.List;
 import java.util.ArrayList;
@@ -28,8 +27,8 @@ public class CuentaDAO implements GenericDAO<CuentaBancaria> {
         List<CuentaBancaria> cuentas = obtenerTodos();
         
         // Verificar si ya existe una cuenta con el mismo número
-        if (buscarPorId(cuenta.obtenerNumeroCuenta()) != null) {
-            throw new Exception("Ya existe una cuenta con el número: " + cuenta.obtenerNumeroCuenta());
+        if (buscarPorId(cuenta.getNumeroCuenta()) != null) {
+            throw new Exception("Ya existe una cuenta con el número: " + cuenta.getNumeroCuenta());
         }
         
         cuentas.add(cuenta);
@@ -41,7 +40,7 @@ public class CuentaDAO implements GenericDAO<CuentaBancaria> {
         List<CuentaBancaria> cuentas = obtenerTodos();
         
         return cuentas.stream()
-                .filter(cuenta -> cuenta.obtenerNumeroCuenta().equals(numeroCuenta))
+                .filter(cuenta -> cuenta.getNumeroCuenta().equals(numeroCuenta))
                 .findFirst()
                 .orElse(null);
     }
@@ -66,7 +65,7 @@ public class CuentaDAO implements GenericDAO<CuentaBancaria> {
         boolean encontrada = false;
         
         for (int i = 0; i < cuentas.size(); i++) {
-            if (cuentas.get(i).obtenerNumeroCuenta().equals(cuentaActualizada.obtenerNumeroCuenta())) {
+            if (cuentas.get(i).getNumeroCuenta().equals(cuentaActualizada.getNumeroCuenta())) {
                 cuentas.set(i, cuentaActualizada);
                 encontrada = true;
                 break;
@@ -74,7 +73,7 @@ public class CuentaDAO implements GenericDAO<CuentaBancaria> {
         }
         
         if (!encontrada) {
-            throw new Exception("No se encontró la cuenta con número: " + cuentaActualizada.obtenerNumeroCuenta());
+            throw new Exception("No se encontró la cuenta con número: " + cuentaActualizada.getNumeroCuenta());
         }
         
         jsonUtil.guardarLista(cuentas, ARCHIVO_CUENTAS);
@@ -83,7 +82,7 @@ public class CuentaDAO implements GenericDAO<CuentaBancaria> {
     @Override
     public void eliminar(String numeroCuenta) throws Exception {
         List<CuentaBancaria> cuentas = obtenerTodos();
-        boolean eliminada = cuentas.removeIf(cuenta -> cuenta.obtenerNumeroCuenta().equals(numeroCuenta));
+        boolean eliminada = cuentas.removeIf(cuenta -> cuenta.getNumeroCuenta().equals(numeroCuenta));
         
         if (!eliminada) {
             throw new Exception("No se encontró la cuenta con número: " + numeroCuenta);
@@ -108,7 +107,7 @@ public class CuentaDAO implements GenericDAO<CuentaBancaria> {
         List<CuentaBancaria> cuentasDelCliente = new ArrayList<>();
         
         for (CuentaBancaria cuenta : todasLasCuentas) {
-            if (cuenta.obtenerIdClienteAsociado().equals(idCliente)) {
+            if (cuenta.getIdClienteAsociado().equals(idCliente)) {
                 cuentasDelCliente.add(cuenta);
             }
         }
@@ -127,7 +126,7 @@ public class CuentaDAO implements GenericDAO<CuentaBancaria> {
         List<CuentaBancaria> cuentasDeLaSucursal = new ArrayList<>();
         
         for (CuentaBancaria cuenta : todasLasCuentas) {
-            if (cuenta.obtenerIdSucursalAsociada().equals(idSucursal)) {
+            if (cuenta.getIdSucursalAsociada().equals(idSucursal)) {
                 cuentasDeLaSucursal.add(cuenta);
             }
         }
@@ -146,7 +145,7 @@ public class CuentaDAO implements GenericDAO<CuentaBancaria> {
         List<CuentaBancaria> cuentasDelTipo = new ArrayList<>();
         
         for (CuentaBancaria cuenta : todasLasCuentas) {
-            if (cuenta.obtenerTipoCuenta().equals(tipoCuenta)) {
+            if (cuenta.getTipoCuenta().equals(tipoCuenta)) {
                 cuentasDelTipo.add(cuenta);
             }
         }

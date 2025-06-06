@@ -1,3 +1,5 @@
+package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
+
 import java.time.LocalDate;
 
 /**
@@ -25,19 +27,19 @@ public class Cajero extends Empleado {
         this.numeroVentanilla = numeroVentanilla;
     }
     
-    public String obtenerHorarioTrabajo() {
+    public String getHorarioTrabajo() {
         return horarioTrabajo;
     }
     
-    public void establecerHorarioTrabajo(String horarioTrabajo) {
+    public void setHorarioTrabajo(String horarioTrabajo) {
         this.horarioTrabajo = horarioTrabajo;
     }
     
-    public int obtenerNumeroVentanilla() {
+    public int getNumeroVentanilla() {
         return numeroVentanilla;
     }
     
-    public void establecerNumeroVentanilla(int numeroVentanilla) {
+    public void setNumeroVentanilla(int numeroVentanilla) {
         this.numeroVentanilla = numeroVentanilla;
     }
 }

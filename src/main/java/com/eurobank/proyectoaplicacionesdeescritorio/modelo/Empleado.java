@@ -1,3 +1,4 @@
+package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
 import java.time.LocalDate;
 
@@ -18,7 +19,7 @@ public abstract class Empleado {
     
     protected Empleado(String idEmpleado, String nombreCompleto, String direccionCompleta, 
                    LocalDate fechaNacimiento, String generoEmpleado, double salarioMensual,
-                   String nombreUsuario, String contraseñaAcceso, String tipoEmpleado) {
+                   String nombreUsuario, String contrasenaAcceso, String tipoEmpleado) {
         
         this.idEmpleado = idEmpleado;
         this.nombreCompleto = nombreCompleto;
@@ -27,82 +28,85 @@ public abstract class Empleado {
         this.generoEmpleado = generoEmpleado;
         this.salarioMensual = salarioMensual;
         this.nombreUsuario = nombreUsuario;
-        this.contrasenaAcceso = contraseñaAcceso;
+        this.contrasenaAcceso = contrasenaAcceso;
         this.tipoEmpleado = tipoEmpleado;
     }
     
     // Getters y Setters
-    public String obtenerIdEmpleado() {
+
+    public String getIdEmpleado() {
         return idEmpleado;
     }
-    
-    public void establecerIdEmpleado(String idEmpleado) {
+
+    public void setIdEmpleado(String idEmpleado) {
         this.idEmpleado = idEmpleado;
     }
-    
-    public String obtenerNombreCompleto() {
+
+    public String getNombreCompleto() {
         return nombreCompleto;
     }
-    
-    public void establecerNombreCompleto(String nombreCompleto) {
+
+    public void setNombreCompleto(String nombreCompleto) {
         this.nombreCompleto = nombreCompleto;
     }
-    
-    public String obtenerDireccionCompleta() {
+
+    public String getDireccionCompleta() {
         return direccionCompleta;
     }
-    
-    public void establecerDireccionCompleta(String direccionCompleta) {
+
+    public void setDireccionCompleta(String direccionCompleta) {
         this.direccionCompleta = direccionCompleta;
     }
-    
-    public LocalDate obtenerFechaNacimiento() {
+
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
-    
-    public void establecerFechaNacimiento(LocalDate fechaNacimiento) {
+
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
-    
-    public String obtenerGeneroEmpleado() {
+
+    public String getGeneroEmpleado() {
         return generoEmpleado;
     }
-    
-    public void establecerGeneroEmpleado(String generoEmpleado) {
+
+    public void setGeneroEmpleado(String generoEmpleado) {
         this.generoEmpleado = generoEmpleado;
     }
-    
-    public double obtenerSalarioMensual() {
+
+    public double getSalarioMensual() {
         return salarioMensual;
     }
-    
-    public void establecerSalarioMensual(double salarioMensual) {
+
+    public void setSalarioMensual(double salarioMensual) {
         this.salarioMensual = salarioMensual;
     }
-    
-    public String obtenerNombreUsuario() {
+
+    public String getNombreUsuario() {
         return nombreUsuario;
     }
-    
-    public void establecerNombreUsuario(String nombreUsuario) {
+
+    public void setNombreUsuario(String nombreUsuario) {
         this.nombreUsuario = nombreUsuario;
     }
-    
-    public String obtenerContraseñaAcceso() {
+
+    public String getContrasenaAcceso() {
         return contrasenaAcceso;
     }
-    
-    public void establecerContraseñaAcceso(String contraseñaAcceso) {
-        this.contrasenaAcceso = contraseñaAcceso;
+
+    public void setContrasenaAcceso(String contrasenaAcceso) {
+        this.contrasenaAcceso = contrasenaAcceso;
     }
-    
-    public String obtenerTipoEmpleado() {
+
+    public String getTipoEmpleado() {
         return tipoEmpleado;
     }
-    
-    public void establecerTipoEmpleado(String tipoEmpleado) {
+
+    public void setTipoEmpleado(String tipoEmpleado) {
         this.tipoEmpleado = tipoEmpleado;
     }
+    
+    
     
     @Override
     public String toString() {

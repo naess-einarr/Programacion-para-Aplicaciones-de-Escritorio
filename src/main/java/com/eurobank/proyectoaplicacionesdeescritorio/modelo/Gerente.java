@@ -1,3 +1,5 @@
+package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
+
 import java.time.LocalDate;
 
 /**
@@ -7,7 +9,7 @@ import java.time.LocalDate;
 public class Gerente extends Empleado {
     
     private String nivelAcceso;
-    private int añosExperiencia;
+    private int aniosExperiencia;
     
     public Gerente() {
         super();
@@ -22,22 +24,24 @@ public class Gerente extends Empleado {
               generoEmpleado, salarioMensual, nombreUsuario, contraseñaAcceso, "GERENTE");
         
         this.nivelAcceso = nivelAcceso;
-        this.añosExperiencia = añosExperiencia;
+        this.aniosExperiencia = añosExperiencia;
     }
-    
-    public String obtenerNivelAcceso() {
+
+    public String getNivelAcceso() {
         return nivelAcceso;
     }
-    
-    public void establecerNivelAcceso(String nivelAcceso) {
+
+    public void setNivelAcceso(String nivelAcceso) {
         this.nivelAcceso = nivelAcceso;
     }
-    
-    public int obtenerAñosExperiencia() {
-        return añosExperiencia;
+
+    public int getAniosExperiencia() {
+        return aniosExperiencia;
+    }
+
+    public void setAniosExperiencia(int aniosExperiencia) {
+        this.aniosExperiencia = aniosExperiencia;
     }
     
-    public void establecerAñosExperiencia(int añosExperiencia) {
-        this.añosExperiencia = añosExperiencia;
-    }
+    
 }

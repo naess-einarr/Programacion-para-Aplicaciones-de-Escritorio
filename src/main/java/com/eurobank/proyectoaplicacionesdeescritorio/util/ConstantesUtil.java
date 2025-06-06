@@ -1,3 +1,5 @@
+package com.eurobank.proyectoaplicacionesdeescritorio.util;
+
 
 public class ConstantesUtil {
     

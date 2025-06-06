@@ -13,10 +13,10 @@ public abstract class Empleado {
     private String contrasenaAcceso;
     private String tipoEmpleado;
     
-    public Empleado() {
+    protected Empleado() {
     }
     
-    public Empleado(String idEmpleado, String nombreCompleto, String direccionCompleta, 
+    protected Empleado(String idEmpleado, String nombreCompleto, String direccionCompleta, 
                    LocalDate fechaNacimiento, String generoEmpleado, double salarioMensual,
                    String nombreUsuario, String contraseñaAcceso, String tipoEmpleado) {
         

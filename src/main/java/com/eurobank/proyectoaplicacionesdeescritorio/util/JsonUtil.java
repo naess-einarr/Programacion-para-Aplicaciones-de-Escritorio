@@ -3,6 +3,7 @@ package com.eurobank.proyectoaplicacionesdeescritorio.util;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 import java.io.*;
 import java.lang.reflect.Type;
@@ -24,11 +25,24 @@ public class JsonUtil<T> {
     public JsonUtil() {
         this.gson = new GsonBuilder()
                 .registerTypeAdapter(LocalDate.class,
-                    (JsonDeserializer<LocalDate>) (json, type, context) ->
-                        LocalDate.parse(json.getAsString()))
-                
+                        (JsonDeserializer<LocalDate>) (json, type, context)
+                        -> LocalDate.parse(json.getAsString()))
                 .setDateFormat("yyyy-MM-dd HH:mm:ss")
 
+
+                .registerTypeAdapter(LocalDate.class,
+                        (JsonDeserializer<LocalDate>) (json, type, context) -> {
+                            if (json.isJsonObject()) {
+                                JsonObject dateObj = json.getAsJsonObject();
+                                return LocalDate.of(
+                                        dateObj.get("year").getAsInt(),
+                                        dateObj.get("month").getAsInt(),
+                                        dateObj.get("day").getAsInt()
+                                );
+                            } else {
+                                return LocalDate.parse(json.getAsString());
+                            }
+                        })
                 .setPrettyPrinting()
                 .create();
     }

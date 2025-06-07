@@ -58,7 +58,12 @@ public class EmpleadoController implements Initializable {
 
     @FXML
     void accionEliminar(ActionEvent event) {
+        Empleado empleado = tablaEmpleados.getSelectionModel().getSelectedItem();
+        try {
+            empleadoDAO.eliminar(empleado.getIdEmpleado());
+        } catch (Exception ex) {
 
+        }
     }
 
     @FXML

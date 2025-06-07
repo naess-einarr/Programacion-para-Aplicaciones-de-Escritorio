@@ -9,7 +9,7 @@ import javafx.fxml.Initializable;
  *
  * @author User
  */
-public class RegistroEmpleadoController implements Initializable {
+public class EmpleadoRegistroController implements Initializable {
 
     /**
      * Initializes the controller class.

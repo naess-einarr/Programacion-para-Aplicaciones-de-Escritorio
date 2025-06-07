@@ -1,5 +1,7 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.vista;
 
+import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ConstantesUtil;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -7,10 +9,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import javafx.scene.control.Alert;
 
 public class ManejadorDeVistas {
     
-    // Enum para definir las vistas disponibles
     public enum Vista {
         LOGIN("/vistas/login.fxml"),
         MENU("/vistas/menu.fxml"),
@@ -18,7 +20,9 @@ public class ManejadorDeVistas {
         CUENTA("/vistas/cuenta.fxml"),
         EMPLEADO("/vistas/empleado.fxml"),
         SUCURSAL("/vistas/sucursal.fxml"),
-        TRANSACCION("/vistas/transaccion.fxml");
+        TRANSACCION("/vistas/transaccion.fxml"),
+        CLIENTE_REGISTRO("vistas/clienteregistro.fxml"),
+        EMPLEADO_REGISTRO("vistas/empleadoregistro.fxml");
         
         private final String rutaFXML;
         
@@ -41,7 +45,7 @@ public class ManejadorDeVistas {
     }
     
     // Método para obtener la instancia única
-    public static ManejadorDeVistas obtenerInstancia() {
+    public static ManejadorDeVistas getInstancia() {
         if (instancia == null) {
             instancia = new ManejadorDeVistas();
         }
@@ -49,13 +53,12 @@ public class ManejadorDeVistas {
     }
     
     // Establecer el escenario principal
-    public void establecerEscenarioPrincipal(Stage escenario) {
+    public void setEscenarioPrincipal(Stage escenario) {
         this.escenarioPrincipal = escenario;
     }
     
     // Cargar una vista FXML
     public Parent cargarVista(Vista vista) throws IOException {
-        // Verificar si la vista ya está en caché
         if (vistasCache.containsKey(vista)) {
             return vistasCache.get(vista);
         }
@@ -64,7 +67,6 @@ public class ManejadorDeVistas {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(vista.getRutaFXML()));
             Parent root = loader.load();
             
-            // Guardar en caché para futuras cargas
             vistasCache.put(vista, root);
             
             return root;
@@ -74,12 +76,10 @@ public class ManejadorDeVistas {
         }
     }
     
-    // Cambiar a una vista específica
     public void cambiarVista(Vista vista) {
         cambiarVista(vista, "EuroBank - " + vista.name());
     }
     
-    // Cambiar a una vista específica con título personalizado
     public void cambiarVista(Vista vista, String titulo) {
         try {
             Parent root = cargarVista(vista);
@@ -108,9 +108,9 @@ public class ManejadorDeVistas {
             nuevaVentana.show();
             
             return nuevaVentana;
-        } catch (IOException e) {
-            System.err.println("Error al abrir nueva ventana para la vista: " + vista.name());
-            e.printStackTrace();
+        } catch (IOException ioe) {
+            AlertaUtil.mostrarAlerta(ConstantesUtil.ERROR, "No se pudo abrir la ventana", Alert.AlertType.ERROR);
+           
             return null;
         }
     }

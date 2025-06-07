@@ -19,11 +19,7 @@ import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-/**
- * FXML Controller class
- *
- * @author User
- */
+
 public class LoginController implements Initializable {
         private static final Logger LOG = LogManager.getLogger(LoginController.class);
         
@@ -47,8 +43,8 @@ public class LoginController implements Initializable {
         @FXML
         void cancelarInicioSesion(ActionEvent event) {
             Stage escenarioPrincipal = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            ManejadorDeVistas.obtenerInstancia().establecerEscenarioPrincipal(escenarioPrincipal);
-            ManejadorDeVistas.obtenerInstancia().cerrarAplicacion();
+            ManejadorDeVistas.getInstancia().setEscenarioPrincipal(escenarioPrincipal);
+            ManejadorDeVistas.getInstancia().cerrarAplicacion();
         }
 
         @FXML
@@ -60,8 +56,8 @@ public class LoginController implements Initializable {
                 empleado = empleadoDAO.validarCredenciales(usuario, contrasena);
                 if(Objects.nonNull(empleado)){
                     Stage escenarioPrincipal = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    ManejadorDeVistas.obtenerInstancia().establecerEscenarioPrincipal(escenarioPrincipal);
-                    ManejadorDeVistas.obtenerInstancia().cambiarVista(ManejadorDeVistas.Vista.MENU);
+                    ManejadorDeVistas.getInstancia().setEscenarioPrincipal(escenarioPrincipal);
+                    ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.MENU);
                 }else{
                     AlertaUtil.mostrarAlerta("Error", "Datos inválidos", Alert.AlertType.ERROR);
                 }

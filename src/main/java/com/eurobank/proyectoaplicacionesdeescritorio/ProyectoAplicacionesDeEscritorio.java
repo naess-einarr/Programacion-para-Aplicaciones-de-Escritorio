@@ -17,6 +17,6 @@ public class ProyectoAplicacionesDeEscritorio extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        ManejadorDeVistas.obtenerInstancia().abrirVistaEnNuevaVentana(ManejadorDeVistas.Vista.LOGIN, "INICIO DE SESIÓN");
+        ManejadorDeVistas.getInstancia().abrirVistaEnNuevaVentana(ManejadorDeVistas.Vista.LOGIN, "INICIO DE SESIÓN");
     }
 }

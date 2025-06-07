@@ -3,20 +3,6 @@ package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDate;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
-
-@JsonTypeInfo(
-    use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
-    property = "tipoEmpleado"
-)
-@JsonSubTypes({
-    @Type(value = Gerente.class, name = "GERENTE"),
-    @Type(value = Cajero.class, name = "CAJERO"),
-    @Type(value = Ejecutivo.class, name = "EJECUTIVO")
-})
 
 public class Empleado {
     

@@ -3,7 +3,11 @@
     "idEmpleado": "G001",
     "nombreCompleto": "Carlos Mendoza",
     "direccionCompleta": "Av. Central 456, Oficina 302, Ciudad Empresarial",
-    "fechaNacimiento": "1980-03-15",
+    "fechaNacimiento": {
+      "year": 1980,
+      "month": 3,
+      "day": 15
+    },
     "generoEmpleado": "Masculino",
     "salarioMensual": 7500.0,
     "nombreUsuario": "admin",
@@ -16,9 +20,13 @@
     "idEmpleado": "10",
     "nombreCompleto": "asd",
     "direccionCompleta": "asd",
-    "fechaNacimiento": "2025-06-01",
-    "generoEmpleado": "FEMENINO",
-    "salarioMensual": 101010.0,
+    "fechaNacimiento": {
+      "year": 2025,
+      "month": 6,
+      "day": 6
+    },
+    "generoEmpleado": "MASCULINO",
+    "salarioMensual": 1010.0,
     "nombreUsuario": "empleadon",
     "contrasenaAcceso": "empleadon",
     "tipoEmpleado": "EJECUTIVO",

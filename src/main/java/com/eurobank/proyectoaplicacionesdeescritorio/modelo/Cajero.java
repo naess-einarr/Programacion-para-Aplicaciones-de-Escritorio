@@ -13,6 +13,7 @@ public class Cajero extends Empleado {
     
     public Cajero() {
         super();
+        this.tipoEmpleado = "CAJERO";
     }
     
     public Cajero(String idEmpleado, String nombreCompleto, String direccionCompleta,

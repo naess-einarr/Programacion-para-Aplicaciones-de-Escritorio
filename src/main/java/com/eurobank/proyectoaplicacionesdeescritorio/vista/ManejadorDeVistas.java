@@ -23,6 +23,7 @@ public class ManejadorDeVistas {
         TRANSACCION("/vistas/transaccion.fxml"),
         CLIENTE_REGISTRO("vistas/clienteregistro.fxml"),
         EMPLEADO_REGISTRO("vistas/empleadoregistro.fxml");
+
         
         private final String rutaFXML;
         

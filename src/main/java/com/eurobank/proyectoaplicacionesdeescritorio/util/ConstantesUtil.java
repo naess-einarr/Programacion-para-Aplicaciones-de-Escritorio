@@ -25,8 +25,7 @@ public class ConstantesUtil {
     public static final String REGEX_TELEFONO = "^[0-9]{10}$";
     public static final String REGEX_NUMERO_CUENTA = "^ACC[0-9]{6}$";
     public static final String REGEX_RFC = "^[A-Z]{4}[0-9]{6}[A-Z0-9]{3}$";
-    public static final String REGEX_RFC_PERSONA_FISICA = "^[A-Z]{4}\\d{6}[A-Z0-9]{3}$";
-    public static final String REGEX_CURP = "^[A-Z]{4}\\d{6}[HM][A-Z]{5}[A-Z0-9]\\d$";
+    public static final String REGEX_CURP = "^[A-Z]{4}\\d{6}[HM][A-Z]{3}[A-Z0-9]\\d$";
     public static final String REGEX_SOLO_LETRAS = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$";
     public static final String REGEX_LETRAS_Y_NUMEROS = "^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ\\s.,#-]+$";
     

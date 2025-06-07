@@ -2,9 +2,11 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cajero;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.ComboDatosUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -35,6 +37,8 @@ public class EmpleadoRegistroController implements Initializable{
     private TextField textSalario;
     
     private EmpleadoDAO empleadoDAO;
+    
+    private Empleado empleadoEditar;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -68,7 +72,11 @@ public class EmpleadoRegistroController implements Initializable{
         empleado.setContrasenaAcceso("empleadon");
         
         try {
-            empleadoDAO.guardar(empleado);
+            if(Objects.nonNull(empleadoEditar)){
+                empleadoDAO.actualizar(empleado);
+            }else{
+                empleadoDAO.guardar(empleado);
+            }
         } catch (Exception ex) {
 
         }
@@ -77,4 +85,9 @@ public class EmpleadoRegistroController implements Initializable{
         ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO);
     }
 
+    public void setEmpleadoEditar(Empleado empleadoEditar) {
+        this.textNombre.setText(empleadoEditar.getNombreCompleto());
+        this.textDireccion.setText(empleadoEditar.getDireccionCompleta());
+    }
+        
 }

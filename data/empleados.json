@@ -23,13 +23,13 @@
     "fechaNacimiento": {
       "year": 2025,
       "month": 6,
-      "day": 6
+      "day": 5
     },
-    "generoEmpleado": "MASCULINO",
-    "salarioMensual": 1010.0,
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 100.0,
     "nombreUsuario": "empleadon",
     "contrasenaAcceso": "empleadon",
-    "tipoEmpleado": "EJECUTIVO",
+    "tipoEmpleado": "GERENTE",
     "idSucursal": "suc01"
   }
 ]

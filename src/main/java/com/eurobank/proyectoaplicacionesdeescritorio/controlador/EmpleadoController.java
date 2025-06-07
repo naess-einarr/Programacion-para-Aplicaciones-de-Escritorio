@@ -3,9 +3,12 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -53,7 +56,15 @@ public class EmpleadoController implements Initializable {
 
     @FXML
     void accionEditar(ActionEvent event) {
+        try {
+            EmpleadoRegistroController empleadoRegistroController = ManejadorDeVistas.getInstancia().obtenerControlador(ManejadorDeVistas.Vista.EMPLEADO_REGISTRO);
+            Empleado empleado = tablaEmpleados.getSelectionModel().getSelectedItem();
+            empleadoRegistroController.setEmpleadoEditar(empleado);
+            ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO_REGISTRO);
 
+        } catch (IOException ex) {
+
+        }
     }
 
     @FXML

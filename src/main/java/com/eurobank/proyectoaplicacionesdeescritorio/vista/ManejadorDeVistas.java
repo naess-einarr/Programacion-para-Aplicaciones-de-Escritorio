@@ -18,7 +18,8 @@ public class ManejadorDeVistas {
         CUENTA("/vistas/cuenta.fxml"),
         EMPLEADO("/vistas/empleado.fxml"),
         SUCURSAL("/vistas/sucursal.fxml"),
-        TRANSACCION("/vistas/transaccion.fxml");
+        TRANSACCION("/vistas/transaccion.fxml"),
+        EMPLEADO_REGISTRO("/vistas/empleadoregistro.fxml");
         
         private final String rutaFXML;
         

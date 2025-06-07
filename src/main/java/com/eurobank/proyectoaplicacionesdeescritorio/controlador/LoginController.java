@@ -3,6 +3,7 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ManejadorDeSesiones;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
 import java.util.Objects;
@@ -46,8 +47,6 @@ public class LoginController implements Initializable {
 
         @FXML
         void cancelarInicioSesion(ActionEvent event) {
-            Stage escenarioPrincipal = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            ManejadorDeVistas.obtenerInstancia().establecerEscenarioPrincipal(escenarioPrincipal);
             ManejadorDeVistas.obtenerInstancia().cerrarAplicacion();
         }
 
@@ -59,8 +58,6 @@ public class LoginController implements Initializable {
             try {
                 empleado = empleadoDAO.validarCredenciales(usuario, contrasena);
                 if(Objects.nonNull(empleado)){
-                    Stage escenarioPrincipal = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    ManejadorDeVistas.obtenerInstancia().establecerEscenarioPrincipal(escenarioPrincipal);
                     ManejadorDeVistas.obtenerInstancia().cambiarVista(ManejadorDeVistas.Vista.MENU);
                 }else{
                     AlertaUtil.mostrarAlerta("Error", "Datos inválidos", Alert.AlertType.ERROR);

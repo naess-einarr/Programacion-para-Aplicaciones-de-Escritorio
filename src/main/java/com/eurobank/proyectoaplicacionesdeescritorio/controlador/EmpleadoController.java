@@ -47,8 +47,8 @@ public class EmpleadoController implements Initializable {
 
     @FXML
     void accionCancelar(ActionEvent event) {
-        ManejadorDeVistas.obtenerInstancia().limpiarCache();
-        ManejadorDeVistas.obtenerInstancia().cambiarVista(ManejadorDeVistas.Vista.MENU);
+        ManejadorDeVistas.getInstancia().limpiarCache();
+        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.MENU);
     }
 
     @FXML
@@ -63,7 +63,7 @@ public class EmpleadoController implements Initializable {
 
     @FXML
     void accionRegistrar(ActionEvent event) {
-        ManejadorDeVistas.obtenerInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO_REGISTRO);
+        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO_REGISTRO);
     }
 
     private void cargarListaEmpleados() {

@@ -17,8 +17,10 @@ public class ProyectoAplicacionesDeEscritorio extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        ManejadorDeVistas manejador = ManejadorDeVistas.obtenerInstancia();
-        manejador.establecerEscenarioPrincipal(stage);
+
+        ManejadorDeVistas manejador = ManejadorDeVistas.getInstancia();
+        manejador.setEscenarioPrincipal(stage);
         manejador.cambiarVista(ManejadorDeVistas.Vista.LOGIN);
+
     }
 }

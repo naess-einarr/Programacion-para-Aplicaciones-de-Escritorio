@@ -20,11 +20,7 @@ import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-/**
- * FXML Controller class
- *
- * @author User
- */
+
 public class LoginController implements Initializable {
         private static final Logger LOG = LogManager.getLogger(LoginController.class);
         
@@ -47,7 +43,11 @@ public class LoginController implements Initializable {
 
         @FXML
         void cancelarInicioSesion(ActionEvent event) {
-            ManejadorDeVistas.obtenerInstancia().cerrarAplicacion();
+            
+            Stage escenarioPrincipal = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            ManejadorDeVistas.getInstancia().setEscenarioPrincipal(escenarioPrincipal);
+            ManejadorDeVistas.getInstancia().cerrarAplicacion();
+
         }
 
         @FXML
@@ -58,7 +58,11 @@ public class LoginController implements Initializable {
             try {
                 empleado = empleadoDAO.validarCredenciales(usuario, contrasena);
                 if(Objects.nonNull(empleado)){
-                    ManejadorDeVistas.obtenerInstancia().cambiarVista(ManejadorDeVistas.Vista.MENU);
+
+                    Stage escenarioPrincipal = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    ManejadorDeVistas.getInstancia().setEscenarioPrincipal(escenarioPrincipal);
+                    ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.MENU);
+
                 }else{
                     AlertaUtil.mostrarAlerta("Error", "Datos inválidos", Alert.AlertType.ERROR);
                 }

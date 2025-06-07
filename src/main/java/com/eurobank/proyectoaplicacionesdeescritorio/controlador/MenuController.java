@@ -35,7 +35,7 @@ public class MenuController implements Initializable {
 
     @FXML
     void abrirVentanaAdministrarEmpleados(ActionEvent event) {
-        ManejadorDeVistas.obtenerInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO);
+        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO);
     }
 
     @FXML
@@ -50,8 +50,8 @@ public class MenuController implements Initializable {
     
     @FXML
     void cerrarSesion(MouseEvent event) {
-        ManejadorDeVistas.obtenerInstancia().limpiarCache();
-        ManejadorDeVistas.obtenerInstancia().cambiarVista(ManejadorDeVistas.Vista.LOGIN);
+        ManejadorDeVistas.getInstancia().limpiarCache();
+        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.LOGIN);
     }
     
 }

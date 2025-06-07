@@ -1,0 +1,18 @@
+[
+  {
+    "idCliente": "CLI-D1AE43DD",
+    "nombreCompleto": "Victor",
+    "apellidosCompletos": "Sanchez",
+    "nacionalidadCliente": "Peruano",
+    "fechaNacimiento": {
+      "year": 2025,
+      "month": 5,
+      "day": 22
+    },
+    "rfcCliente": "SAMM981231H06",
+    "curpCliente": "SAMM981231HVZNNR06",
+    "direccionCompleta": "sdjaljdslaksjdlsakjd",
+    "telefonoContacto": "1234567890",
+    "correoElectronico": "usuario@ejemplo.com"
+  }
+]

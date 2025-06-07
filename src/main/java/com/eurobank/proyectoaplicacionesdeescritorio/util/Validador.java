@@ -106,7 +106,7 @@ public class Validador {
         }
 
         // Validación básica de formato para persona física (4 letras + 6 números + 3 caracteres)
-        if (rfcLimpio.length() == 13 && !rfcLimpio.matches(ConstantesUtil.REGEX_RFC_PERSONA_FISICA)) {
+        if (rfcLimpio.length() == 13 && !rfcLimpio.matches(ConstantesUtil.REGEX_RFC)) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_RFC_FORMATO);
         }
     }
@@ -179,11 +179,6 @@ public class Validador {
         }
     }
 
-    /**
-     * Valida el correo electrónico.
-     * @param correo Correo a validar
-     * @throws IllegalArgumentException si el correo no es válido
-     */
     public static void validarCorreo(String correo) {
         if (correo == null || correo.trim().isEmpty()) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_CORREO_OBLIGATORIO);

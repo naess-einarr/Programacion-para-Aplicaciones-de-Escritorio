@@ -11,18 +11,13 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 import java.net.URL;
-import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.UUID;
 
-/**
- * Controlador para el formulario de registro de clientes.
- */
 public class ClienteRegistroController implements Initializable {
     
     private static final Logger LOG = LogManager.getLogger(ClienteRegistroController.class);
     
-    // Campos del formulario vinculados al FXML
     @FXML
     private TextField textIdCliente;
     
@@ -74,23 +69,17 @@ public class ClienteRegistroController implements Initializable {
         LOG.debug("ID único generado: {}", idUnico);
     }
     
-
-    
     @FXML
     public void accionRegistrar() {
+        
         LOG.info("Iniciando proceso de registro de cliente");
         
         try {
+            
             Cliente nuevoCliente = crearClienteDesdeFormulario();
-            
             Validador.validarCliente(nuevoCliente);
-            
             clienteDAO.guardar(nuevoCliente);
-            
             mostrarMensaje("Éxito", "Cliente registrado correctamente", Alert.AlertType.INFORMATION);
-            
-            LOG.info("Cliente registrado exitosamente con ID: {}", nuevoCliente.getIdCliente());
-            
             limpiarFormulario();
             
         } catch (IllegalArgumentException e) {
@@ -115,8 +104,6 @@ public class ClienteRegistroController implements Initializable {
             cerrarVentana();
         }
     }
-    
-
     
     private Cliente crearClienteDesdeFormulario() {
         Cliente cliente = new Cliente();
@@ -162,6 +149,5 @@ public class ClienteRegistroController implements Initializable {
     private void cerrarVentana() {
         Stage stage = (Stage) botonCancelar.getScene().getWindow();
         stage.close();
-        LOG.info("Ventana de registro cerrada");
     }
 }

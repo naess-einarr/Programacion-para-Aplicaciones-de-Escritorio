@@ -25,7 +25,7 @@ public class MenuController implements Initializable {
     
     @FXML
     void abrirVentanaAdministrarClientes(ActionEvent event) {
-
+         ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.CLIENTE);
     }
 
     @FXML

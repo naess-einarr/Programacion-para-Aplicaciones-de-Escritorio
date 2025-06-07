@@ -13,6 +13,7 @@ public class Gerente extends Empleado {
     
     public Gerente() {
         super();
+        this.tipoEmpleado = "GERENTE";
     }
     
     public Gerente(String idEmpleado, String nombreCompleto, String direccionCompleta,

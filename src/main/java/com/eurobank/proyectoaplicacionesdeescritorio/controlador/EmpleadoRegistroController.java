@@ -1,12 +1,10 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cajero;
-import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ComboDatosUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,10 +16,10 @@ import javafx.scene.control.TextField;
 public class EmpleadoRegistroController implements Initializable{
 
     @FXML
-    private ComboBox<?> comboGenero;
+    private ComboBox<String> comboGenero;
 
     @FXML
-    private ComboBox<?> comboTipoEmpleado;
+    private ComboBox<String> comboTipoEmpleado;
 
     @FXML
     private DatePicker dateFechaNacimiento;
@@ -40,6 +38,8 @@ public class EmpleadoRegistroController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         empleadoDAO = new EmpleadoDAO();
+        comboGenero.setItems(ComboDatosUtil.listaGenero());
+        comboTipoEmpleado.setItems(ComboDatosUtil.listaTipoEmpleado());
     }
     
     @FXML
@@ -50,9 +50,22 @@ public class EmpleadoRegistroController implements Initializable{
 
     @FXML
     void guardarRegistro(ActionEvent event) {
+        
         Cajero empleado = new Cajero();
         empleado.setIdEmpleado("10");
         empleado.setNombreCompleto(textNombre.getText().trim());
+        empleado.setDireccionCompleta(textDireccion.getText().trim());
+        empleado.setFechaNacimiento(dateFechaNacimiento.getValue());
+        empleado.setGeneroEmpleado(comboGenero.getValue());
+        empleado.setSalarioMensual(Double.parseDouble(textSalario.getText().trim()));
+        empleado.setTipoEmpleado(comboTipoEmpleado.getValue());
+        empleado.setHorarioTrabajo("horas");
+        empleado.setNumeroVentanilla(2);
+        
+        empleado.setIdSucursal("suc01");
+        empleado.setNombreUsuario("empleadon");
+        empleado.setContrasenaAcceso("empleadon");
+        
         try {
             empleadoDAO.guardar(empleado);
         } catch (Exception ex) {

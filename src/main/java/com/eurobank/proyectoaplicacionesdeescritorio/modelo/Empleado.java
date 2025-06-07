@@ -1,20 +1,39 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
+
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.PROPERTY,
+    property = "tipoEmpleado"
+)
+@JsonSubTypes({
+    @Type(value = Gerente.class, name = "GERENTE"),
+    @Type(value = Cajero.class, name = "CAJERO"),
+    @Type(value = Ejecutivo.class, name = "EJECUTIVO")
+})
 
 public class Empleado {
     
     private String idEmpleado;
     private String nombreCompleto;
     private String direccionCompleta;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate fechaNacimiento;
     private String generoEmpleado;
     private double salarioMensual;
     private String nombreUsuario;
     private String contrasenaAcceso;
-    private String tipoEmpleado;
+    protected String tipoEmpleado;
+    private String idSucursal;
     
     protected Empleado() {
+
     }
     
     protected Empleado(String idEmpleado, String nombreCompleto, String direccionCompleta, 
@@ -105,8 +124,14 @@ public class Empleado {
     public void setTipoEmpleado(String tipoEmpleado) {
         this.tipoEmpleado = tipoEmpleado;
     }
-    
-    
+
+    public String getIdSucursal() {
+        return idSucursal;
+    }
+
+    public void setIdSucursal(String idSucursal) {
+        this.idSucursal = idSucursal;
+    }
     
     @Override
     public String toString() {

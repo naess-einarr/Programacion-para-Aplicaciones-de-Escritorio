@@ -5,9 +5,23 @@
     "direccionCompleta": "Av. Central 456, Oficina 302, Ciudad Empresarial",
     "fechaNacimiento": "1980-03-15",
     "generoEmpleado": "Masculino",
-    "salarioMensual": 7500.00,
+    "salarioMensual": 7500.0,
     "nombreUsuario": "admin",
     "contrasenaAcceso": "admin",
     "tipoEmpleado": "Gerente"
+  },
+  {
+    "horarioTrabajo": "horas",
+    "numeroVentanilla": 2,
+    "idEmpleado": "10",
+    "nombreCompleto": "asd",
+    "direccionCompleta": "asd",
+    "fechaNacimiento": "2025-06-01",
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 101010.0,
+    "nombreUsuario": "empleadon",
+    "contrasenaAcceso": "empleadon",
+    "tipoEmpleado": "EJECUTIVO",
+    "idSucursal": "suc01"
   }
 ]

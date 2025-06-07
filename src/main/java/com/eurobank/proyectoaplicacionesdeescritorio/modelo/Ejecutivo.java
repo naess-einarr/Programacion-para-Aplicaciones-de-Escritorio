@@ -13,6 +13,7 @@ public class Ejecutivo extends Empleado {
     
     public Ejecutivo() {
         super();
+        this.tipoEmpleado = "EJECUTIVO";
     }
     
     public Ejecutivo(String idEmpleado, String nombreCompleto, String direccionCompleta,

@@ -13,16 +13,16 @@ public class Sucursal {
     private String direccionSucursal;
     private String telefonoSucursal;
     private String correoSucursal;
-    private String nombreGerente;
-    private String personaContacto;
-    private List<String> listaCuentasAsociadas;
-    private List<String> listaEmpleadosAsociados;
+    private Gerente gerente;
+    private String contacto;
+    private List<String> cuentasAsociadas;
+    private List<String> empleadosAsociados;
     
     public Sucursal() {
     }
     
     public Sucursal(String idSucursal, String nombreSucursal, String direccionSucursal,
-                    String telefonoSucursal, String correoSucursal, String nombreGerente,
+                    String telefonoSucursal, String correoSucursal, Gerente gerente,
                     String personaContacto) {
         
         this.idSucursal = idSucursal;
@@ -30,11 +30,9 @@ public class Sucursal {
         this.direccionSucursal = direccionSucursal;
         this.telefonoSucursal = telefonoSucursal;
         this.correoSucursal = correoSucursal;
-        this.nombreGerente = nombreGerente;
-        this.personaContacto = personaContacto;
+        this.gerente = gerente;
+        this.contacto = personaContacto;
     }
-    
-    // Getters y Setters
 
     public String getIdSucursal() {
         return idSucursal;
@@ -76,39 +74,38 @@ public class Sucursal {
         this.correoSucursal = correoSucursal;
     }
 
-    public String getNombreGerente() {
-        return nombreGerente;
+    public Gerente getGerente() {
+        return gerente;
     }
 
-    public void setNombreGerente(String nombreGerente) {
-        this.nombreGerente = nombreGerente;
+    public void setGerente(Gerente idGerente) {
+        this.gerente = idGerente;
     }
 
-    public String getPersonaContacto() {
-        return personaContacto;
+    public String getContacto() {
+        return contacto;
     }
 
-    public void setPersonaContacto(String personaContacto) {
-        this.personaContacto = personaContacto;
+    public void setContacto(String contacto) {
+        this.contacto = contacto;
     }
 
     public List<String> getListaCuentasAsociadas() {
-        return listaCuentasAsociadas;
+        return cuentasAsociadas;
     }
 
     public void setListaCuentasAsociadas(List<String> listaCuentasAsociadas) {
-        this.listaCuentasAsociadas = listaCuentasAsociadas;
+        this.cuentasAsociadas = listaCuentasAsociadas;
     }
 
     public List<String> getListaEmpleadosAsociados() {
-        return listaEmpleadosAsociados;
+        return empleadosAsociados;
     }
 
     public void setListaEmpleadosAsociados(List<String> listaEmpleadosAsociados) {
-        this.listaEmpleadosAsociados = listaEmpleadosAsociados;
+        this.empleadosAsociados = listaEmpleadosAsociados;
     }
-    
-    
+
     @Override
     public String toString() {
         return "Sucursal{" +

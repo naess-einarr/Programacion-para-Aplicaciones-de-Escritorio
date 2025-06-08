@@ -4,12 +4,12 @@ import java.time.LocalDate;
 
 /**
  * Clase que representa un cajero del banco.
- * Hereda de Empleado y añade atributos específicos del rol de cajero.
+ * Hereda de Empleado y anade atributos específicos del rol de cajero.
  */
 public class Cajero extends Empleado {
     
     private String horarioTrabajo;
-    private int numeroVentanilla;
+    private Integer numeroVentanilla;
     
     public Cajero() {
         super();
@@ -18,11 +18,11 @@ public class Cajero extends Empleado {
     
     public Cajero(String idEmpleado, String nombreCompleto, String direccionCompleta,
                   LocalDate fechaNacimiento, String generoEmpleado, double salarioMensual,
-                  String nombreUsuario, String contraseñaAcceso, String horarioTrabajo, 
-                  int numeroVentanilla) {
+                  String nombreUsuario, String contrasenaAcceso, String horarioTrabajo, 
+                  Integer numeroVentanilla) {
         
         super(idEmpleado, nombreCompleto, direccionCompleta, fechaNacimiento, 
-              generoEmpleado, salarioMensual, nombreUsuario, contraseñaAcceso, "CAJERO");
+              generoEmpleado, salarioMensual, nombreUsuario, contrasenaAcceso, "CAJERO");
         
         this.horarioTrabajo = horarioTrabajo;
         this.numeroVentanilla = numeroVentanilla;
@@ -36,11 +36,11 @@ public class Cajero extends Empleado {
         this.horarioTrabajo = horarioTrabajo;
     }
     
-    public int getNumeroVentanilla() {
+    public Integer getNumeroVentanilla() {
         return numeroVentanilla;
     }
     
-    public void setNumeroVentanilla(int numeroVentanilla) {
+    public void setNumeroVentanilla(Integer numeroVentanilla) {
         this.numeroVentanilla = numeroVentanilla;
     }
 }

@@ -1,0 +1,162 @@
+[
+  {
+    "idSucursal": "SUC001",
+    "nombreSucursal": "Sucursal Centro Xalapa",
+    "direccionSucursal": "Av. Revolución #234, Col. Centro, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1001",
+    "correoSucursal": "centro.xalapa@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García",
+      "nivelAcceso": "ALTO",
+      "aniosExperiencia": 12
+    },
+    "contacto": "María Elena Rodríguez García",
+    "cuentasAsociadas": ["CTA001", "CTA002", "CTA003", "CTA004", "CTA005"],
+    "empleadosAsociados": ["EMP001", "EMP002", "EMP003", "EMP009", "EMP011", "EMP014", "EMP017", "EMP018"]
+  },
+  {
+    "idSucursal": "SUC002",
+    "nombreSucursal": "Sucursal Obrero Campesina",
+    "direccionSucursal": "Calle Hidalgo #456, Col. Obrero Campesina, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1002",
+    "correoSucursal": "obrero.campesina@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP006",
+      "nombreCompleto": "Fernando Gabriel Castillo Ruiz",
+      "nivelAcceso": "MEDIO",
+      "aniosExperiencia": 15
+    },
+    "contacto": "Fernando Gabriel Castillo Ruiz",
+    "cuentasAsociadas": ["CTA006", "CTA007", "CTA008", "CTA009", "CTA010"],
+    "empleadosAsociados": ["EMP004", "EMP005", "EMP006", "EMP012", "EMP013", "EMP019"]
+  },
+  {
+    "idSucursal": "SUC003",
+    "nombreSucursal": "Sucursal Progreso Macuiltépetl",
+    "direccionSucursal": "Calle Murillo Vidal #445, Col. Progreso Macuiltépetl, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1003",
+    "correoSucursal": "progreso.macuiltepetl@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP010",
+      "nombreCompleto": "Alejandro David Ortega Peña",
+      "nivelAcceso": "ALTO",
+      "aniosExperiencia": 18
+    },
+    "contacto": "Alejandro David Ortega Peña",
+    "cuentasAsociadas": ["CTA011", "CTA012", "CTA013", "CTA014", "CTA015"],
+    "empleadosAsociados": ["EMP007", "EMP008", "EMP010", "EMP015", "EMP016"]
+  },
+  {
+    "idSucursal": "SUC004",
+    "nombreSucursal": "Sucursal Universidad",
+    "direccionSucursal": "Av. Universidad #567, Col. Universitaria, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1004",
+    "correoSucursal": "universidad@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP020",
+      "nombreCompleto": "Ana Cristina Morales Vega",
+      "nivelAcceso": "ALTO",
+      "aniosExperiencia": 16
+    },
+    "contacto": "Ana Cristina Morales Vega",
+    "cuentasAsociadas": ["CTA016", "CTA017", "CTA018", "CTA019", "CTA020"],
+    "empleadosAsociados": ["EMP020", "EMP021", "EMP022", "EMP023"]
+  },
+  {
+    "idSucursal": "SUC005",
+    "nombreSucursal": "Sucursal Jardines de Xalapa",
+    "direccionSucursal": "Av. Araucarias #234, Col. Jardines de Xalapa, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1005",
+    "correoSucursal": "jardines.xalapa@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP024",
+      "nombreCompleto": "Roberto Carlos Mendoza Torres",
+      "nivelAcceso": "MEDIO",
+      "aniosExperiencia": 13
+    },
+    "contacto": "Roberto Carlos Mendoza Torres",
+    "cuentasAsociadas": ["CTA021", "CTA022", "CTA023", "CTA024", "CTA025"],
+    "empleadosAsociados": ["EMP024", "EMP025", "EMP026", "EMP027"]
+  },
+  {
+    "idSucursal": "SUC006",
+    "nombreSucursal": "Sucursal Lomas del Estadio",
+    "direccionSucursal": "Av. Lázaro Cárdenas #369, Col. Lomas del Estadio, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1006",
+    "correoSucursal": "lomas.estadio@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP028",
+      "nombreCompleto": "Patricia Isabel Ramírez Cruz",
+      "nivelAcceso": "ALTO",
+      "aniosExperiencia": 19
+    },
+    "contacto": "Patricia Isabel Ramírez Cruz",
+    "cuentasAsociadas": ["CTA026", "CTA027", "CTA028", "CTA029", "CTA030"],
+    "empleadosAsociados": ["EMP028", "EMP029", "EMP030", "EMP031"]
+  },
+  {
+    "idSucursal": "SUC007",
+    "nombreSucursal": "Sucursal Emiliano Zapata",
+    "direccionSucursal": "Av. 20 de Noviembre #123, Col. Emiliano Zapata, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1007",
+    "correoSucursal": "emiliano.zapata@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP032",
+      "nombreCompleto": "Luis Fernando Díaz Herrera",
+      "nivelAcceso": "MEDIO",
+      "aniosExperiencia": 11
+    },
+    "contacto": "Luis Fernando Díaz Herrera",
+    "cuentasAsociadas": ["CTA031", "CTA032", "CTA033", "CTA034", "CTA035"],
+    "empleadosAsociados": ["EMP032", "EMP033", "EMP034", "EMP035"]
+  },
+  {
+    "idSucursal": "SUC008",
+    "nombreSucursal": "Sucursal Casa Blanca",
+    "direccionSucursal": "Av. Circunvalación #654, Col. Casa Blanca, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1008",
+    "correoSucursal": "casa.blanca@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP036",
+      "nombreCompleto": "Carmen Alejandra Vázquez Silva",
+      "nivelAcceso": "ALTO",
+      "aniosExperiencia": 17
+    },
+    "contacto": "Carmen Alejandra Vázquez Silva",
+    "cuentasAsociadas": ["CTA036", "CTA037", "CTA038", "CTA039", "CTA040"],
+    "empleadosAsociados": ["EMP036", "EMP037", "EMP038", "EMP039"]
+  },
+  {
+    "idSucursal": "SUC009",
+    "nombreSucursal": "Sucursal Revolución",
+    "direccionSucursal": "Calle Zaragoza #258, Col. Revolución, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1009",
+    "correoSucursal": "revolucion@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP040",
+      "nombreCompleto": "Eduardo Javier Campos Morales",
+      "nivelAcceso": "MEDIO",
+      "aniosExperiencia": 14
+    },
+    "contacto": "Eduardo Javier Campos Morales",
+    "cuentasAsociadas": ["CTA041", "CTA042", "CTA043", "CTA044", "CTA045"],
+    "empleadosAsociados": ["EMP040", "EMP041", "EMP042", "EMP043"]
+  },
+  {
+    "idSucursal": "SUC010",
+    "nombreSucursal": "Sucursal Maestros Veracruzanos",
+    "direccionSucursal": "Av. Maestros Veracruzanos #678, Col. Maestros, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1010",
+    "correoSucursal": "maestros.veracruzanos@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP044",
+      "nombreCompleto": "Gabriela Monserrat Torres Aguilar",
+      "nivelAcceso": "ALTO",
+      "aniosExperiencia": 15
+    },
+    "contacto": "Gabriela Monserrat Torres Aguilar",
+    "cuentasAsociadas": ["CTA046", "CTA047", "CTA048", "CTA049", "CTA050"],
+    "empleadosAsociados": ["EMP044", "EMP045", "EMP046", "EMP047"]
+  }
+]

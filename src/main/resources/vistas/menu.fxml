@@ -15,15 +15,15 @@
       </Label>
       <Label fx:id="labelSubtitulo" layoutX="28.0" layoutY="52.0" text="Sistema de administración de transacciones y clientes">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="botonAdministrarSucursales" layoutX="109.0" layoutY="150.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarSucursales" prefHeight="25.0" prefWidth="177.0" text="Sucursales" />
-      <Button fx:id="botonAdministrarCuentasBancarias" layoutX="109.0" layoutY="198.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarCuentasBancarias" prefHeight="25.0" prefWidth="177.0" text="Cuentas Bancarias" />
-      <Button fx:id="botonAdministrarEmpleados" layoutX="109.0" layoutY="245.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarEmpleados" prefHeight="25.0" prefWidth="177.0" text="Empleados" />
-      <Button fx:id="botonAdministrarClientes" layoutX="109.0" layoutY="289.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarClientes" prefHeight="25.0" prefWidth="177.0" text="Clientes" />
-      <Button fx:id="botonAdministrarTransacciones" layoutX="109.0" layoutY="333.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarTransacciones" prefHeight="25.0" prefWidth="177.0" text="Transacciones" />
-      <Label fx:id="labelAdministrar" layoutX="168.0" layoutY="113.0" text="Administrar" />
+      <Button fx:id="botonAdministrarSucursales" layoutX="110.0" layoutY="161.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarSucursales" prefHeight="25.0" prefWidth="177.0" text="Sucursales" />
+      <Button fx:id="botonAdministrarCuentasBancarias" layoutX="110.0" layoutY="209.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarCuentasBancarias" prefHeight="25.0" prefWidth="177.0" text="Cuentas Bancarias" />
+      <Button fx:id="botonAdministrarEmpleados" layoutX="110.0" layoutY="256.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarEmpleados" prefHeight="25.0" prefWidth="177.0" text="Empleados" />
+      <Button fx:id="botonAdministrarClientes" layoutX="110.0" layoutY="300.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarClientes" prefHeight="25.0" prefWidth="177.0" text="Clientes" />
+      <Button fx:id="botonAdministrarTransacciones" layoutX="110.0" layoutY="344.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarTransacciones" prefHeight="25.0" prefWidth="177.0" text="Transacciones" />
+      <Label fx:id="labelAdministrar" layoutX="168.0" layoutY="136.0" text="Administrar" />
       <Label fx:id="labelCerrarSesion" layoutX="310.0" layoutY="377.0" onMouseClicked="#cerrarSesion" text="Cerrar sesión" textFill="#0095ff" underline="true">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -32,5 +32,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
+      <Label fx:id="labelBienvenido" layoutX="28.0" layoutY="82.0" text="Bienvenido:" />
+      <Label fx:id="labelPuesto" layoutX="28.0" layoutY="107.0" text="Puesto:" />
+      <Label fx:id="textNombre" layoutX="96.0" layoutY="82.0" text="nombre" />
+      <Label fx:id="textPuesto" layoutX="96.0" layoutY="107.0" text="puesto" />
    </children>
 </AnchorPane>

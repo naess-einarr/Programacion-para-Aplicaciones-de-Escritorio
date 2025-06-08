@@ -1,5 +1,7 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.util;
 
+import com.eurobank.proyectoaplicacionesdeescritorio.dao.adaptadores.EmpleadoTypeAdapter;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializer;
@@ -7,6 +9,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 import java.io.*;
 import java.lang.reflect.Type;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -28,8 +31,6 @@ public class JsonUtil<T> {
                         (JsonDeserializer<LocalDate>) (json, type, context)
                         -> LocalDate.parse(json.getAsString()))
                 .setDateFormat("yyyy-MM-dd HH:mm:ss")
-
-
                 .registerTypeAdapter(LocalDate.class,
                         (JsonDeserializer<LocalDate>) (json, type, context) -> {
                             if (json.isJsonObject()) {
@@ -43,6 +44,7 @@ public class JsonUtil<T> {
                                 return LocalDate.parse(json.getAsString());
                             }
                         })
+                .registerTypeAdapter(Empleado.class, new EmpleadoTypeAdapter())
                 .setPrettyPrinting()
                 .create();
     }
@@ -54,7 +56,7 @@ public class JsonUtil<T> {
         
         crearDirectorioSiNoExiste(rutaArchivo);
         
-        try (FileWriter writer = new FileWriter(rutaArchivo)) {
+        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(rutaArchivo), StandardCharsets.UTF_8)) {
             gson.toJson(objeto, writer);
         }
     }
@@ -66,7 +68,7 @@ public class JsonUtil<T> {
         
         crearDirectorioSiNoExiste(rutaArchivo);
         
-        try (FileWriter writer = new FileWriter(rutaArchivo)) {
+        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(rutaArchivo), StandardCharsets.UTF_8)) {
             gson.toJson(lista, writer);
         }
     }
@@ -77,7 +79,7 @@ public class JsonUtil<T> {
             throw new FileNotFoundException("El archivo no existe: " + rutaArchivo);
         }
         
-        try (FileReader reader = new FileReader(rutaArchivo)) {
+        try (InputStreamReader reader = new InputStreamReader(new FileInputStream(rutaArchivo), StandardCharsets.UTF_8)) {
             return gson.fromJson(reader, claseObjeto);
         }
     }
@@ -89,7 +91,7 @@ public class JsonUtil<T> {
             throw new FileNotFoundException("El archivo no existe: " + rutaArchivo);
         }
         
-        try (FileReader reader = new FileReader(rutaArchivo)) {
+        try (InputStreamReader reader = new InputStreamReader(new FileInputStream(rutaArchivo), StandardCharsets.UTF_8)) {
             Type tipoLista = TypeToken.getParameterized(List.class, claseObjeto).getType();
             return gson.fromJson(reader, tipoLista);
         }
@@ -103,7 +105,6 @@ public class JsonUtil<T> {
             Files.createDirectories(directorio);
         }
     }
-    
     
     public boolean archivoExiste(String rutaArchivo) {
         return new File(rutaArchivo).exists();

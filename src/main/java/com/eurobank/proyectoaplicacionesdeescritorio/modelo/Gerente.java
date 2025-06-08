@@ -4,12 +4,12 @@ import java.time.LocalDate;
 
 /**
  * Clase que representa un gerente del banco.
- * Hereda de Empleado y añade atributos específicos del rol de gerente.
+ * Hereda de Empleado y anade atributos específicos del rol de gerente.
  */
 public class Gerente extends Empleado {
     
     private String nivelAcceso;
-    private int aniosExperiencia;
+    private Integer aniosExperiencia;
     
     public Gerente() {
         super();
@@ -18,14 +18,14 @@ public class Gerente extends Empleado {
     
     public Gerente(String idEmpleado, String nombreCompleto, String direccionCompleta,
                    LocalDate fechaNacimiento, String generoEmpleado, double salarioMensual,
-                   String nombreUsuario, String contraseñaAcceso, String nivelAcceso,
-                   int añosExperiencia) {
+                   String nombreUsuario, String contrasenaAcceso, String nivelAcceso,
+                   Integer aniosExperiencia) {
         
         super(idEmpleado, nombreCompleto, direccionCompleta, fechaNacimiento,
-              generoEmpleado, salarioMensual, nombreUsuario, contraseñaAcceso, "GERENTE");
+              generoEmpleado, salarioMensual, nombreUsuario, contrasenaAcceso, "GERENTE");
         
         this.nivelAcceso = nivelAcceso;
-        this.aniosExperiencia = añosExperiencia;
+        this.aniosExperiencia = aniosExperiencia;
     }
 
     public String getNivelAcceso() {
@@ -36,13 +36,19 @@ public class Gerente extends Empleado {
         this.nivelAcceso = nivelAcceso;
     }
 
-    public int getAniosExperiencia() {
+    public Integer getAniosExperiencia() {
         return aniosExperiencia;
     }
 
-    public void setAniosExperiencia(int aniosExperiencia) {
+    public void setAniosExperiencia(Integer aniosExperiencia) {
         this.aniosExperiencia = aniosExperiencia;
     }
+
+    @Override
+    public String toString() {
+        return getNombreUsuario();
+    }
+    
     
     
 }

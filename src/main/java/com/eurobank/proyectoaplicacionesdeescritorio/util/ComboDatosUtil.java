@@ -5,30 +5,43 @@ import javafx.collections.ObservableList;
 
 public class ComboDatosUtil {
 
+    public static final String TIPO_GERENTE = "GERENTE";
+    public static final String TIPO_EJECUTIVO = "EJECUTIVO";
+    public static final String TIPO_CAJERO = "CAJERO";
+
+    public static final String GENERO_MASCULINO = "MASCULINO";
+    public static final String GENERO_FEMENINO = "FEMENINO";
+
+    public static final String NIVEL_SUCURSAL = "SUCURSAL";
+    public static final String NIVEL_REGIONAL = "REGIONAL";
+    public static final String NIVEL_NACIONAL = "NACIONAL";
+
     private ComboDatosUtil() {
-        throw new IllegalStateException("Utility class");
+        throw new IllegalStateException("Clase de utileria.");
     }
 
+// Métodos usando las constantes
     public static final ObservableList<String> listaTipoEmpleado() {
         return FXCollections.observableArrayList(
-                "GERENTE",
-                "EJECUTIVO",
-                "CAJERO"
+                TIPO_GERENTE,
+                TIPO_EJECUTIVO,
+                TIPO_CAJERO
         );
     }
 
     public static final ObservableList<String> listaGenero() {
         return FXCollections.observableArrayList(
-                "MASCULINO",
-                "FEMENINO"
+                GENERO_MASCULINO,
+                GENERO_FEMENINO
         );
     }
 
     public static final ObservableList<String> listaNivelAcceso() {
         return FXCollections.observableArrayList(
-                "SUCURSAL",
-                "REGIONAL",
-                "NACIONAL"
+                NIVEL_SUCURSAL,
+                NIVEL_REGIONAL,
+                NIVEL_NACIONAL
         );
     }
+
 }

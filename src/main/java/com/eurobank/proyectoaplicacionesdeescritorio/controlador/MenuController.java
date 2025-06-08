@@ -1,26 +1,29 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 
-/**
- * FXML Controller class
- *
- * @author User
- */
 public class MenuController implements Initializable {
+    
+    @FXML
+    private Label textNombre;
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private Label textPuesto;
+
+    
+    private Empleado empleado;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }
     
     @FXML
@@ -52,6 +55,19 @@ public class MenuController implements Initializable {
     void cerrarSesion(MouseEvent event) {
         ManejadorDeVistas.getInstancia().limpiarCache();
         ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.LOGIN);
+    }
+    
+    public void cargarDatosMenuEmpleado(){
+        textNombre.setText(empleado.getNombreCompleto());
+        textPuesto.setText(empleado.getTipoEmpleado());
+    }
+
+    public Empleado getEmpleado() {
+        return empleado;
+    }
+
+    public void setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
     }
     
 }

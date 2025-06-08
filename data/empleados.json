@@ -1,35 +1,326 @@
 [
   {
-    "idEmpleado": "G001",
-    "nombreCompleto": "Carlos Mendoza",
-    "direccionCompleta": "Av. Central 456, Oficina 302, Ciudad Empresarial",
+    "nivelAcceso": "ALTO",
+    "aniosExperiencia": 12,
+    "idEmpleado": "EMP001",
+    "nombreCompleto": "María Elena Rodríguez García",
+    "direccionCompleta": "Av. Revolución #234, Col. Centro, Xalapa, Veracruz",
     "fechaNacimiento": {
-      "year": 1980,
+      "year": 1985,
       "month": 3,
       "day": 15
     },
-    "generoEmpleado": "Masculino",
-    "salarioMensual": 7500.0,
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 25000.0,
     "nombreUsuario": "admin",
     "contrasenaAcceso": "admin",
-    "tipoEmpleado": "Gerente"
+    "tipoEmpleado": "GERENTE",
+    "idSucursal": "SUC001"
   },
   {
-    "horarioTrabajo": "horas",
-    "numeroVentanilla": 2,
-    "idEmpleado": "10",
-    "nombreCompleto": "asd",
-    "direccionCompleta": "asd",
+    "especializacionEjecutivo": "CREDITOS_PERSONALES",
+    "numeroClientesAsignados": 45,
+    "idEmpleado": "EMP002",
+    "nombreCompleto": "Carlos Alberto Mendoza López",
+    "direccionCompleta": "Calle Hidalgo #456, Col. Obrero Campesina, Xalapa, Veracruz",
     "fechaNacimiento": {
-      "year": 2025,
+      "year": 1990,
+      "month": 7,
+      "day": 22
+    },
+    "generoEmpleado": "MASCULINO",
+    "salarioMensual": 18000.0,
+    "nombreUsuario": "cmendoza002",
+    "contrasenaAcceso": "Secure123",
+    "tipoEmpleado": "EJECUTIVO",
+    "idSucursal": "SUC001"
+  },
+  {
+    "horarioTrabajo": "08:00-16:00",
+    "numeroVentanilla": 1,
+    "idEmpleado": "EMP003",
+    "nombreCompleto": "Ana Sofía Herrera Martínez",
+    "direccionCompleta": "Av. Lázaro Cárdenas #789, Col. Rafael Lucio, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1992,
+      "month": 11,
+      "day": 8
+    },
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 15000.0,
+    "nombreUsuario": "aherrera003",
+    "contrasenaAcceso": "Banking456",
+    "tipoEmpleado": "CAJERO",
+    "idSucursal": "SUC001"
+  },
+  {
+    "horarioTrabajo": "09:00-17:00",
+    "numeroVentanilla": 3,
+    "idEmpleado": "EMP004",
+    "nombreCompleto": "Roberto Jesús Vázquez Torres",
+    "direccionCompleta": "Calle Enríquez #321, Col. Zona Centro, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1988,
+      "month": 4,
+      "day": 12
+    },
+    "generoEmpleado": "MASCULINO",
+    "salarioMensual": 15500.0,
+    "nombreUsuario": "rvazquez004",
+    "contrasenaAcceso": "Vault789",
+    "tipoEmpleado": "CAJERO",
+    "idSucursal": "SUC002"
+  },
+  {
+    "especializacionEjecutivo": "HIPOTECARIOS",
+    "numeroClientesAsignados": 32,
+    "idEmpleado": "EMP005",
+    "nombreCompleto": "Diana Patricia Morales Jiménez",
+    "direccionCompleta": "Av. Universidad #567, Col. Universitaria, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1987,
+      "month": 9,
+      "day": 30
+    },
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 19500.0,
+    "nombreUsuario": "dmorales005",
+    "contrasenaAcceso": "Finance2024",
+    "tipoEmpleado": "EJECUTIVO",
+    "idSucursal": "SUC002"
+  },
+  {
+    "nivelAcceso": "MEDIO",
+    "aniosExperiencia": 15,
+    "idEmpleado": "EMP006",
+    "nombreCompleto": "Fernando Gabriel Castillo Ruiz",
+    "direccionCompleta": "Calle Allende #890, Col. Ferrer Guardia, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1983,
+      "month": 12,
+      "day": 3
+    },
+    "generoEmpleado": "MASCULINO",
+    "salarioMensual": 28000.0,
+    "nombreUsuario": "fcastillo006",
+    "contrasenaAcceso": "Manager2024",
+    "tipoEmpleado": "GERENTE",
+    "idSucursal": "SUC002"
+  },
+  {
+    "horarioTrabajo": "10:00-18:00",
+    "numeroVentanilla": 2,
+    "idEmpleado": "EMP007",
+    "nombreCompleto": "Laura Beatriz Sánchez Flores",
+    "direccionCompleta": "Av. 20 de Noviembre #123, Col. Emiliano Zapata, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1991,
       "month": 6,
+      "day": 18
+    },
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 14800.0,
+    "nombreUsuario": "lsanchez007",
+    "contrasenaAcceso": "Cashier123",
+    "tipoEmpleado": "CAJERO",
+    "idSucursal": "SUC003"
+  },
+  {
+    "especializacionEjecutivo": "EMPRESARIAL",
+    "numeroClientesAsignados": 28,
+    "idEmpleado": "EMP008",
+    "nombreCompleto": "Miguel Ángel Ramírez Delgado",
+    "direccionCompleta": "Calle Murillo Vidal #445, Col. Progreso Macuiltépetl, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1986,
+      "month": 1,
+      "day": 25
+    },
+    "generoEmpleado": "MASCULINO",
+    "salarioMensual": 20500.0,
+    "nombreUsuario": "mramirez008",
+    "contrasenaAcceso": "Executive456",
+    "tipoEmpleado": "EJECUTIVO",
+    "idSucursal": "SUC003"
+  },
+  {
+    "horarioTrabajo": "07:00-15:00",
+    "numeroVentanilla": 4,
+    "idEmpleado": "EMP009",
+    "nombreCompleto": "Gabriela Monserrat Cruz Moreno",
+    "direccionCompleta": "Av. Maestros Veracruzanos #678, Col. Maestros, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1989,
+      "month": 8,
+      "day": 14
+    },
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 16200.0,
+    "nombreUsuario": "gcruz009",
+    "contrasenaAcceso": "Teller789",
+    "tipoEmpleado": "CAJERO",
+    "idSucursal": "SUC001"
+  },
+  {
+    "nivelAcceso": "ALTO",
+    "aniosExperiencia": 18,
+    "idEmpleado": "EMP010",
+    "nombreCompleto": "Alejandro David Ortega Peña",
+    "direccionCompleta": "Calle Sebastián Camacho #901, Col. Badillo, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1984,
+      "month": 5,
+      "day": 7
+    },
+    "generoEmpleado": "MASCULINO",
+    "salarioMensual": 26500.0,
+    "nombreUsuario": "aortega010",
+    "contrasenaAcceso": "Leader2024",
+    "tipoEmpleado": "GERENTE",
+    "idSucursal": "SUC003"
+  },
+  {
+    "especializacionEjecutivo": "INVERSIONES",
+    "numeroClientesAsignados": 38,
+    "idEmpleado": "EMP011",
+    "nombreCompleto": "Valeria Isabella Guerrero Silva",
+    "direccionCompleta": "Av. Araucarias #234, Col. Jardines de Xalapa, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1993,
+      "month": 2,
+      "day": 28
+    },
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 17800.0,
+    "nombreUsuario": "vguerrero011",
+    "contrasenaAcceso": "Advisor123",
+    "tipoEmpleado": "EJECUTIVO",
+    "idSucursal": "SUC001"
+  },
+  {
+    "horarioTrabajo": "11:00-19:00",
+    "numeroVentanilla": 5,
+    "idEmpleado": "EMP012",
+    "nombreCompleto": "Rodrigo Emilio Torres Aguilar",
+    "direccionCompleta": "Calle Dr. Rafael Lucio #567, Col. Centro, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1990,
+      "month": 10,
+      "day": 11
+    },
+    "generoEmpleado": "MASCULINO",
+    "salarioMensual": 15800.0,
+    "nombreUsuario": "rtorres012",
+    "contrasenaAcceso": "Cash2024",
+    "tipoEmpleado": "CAJERO",
+    "idSucursal": "SUC002"
+  },
+  {
+    "especializacionEjecutivo": "PYME",
+    "numeroClientesAsignados": 41,
+    "idEmpleado": "EMP013",
+    "nombreCompleto": "Andrea Paola Medina Castro",
+    "direccionCompleta": "Av. Xalapa #789, Col. Reparto Antorcha, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1988,
+      "month": 7,
       "day": 5
     },
     "generoEmpleado": "FEMENINO",
-    "salarioMensual": 100.0,
-    "nombreUsuario": "empleadon",
-    "contrasenaAcceso": "empleadon",
+    "salarioMensual": 21200.0,
+    "nombreUsuario": "amedina013",
+    "contrasenaAcceso": "Business456",
+    "tipoEmpleado": "EJECUTIVO",
+    "idSucursal": "SUC002"
+  },
+  {
+    "nivelAcceso": "ALTO",
+    "aniosExperiencia": 20,
+    "idEmpleado": "EMP014",
+    "nombreCompleto": "Javier Antonio Ramos Vega",
+    "direccionCompleta": "Calle Juárez #321, Col. Tlalnehuayocan, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1985,
+      "month": 11,
+      "day": 20
+    },
+    "generoEmpleado": "MASCULINO",
+    "salarioMensual": 29500.0,
+    "nombreUsuario": "jramos014",
+    "contrasenaAcceso": "Chief789",
     "tipoEmpleado": "GERENTE",
-    "idSucursal": "suc01"
+    "idSucursal": "SUC001"
+  },
+  {
+    "horarioTrabajo": "08:30-16:30",
+    "numeroVentanilla": 6,
+    "idEmpleado": "EMP015",
+    "nombreCompleto": "Carmen Lucía Ibarra Núñez",
+    "direccionCompleta": "Av. Circunvalación #654, Col. Casa Blanca, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1992,
+      "month": 4,
+      "day": 16
+    },
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 14500.0,
+    "nombreUsuario": "cibarra015",
+    "contrasenaAcceso": "Window123",
+    "tipoEmpleado": "CAJERO",
+    "idSucursal": "SUC003"
+  },
+  {
+    "especializacionEjecutivo": "SEGUROS",
+    "numeroClientesAsignados": 35,
+    "idEmpleado": "EMP016",
+    "nombreCompleto": "Sebastián Mateo Díaz Herrera",
+    "direccionCompleta": "Calle Nicolás Bravo #987, Col. Adolfo Ruiz Cortines, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1987,
+      "month": 9,
+      "day": 12
+    },
+    "generoEmpleado": "MASCULINO",
+    "salarioMensual": 19800.0,
+    "nombreUsuario": "sdiaz016",
+    "contrasenaAcceso": "Consultant456",
+    "tipoEmpleado": "EJECUTIVO",
+    "idSucursal": "SUC003"
+  },
+  {
+    "horarioTrabajo": "12:00-20:00",
+    "numeroVentanilla": 7,
+    "idEmpleado": "EMP017",
+    "nombreCompleto": "Mónica Alejandra Vargas Quintero",
+    "direccionCompleta": "Av. Ávila Camacho #147, Col. Veracruz, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1991,
+      "month": 12,
+      "day": 9
+    },
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 16500.0,
+    "nombreUsuario": "mvargas017",
+    "contrasenaAcceso": "Service789",
+    "tipoEmpleado": "CAJERO",
+    "idSucursal": "SUC001"
+  },
+  {
+    "nivelAcceso": "MEDIO",
+    "aniosExperiencia": 14,
+    "idEmpleado": "EMP019",
+    "nombreCompleto": "Paola Fernanda Jiménez Sandoval",
+    "direccionCompleta": "Av. Lázaro Cárdenas #369, Col. Lomas del Estadio, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1989,
+      "month": 3,
+      "day": 27
+    },
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 27200.0,
+    "nombreUsuario": "pjimenez019",
+    "contrasenaAcceso": "Director123",
+    "tipoEmpleado": "GERENTE",
+    "idSucursal": "SUC002"
   }
 ]

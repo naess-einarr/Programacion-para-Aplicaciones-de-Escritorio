@@ -4,12 +4,12 @@ import java.time.LocalDate;
 
 /**
  * Clase que representa un ejecutivo de cuenta del banco.
- * Hereda de Empleado y añade atributos específicos del rol de ejecutivo.
+ * Hereda de Empleado y anade atributos específicos del rol de ejecutivo.
  */
 public class Ejecutivo extends Empleado {
     
-    private int numeroClientesAsignados;
     private String especializacionEjecutivo;
+    private Integer numeroClientesAsignados;
     
     public Ejecutivo() {
         super();
@@ -18,7 +18,7 @@ public class Ejecutivo extends Empleado {
     
     public Ejecutivo(String idEmpleado, String nombreCompleto, String direccionCompleta,
                      LocalDate fechaNacimiento, String generoEmpleado, double salarioMensual,
-                     String nombreUsuario, String contrasenaAcceso, int numeroClientesAsignados,
+                     String nombreUsuario, String contrasenaAcceso, Integer numeroClientesAsignados,
                      String especializacionEjecutivo) {
         
         super(idEmpleado, nombreCompleto, direccionCompleta, fechaNacimiento,
@@ -28,11 +28,11 @@ public class Ejecutivo extends Empleado {
         this.especializacionEjecutivo = especializacionEjecutivo;
     }
 
-    public int getNumeroClientesAsignados() {
+    public Integer getNumeroClientesAsignados() {
         return numeroClientesAsignados;
     }
 
-    public void setNumeroClientesAsignados(int numeroClientesAsignados) {
+    public void setNumeroClientesAsignados(Integer numeroClientesAsignados) {
         this.numeroClientesAsignados = numeroClientesAsignados;
     }
 

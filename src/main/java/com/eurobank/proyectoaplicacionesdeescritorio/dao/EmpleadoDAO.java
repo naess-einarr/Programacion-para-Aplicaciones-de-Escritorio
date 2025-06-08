@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class EmpleadoDAO implements GenericDAO<Empleado> {
 
     private static final String ARCHIVO_EMPLEADOS = "data/empleados.json";
-    private JsonUtil<Empleado> jsonUtil;
+    private final JsonUtil<Empleado> jsonUtil;
 
     public EmpleadoDAO() {
         this.jsonUtil = new JsonUtil<>();
@@ -23,8 +23,6 @@ public class EmpleadoDAO implements GenericDAO<Empleado> {
         if (empleado == null) {
             throw new IllegalArgumentException("El empleado no puede ser nulo");
         }
-
-        validarCamposObligatorios(empleado);
 
         List<Empleado> empleados = obtenerTodos();
 
@@ -70,8 +68,6 @@ public class EmpleadoDAO implements GenericDAO<Empleado> {
         if (empleadoActualizado == null) {
             throw new IllegalArgumentException("El empleado no puede ser nulo");
         }
-
-        validarCamposObligatorios(empleadoActualizado);
 
         List<Empleado> empleados = obtenerTodos();
         boolean encontrado = false;
@@ -184,21 +180,28 @@ public class EmpleadoDAO implements GenericDAO<Empleado> {
                 .collect(Collectors.toList());
     }
 
-    private void validarCamposObligatorios(Empleado empleado) throws Exception {
-        if (empleado.getIdEmpleado() == null || empleado.getIdEmpleado().trim().isEmpty()) {
-            throw new Exception("El ID del empleado es obligatorio");
+    public int obtenerSiguienteId() throws Exception {
+        List<Empleado> empleados = obtenerTodos();
+
+        if (empleados.isEmpty()) {
+            return 1;
         }
-        if (empleado.getNombreUsuario() == null || empleado.getNombreUsuario().trim().isEmpty()) {
-            throw new Exception("El nombre de usuario es obligatorio");
-        }
-        if (empleado.getContrasenaAcceso() == null || empleado.getContrasenaAcceso().trim().isEmpty()) {
-            throw new Exception("La contraseña es obligatoria");
-        }
-        if (empleado.getNombreCompleto()== null || empleado.getNombreCompleto().trim().isEmpty()) {
-            throw new Exception("El nombre es obligatorio");
-        }
-        if (empleado.getIdSucursal() == null || empleado.getIdSucursal().trim().isEmpty()) {
-            throw new Exception("Los apellidos son obligatorios");
-        }
+
+        int maxNumero = empleados.stream()
+                .mapToInt(empleado -> {
+                    String id = empleado.getIdEmpleado();
+                    if (id != null && id.startsWith("EMP")) {
+                        try {
+                            return Integer.parseInt(id.substring(3));
+                        } catch (NumberFormatException e) {
+                            return 0;
+                        }
+                    }
+                    return 0;
+                })
+                .max()
+                .orElse(0);
+
+        return maxNumero + 1;
     }
 }

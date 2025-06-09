@@ -3,7 +3,7 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.SucursalDAO;
-import com.eurobank.proyectoaplicacionesdeescritorio.modelo.CuentaBancaria;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cuenta;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Ejecutivo;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
@@ -132,7 +132,7 @@ public class SucursalRegistroController implements Initializable {
             sucursal.setCuentasAsociadas(sucursalEdicion.getCuentasAsociadas());
         }else{
             sucursal.setEmpleadosAsociados(new ArrayList<Empleado>());
-            sucursal.setCuentasAsociadas(new ArrayList<CuentaBancaria>());
+            sucursal.setCuentasAsociadas(new ArrayList<Cuenta>());
         }
         return sucursal;
     }

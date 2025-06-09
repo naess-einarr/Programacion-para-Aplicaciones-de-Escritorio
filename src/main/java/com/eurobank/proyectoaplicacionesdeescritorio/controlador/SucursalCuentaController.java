@@ -1,7 +1,7 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.CuentaDAO;
-import com.eurobank.proyectoaplicacionesdeescritorio.modelo.CuentaBancaria;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cuenta;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -24,10 +24,10 @@ public class SucursalCuentaController implements Initializable {
     private TableColumn<?, ?> columnaNombreAsociado;
     
     @FXML
-    private TableView<CuentaBancaria> tablaCuentasAsociadas;
+    private TableView<Cuenta> tablaCuentasAsociadas;
 
     @FXML
-    private TableView<CuentaBancaria> tablaCuentasDisponibles;
+    private TableView<Cuenta> tablaCuentasDisponibles;
     
     private CuentaDAO cuentaDAO;
 

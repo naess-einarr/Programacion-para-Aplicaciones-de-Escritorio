@@ -1,0 +1,46 @@
+[
+  {
+    "numeroCuenta": "4001-2024-0001",
+    "tipo": "AHORROS",
+    "saldoActual": 15030.5,
+    "limiteCredito": 0.0,
+    "cliente": {
+      "idCliente": "CLI001",
+      "nombreCompleto": "María Elena",
+      "apellidosCompletos": "García Rodríguez"
+    }
+  },
+  {
+    "numeroCuenta": "4001-2024-0002",
+    "tipo": "CORRIENTE",
+    "saldoActual": 8750.25,
+    "limiteCredito": 50000.0,
+    "cliente": {
+      "idCliente": "CLI002",
+      "nombreCompleto": "Carlos Alberto",
+      "apellidosCompletos": "Mendoza López"
+    }
+  },
+  {
+    "numeroCuenta": "4001-2024-0003",
+    "tipo": "CREDITO",
+    "saldoActual": -2500.0,
+    "limiteCredito": 100000.0,
+    "cliente": {
+      "idCliente": "CLI003",
+      "nombreCompleto": "Ana Patricia",
+      "apellidosCompletos": "Hernández Morales"
+    }
+  },
+  {
+    "numeroCuenta": "4001-2024-0004",
+    "tipo": "AHORROS",
+    "saldoActual": 45000.75,
+    "limiteCredito": 0.0,
+    "cliente": {
+      "idCliente": "CLI004",
+      "nombreCompleto": "José Miguel",
+      "apellidosCompletos": "Torres Vázquez"
+    }
+  }
+]

@@ -1,7 +1,9 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.util;
 
+import com.eurobank.proyectoaplicacionesdeescritorio.dao.adaptadores.CuentaTypeAdapter;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.adaptadores.EmpleadoTypeAdapter;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.adaptadores.SucursalTypeAdapter;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cuenta;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.google.gson.Gson;
@@ -48,6 +50,7 @@ public class JsonUtil<T> {
                         })
                 .registerTypeAdapter(Empleado.class, new EmpleadoTypeAdapter())
                 .registerTypeAdapter(Sucursal.class, new SucursalTypeAdapter())
+                .registerTypeAdapter(Cuenta.class, new CuentaTypeAdapter())
                 .setPrettyPrinting()
                 .create();
     }

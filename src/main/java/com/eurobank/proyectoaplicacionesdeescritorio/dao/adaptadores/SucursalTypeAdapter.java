@@ -38,7 +38,7 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
         // Cuentas asociadas - solo numeroCuenta
         if (sucursal.getCuentasAsociadas() != null) {
             JsonArray cuentasArray = new JsonArray();
-            for (CuentaBancaria cuenta : sucursal.getCuentasAsociadas()) {
+            for (Cuenta cuenta : sucursal.getCuentasAsociadas()) {
                 JsonObject cuentaObj = new JsonObject();
                     cuentaObj.addProperty("numeroCuenta", cuenta.getNumeroCuenta());
                     JsonObject clienteObj = new JsonObject();
@@ -94,10 +94,10 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
         
         // Cuentas asociadas - solo numeroCuenta
         JsonArray cuentasArray = jsonObject.getAsJsonArray("cuentasAsociadas");
-        List<CuentaBancaria> cuentas = new ArrayList<>();
+        List<Cuenta> cuentas = new ArrayList<>();
         for (JsonElement cuentaElement : cuentasArray) {
             JsonObject cuentaObj = cuentaElement.getAsJsonObject();
-                CuentaBancaria cuenta = new CuentaBancaria();
+                Cuenta cuenta = new Cuenta();
                 cuenta.setNumeroCuenta(cuentaObj.get("numeroCuenta").getAsString());
                 JsonObject clienteObj = cuentaObj.getAsJsonObject("cliente");
                 Cliente cliente = new Cliente();

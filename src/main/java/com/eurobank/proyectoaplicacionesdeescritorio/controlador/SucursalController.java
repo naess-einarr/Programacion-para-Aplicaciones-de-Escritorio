@@ -5,9 +5,11 @@ import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Ejecutivo;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ExportadorGenerico;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.Objects;
 import java.util.ResourceBundle;
 import javafx.beans.property.SimpleObjectProperty;
@@ -42,6 +44,7 @@ public class SucursalController implements Initializable {
     private TableColumn<Sucursal, String> columnaTelefono;
     @FXML
     private TableView<Sucursal> tablaSucursales;
+
     private SucursalDAO sucursalDAO;
     
     @Override
@@ -131,6 +134,14 @@ public class SucursalController implements Initializable {
     void accionCancelar(ActionEvent event) {
         ManejadorDeVistas.getInstancia().limpiarCache();
         ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.MENU);
+    }
+    
+    @FXML
+    public void exportar(ActionEvent event){
+        ExportadorGenerico.exportar(tablaSucursales.getItems(), 
+                ExportadorGenerico.TipoExportacion.CSV, 
+                ManejadorDeVistas.getInstancia().obtenerEscenarioPrincipal(), 
+                "sucursales-"+LocalDate.now()+".csv");
     }
     
     private void cargarDatosTabla() {

@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
+import java.util.Set;
+import java.util.stream.Collectors;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -125,19 +127,32 @@ public class SucursalCuentaController implements Initializable {
     public void administrarSucursal(Sucursal sucursalSeleccionada){
         this.sucursalSeleccionada = sucursalSeleccionada;
         textSucursal.setText(sucursalSeleccionada.toString());
-        cargarListaEmpleadosAsociados();
-        cargarListaEmpleadosDisponibles();
+        cargarListaCuentasAsociadas();
+        cargarListaCuentasDisponibles();
     }
     
-        private void cargarListaEmpleadosAsociados(){
+        private void cargarListaCuentasAsociadas(){
         ObservableList<Cuenta> cuentasAsociadas = FXCollections.observableArrayList(sucursalSeleccionada.getCuentasAsociadas());
         tablaCuentasAsociadas.setItems(cuentasAsociadas);
     }
     
-    private void cargarListaEmpleadosDisponibles(){
+    private void cargarListaCuentasDisponibles(){
         try {
-            ObservableList<Cuenta> cuentasDisponibles = FXCollections.observableArrayList(cuentaDAO.obtenerTodos());
-            tablaCuentasDisponibles.setItems(cuentasDisponibles);
+            List<Cuenta> universoTotal = cuentaDAO.obtenerTodos();
+            List<Sucursal> cuentasSucursales = sucursalDAO.obtenerTodos();
+            
+            Set<String> cuentasYaAsociadas = cuentasSucursales.stream()
+                .filter(sucursal -> sucursal.getCuentasAsociadas() != null)
+                .flatMap(sucursal -> sucursal.getCuentasAsociadas().stream())
+                .map(Cuenta::getNumeroCuenta)
+                .collect(Collectors.toSet());
+
+            List<Cuenta> cuentasDisponibles = universoTotal.stream()
+                .filter(cuenta -> !cuentasYaAsociadas.contains(cuenta.getNumeroCuenta()))
+                .collect(Collectors.toList());
+            
+            ObservableList<Cuenta> cuentasFinales = FXCollections.observableArrayList(cuentasDisponibles);
+            tablaCuentasDisponibles.setItems(cuentasFinales);
         } catch (Exception ex) {
             LOG.error(ex);
         }

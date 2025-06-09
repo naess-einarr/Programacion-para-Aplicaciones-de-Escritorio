@@ -13,90 +13,8 @@
       "idEmpleado": "EMP002",
       "nombreCompleto": "Carlos Alberto Mendoza López"
     },
-    "cuentasAsociadas": [
-      {
-        "numeroCuenta": "CTA002",
-        "cliente": {
-          "idCliente": "CLI-WSN99PIB",
-          "nombreCompleto": "Carlos",
-          "apellidosCompletos": "Mendoza"
-        }
-      }
-    ],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP001",
-        "nombreCompleto": "María Elena Rodríguez García"
-      },
-      {
-        "idEmpleado": "EMP001",
-        "nombreCompleto": "María Elena Rodríguez García"
-      },
-      {
-        "idEmpleado": "EMP002",
-        "nombreCompleto": "Carlos Alberto Mendoza López"
-      },
-      {
-        "idEmpleado": "EMP003",
-        "nombreCompleto": "Ana Sofía Herrera Martínez"
-      },
-      {
-        "idEmpleado": "EMP004",
-        "nombreCompleto": "Roberto Jesús Vázquez Torres"
-      },
-      {
-        "idEmpleado": "EMP005",
-        "nombreCompleto": "Diana Patricia Morales Jiménez"
-      },
-      {
-        "idEmpleado": "EMP006",
-        "nombreCompleto": "Fernando Gabriel Castillo Ruiz"
-      },
-      {
-        "idEmpleado": "EMP007",
-        "nombreCompleto": "Laura Beatriz Sánchez Flores"
-      },
-      {
-        "idEmpleado": "EMP008",
-        "nombreCompleto": "Miguel Ángel Ramírez Delgado"
-      },
-      {
-        "idEmpleado": "EMP009",
-        "nombreCompleto": "Gabriela Monserrat Cruz Moreno"
-      },
-      {
-        "idEmpleado": "EMP010",
-        "nombreCompleto": "Alejandro David Ortega Peña"
-      },
-      {
-        "idEmpleado": "EMP011",
-        "nombreCompleto": "Valeria Isabella Guerrero Silva"
-      },
-      {
-        "idEmpleado": "EMP012",
-        "nombreCompleto": "Rodrigo Emilio Torres Aguilar"
-      },
-      {
-        "idEmpleado": "EMP013",
-        "nombreCompleto": "Andrea Paola Medina Castro"
-      },
-      {
-        "idEmpleado": "EMP014",
-        "nombreCompleto": "Javier Antonio Ramos Vega"
-      },
-      {
-        "idEmpleado": "EMP015",
-        "nombreCompleto": "Carmen Lucía Ibarra Núñez"
-      },
-      {
-        "idEmpleado": "EMP016",
-        "nombreCompleto": "Sebastián Mateo Díaz Herrera"
-      },
-      {
-        "idEmpleado": "EMP17",
-        "nombreCompleto": "asd"
-      }
-    ]
+    "cuentasAsociadas": [],
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC002",
@@ -113,32 +31,7 @@
       "nombreCompleto": "Diana Patricia Morales Jiménez"
     },
     "cuentasAsociadas": [],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP004",
-        "nombreCompleto": "Roberto Jesús Vázquez Torres"
-      },
-      {
-        "idEmpleado": "EMP005",
-        "nombreCompleto": "Diana Patricia Morales Jiménez"
-      },
-      {
-        "idEmpleado": "EMP006",
-        "nombreCompleto": "Fernando Gabriel Castillo Ruiz"
-      },
-      {
-        "idEmpleado": "EMP012",
-        "nombreCompleto": "Rodrigo Emilio Torres Aguilar"
-      },
-      {
-        "idEmpleado": "EMP013",
-        "nombreCompleto": "Andrea Paola Medina Castro"
-      },
-      {
-        "idEmpleado": "EMP019",
-        "nombreCompleto": "Empleado No Encontrado"
-      }
-    ]
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC003",
@@ -155,28 +48,7 @@
       "nombreCompleto": "Miguel Ángel Ramírez Delgado"
     },
     "cuentasAsociadas": [],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP007",
-        "nombreCompleto": "Laura Beatriz Sánchez Flores"
-      },
-      {
-        "idEmpleado": "EMP008",
-        "nombreCompleto": "Miguel Ángel Ramírez Delgado"
-      },
-      {
-        "idEmpleado": "EMP010",
-        "nombreCompleto": "Alejandro David Ortega Peña"
-      },
-      {
-        "idEmpleado": "EMP015",
-        "nombreCompleto": "Carmen Lucía Ibarra Núñez"
-      },
-      {
-        "idEmpleado": "EMP016",
-        "nombreCompleto": "Sebastián Mateo Díaz Herrera"
-      }
-    ]
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC004",
@@ -193,24 +65,7 @@
       "nombreCompleto": "Valeria Isabella Guerrero Silva"
     },
     "cuentasAsociadas": [],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP020",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP021",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP022",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP023",
-        "nombreCompleto": "Empleado No Encontrado"
-      }
-    ]
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC005",
@@ -227,24 +82,7 @@
       "nombreCompleto": "Andrea Paola Medina Castro"
     },
     "cuentasAsociadas": [],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP024",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP025",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP026",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP027",
-        "nombreCompleto": "Empleado No Encontrado"
-      }
-    ]
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC006",
@@ -278,24 +116,7 @@
       "nombreCompleto": "Carlos Alberto Mendoza López"
     },
     "cuentasAsociadas": [],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP032",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP033",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP034",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP035",
-        "nombreCompleto": "Empleado No Encontrado"
-      }
-    ]
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC008",
@@ -329,24 +150,7 @@
       "nombreCompleto": "Miguel Ángel Ramírez Delgado"
     },
     "cuentasAsociadas": [],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP040",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP041",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP042",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP043",
-        "nombreCompleto": "Empleado No Encontrado"
-      }
-    ]
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC10",

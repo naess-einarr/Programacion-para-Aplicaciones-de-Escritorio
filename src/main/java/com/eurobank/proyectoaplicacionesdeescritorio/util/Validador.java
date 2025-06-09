@@ -146,10 +146,6 @@ public class Validador {
         if (genero == null || genero.isEmpty()) {
             throw new IllegalArgumentException("El género es obligatorio");
         }
-
-        if (!genero.equals("Masculino") && !genero.equals("Femenino")) {
-            throw new IllegalArgumentException("El género debe ser: Masculino o Femenino");
-        }
     }
 
     public static void validarSalarioMensual(Double salario) {
@@ -179,6 +175,7 @@ public class Validador {
     }
     
     private static void validarAniosExperiencia(Integer anios){
+        
         if (anios == null){
             throw new IllegalArgumentException("Los años de experiencia son obligatorios");
         }
@@ -191,6 +188,19 @@ public class Validador {
     private static void validarNivelAcceso(String nivelAcceso){
         if (nivelAcceso == null|| nivelAcceso.isEmpty() ){
             throw new IllegalArgumentException("El nivel de Acceso es obligatorio");
+        }
+        
+    }
+    
+    private static void validarHorario(String horario){
+        if (horario == null || horario.isEmpty()){
+            throw new IllegalArgumentException("El horario es obligatorio");
+        }
+    }
+    
+    private static void validarVentanilla (int ventanilla){
+        if (ventanilla < 1){
+            throw new IllegalArgumentException("No puede haber ventanillas negativas");
         }
         
     }
@@ -210,7 +220,8 @@ public class Validador {
         validarTipoEmpleado(empleado.getTipoEmpleado());
 
         if (empleado instanceof Cajero) {
-
+            validarHorario(((Cajero) empleado).getHorarioTrabajo());
+            validarVentanilla(((Cajero) empleado).getNumeroVentanilla());
         } else if (empleado instanceof Ejecutivo) {
             validarEspecializacion(((Ejecutivo) empleado).getEspecializacionEjecutivo());
         } else if (empleado instanceof Gerente) {

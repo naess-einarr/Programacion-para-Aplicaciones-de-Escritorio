@@ -11,10 +11,6 @@ import javafx.stage.Stage;
  */
 public class ProyectoAplicacionesDeEscritorio extends Application {
     
-    public static void main(String[] args) {
-        launch(args);
-    }
-
     @Override
     public void start(Stage stage) throws Exception {
 
@@ -23,4 +19,10 @@ public class ProyectoAplicacionesDeEscritorio extends Application {
         manejador.cambiarVista(ManejadorDeVistas.Vista.LOGIN);
 
     }
+    
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    
 }

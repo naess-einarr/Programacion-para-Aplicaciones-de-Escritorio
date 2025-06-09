@@ -101,7 +101,7 @@ public class ClienteController implements Initializable {
 
             ClienteRegistroController clienteRegistroController = ManejadorDeVistas.getInstancia().obtenerControlador(ManejadorDeVistas.Vista.CLIENTE_REGISTRO);
             Cliente cliente = tablaClientes.getSelectionModel().getSelectedItem();
-            clienteRegistroController.setEditarCliente(cliente);
+            clienteRegistroController.configurarModoEdicion(cliente);
             ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.CLIENTE_REGISTRO);
         }catch (IOException ioe){
             AlertaUtil.mostrarAlertaVentana();

@@ -156,7 +156,7 @@ public class EmpleadoRegistroController implements Initializable{
         empleado.setDireccionCompleta(textDireccion.getText().trim());
         empleado.setFechaNacimiento(dateFechaNacimiento.getValue());
         empleado.setGeneroEmpleado(comboGenero.getValue());
-        empleado.setSalarioMensual(Double.parseDouble(textSalario.getText().trim()));
+        empleado.setSalarioMensual(Double.valueOf(textSalario.getText().trim()));
         empleado.setTipoEmpleado(textTipoDeEmpleado.getText());
         empleado.setNombreUsuario(textID.getText().trim());
 

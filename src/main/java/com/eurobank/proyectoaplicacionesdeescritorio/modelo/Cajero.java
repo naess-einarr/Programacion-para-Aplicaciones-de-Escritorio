@@ -1,7 +1,5 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
-import java.time.LocalDate;
-
 public class Cajero extends Empleado {
     
     private String horarioTrabajo;

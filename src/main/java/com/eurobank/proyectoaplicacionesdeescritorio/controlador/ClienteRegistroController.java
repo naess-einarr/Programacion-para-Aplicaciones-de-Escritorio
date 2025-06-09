@@ -57,50 +57,58 @@ public class ClienteRegistroController implements Initializable {
     private Button botonCancelar;
     
     private ClienteDAO clienteDAO;
+    private Cliente clienteEdicion;
+    private boolean modoEdicion;
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        
         clienteDAO = new ClienteDAO();
+        modoEdicion = false;
         generarIdUnico();
     }
     
     private void generarIdUnico() {
-        String idUnico = "CLI-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
-        textIdCliente.setText(idUnico);
-        LOG.debug("ID único generado: {}", idUnico);
+        if (!modoEdicion) {
+            String idUnico = "CLI-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
+            textIdCliente.setText(idUnico);
+        }
     }
     
     @FXML
     public void accionRegistrar() {
-        
         try {
+            Cliente cliente = crearClienteDesdeFormulario();
+            Validador.validarCliente(cliente);
             
-            Cliente nuevoCliente = crearClienteDesdeFormulario();
-            Validador.validarCliente(nuevoCliente);
-            clienteDAO.guardar(nuevoCliente);
+            if (modoEdicion) {
+                clienteDAO.actualizar(cliente);
+                AlertaUtil.mostrarAlertaRegistroExitoso();
+            } else {
+                clienteDAO.guardar(cliente);
+                AlertaUtil.mostrarAlertaRegistroExitoso();
+            }
             
-            AlertaUtil.mostrarAlertaRegistroExitoso();
-            limpiarFormulario();
+            ManejadorDeVistas.getInstancia().limpiarCache();
+            ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.CLIENTE);
+            
         } catch (IllegalArgumentException e) {
-            
             LOG.warn(ConstantesUtil.ALERTA_DATOS_INVALIDOS, e);
             AlertaUtil.mostrarAlerta(AlertaUtil.ADVERTENCIA, e.getMessage(), Alert.AlertType.WARNING);
         } catch (Exception e) {
-            
+            LOG.error("Error al procesar cliente: ", e);
             AlertaUtil.mostrarAlerta(AlertaUtil.ERROR, e.getMessage(), Alert.AlertType.ERROR);
         }
     }
     
     @FXML
     public void accionCancelar() {
-        
-        ManejadorDeVistas.getInstancia().limpiarCache();
-        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.CLIENTE);
+        if (AlertaUtil.mostrarAlertaCancelarGuardado()) {
+            ManejadorDeVistas.getInstancia().limpiarCache();
+            ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.CLIENTE);
+        }
     }
     
     private Cliente crearClienteDesdeFormulario() {
-        
         Cliente cliente = new Cliente();
         
         cliente.setIdCliente(textIdCliente.getText().trim());
@@ -117,32 +125,26 @@ public class ClienteRegistroController implements Initializable {
         return cliente;
     }
     
-    public void setEditarCliente(Cliente clienteEditar){
+    public void configurarModoEdicion(Cliente clienteEditar) {
+        this.modoEdicion = true;
+        this.clienteEdicion = clienteEditar;
+        llenarCamposEdicion(clienteEditar);
         
-        this.textIdCliente.setText(clienteEditar.getIdCliente());
-        this.textNombreCliente.setText(clienteEditar.getNombreCompleto());
-        this.textApellidoCliente.setText(clienteEditar.getApellidosCompletos());
-        this.textNacionalidadCliente.setText(clienteEditar.getNacionalidadCliente());
-        this.dateFechaNacCliente.setValue(clienteEditar.getFechaNacimiento());
-        this.textRfcCliente.setText(clienteEditar.getRfcCliente());
-        this.textCurpCliente.setText(clienteEditar.getCurpCliente());
-        this.textDireccionCliente.setText(clienteEditar.getDireccionCompleta());
-        this.textTelefonoCliente.setText(clienteEditar.getTelefonoContacto());
-        this.textCorreoCliente.setText(clienteEditar.getCorreoElectronico());
+        botonRegistrar.setText("Actualizar");
         
     }
     
-    private void limpiarFormulario() {
-        textNombreCliente.clear();
-        textApellidoCliente.clear();
-        textNacionalidadCliente.clear();
-        dateFechaNacCliente.setValue(null);
-        textRfcCliente.clear();
-        textCurpCliente.clear();
-        textDireccionCliente.clear();
-        textTelefonoCliente.clear();
-        textCorreoCliente.clear();
-        
-        generarIdUnico();
+    private void llenarCamposEdicion(Cliente clienteEditar) {
+        textIdCliente.setText(clienteEditar.getIdCliente());
+        textNombreCliente.setText(clienteEditar.getNombreCompleto());
+        textApellidoCliente.setText(clienteEditar.getApellidosCompletos());
+        textNacionalidadCliente.setText(clienteEditar.getNacionalidadCliente());
+        dateFechaNacCliente.setValue(clienteEditar.getFechaNacimiento());
+        textRfcCliente.setText(clienteEditar.getRfcCliente());
+        textCurpCliente.setText(clienteEditar.getCurpCliente());
+        textDireccionCliente.setText(clienteEditar.getDireccionCompleta());
+        textTelefonoCliente.setText(clienteEditar.getTelefonoContacto());
+        textCorreoCliente.setText(clienteEditar.getCorreoElectronico());
     }
+    
 }

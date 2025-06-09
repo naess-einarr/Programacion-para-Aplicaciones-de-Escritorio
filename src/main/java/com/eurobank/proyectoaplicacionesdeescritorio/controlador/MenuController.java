@@ -1,6 +1,8 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
+import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeSesion;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -9,21 +11,22 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import static javax.management.Query.value;
 
 public class MenuController implements Initializable {
     
     @FXML
     private Label textNombre;
-
     @FXML
     private Label textPuesto;
-
-    
-    private Empleado empleado;
+    @FXML
+    private Label textSucursal;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        if(ManejadorDeSesion.haySesionActiva()){
+            cargarDatosMenuEmpleado();
+        }
     }
     
     @FXML
@@ -59,16 +62,11 @@ public class MenuController implements Initializable {
     }
     
     public void cargarDatosMenuEmpleado(){
-        textNombre.setText(empleado.getNombreCompleto());
+        Empleado empleado = ManejadorDeSesion.obtenerEmpleado();
+        Sucursal sucursal = ManejadorDeSesion.getSucursalActual();
+        textNombre.setText(empleado.toString());
         textPuesto.setText(empleado.getTipoEmpleado());
+        String sucursalActual= sucursal != null ? sucursal.toString() : "Sin sucursal asignada";
+        textSucursal.setText(sucursalActual);
     }
-
-    public Empleado getEmpleado() {
-        return empleado;
-    }
-
-    public void setEmpleado(Empleado empleado) {
-        this.empleado = empleado;
-    }
-    
 }

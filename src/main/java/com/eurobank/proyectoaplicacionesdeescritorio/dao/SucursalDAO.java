@@ -1,7 +1,6 @@
 
 package com.eurobank.proyectoaplicacionesdeescritorio.dao;
 
-import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.JsonUtil;
 import java.util.List;
@@ -141,4 +140,35 @@ public class SucursalDAO implements GenericDAO<Sucursal> {
 
         return maxNumero + 1;
     }
+
+    public Sucursal buscarSucursalPorIdEmpleado(String idEmpleado) throws Exception {
+    List<Sucursal> todasLasSucursales = obtenerTodos(); // tu método actual que trae todas las sucursales
+
+    for (Sucursal sucursal : todasLasSucursales) {
+        // Comparar con el gerente
+        if (sucursal.getGerente() != null && 
+            idEmpleado.equalsIgnoreCase(sucursal.getGerente().getIdEmpleado())) {
+            return sucursal;
+        }
+
+        // Comparar con el contacto
+        if (sucursal.getContacto() != null && 
+            idEmpleado.equalsIgnoreCase(sucursal.getContacto().getIdEmpleado())) {
+            return sucursal;
+        }
+
+        // Buscar en empleados asociados
+        if (sucursal.getEmpleadosAsociados() != null) {
+            boolean estaAsociado = sucursal.getEmpleadosAsociados().stream()
+                .anyMatch(e -> idEmpleado.equalsIgnoreCase(e.getIdEmpleado()));
+
+            if (estaAsociado) {
+                return sucursal;
+            }
+        }
+    }
+
+    return null; 
+}
+
 }

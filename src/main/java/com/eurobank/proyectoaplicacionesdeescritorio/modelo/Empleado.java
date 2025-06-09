@@ -101,7 +101,11 @@ public class Empleado {
     public void setTipoEmpleado(String tipoEmpleado) {
         this.tipoEmpleado = tipoEmpleado;
     }
-    
-    
 
-}
+    @Override
+    public String toString() {
+        return idEmpleado + " - " + nombreCompleto;
+    }
+    
+    
+ }

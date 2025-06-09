@@ -13,18 +13,13 @@ public class Ejecutivo extends Empleado {
     
     public Ejecutivo() {
         super();
-        this.tipoEmpleado = "EJECUTIVO";
     }
-    
-    public Ejecutivo(String idEmpleado, String nombreCompleto, String direccionCompleta,
-                     LocalDate fechaNacimiento, String generoEmpleado, double salarioMensual,
-                     String nombreUsuario, String contrasenaAcceso, Integer numeroClientesAsignados,
-                     String especializacionEjecutivo) {
-        
-        super(idEmpleado, nombreCompleto, direccionCompleta, fechaNacimiento,
-              generoEmpleado, salarioMensual, nombreUsuario, contrasenaAcceso, "EJECUTIVO");
-        
-        this.numeroClientesAsignados = numeroClientesAsignados;
+
+    public String getEspecializacionEjecutivo() {
+        return especializacionEjecutivo;
+    }
+
+    public void setEspecializacionEjecutivo(String especializacionEjecutivo) {
         this.especializacionEjecutivo = especializacionEjecutivo;
     }
 
@@ -36,13 +31,11 @@ public class Ejecutivo extends Empleado {
         this.numeroClientesAsignados = numeroClientesAsignados;
     }
 
-    public String getEspecializacionEjecutivo() {
-        return especializacionEjecutivo;
+    public String getTipoEmpleado() {
+        return tipoEmpleado;
     }
 
-    public void setEspecializacionEjecutivo(String especializacionEjecutivo) {
-        this.especializacionEjecutivo = especializacionEjecutivo;
+    public void setTipoEmpleado(String tipoEmpleado) {
+        this.tipoEmpleado = tipoEmpleado;
     }
-    
-    
 }

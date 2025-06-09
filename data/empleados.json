@@ -1,6 +1,6 @@
 [
   {
-    "nivelAcceso": "ALTO",
+    "nivelAcceso": "NACIONAL",
     "aniosExperiencia": 12,
     "idEmpleado": "EMP001",
     "nombreCompleto": "María Elena Rodríguez García",
@@ -15,10 +15,13 @@
     "nombreUsuario": "admin",
     "contrasenaAcceso": "admin",
     "tipoEmpleado": "GERENTE",
-    "idSucursal": "SUC001"
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    }
   },
   {
-    "especializacionEjecutivo": "CREDITOS_PERSONALES",
+    "especializacionEjecutivo": "PYMES",
     "numeroClientesAsignados": 45,
     "idEmpleado": "EMP002",
     "nombreCompleto": "Carlos Alberto Mendoza López",
@@ -30,13 +33,16 @@
     },
     "generoEmpleado": "MASCULINO",
     "salarioMensual": 18000.0,
-    "nombreUsuario": "cmendoza002",
-    "contrasenaAcceso": "Secure123",
+    "nombreUsuario": "EMP002",
+    "contrasenaAcceso": "CAR220790",
     "tipoEmpleado": "EJECUTIVO",
-    "idSucursal": "SUC001"
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    }
   },
   {
-    "horarioTrabajo": "08:00-16:00",
+    "horarioTrabajo": "MATUTINO 8:00 - 14:00",
     "numeroVentanilla": 1,
     "idEmpleado": "EMP003",
     "nombreCompleto": "Ana Sofía Herrera Martínez",
@@ -48,13 +54,16 @@
     },
     "generoEmpleado": "FEMENINO",
     "salarioMensual": 15000.0,
-    "nombreUsuario": "aherrera003",
-    "contrasenaAcceso": "Banking456",
+    "nombreUsuario": "EMP003",
+    "contrasenaAcceso": "ANA081192",
     "tipoEmpleado": "CAJERO",
-    "idSucursal": "SUC001"
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    }
   },
   {
-    "horarioTrabajo": "09:00-17:00",
+    "horarioTrabajo": "COMPLETO  8:00 - 17:00",
     "numeroVentanilla": 3,
     "idEmpleado": "EMP004",
     "nombreCompleto": "Roberto Jesús Vázquez Torres",
@@ -66,13 +75,16 @@
     },
     "generoEmpleado": "MASCULINO",
     "salarioMensual": 15500.0,
-    "nombreUsuario": "rvazquez004",
-    "contrasenaAcceso": "Vault789",
+    "nombreUsuario": "EMP004",
+    "contrasenaAcceso": "ROB120488",
     "tipoEmpleado": "CAJERO",
-    "idSucursal": "SUC002"
+    "sucursal": {
+      "idSucursal": "SUC002",
+      "nombreSucursal": "Sucursal Obrero Campesina"
+    }
   },
   {
-    "especializacionEjecutivo": "HIPOTECARIOS",
+    "especializacionEjecutivo": "CORPORATIVO",
     "numeroClientesAsignados": 32,
     "idEmpleado": "EMP005",
     "nombreCompleto": "Diana Patricia Morales Jiménez",
@@ -84,13 +96,16 @@
     },
     "generoEmpleado": "FEMENINO",
     "salarioMensual": 19500.0,
-    "nombreUsuario": "dmorales005",
-    "contrasenaAcceso": "Finance2024",
+    "nombreUsuario": "EMP005",
+    "contrasenaAcceso": "DIA300987",
     "tipoEmpleado": "EJECUTIVO",
-    "idSucursal": "SUC002"
+    "sucursal": {
+      "idSucursal": "SUC002",
+      "nombreSucursal": "Sucursal Obrero Campesina"
+    }
   },
   {
-    "nivelAcceso": "MEDIO",
+    "nivelAcceso": "REGIONAL",
     "aniosExperiencia": 15,
     "idEmpleado": "EMP006",
     "nombreCompleto": "Fernando Gabriel Castillo Ruiz",
@@ -102,13 +117,16 @@
     },
     "generoEmpleado": "MASCULINO",
     "salarioMensual": 28000.0,
-    "nombreUsuario": "fcastillo006",
-    "contrasenaAcceso": "Manager2024",
+    "nombreUsuario": "EMP006",
+    "contrasenaAcceso": "FER031283",
     "tipoEmpleado": "GERENTE",
-    "idSucursal": "SUC002"
+    "sucursal": {
+      "idSucursal": "SUC002",
+      "nombreSucursal": "Sucursal Obrero Campesina"
+    }
   },
   {
-    "horarioTrabajo": "10:00-18:00",
+    "horarioTrabajo": "VESPERTINO 14:00 - 20:00",
     "numeroVentanilla": 2,
     "idEmpleado": "EMP007",
     "nombreCompleto": "Laura Beatriz Sánchez Flores",
@@ -120,13 +138,16 @@
     },
     "generoEmpleado": "FEMENINO",
     "salarioMensual": 14800.0,
-    "nombreUsuario": "lsanchez007",
-    "contrasenaAcceso": "Cashier123",
+    "nombreUsuario": "EMP007",
+    "contrasenaAcceso": "LAU180691",
     "tipoEmpleado": "CAJERO",
-    "idSucursal": "SUC003"
+    "sucursal": {
+      "idSucursal": "SUC003",
+      "nombreSucursal": "Sucursal Progreso Macuiltépetl"
+    }
   },
   {
-    "especializacionEjecutivo": "EMPRESARIAL",
+    "especializacionEjecutivo": "CORPORATIVO",
     "numeroClientesAsignados": 28,
     "idEmpleado": "EMP008",
     "nombreCompleto": "Miguel Ángel Ramírez Delgado",
@@ -138,13 +159,16 @@
     },
     "generoEmpleado": "MASCULINO",
     "salarioMensual": 20500.0,
-    "nombreUsuario": "mramirez008",
-    "contrasenaAcceso": "Executive456",
+    "nombreUsuario": "EMP008",
+    "contrasenaAcceso": "MIG250186",
     "tipoEmpleado": "EJECUTIVO",
-    "idSucursal": "SUC003"
+    "sucursal": {
+      "idSucursal": "SUC003",
+      "nombreSucursal": "Sucursal Progreso Macuiltépetl"
+    }
   },
   {
-    "horarioTrabajo": "07:00-15:00",
+    "horarioTrabajo": "MATUTINO 8:00 - 14:00",
     "numeroVentanilla": 4,
     "idEmpleado": "EMP009",
     "nombreCompleto": "Gabriela Monserrat Cruz Moreno",
@@ -156,13 +180,16 @@
     },
     "generoEmpleado": "FEMENINO",
     "salarioMensual": 16200.0,
-    "nombreUsuario": "gcruz009",
-    "contrasenaAcceso": "Teller789",
+    "nombreUsuario": "EMP009",
+    "contrasenaAcceso": "GAB140889",
     "tipoEmpleado": "CAJERO",
-    "idSucursal": "SUC001"
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    }
   },
   {
-    "nivelAcceso": "ALTO",
+    "nivelAcceso": "NACIONAL",
     "aniosExperiencia": 18,
     "idEmpleado": "EMP010",
     "nombreCompleto": "Alejandro David Ortega Peña",
@@ -174,13 +201,16 @@
     },
     "generoEmpleado": "MASCULINO",
     "salarioMensual": 26500.0,
-    "nombreUsuario": "aortega010",
-    "contrasenaAcceso": "Leader2024",
+    "nombreUsuario": "EMP010",
+    "contrasenaAcceso": "ALE070584",
     "tipoEmpleado": "GERENTE",
-    "idSucursal": "SUC003"
+    "sucursal": {
+      "idSucursal": "SUC003",
+      "nombreSucursal": "Sucursal Progreso Macuiltépetl"
+    }
   },
   {
-    "especializacionEjecutivo": "INVERSIONES",
+    "especializacionEjecutivo": "PYMES",
     "numeroClientesAsignados": 38,
     "idEmpleado": "EMP011",
     "nombreCompleto": "Valeria Isabella Guerrero Silva",
@@ -192,13 +222,16 @@
     },
     "generoEmpleado": "FEMENINO",
     "salarioMensual": 17800.0,
-    "nombreUsuario": "vguerrero011",
-    "contrasenaAcceso": "Advisor123",
+    "nombreUsuario": "EMP011",
+    "contrasenaAcceso": "VAL280293",
     "tipoEmpleado": "EJECUTIVO",
-    "idSucursal": "SUC001"
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    }
   },
   {
-    "horarioTrabajo": "11:00-19:00",
+    "horarioTrabajo": "VESPERTINO 14:00 - 20:00",
     "numeroVentanilla": 5,
     "idEmpleado": "EMP012",
     "nombreCompleto": "Rodrigo Emilio Torres Aguilar",
@@ -210,13 +243,16 @@
     },
     "generoEmpleado": "MASCULINO",
     "salarioMensual": 15800.0,
-    "nombreUsuario": "rtorres012",
-    "contrasenaAcceso": "Cash2024",
+    "nombreUsuario": "EMP012",
+    "contrasenaAcceso": "ROD111090",
     "tipoEmpleado": "CAJERO",
-    "idSucursal": "SUC002"
+    "sucursal": {
+      "idSucursal": "SUC002",
+      "nombreSucursal": "Sucursal Obrero Campesina"
+    }
   },
   {
-    "especializacionEjecutivo": "PYME",
+    "especializacionEjecutivo": "PYMES",
     "numeroClientesAsignados": 41,
     "idEmpleado": "EMP013",
     "nombreCompleto": "Andrea Paola Medina Castro",
@@ -228,13 +264,16 @@
     },
     "generoEmpleado": "FEMENINO",
     "salarioMensual": 21200.0,
-    "nombreUsuario": "amedina013",
-    "contrasenaAcceso": "Business456",
+    "nombreUsuario": "EMP013",
+    "contrasenaAcceso": "AND050788",
     "tipoEmpleado": "EJECUTIVO",
-    "idSucursal": "SUC002"
+    "sucursal": {
+      "idSucursal": "SUC002",
+      "nombreSucursal": "Sucursal Obrero Campesina"
+    }
   },
   {
-    "nivelAcceso": "ALTO",
+    "nivelAcceso": "NACIONAL",
     "aniosExperiencia": 20,
     "idEmpleado": "EMP014",
     "nombreCompleto": "Javier Antonio Ramos Vega",
@@ -246,14 +285,17 @@
     },
     "generoEmpleado": "MASCULINO",
     "salarioMensual": 29500.0,
-    "nombreUsuario": "jramos014",
-    "contrasenaAcceso": "Chief789",
+    "nombreUsuario": "EMP014",
+    "contrasenaAcceso": "JAV201185",
     "tipoEmpleado": "GERENTE",
-    "idSucursal": "SUC001"
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    }
   },
   {
-    "horarioTrabajo": "08:30-16:30",
-    "numeroVentanilla": 6,
+    "horarioTrabajo": "SABADOS 9:00 - 13:00",
+    "numeroVentanilla": 1,
     "idEmpleado": "EMP015",
     "nombreCompleto": "Carmen Lucía Ibarra Núñez",
     "direccionCompleta": "Av. Circunvalación #654, Col. Casa Blanca, Xalapa, Veracruz",
@@ -264,13 +306,16 @@
     },
     "generoEmpleado": "FEMENINO",
     "salarioMensual": 14500.0,
-    "nombreUsuario": "cibarra015",
-    "contrasenaAcceso": "Window123",
+    "nombreUsuario": "EMP015",
+    "contrasenaAcceso": "CAR160492",
     "tipoEmpleado": "CAJERO",
-    "idSucursal": "SUC003"
+    "sucursal": {
+      "idSucursal": "SUC003",
+      "nombreSucursal": "Sucursal Progreso Macuiltépetl"
+    }
   },
   {
-    "especializacionEjecutivo": "SEGUROS",
+    "especializacionEjecutivo": "CORPORATIVO",
     "numeroClientesAsignados": 35,
     "idEmpleado": "EMP016",
     "nombreCompleto": "Sebastián Mateo Díaz Herrera",
@@ -282,31 +327,16 @@
     },
     "generoEmpleado": "MASCULINO",
     "salarioMensual": 19800.0,
-    "nombreUsuario": "sdiaz016",
-    "contrasenaAcceso": "Consultant456",
+    "nombreUsuario": "EMP016",
+    "contrasenaAcceso": "SEB120987",
     "tipoEmpleado": "EJECUTIVO",
-    "idSucursal": "SUC003"
+    "sucursal": {
+      "idSucursal": "SUC003",
+      "nombreSucursal": "Sucursal Progreso Macuiltépetl"
+    }
   },
   {
-    "horarioTrabajo": "12:00-20:00",
-    "numeroVentanilla": 7,
-    "idEmpleado": "EMP017",
-    "nombreCompleto": "Mónica Alejandra Vargas Quintero",
-    "direccionCompleta": "Av. Ávila Camacho #147, Col. Veracruz, Xalapa, Veracruz",
-    "fechaNacimiento": {
-      "year": 1991,
-      "month": 12,
-      "day": 9
-    },
-    "generoEmpleado": "FEMENINO",
-    "salarioMensual": 16500.0,
-    "nombreUsuario": "mvargas017",
-    "contrasenaAcceso": "Service789",
-    "tipoEmpleado": "CAJERO",
-    "idSucursal": "SUC001"
-  },
-  {
-    "nivelAcceso": "MEDIO",
+    "nivelAcceso": "SUCURSAL",
     "aniosExperiencia": 14,
     "idEmpleado": "EMP019",
     "nombreCompleto": "Paola Fernanda Jiménez Sandoval",
@@ -318,9 +348,12 @@
     },
     "generoEmpleado": "FEMENINO",
     "salarioMensual": 27200.0,
-    "nombreUsuario": "pjimenez019",
-    "contrasenaAcceso": "Director123",
+    "nombreUsuario": "EMP019",
+    "contrasenaAcceso": "PAO270389",
     "tipoEmpleado": "GERENTE",
-    "idSucursal": "SUC002"
+    "sucursal": {
+      "idSucursal": "SUC002",
+      "nombreSucursal": "Sucursal Obrero Campesina"
+    }
   }
 ]

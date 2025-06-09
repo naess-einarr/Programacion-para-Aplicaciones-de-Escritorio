@@ -20,19 +20,6 @@ public class Sucursal {
     
     public Sucursal() {
     }
-    
-    public Sucursal(String idSucursal, String nombreSucursal, String direccionSucursal,
-                    String telefonoSucursal, String correoSucursal, Gerente gerente,
-                    String personaContacto) {
-        
-        this.idSucursal = idSucursal;
-        this.nombreSucursal = nombreSucursal;
-        this.direccionSucursal = direccionSucursal;
-        this.telefonoSucursal = telefonoSucursal;
-        this.correoSucursal = correoSucursal;
-        this.gerente = gerente;
-        this.contacto = personaContacto;
-    }
 
     public String getIdSucursal() {
         return idSucursal;
@@ -78,8 +65,8 @@ public class Sucursal {
         return gerente;
     }
 
-    public void setGerente(Gerente idGerente) {
-        this.gerente = idGerente;
+    public void setGerente(Gerente gerente) {
+        this.gerente = gerente;
     }
 
     public String getContacto() {
@@ -90,28 +77,26 @@ public class Sucursal {
         this.contacto = contacto;
     }
 
-    public List<String> getListaCuentasAsociadas() {
+    public List<String> getCuentasAsociadas() {
         return cuentasAsociadas;
     }
 
-    public void setListaCuentasAsociadas(List<String> listaCuentasAsociadas) {
-        this.cuentasAsociadas = listaCuentasAsociadas;
+    public void setCuentasAsociadas(List<String> cuentasAsociadas) {
+        this.cuentasAsociadas = cuentasAsociadas;
     }
 
-    public List<String> getListaEmpleadosAsociados() {
+    public List<String> getEmpleadosAsociados() {
         return empleadosAsociados;
     }
 
-    public void setListaEmpleadosAsociados(List<String> listaEmpleadosAsociados) {
-        this.empleadosAsociados = listaEmpleadosAsociados;
+    public void setEmpleadosAsociados(List<String> empleadosAsociados) {
+        this.empleadosAsociados = empleadosAsociados;
     }
+    
+
 
     @Override
     public String toString() {
-        return "Sucursal{" +
-               "idSucursal='" + idSucursal + '\'' +
-               ", nombreSucursal='" + nombreSucursal + '\'' +
-               ", direccionSucursal='" + direccionSucursal + '\'' +
-               '}';
+        return idSucursal + " - " + nombreSucursal;
     }
 }

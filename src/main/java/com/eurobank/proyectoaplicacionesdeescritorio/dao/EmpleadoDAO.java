@@ -150,11 +150,10 @@ public class EmpleadoDAO implements GenericDAO<Empleado> {
         if (idSucursal == null || idSucursal.trim().isEmpty()) {
             throw new IllegalArgumentException("El ID de sucursal no puede ser nulo o vacío");
         }
-
         List<Empleado> todosLosEmpleados = obtenerTodos();
-
         return todosLosEmpleados.stream()
-                .filter(empleado -> empleado.getIdSucursal().equals(idSucursal))
+                .filter(empleado -> empleado.getSucursal() != null 
+                        && empleado.getSucursal().getIdSucursal().equals(idSucursal))
                 .collect(Collectors.toList());
     }
 

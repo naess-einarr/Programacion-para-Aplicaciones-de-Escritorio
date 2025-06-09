@@ -2,6 +2,7 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.dao;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Transaccion;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.JsonUtil;
 import java.util.List;
 import java.util.ArrayList;
@@ -49,7 +50,8 @@ public class SucursalDAO implements GenericDAO<Sucursal> {
     @Override
     public List<Sucursal> obtenerTodos() throws Exception {
         try {
-            return jsonUtil.cargarLista(ARCHIVO_SUCURSALES, Sucursal.class);
+            List<Sucursal> resultado = jsonUtil.cargarLista(ARCHIVO_SUCURSALES, Sucursal.class);
+            return resultado != null ? resultado : new ArrayList<>();
         } catch (Exception e) {
             // Si el archivo no existe, retornar lista vacía
             return new ArrayList<>();

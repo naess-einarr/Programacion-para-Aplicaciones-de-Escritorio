@@ -3,13 +3,16 @@ package com.eurobank.proyectoaplicacionesdeescritorio.util;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.adaptadores.CuentaTypeAdapter;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.adaptadores.EmpleadoTypeAdapter;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.adaptadores.SucursalTypeAdapter;
+import com.eurobank.proyectoaplicacionesdeescritorio.dao.adaptadores.TransaccionTypeAdapter;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cuenta;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Transaccion;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonSerializer;
 import com.google.gson.reflect.TypeToken;
 import java.io.*;
 import java.lang.reflect.Type;
@@ -18,6 +21,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -48,9 +53,16 @@ public class JsonUtil<T> {
                                 return LocalDate.parse(json.getAsString());
                             }
                         })
+                .registerTypeAdapter(LocalDateTime.class,
+                        (JsonSerializer<LocalDateTime>) (src, typeOfSrc, context)
+                        -> context.serialize(src.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)))
+                .registerTypeAdapter(LocalDateTime.class,
+                        (JsonDeserializer<LocalDateTime>) (json, type, context)
+                        -> LocalDateTime.parse(json.getAsString(), DateTimeFormatter.ISO_LOCAL_DATE_TIME))
                 .registerTypeAdapter(Empleado.class, new EmpleadoTypeAdapter())
                 .registerTypeAdapter(Sucursal.class, new SucursalTypeAdapter())
                 .registerTypeAdapter(Cuenta.class, new CuentaTypeAdapter())
+                .registerTypeAdapter(Transaccion.class, new TransaccionTypeAdapter())
                 .setPrettyPrinting()
                 .create();
     }

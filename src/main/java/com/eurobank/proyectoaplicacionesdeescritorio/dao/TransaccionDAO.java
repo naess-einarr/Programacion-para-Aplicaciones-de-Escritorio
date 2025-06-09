@@ -39,7 +39,8 @@ public class TransaccionDAO implements GenericDAO<Transaccion> {
     @Override
     public List<Transaccion> obtenerTodos() throws Exception {
         try {
-            return jsonUtil.cargarLista(ARCHIVO_TRANSACCIONES, Transaccion.class);
+            List<Transaccion> resultado = jsonUtil.cargarLista(ARCHIVO_TRANSACCIONES, Transaccion.class);
+            return resultado != null ? resultado : new ArrayList<>();
         } catch (Exception e) {
             return new ArrayList<>();
         }

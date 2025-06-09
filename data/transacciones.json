@@ -1,0 +1,240 @@
+[
+  {
+    "idTransaccion": "4E7A6D29-5D33-424F-A36B-2614BA9FA6FD",
+    "montoTransaccion": 100.0,
+    "tipoTransaccion": "TRANSFERENCIA",
+    "fechaHoraTransaccion": "2025-06-09T05:37:13.051",
+    "cuentaOrigen": {
+      "numeroCuenta": "CTA001",
+      "cliente": {
+        "idCliente": "CLI-3H4B2OWN",
+        "nombreCompleto": "María",
+        "apellidosCompletos": "García"
+      }
+    },
+    "cuentaDestino": {
+      "numeroCuenta": "CTA002",
+      "cliente": {
+        "idCliente": "CLI-WSN99PIB",
+        "nombreCompleto": "Carlos",
+        "apellidosCompletos": "Mendoza"
+      }
+    },
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    },
+    "empleadoResponsable": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    }
+  },
+  {
+    "idTransaccion": "C6FEBB70-8FFD-4817-B5B3-76D1980BAECB",
+    "montoTransaccion": 100.0,
+    "tipoTransaccion": "DEPOSITO",
+    "fechaHoraTransaccion": "2025-06-09T05:42:24.088",
+    "cuentaDestino": {
+      "numeroCuenta": "CTA003",
+      "cliente": {
+        "idCliente": "CLI-GWH06IAU",
+        "nombreCompleto": "Ana",
+        "apellidosCompletos": "Hernández"
+      }
+    },
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    },
+    "empleadoResponsable": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    }
+  },
+  {
+    "idTransaccion": "877B9702-FA20-4144-86C5-FA382B8A06C5",
+    "montoTransaccion": 400.0,
+    "tipoTransaccion": "RETIRO",
+    "fechaHoraTransaccion": "2025-06-09T05:42:51.581",
+    "cuentaOrigen": {
+      "numeroCuenta": "CTA001",
+      "cliente": {
+        "idCliente": "CLI-3H4B2OWN",
+        "nombreCompleto": "María",
+        "apellidosCompletos": "García"
+      }
+    },
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    },
+    "empleadoResponsable": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    }
+  },
+  {
+    "idTransaccion": "D581C2C9-A420-4278-A4E1-BA884C303D25",
+    "montoTransaccion": 1500.0,
+    "tipoTransaccion": "TRANSFERENCIA",
+    "fechaHoraTransaccion": "2025-06-09T05:43:46.8",
+    "cuentaOrigen": {
+      "numeroCuenta": "CTA001",
+      "cliente": {
+        "idCliente": "CLI-3H4B2OWN",
+        "nombreCompleto": "María",
+        "apellidosCompletos": "García"
+      }
+    },
+    "cuentaDestino": {
+      "numeroCuenta": "CTA002",
+      "cliente": {
+        "idCliente": "CLI-WSN99PIB",
+        "nombreCompleto": "Carlos",
+        "apellidosCompletos": "Mendoza"
+      }
+    },
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    },
+    "empleadoResponsable": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    }
+  },
+  {
+    "idTransaccion": "D581C2C9-A420-4278-A4E1-BA884C303D25",
+    "montoTransaccion": 1500.0,
+    "tipoTransaccion": "TRANSFERENCIA",
+    "fechaHoraTransaccion": "2025-06-09T05:43:53.586",
+    "cuentaOrigen": {
+      "numeroCuenta": "CTA001",
+      "cliente": {
+        "idCliente": "CLI-3H4B2OWN",
+        "nombreCompleto": "María",
+        "apellidosCompletos": "García"
+      }
+    },
+    "cuentaDestino": {
+      "numeroCuenta": "CTA002",
+      "cliente": {
+        "idCliente": "CLI-WSN99PIB",
+        "nombreCompleto": "Carlos",
+        "apellidosCompletos": "Mendoza"
+      }
+    },
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    },
+    "empleadoResponsable": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    }
+  },
+  {
+    "idTransaccion": "D581C2C9-A420-4278-A4E1-BA884C303D25",
+    "montoTransaccion": 4000.0,
+    "tipoTransaccion": "TRANSFERENCIA",
+    "fechaHoraTransaccion": "2025-06-09T05:44:40.422",
+    "cuentaOrigen": {
+      "numeroCuenta": "CTA002",
+      "cliente": {
+        "idCliente": "CLI-WSN99PIB",
+        "nombreCompleto": "Carlos",
+        "apellidosCompletos": "Mendoza"
+      }
+    },
+    "cuentaDestino": {
+      "numeroCuenta": "CTA001",
+      "cliente": {
+        "idCliente": "CLI-3H4B2OWN",
+        "nombreCompleto": "María",
+        "apellidosCompletos": "García"
+      }
+    },
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    },
+    "empleadoResponsable": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    }
+  },
+  {
+    "idTransaccion": "D9093152-B782-46E2-8BC0-F7C7C33437E5",
+    "montoTransaccion": 4001.0,
+    "tipoTransaccion": "DEPOSITO",
+    "fechaHoraTransaccion": "2025-06-09T05:53:45.063",
+    "cuentaDestino": {
+      "numeroCuenta": "CTA001",
+      "cliente": {
+        "idCliente": "CLI-3H4B2OWN",
+        "nombreCompleto": "María",
+        "apellidosCompletos": "García"
+      }
+    },
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    },
+    "empleadoResponsable": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    }
+  },
+  {
+    "idTransaccion": "78FF36E9-7B4F-4A4F-997F-3B6DBC117DE1",
+    "montoTransaccion": 4001.0,
+    "tipoTransaccion": "RETIRO",
+    "fechaHoraTransaccion": "2025-06-09T05:54:06.395",
+    "cuentaOrigen": {
+      "numeroCuenta": "CTA001",
+      "cliente": {
+        "idCliente": "CLI-3H4B2OWN",
+        "nombreCompleto": "María",
+        "apellidosCompletos": "García"
+      }
+    },
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    },
+    "empleadoResponsable": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    }
+  },
+  {
+    "idTransaccion": "06E33441-C236-40F5-8491-03A622D56768",
+    "montoTransaccion": 100.0,
+    "tipoTransaccion": "TRANSFERENCIA",
+    "fechaHoraTransaccion": "2025-06-09T05:54:28.189",
+    "cuentaOrigen": {
+      "numeroCuenta": "CTA001",
+      "cliente": {
+        "idCliente": "CLI-3H4B2OWN",
+        "nombreCompleto": "María",
+        "apellidosCompletos": "García"
+      }
+    },
+    "cuentaDestino": {
+      "numeroCuenta": "CTA002",
+      "cliente": {
+        "idCliente": "CLI-WSN99PIB",
+        "nombreCompleto": "Carlos",
+        "apellidosCompletos": "Mendoza"
+      }
+    },
+    "sucursal": {
+      "idSucursal": "SUC001",
+      "nombreSucursal": "Sucursal Centro Xalapa"
+    },
+    "empleadoResponsable": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    }
+  }
+]

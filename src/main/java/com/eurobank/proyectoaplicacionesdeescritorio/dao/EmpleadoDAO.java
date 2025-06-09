@@ -4,6 +4,7 @@ import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cajero;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Ejecutivo;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.JsonUtil;
 import java.util.List;
 import java.util.ArrayList;
@@ -57,7 +58,8 @@ public class EmpleadoDAO implements GenericDAO<Empleado> {
     @Override
     public List<Empleado> obtenerTodos() throws Exception {
         try {
-            return jsonUtil.cargarLista(ARCHIVO_EMPLEADOS, Empleado.class);
+            List<Empleado> resultado = jsonUtil.cargarLista(ARCHIVO_EMPLEADOS, Empleado.class);
+            return resultado != null ? resultado : new ArrayList<>();
         } catch (Exception e) {
             return new ArrayList<>();
         }

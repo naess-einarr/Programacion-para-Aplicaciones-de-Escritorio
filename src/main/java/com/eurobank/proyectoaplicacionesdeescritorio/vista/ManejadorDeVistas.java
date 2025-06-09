@@ -21,7 +21,7 @@ public class ManejadorDeVistas {
         TRANSACCION("/vistas/transaccion.fxml", true),
         CLIENTE_REGISTRO("/vistas/clienteregistro.fxml", false),
         EMPLEADO_REGISTRO("/vistas/empleadoregistro.fxml", false),
-        SUCURSAL_SELECCION("/vistas/sucursalseleccion.fxml", false);
+        SUCURSAL_SELECCION("/vistas/sucursalseleccion.fxml", true);
 
         private final String rutaFXML;
         private final boolean resizable;

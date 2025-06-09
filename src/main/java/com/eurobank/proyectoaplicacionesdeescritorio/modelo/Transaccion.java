@@ -1,13 +1,11 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDateTime;
 
 public class Transaccion {
     
     private String idTransaccion;
     private double montoTransaccion;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDateTime fechaHoraTransaccion;
     private String tipoTransaccion; // "DEPOSITO", "RETIRO", "TRANSFERENCIA"
     private String numeroCuentaOrigen;

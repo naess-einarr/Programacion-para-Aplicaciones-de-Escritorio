@@ -1,31 +1,25 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDate;
-
 
 public class Empleado {
     
     private String idEmpleado;
     private String nombreCompleto;
     private String direccionCompleta;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate fechaNacimiento;
     private String generoEmpleado;
     private double salarioMensual;
     private String nombreUsuario;
     private String contrasenaAcceso;
     protected String tipoEmpleado;
-    private String idSucursal;
+    private Sucursal sucursal;
     
     protected Empleado() {
 
     }
-    
-    protected Empleado(String idEmpleado, String nombreCompleto, String direccionCompleta, 
-                   LocalDate fechaNacimiento, String generoEmpleado, double salarioMensual,
-                   String nombreUsuario, String contrasenaAcceso, String tipoEmpleado) {
-        
+
+    public Empleado(String idEmpleado, String nombreCompleto, String direccionCompleta, LocalDate fechaNacimiento, String generoEmpleado, double salarioMensual, String nombreUsuario, String contrasenaAcceso, String tipoEmpleado, Sucursal sucursal) {
         this.idEmpleado = idEmpleado;
         this.nombreCompleto = nombreCompleto;
         this.direccionCompleta = direccionCompleta;
@@ -35,9 +29,8 @@ public class Empleado {
         this.nombreUsuario = nombreUsuario;
         this.contrasenaAcceso = contrasenaAcceso;
         this.tipoEmpleado = tipoEmpleado;
+        this.sucursal = sucursal;
     }
-    
-    // Getters y Setters
 
     public String getIdEmpleado() {
         return idEmpleado;
@@ -111,14 +104,14 @@ public class Empleado {
         this.tipoEmpleado = tipoEmpleado;
     }
 
-    public String getIdSucursal() {
-        return idSucursal;
+    public Sucursal getSucursal() {
+        return sucursal;
     }
 
-    public void setIdSucursal(String idSucursal) {
-        this.idSucursal = idSucursal;
+    public void setSucursal(Sucursal sucursal) {
+        this.sucursal = sucursal;
     }
-    
+
     @Override
     public String toString() {
         return "Empleado{" +

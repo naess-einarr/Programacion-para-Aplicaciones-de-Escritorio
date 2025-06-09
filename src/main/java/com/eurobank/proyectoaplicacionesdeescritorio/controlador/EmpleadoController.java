@@ -1,20 +1,16 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
-import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cajero;
-import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Ejecutivo;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
-import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
-import com.eurobank.proyectoaplicacionesdeescritorio.util.ComboDatosUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoDatosUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoTablaUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.ResourceBundle;
-import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,39 +19,35 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class EmpleadoController implements Initializable {
+    
+    private static final Logger LOG = LogManager.getLogger(EmpleadoController.class);
+
     @FXML
     private TableColumn<Empleado, String> columnTipoEmpleado;
-    
     @FXML
     private TableColumn<Empleado, LocalDate> columnaFechaNacimiento;
-
     @FXML
     private TableColumn<Empleado, String> columnaDireccion;
-
     @FXML
     private TableColumn<Empleado, String> columnaGenero;
-
     @FXML
     private TableColumn<Empleado, String> columnaID;
-
     @FXML
     private TableColumn<Empleado, String> columnaNombre;
-
     @FXML
     private TableColumn<Empleado, Double> columnaSalario;
-
+    @FXML
+    private TableColumn<Empleado, String> columnaSucursal;
     @FXML
     private TableColumn<Empleado, String> columnaUno;
-
     @FXML
     private TableColumn<Empleado, Integer> columnaDos;
-    
     @FXML
     private ComboBox<String> comboTipoEmpleado;
-    
     @FXML
     private TableView<Empleado> tablaEmpleados;
 
@@ -76,21 +68,25 @@ public class EmpleadoController implements Initializable {
 
     @FXML
     void accionEditar(ActionEvent event) {
+        String tipoEmpleado = comboTipoEmpleado.getSelectionModel().getSelectedItem();
         try {
-            if(Objects.isNull(tablaEmpleados.getSelectionModel().getSelectedItem())){
+            if (Objects.isNull(tipoEmpleado)) {
                 AlertaUtil.mostrarAlerta("INFORACION", "Debe seleccionar un registro", Alert.AlertType.INFORMATION);
                 return;
             }
-            
+
             ManejadorDeVistas.getInstancia().limpiarCacheVista(ManejadorDeVistas.Vista.EMPLEADO_REGISTRO);
 
             EmpleadoRegistroController empleadoRegistroController = ManejadorDeVistas.getInstancia().obtenerControlador(ManejadorDeVistas.Vista.EMPLEADO_REGISTRO);
             Empleado empleado = tablaEmpleados.getSelectionModel().getSelectedItem();
-            empleadoRegistroController.setEmpleadoEditar(empleado);
+            empleadoRegistroController.setTipoEmpleado(tipoEmpleado);
+            empleadoRegistroController.cargarObjetosPersonalizados();
+            empleadoRegistroController.llenarCamposEdicion(empleado);
+            empleadoRegistroController.configurarLabelDinamicos();
             ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO_REGISTRO);
 
         } catch (IOException ex) {
-
+            LOG.error(ex);
         }
     }
 
@@ -106,74 +102,66 @@ public class EmpleadoController implements Initializable {
         try {
             if (AlertaUtil.mostrarAlertaEliminar()) {
                 empleadoDAO.eliminar(empleado.getIdEmpleado());
+                tablaEmpleados.getItems().remove(empleado);
             }
         } catch (Exception ex) {
-
+            LOG.error(ex);
         }
     }
 
     @FXML
     void accionRegistrar(ActionEvent event) {
-        if(Objects.isNull(comboTipoEmpleado.getSelectionModel().getSelectedItem())){
+        String tipoEmpleado = comboTipoEmpleado.getSelectionModel().getSelectedItem();
+        if (Objects.isNull(tipoEmpleado)) {
             AlertaUtil.mostrarAlerta("INFORMACION", "Debe seleccionar un tipo de empleado.", Alert.AlertType.INFORMATION);
             return;
         }
-        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO_REGISTRO);
+        ManejadorDeVistas.getInstancia().limpiarCacheVista(ManejadorDeVistas.Vista.EMPLEADO_REGISTRO);
+
+        try {
+            EmpleadoRegistroController empleadoRegistroController = ManejadorDeVistas.getInstancia().obtenerControlador(ManejadorDeVistas.Vista.EMPLEADO_REGISTRO);
+            empleadoRegistroController.setTipoEmpleado(tipoEmpleado);
+            empleadoRegistroController.cargarObjetosPersonalizados();
+            empleadoRegistroController.configurarLabelDinamicos();
+            ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO_REGISTRO);
+        } catch (IOException ex) {
+            LOG.error(ex);
+        }
+
     }
 
     @FXML
     void cargarListaEmpleadosPorTipo(ActionEvent event) {
         
         try {
-            if(ComboDatosUtil.TIPO_GERENTE.equals(comboTipoEmpleado.getSelectionModel().getSelectedItem())){
+            String tipoSeleccionado = comboTipoEmpleado.getSelectionModel().getSelectedItem();
+
+            // Configurar labels según el tipo seleccionado
+            EmpleadoTablaUtil.configurarLabelsSegunTipo(tipoSeleccionado, columnaUno, columnaDos);
+            EmpleadoTablaUtil.restablecerTabla(tablaEmpleados);
+
+            // Cargar datos según el tipo
+            if (EmpleadoDatosUtil.TIPO_GERENTE.equals(tipoSeleccionado)) {
                 tablaEmpleados.setItems(FXCollections.observableArrayList(empleadoDAO.obtenerGerentes()));
-            }else if(ComboDatosUtil.TIPO_EJECUTIVO.equals(comboTipoEmpleado.getSelectionModel().getSelectedItem())){
+            } else if (EmpleadoDatosUtil.TIPO_EJECUTIVO.equals(tipoSeleccionado)) {
                 tablaEmpleados.setItems(FXCollections.observableArrayList(empleadoDAO.obtenerEjecutivos()));
-            }else if(ComboDatosUtil.TIPO_CAJERO.equals(comboTipoEmpleado.getSelectionModel().getSelectedItem())){
+            } else if (EmpleadoDatosUtil.TIPO_CAJERO.equals(tipoSeleccionado)) {
                 tablaEmpleados.setItems(FXCollections.observableArrayList(empleadoDAO.obtenerCajeros()));
             }
         } catch (Exception ex) {
-
+            LOG.error(ex);
         }
     }
-    private void cargarComboTipoEmpleado(){
-        comboTipoEmpleado.setItems(FXCollections.observableArrayList(ComboDatosUtil.listaTipoEmpleado()));
+
+    private void cargarComboTipoEmpleado() {
+        comboTipoEmpleado.setItems(FXCollections.observableArrayList(EmpleadoDatosUtil.listaTipoEmpleado()));
     }
 
     private void configurarTablaEmpleados() {
-        columnTipoEmpleado.setCellValueFactory(new PropertyValueFactory<>("tipoEmpleado"));
-        columnaID.setCellValueFactory(new PropertyValueFactory<>("idEmpleado"));
-        columnaNombre.setCellValueFactory(new PropertyValueFactory<>("nombreCompleto"));
-        columnaDireccion.setCellValueFactory(new PropertyValueFactory<>("direccionCompleta"));
-        columnaFechaNacimiento.setCellValueFactory(new PropertyValueFactory<>("fechaNacimiento"));
-        columnaGenero.setCellValueFactory(new PropertyValueFactory<>("generoEmpleado"));
-        columnaSalario.setCellValueFactory(new PropertyValueFactory<>("salarioMensual"));
+        EmpleadoTablaUtil.configurarColumnasBasicas(columnTipoEmpleado, columnaID, columnaNombre,
+                columnaDireccion, columnaFechaNacimiento,
+                columnaGenero, columnaSalario, columnaSucursal);
 
-        // Columnas específicas usando Callback
-        columnaUno.setCellValueFactory(cellData -> {
-            Empleado empleado = cellData.getValue();
-            if (empleado instanceof Gerente) {
-                return new SimpleStringProperty(((Gerente) empleado).getNivelAcceso());
-            } else if (empleado instanceof Ejecutivo) {
-                return new SimpleStringProperty(((Ejecutivo) empleado).getEspecializacionEjecutivo());
-            } else if (empleado instanceof Cajero) {
-                return new SimpleStringProperty(((Cajero) empleado).getHorarioTrabajo());
-            }
-            return new SimpleStringProperty(""); // Valor por defecto
-        });
-
-        columnaDos.setCellValueFactory(cellData -> {
-            Empleado empleado = cellData.getValue();
-            Integer valor = 0; // valor por defecto
-
-            if (empleado instanceof Gerente) {
-                valor = ((Gerente) empleado).getAniosExperiencia();
-            } else if (empleado instanceof Ejecutivo) {
-                valor = ((Ejecutivo) empleado).getNumeroClientesAsignados();
-            } else if (empleado instanceof Cajero) {
-                valor = ((Cajero) empleado).getNumeroVentanilla();
-            }
-            return new SimpleObjectProperty<>(valor);
-        });
+        EmpleadoTablaUtil.configurarColumnasDinamicas(columnaUno, columnaDos);
     }
 }

@@ -13,20 +13,7 @@ public class Gerente extends Empleado {
     
     public Gerente() {
         super();
-        this.tipoEmpleado = "GERENTE";
-    }
-    
-    public Gerente(String idEmpleado, String nombreCompleto, String direccionCompleta,
-                   LocalDate fechaNacimiento, String generoEmpleado, double salarioMensual,
-                   String nombreUsuario, String contrasenaAcceso, String nivelAcceso,
-                   Integer aniosExperiencia) {
-        
-        super(idEmpleado, nombreCompleto, direccionCompleta, fechaNacimiento,
-              generoEmpleado, salarioMensual, nombreUsuario, contrasenaAcceso, "GERENTE");
-        
-        this.nivelAcceso = nivelAcceso;
-        this.aniosExperiencia = aniosExperiencia;
-    }
+    }  
 
     public String getNivelAcceso() {
         return nivelAcceso;
@@ -43,6 +30,16 @@ public class Gerente extends Empleado {
     public void setAniosExperiencia(Integer aniosExperiencia) {
         this.aniosExperiencia = aniosExperiencia;
     }
+
+    public String getTipoEmpleado() {
+        return tipoEmpleado;
+    }
+
+    public void setTipoEmpleado(String tipoEmpleado) {
+        this.tipoEmpleado = tipoEmpleado;
+    }
+    
+    
 
     @Override
     public String toString() {

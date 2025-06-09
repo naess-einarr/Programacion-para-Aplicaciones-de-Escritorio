@@ -6,12 +6,14 @@ import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class SucursalSeleccionController implements Initializable {
 
@@ -27,7 +29,7 @@ public class SucursalSeleccionController implements Initializable {
     private TableColumn<Sucursal, String> direccionSucursal;
 
     @FXML
-    private TableColumn<Sucursal, Gerente> gerente;
+    private TableColumn<Sucursal, String> gerente;
 
     @FXML
     private TableColumn<Sucursal, String> idSucursal;
@@ -44,7 +46,9 @@ public class SucursalSeleccionController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         sucursalDAO = new SucursalDAO();
+        configurarTabla();
         cargarDatosTabla();
+        
     }    
 
     @FXML
@@ -63,6 +67,22 @@ public class SucursalSeleccionController implements Initializable {
         } catch (Exception ex) {
 
         }
+    }
+    
+    private void configurarTabla(){
+        contacto.setCellValueFactory(new PropertyValueFactory<>("contacto"));
+        correoSucursal.setCellValueFactory(new PropertyValueFactory<>("correoSucursal"));
+        direccionSucursal.setCellValueFactory(new PropertyValueFactory<>("direccionSucursal"));
+        gerente.setCellValueFactory(cellData -> {
+            Gerente gerenteObj = cellData.getValue().getGerente();
+            if (gerenteObj != null) {
+                return new SimpleStringProperty(gerenteObj.getNombreCompleto());
+            }
+            return new SimpleStringProperty("");
+        });
+        idSucursal.setCellValueFactory(new PropertyValueFactory<>("idSucursal"));
+        telefonoSucursal.setCellValueFactory(new PropertyValueFactory<>("telefonoSucursal"));
+        nombreSucursal.setCellValueFactory(new PropertyValueFactory<>("nombreSucursal"));
     }
     
 }

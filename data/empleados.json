@@ -270,22 +270,5 @@
     "nombreUsuario": "EMP016",
     "contrasenaAcceso": "SEB120987",
     "tipoEmpleado": "EJECUTIVO"
-  },
-  {
-    "nivelAcceso": "SUCURSAL",
-    "aniosExperiencia": 1,
-    "idEmpleado": "EMP17",
-    "nombreCompleto": "asd",
-    "direccionCompleta": "asd",
-    "fechaNacimiento": {
-      "year": 2025,
-      "month": 6,
-      "day": 1
-    },
-    "generoEmpleado": "MASCULINO",
-    "salarioMensual": 12.0,
-    "nombreUsuario": "EMP17",
-    "contrasenaAcceso": "ASD010625",
-    "tipoEmpleado": "GERENTE"
   }
 ]

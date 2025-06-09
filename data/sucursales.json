@@ -13,90 +13,8 @@
       "idEmpleado": "EMP002",
       "nombreCompleto": "Carlos Alberto Mendoza López"
     },
-    "cuentasAsociadas": [
-      {
-        "numeroCuenta": "CTA002",
-        "cliente": {
-          "idCliente": "CLI-WSN99PIB",
-          "nombreCompleto": "Carlos",
-          "apellidosCompletos": "Mendoza"
-        }
-      }
-    ],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP001",
-        "nombreCompleto": "María Elena Rodríguez García"
-      },
-      {
-        "idEmpleado": "EMP001",
-        "nombreCompleto": "María Elena Rodríguez García"
-      },
-      {
-        "idEmpleado": "EMP002",
-        "nombreCompleto": "Carlos Alberto Mendoza López"
-      },
-      {
-        "idEmpleado": "EMP003",
-        "nombreCompleto": "Ana Sofía Herrera Martínez"
-      },
-      {
-        "idEmpleado": "EMP004",
-        "nombreCompleto": "Roberto Jesús Vázquez Torres"
-      },
-      {
-        "idEmpleado": "EMP005",
-        "nombreCompleto": "Diana Patricia Morales Jiménez"
-      },
-      {
-        "idEmpleado": "EMP006",
-        "nombreCompleto": "Fernando Gabriel Castillo Ruiz"
-      },
-      {
-        "idEmpleado": "EMP007",
-        "nombreCompleto": "Laura Beatriz Sánchez Flores"
-      },
-      {
-        "idEmpleado": "EMP008",
-        "nombreCompleto": "Miguel Ángel Ramírez Delgado"
-      },
-      {
-        "idEmpleado": "EMP009",
-        "nombreCompleto": "Gabriela Monserrat Cruz Moreno"
-      },
-      {
-        "idEmpleado": "EMP010",
-        "nombreCompleto": "Alejandro David Ortega Peña"
-      },
-      {
-        "idEmpleado": "EMP011",
-        "nombreCompleto": "Valeria Isabella Guerrero Silva"
-      },
-      {
-        "idEmpleado": "EMP012",
-        "nombreCompleto": "Rodrigo Emilio Torres Aguilar"
-      },
-      {
-        "idEmpleado": "EMP013",
-        "nombreCompleto": "Andrea Paola Medina Castro"
-      },
-      {
-        "idEmpleado": "EMP014",
-        "nombreCompleto": "Javier Antonio Ramos Vega"
-      },
-      {
-        "idEmpleado": "EMP015",
-        "nombreCompleto": "Carmen Lucía Ibarra Núñez"
-      },
-      {
-        "idEmpleado": "EMP016",
-        "nombreCompleto": "Sebastián Mateo Díaz Herrera"
-      },
-      {
-        "idEmpleado": "EMP17",
-        "nombreCompleto": "asd"
-      }
-    ]
+    "cuentasAsociadas": [],
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC002",
@@ -112,33 +30,33 @@
       "idEmpleado": "EMP005",
       "nombreCompleto": "Diana Patricia Morales Jiménez"
     },
-    "cuentasAsociadas": [],
-    "empleadosAsociados": [
+    "cuentasAsociadas": [
       {
-        "idEmpleado": "EMP004",
-        "nombreCompleto": "Roberto Jesús Vázquez Torres"
+        "numeroCuenta": "CTA001",
+        "cliente": {
+          "idCliente": "CLI-3H4B2OWN",
+          "nombreCompleto": "María",
+          "apellidosCompletos": "García"
+        }
       },
       {
-        "idEmpleado": "EMP005",
-        "nombreCompleto": "Diana Patricia Morales Jiménez"
+        "numeroCuenta": "CTA001",
+        "cliente": {
+          "idCliente": "CLI-3H4B2OWN",
+          "nombreCompleto": "María",
+          "apellidosCompletos": "García"
+        }
       },
       {
-        "idEmpleado": "EMP006",
-        "nombreCompleto": "Fernando Gabriel Castillo Ruiz"
-      },
-      {
-        "idEmpleado": "EMP012",
-        "nombreCompleto": "Rodrigo Emilio Torres Aguilar"
-      },
-      {
-        "idEmpleado": "EMP013",
-        "nombreCompleto": "Andrea Paola Medina Castro"
-      },
-      {
-        "idEmpleado": "EMP019",
-        "nombreCompleto": "Empleado No Encontrado"
+        "numeroCuenta": "CTA001",
+        "cliente": {
+          "idCliente": "CLI-3H4B2OWN",
+          "nombreCompleto": "María",
+          "apellidosCompletos": "García"
+        }
       }
-    ]
+    ],
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC003",
@@ -193,24 +111,7 @@
       "nombreCompleto": "Valeria Isabella Guerrero Silva"
     },
     "cuentasAsociadas": [],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP020",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP021",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP022",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP023",
-        "nombreCompleto": "Empleado No Encontrado"
-      }
-    ]
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC005",
@@ -226,25 +127,17 @@
       "idEmpleado": "EMP013",
       "nombreCompleto": "Andrea Paola Medina Castro"
     },
-    "cuentasAsociadas": [],
-    "empleadosAsociados": [
+    "cuentasAsociadas": [
       {
-        "idEmpleado": "EMP024",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP025",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP026",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP027",
-        "nombreCompleto": "Empleado No Encontrado"
+        "numeroCuenta": "CTA001",
+        "cliente": {
+          "idCliente": "CLI-3H4B2OWN",
+          "nombreCompleto": "María",
+          "apellidosCompletos": "García"
+        }
       }
-    ]
+    ],
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC006",
@@ -311,7 +204,16 @@
       "idEmpleado": "EMP005",
       "nombreCompleto": "Diana Patricia Morales Jiménez"
     },
-    "cuentasAsociadas": [],
+    "cuentasAsociadas": [
+      {
+        "numeroCuenta": "CTA001",
+        "cliente": {
+          "idCliente": "CLI-3H4B2OWN",
+          "nombreCompleto": "María",
+          "apellidosCompletos": "García"
+        }
+      }
+    ],
     "empleadosAsociados": []
   },
   {
@@ -347,22 +249,5 @@
         "nombreCompleto": "Empleado No Encontrado"
       }
     ]
-  },
-  {
-    "idSucursal": "SUC10",
-    "nombreSucursal": "asda",
-    "direccionSucursal": "asd",
-    "telefonoSucursal": "123",
-    "correoSucursal": "asdasd",
-    "gerente": {
-      "idEmpleado": "EMP001",
-      "nombreCompleto": "María Elena Rodríguez García"
-    },
-    "contacto": {
-      "idEmpleado": "EMP005",
-      "nombreCompleto": "Diana Patricia Morales Jiménez"
-    },
-    "cuentasAsociadas": [],
-    "empleadosAsociados": []
   }
 ]

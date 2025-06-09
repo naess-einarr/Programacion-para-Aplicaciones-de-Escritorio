@@ -11,10 +11,9 @@ public class ConstantesUtil {
     public static final int LIMITE_MAXIMO_CREDITO = 50000;
     public static final double SALDO_MINIMO_CUENTA = 0.0;
     public static final int LONGITUD_MINIMA_CONTRASENA = 6;
-    public static final int LONGITUD_RFC_MIN = 10;
-    public static final int LONGITUD_RFC_MAX = 13;
+    public static final int LONGITUD_RFC = 10;
     public static final int LONGITUD_CURP = 18;
-    public static final int LONGITUD_NOMBRE_MIN = 2;
+    public static final int LONGITUD_NOMBRE_MIN = 3;
     public static final int LONGITUD_NOMBRE_MAX = 50;
     public static final int LONGITUD_TELEFONO_MIN = 10;
     public static final int LONGITUD_DIRECCION_MIN = 10;
@@ -71,5 +70,6 @@ public class ConstantesUtil {
     public static final String ERROR_CORREO_OBLIGATORIO = "El correo electrónico es obligatorio";
     public static final String ERROR_CORREO_FORMATO = "El formato del correo electrónico no es válido";
     public static final String ERROR_CARGAR_INFORMACION = "Error al cargar la informacion";
+    public static final String ERROR_MENOR_DE_EDAD = "La persona debe ser mayor de edad (18 años o más)";
 
 }

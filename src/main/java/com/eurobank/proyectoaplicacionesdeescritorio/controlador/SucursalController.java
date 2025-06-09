@@ -5,6 +5,7 @@ import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Ejecutivo;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ExportadorGenerico;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.io.IOException;
 import java.net.URL;
@@ -161,6 +162,14 @@ public class SucursalController implements Initializable {
         columnaID.setCellValueFactory(new PropertyValueFactory<>("idSucursal"));
         columnaTelefono.setCellValueFactory(new PropertyValueFactory<>("telefonoSucursal"));
         columnaNombre.setCellValueFactory(new PropertyValueFactory<>("nombreSucursal"));
+    }
+    
+    @FXML
+    public void accionExportar(){
+        ExportadorGenerico.exportar(tablaSucursales.getItems(), 
+                ExportadorGenerico.TipoExportacion.CSV, 
+                ManejadorDeVistas.getInstancia().obtenerEscenarioPrincipal(), 
+                "sucursales.csv");
     }
     
 }

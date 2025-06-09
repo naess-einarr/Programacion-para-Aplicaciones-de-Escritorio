@@ -17,6 +17,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -43,6 +44,9 @@ public class SucursalEmpleadoController implements Initializable {
 
     @FXML
     private TableView<Empleado> tablaEmpleadosDisponibles;
+    
+    @FXML
+    private Label textSucursal;
     
     private EmpleadoDAO empleadoDAO;
     private SucursalDAO sucursalDAO;
@@ -92,7 +96,7 @@ public class SucursalEmpleadoController implements Initializable {
     void accionRegresarUno(ActionEvent event) {
         Empleado empleadoSeleccionado = tablaEmpleadosAsociados.getSelectionModel().getSelectedItem();
         if(Objects.isNull(empleadoSeleccionado)){
-            AlertaUtil.mostrarAlerta(AlertaUtil.ADVERTENCIA, "Seleccione un empleado asociado", Alert.AlertType.NONE);
+            AlertaUtil.mostrarAlerta(AlertaUtil.ADVERTENCIA, "Seleccione un empleado asociado", Alert.AlertType.WARNING);
             return;
         }
         tablaEmpleadosAsociados.getItems().remove(empleadoSeleccionado);
@@ -103,7 +107,7 @@ public class SucursalEmpleadoController implements Initializable {
     void accionAsociarUno(ActionEvent event) {
         Empleado empleadoSeleccionado = tablaEmpleadosDisponibles.getSelectionModel().getSelectedItem();
         if(Objects.isNull(empleadoSeleccionado)){
-            AlertaUtil.mostrarAlerta(AlertaUtil.ADVERTENCIA, "Seleccione un empleado disponible", Alert.AlertType.NONE);
+            AlertaUtil.mostrarAlerta(AlertaUtil.ADVERTENCIA, "Seleccione un empleado disponible", Alert.AlertType.WARNING);
             return;
         }
         tablaEmpleadosDisponibles.getItems().remove(empleadoSeleccionado);
@@ -118,6 +122,7 @@ public class SucursalEmpleadoController implements Initializable {
     
     public void administrarSucursal(Sucursal sucursalSeleccionada){
         this.sucursalSeleccionada = sucursalSeleccionada;
+        textSucursal.setText(sucursalSeleccionada.toString());
         cargarListaEmpleadosAsociados();
         cargarListaEmpleadosDisponibles();
     }

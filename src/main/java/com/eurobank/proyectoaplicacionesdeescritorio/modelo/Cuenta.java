@@ -1,8 +1,5 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
 public class Cuenta {
     
     private String numeroCuenta;

@@ -103,6 +103,7 @@ public class SucursalController implements Initializable {
         }
         try {
             SucursalCuentaController sucursalCuentaController = ManejadorDeVistas.getInstancia().obtenerControlador(ManejadorDeVistas.Vista.SUCURSAL_CUENTAS);
+            sucursalCuentaController.administrarSucursal(sucursalSeleccionada);
         } catch (IOException ex) {
             LOG.error(ex);
         }

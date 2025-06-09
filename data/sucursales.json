@@ -13,8 +13,90 @@
       "idEmpleado": "EMP002",
       "nombreCompleto": "Carlos Alberto Mendoza López"
     },
-    "cuentasAsociadas": [],
-    "empleadosAsociados": []
+    "cuentasAsociadas": [
+      {
+        "numeroCuenta": "CTA002",
+        "cliente": {
+          "idCliente": "CLI-WSN99PIB",
+          "nombreCompleto": "Carlos",
+          "apellidosCompletos": "Mendoza"
+        }
+      }
+    ],
+    "empleadosAsociados": [
+      {
+        "idEmpleado": "EMP001",
+        "nombreCompleto": "María Elena Rodríguez García"
+      },
+      {
+        "idEmpleado": "EMP001",
+        "nombreCompleto": "María Elena Rodríguez García"
+      },
+      {
+        "idEmpleado": "EMP002",
+        "nombreCompleto": "Carlos Alberto Mendoza López"
+      },
+      {
+        "idEmpleado": "EMP003",
+        "nombreCompleto": "Ana Sofía Herrera Martínez"
+      },
+      {
+        "idEmpleado": "EMP004",
+        "nombreCompleto": "Roberto Jesús Vázquez Torres"
+      },
+      {
+        "idEmpleado": "EMP005",
+        "nombreCompleto": "Diana Patricia Morales Jiménez"
+      },
+      {
+        "idEmpleado": "EMP006",
+        "nombreCompleto": "Fernando Gabriel Castillo Ruiz"
+      },
+      {
+        "idEmpleado": "EMP007",
+        "nombreCompleto": "Laura Beatriz Sánchez Flores"
+      },
+      {
+        "idEmpleado": "EMP008",
+        "nombreCompleto": "Miguel Ángel Ramírez Delgado"
+      },
+      {
+        "idEmpleado": "EMP009",
+        "nombreCompleto": "Gabriela Monserrat Cruz Moreno"
+      },
+      {
+        "idEmpleado": "EMP010",
+        "nombreCompleto": "Alejandro David Ortega Peña"
+      },
+      {
+        "idEmpleado": "EMP011",
+        "nombreCompleto": "Valeria Isabella Guerrero Silva"
+      },
+      {
+        "idEmpleado": "EMP012",
+        "nombreCompleto": "Rodrigo Emilio Torres Aguilar"
+      },
+      {
+        "idEmpleado": "EMP013",
+        "nombreCompleto": "Andrea Paola Medina Castro"
+      },
+      {
+        "idEmpleado": "EMP014",
+        "nombreCompleto": "Javier Antonio Ramos Vega"
+      },
+      {
+        "idEmpleado": "EMP015",
+        "nombreCompleto": "Carmen Lucía Ibarra Núñez"
+      },
+      {
+        "idEmpleado": "EMP016",
+        "nombreCompleto": "Sebastián Mateo Díaz Herrera"
+      },
+      {
+        "idEmpleado": "EMP17",
+        "nombreCompleto": "asd"
+      }
+    ]
   },
   {
     "idSucursal": "SUC002",

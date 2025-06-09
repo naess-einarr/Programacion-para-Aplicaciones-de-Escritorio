@@ -7,55 +7,56 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="449.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.SucursalEmpleadoController">
+<AnchorPane id="AnchorPane" prefHeight="496.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.SucursalEmpleadoController">
    <children>
-        <TableView fx:id="tablaEmpleadosAsociados" layoutX="21.0" layoutY="77.0" prefHeight="321.0" prefWidth="340.0">
+      <Label fx:id="labelTitulo" layoutX="280.0" layoutY="14.0" text="Administración de empleados sucursal">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textSucursal" layoutX="393.0" layoutY="46.0" text="Label" />
+        <TableView fx:id="tablaEmpleadosAsociados" layoutX="27.0" layoutY="113.0" prefHeight="321.0" prefWidth="340.0">
           <columns>
             <TableColumn fx:id="columnaIDAsociado" prefWidth="100.0" text="ID" />
             <TableColumn fx:id="columnaNombreAsociado" prefWidth="240.0" text="Nombre" />
           </columns>
         </TableView>
-        <TableView fx:id="tablaEmpleadosDisponibles" layoutX="439.0" layoutY="77.0" prefHeight="321.0" prefWidth="340.0">
+        <TableView fx:id="tablaEmpleadosDisponibles" layoutX="445.0" layoutY="113.0" prefHeight="321.0" prefWidth="340.0">
           <columns>
             <TableColumn fx:id="columnaID" prefWidth="100.0" text="ID" />
             <TableColumn fx:id="columnaNombre" prefWidth="240.0" text="Nombre" />
           </columns>
         </TableView>
-      <Button layoutX="373.0" layoutY="153.0" mnemonicParsing="false" onAction="#accionRegresarUno" prefHeight="25.0" prefWidth="47.0" text="&gt;">
+      <Button layoutX="379.0" layoutY="189.0" mnemonicParsing="false" onAction="#accionRegresarUno" prefHeight="25.0" prefWidth="47.0" text="&gt;">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="373.0" layoutY="282.0" mnemonicParsing="false" onAction="#accionAsociarUno" prefHeight="25.0" prefWidth="47.0" text="&lt;">
+      <Button layoutX="379.0" layoutY="318.0" mnemonicParsing="false" onAction="#accionAsociarUno" prefHeight="25.0" prefWidth="47.0" text="&lt;">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="373.0" layoutY="195.0" mnemonicParsing="false" onAction="#accionRegresarTodos" prefHeight="25.0" prefWidth="47.0" text="&gt;&gt;">
+      <Button layoutX="379.0" layoutY="231.0" mnemonicParsing="false" onAction="#accionRegresarTodos" prefHeight="25.0" prefWidth="47.0" text="&gt;&gt;">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="373.0" layoutY="237.0" mnemonicParsing="false" onAction="#accionAsociarTodos" prefHeight="25.0" prefWidth="47.0" text="&lt;&lt;">
+      <Button layoutX="379.0" layoutY="273.0" mnemonicParsing="false" onAction="#accionAsociarTodos" prefHeight="25.0" prefWidth="47.0" text="&lt;&lt;">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="botonGuardar" layoutX="251.0" layoutY="410.0" mnemonicParsing="false" onAction="#accionGuardar" prefHeight="25.0" prefWidth="147.0" text="Guardar" />
-      <Button fx:id="botonCancelar" layoutX="421.0" layoutY="410.0" mnemonicParsing="false" onAction="#accionCancelar" prefHeight="25.0" prefWidth="147.0" text="Cancelar" />
-      <Label layoutX="134.0" layoutY="53.0" text="Empleados asociados">
+      <Button fx:id="botonGuardar" layoutX="257.0" layoutY="446.0" mnemonicParsing="false" onAction="#accionGuardar" prefHeight="25.0" prefWidth="147.0" text="Guardar" />
+      <Button fx:id="botonCancelar" layoutX="427.0" layoutY="446.0" mnemonicParsing="false" onAction="#accionCancelar" prefHeight="25.0" prefWidth="147.0" text="Cancelar" />
+      <Label layoutX="140.0" layoutY="89.0" text="Empleados asociados">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="548.0" layoutY="53.0" text="Empleados disponibles">
+      <Label layoutX="554.0" layoutY="89.0" text="Empleados disponibles">
          <font>
             <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="labelTitulo" layoutX="295.0" layoutY="24.0" text="Administración de empleados sucursal">
-         <font>
-            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
    </children>

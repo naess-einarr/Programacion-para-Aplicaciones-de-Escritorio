@@ -44,7 +44,9 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
                     JsonObject clienteObj = new JsonObject();
                     clienteObj.addProperty("idCliente", cuenta.getCliente().getIdCliente());
                     clienteObj.addProperty("nombreCompleto", cuenta.getCliente().getNombreCompleto());
+                    clienteObj.addProperty("apellidosCompletos", cuenta.getCliente().getApellidosCompletos());
                     cuentaObj.add("cliente", clienteObj);
+                    cuentasArray.add(cuentaObj);
             }
             jsonObject.add("cuentasAsociadas", cuentasArray);
         }
@@ -103,6 +105,7 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
                 Cliente cliente = new Cliente();
                 cliente.setIdCliente(clienteObj.get("idCliente").getAsString());
                 cliente.setNombreCompleto(clienteObj.get("nombreCompleto").getAsString());
+                cliente.setApellidosCompletos(clienteObj.get("apellidosCompletos").getAsString());
                 cuenta.setCliente(cliente);
             cuentas.add(cuenta);
         }

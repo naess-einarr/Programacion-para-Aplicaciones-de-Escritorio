@@ -7,55 +7,64 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="449.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.SucursalEmpleadoController">
+<AnchorPane id="AnchorPane" prefHeight="488.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.SucursalCuentaController">
    <children>
-      <TableView fx:id="tablaCuentasAsociadas" layoutX="21.0" layoutY="77.0" prefHeight="321.0" prefWidth="340.0">
+      <Label fx:id="labelTitulo" layoutX="295.0" layoutY="14.0" text="Administración de cuentas sucursal">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textSucursal" layoutX="397.0" layoutY="46.0" text="Label" />
+      <TableView fx:id="tablaCuentasAsociadas" layoutX="21.0" layoutY="108.0" prefHeight="321.0" prefWidth="340.0">
          <columns>
             <TableColumn fx:id="columnaCuentaAsociada" prefWidth="75.0" text="Numero de cuenta" />
             <TableColumn fx:id="columnaNombreAsociado" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="columnaApellidosAsociado" prefWidth="75.0" text="Apellidos" />
          </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
-      <TableView fx:id="tablaCuentasDisponibles" layoutX="439.0" layoutY="77.0" prefHeight="321.0" prefWidth="340.0">
+      <TableView fx:id="tablaCuentasDisponibles" layoutX="439.0" layoutY="108.0" prefHeight="321.0" prefWidth="340.0">
          <columns>
             <TableColumn fx:id="columnaCuenta" prefWidth="75.0" text="Numero de cuenta" />
             <TableColumn fx:id="columnaNombre" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="columnaApellidos" prefWidth="75.0" text="Apellidos" />
          </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
-      <Button layoutX="373.0" layoutY="153.0" mnemonicParsing="false" onAction="#accionRegresarUno" prefHeight="25.0" prefWidth="47.0" text="&gt;">
+      <Button layoutX="373.0" layoutY="184.0" mnemonicParsing="false" onAction="#accionRegresarUno" prefHeight="25.0" prefWidth="47.0" text="&gt;">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="373.0" layoutY="282.0" mnemonicParsing="false" onAction="#accionAsociarUno" prefHeight="25.0" prefWidth="47.0" text="&lt;">
+      <Button layoutX="373.0" layoutY="313.0" mnemonicParsing="false" onAction="#accionAsociarUno" prefHeight="25.0" prefWidth="47.0" text="&lt;">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="373.0" layoutY="195.0" mnemonicParsing="false" onAction="#accionRegresarTodos" prefHeight="25.0" prefWidth="47.0" text="&gt;&gt;">
+      <Button layoutX="373.0" layoutY="226.0" mnemonicParsing="false" onAction="#accionRegresarTodos" prefHeight="25.0" prefWidth="47.0" text="&gt;&gt;">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="373.0" layoutY="237.0" mnemonicParsing="false" onAction="#accionAsociarTodos" prefHeight="25.0" prefWidth="47.0" text="&lt;&lt;">
+      <Button layoutX="373.0" layoutY="268.0" mnemonicParsing="false" onAction="#accionAsociarTodos" prefHeight="25.0" prefWidth="47.0" text="&lt;&lt;">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="botonGuardar" layoutX="251.0" layoutY="410.0" mnemonicParsing="false" onAction="#accionGuardar" prefHeight="25.0" prefWidth="147.0" text="Guardar" />
-      <Button fx:id="botonCancelar" layoutX="421.0" layoutY="410.0" mnemonicParsing="false" onAction="#accionCancelar" prefHeight="25.0" prefWidth="147.0" text="Cancelar" />
-      <Label layoutX="134.0" layoutY="53.0" text="Cuentas asociados">
+      <Button fx:id="botonGuardar" layoutX="251.0" layoutY="441.0" mnemonicParsing="false" onAction="#accionGuardar" prefHeight="25.0" prefWidth="147.0" text="Guardar" />
+      <Button fx:id="botonCancelar" layoutX="421.0" layoutY="441.0" mnemonicParsing="false" onAction="#accionCancelar" prefHeight="25.0" prefWidth="147.0" text="Cancelar" />
+      <Label layoutX="134.0" layoutY="84.0" text="Cuentas asociados">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="548.0" layoutY="53.0" text="Cuentas disponibles">
+      <Label layoutX="548.0" layoutY="84.0" text="Cuentas disponibles">
          <font>
             <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="labelTitulo" layoutX="295.0" layoutY="24.0" text="Administración de cuentas sucursal">
-         <font>
-            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
    </children>

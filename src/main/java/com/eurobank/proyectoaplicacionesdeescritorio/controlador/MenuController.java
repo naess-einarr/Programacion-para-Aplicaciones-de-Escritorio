@@ -33,7 +33,7 @@ public class MenuController implements Initializable {
 
     @FXML
     void abrirVentanaAdministrarCuentasBancarias(ActionEvent event) {
-
+        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.CUENTA);
     }
 
     @FXML

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.ClienteController">
+<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.CuentaController">
    <children>
       <BorderPane layoutX="9.0" layoutY="8.0" maxHeight="800.0" maxWidth="1000.0" prefHeight="405.0" prefWidth="887.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>

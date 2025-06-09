@@ -3,8 +3,7 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.CuentaDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.SucursalDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.TransaccionDAO;
-import com.eurobank.proyectoaplicacionesdeescritorio.modelo.CuentaBancaria;
-import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cuenta;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.ConstantesUtil;
@@ -75,7 +74,7 @@ public class TransaccionRegistroController implements Initializable {
     }
     private void cargarComboCuentas(){
         try {
-            ObservableList<CuentaBancaria> items = FXCollections.observableArrayList(cuentabancariaDAO.obtenerTodos());
+            ObservableList<Cuenta> items = FXCollections.observableArrayList(cuentabancariaDAO.obtenerTodos());
             comboCuentaOrigen.setItems(items);
             comboCuentaDestino.setItems(items);
         } catch (IOException ioe){

@@ -8,8 +8,8 @@ public class Transaccion {
     private double montoTransaccion;
     private LocalDateTime fechaHoraTransaccion;
     private String tipoTransaccion; 
-    private CuentaBancaria cuentaOrigen;
-    private CuentaBancaria cuentaDestino;
+    private Cuenta cuentaOrigen;
+    private Cuenta cuentaDestino;
     private Sucursal sucursal;
     private Empleado empleadoResponsable;
     
@@ -18,7 +18,7 @@ public class Transaccion {
     
     public Transaccion(String idTransaccion, double montoTransaccion, 
                       LocalDateTime fechaHoraTransaccion, String tipoTransaccion,
-                      CuentaBancaria cuentaOrigen, Sucursal sucursal,
+                      Cuenta cuentaOrigen, Sucursal sucursal,
                       Empleado empleadoResponsable) {
         
         this.idTransaccion = idTransaccion;
@@ -32,7 +32,7 @@ public class Transaccion {
     
     public Transaccion(String idTransaccion, double montoTransaccion,
                       LocalDateTime fechaHoraTransaccion, String tipoTransaccion,
-                      CuentaBancaria cuentaOrigen, CuentaBancaria cuentaDestino,
+                      Cuenta cuentaOrigen, Cuenta cuentaDestino,
                       Sucursal sucursal, Empleado empleadoResponsable) {
         
         this(idTransaccion, montoTransaccion, fechaHoraTransaccion, tipoTransaccion,
@@ -72,19 +72,19 @@ public class Transaccion {
         this.tipoTransaccion = tipoTransaccion;
     }
     
-    public CuentaBancaria getCuentaOrigen() {
+    public Cuenta getCuentaOrigen() {
         return cuentaOrigen;
     }
 
-    public void setCuentaOrigen(CuentaBancaria cuentaOrigen) {
+    public void setCuentaOrigen(Cuenta cuentaOrigen) {
         this.cuentaOrigen = cuentaOrigen;
     }
 
-    public CuentaBancaria getCuentaDestino() {
+    public Cuenta getCuentaDestino() {
         return cuentaDestino;
     }
 
-    public void setCuentaDestino(CuentaBancaria cuentaDestino) {
+    public void setCuentaDestino(Cuenta cuentaDestino) {
         this.cuentaDestino = cuentaDestino;
     }
 

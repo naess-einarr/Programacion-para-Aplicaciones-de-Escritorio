@@ -9,7 +9,6 @@ import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 

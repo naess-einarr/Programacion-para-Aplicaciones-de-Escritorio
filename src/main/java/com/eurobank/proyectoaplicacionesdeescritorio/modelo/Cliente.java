@@ -140,6 +140,6 @@ public class Cliente {
     
     @Override
     public String toString() {
-        return nombreCompleto + " - " + apellidosCompletos;
+        return idCliente +" - "+ nombreCompleto + " " + apellidosCompletos;
     }
 }

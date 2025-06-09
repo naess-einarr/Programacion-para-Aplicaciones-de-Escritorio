@@ -11,7 +11,7 @@ public class Sucursal {
     private String correoSucursal;
     private Gerente gerente;
     private Ejecutivo contacto;
-    private List<CuentaBancaria> cuentasAsociadas;
+    private List<Cuenta> cuentasAsociadas;
     private List<Empleado> empleadosAsociados;
 
     public String getIdSucursal() {
@@ -70,11 +70,11 @@ public class Sucursal {
         this.contacto = contacto;
     }
 
-    public List<CuentaBancaria> getCuentasAsociadas() {
+    public List<Cuenta> getCuentasAsociadas() {
         return cuentasAsociadas;
     }
 
-    public void setCuentasAsociadas(List<CuentaBancaria> cuentasAsociadas) {
+    public void setCuentasAsociadas(List<Cuenta> cuentasAsociadas) {
         this.cuentasAsociadas = cuentasAsociadas;
     }
 

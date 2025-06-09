@@ -52,7 +52,7 @@
             <Label fx:id="labelColumnaUno" text="Columna 1:" GridPane.rowIndex="7" />
             <Label fx:id="labelColumnaDos" text="Columna 2:" GridPane.rowIndex="8" />
             <TextField fx:id="textColumnaDos" prefHeight="8.0" prefWidth="266.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <TextField fx:id="textTipoDeEmpleado" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="textTipoDeEmpleado" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <ComboBox fx:id="comboColumnaUno" prefHeight="25.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <ComboBox fx:id="comboColumnaDos" prefHeight="25.0" prefWidth="275.0" promptText="Seleccione una ventanilla" GridPane.columnIndex="1" GridPane.rowIndex="8" />
          </children>

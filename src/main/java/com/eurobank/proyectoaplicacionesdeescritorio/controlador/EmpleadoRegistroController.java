@@ -6,13 +6,16 @@ import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Ejecutivo;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ConstantesUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoDatosUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.Validador;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -76,18 +79,27 @@ public class EmpleadoRegistroController implements Initializable{
     void guardarRegistro(ActionEvent event) {
         try {
                 Empleado empleado = llenarObjetoEmpleado();
-
+                
                 if(modoEdicion){
+                    Validador.validarEmpleado(empleado);
                     empleadoDAO.actualizar(empleado);
                 }else{
+                    Validador.validarEmpleado(empleado);
                     empleadoDAO.guardar(empleado);
                 }
-            
+                
+            AlertaUtil.mostrarAlertaRegistroExitoso();
             ManejadorDeVistas.getInstancia().limpiarCache();
             ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO);
-        } catch (Exception ex) {
-                LOG.error(ex);
+            
+        }catch (IllegalArgumentException iae){
+            LOG.error(ConstantesUtil.ALERTA_DATOS_INVALIDOS, iae);
+            AlertaUtil.mostrarAlerta(AlertaUtil.ADVERTENCIA, iae.getMessage(), Alert.AlertType.WARNING);
+        }catch (Exception ex) {
+            LOG.error(ConstantesUtil.LOG_ERROR_ARCHIVO,ex);
+            AlertaUtil.mostrarAlertaRegistroFallido();
         }
+        
     }
     
     private void cargarComboGenero(){
@@ -144,7 +156,7 @@ public class EmpleadoRegistroController implements Initializable{
         empleado.setDireccionCompleta(textDireccion.getText().trim());
         empleado.setFechaNacimiento(dateFechaNacimiento.getValue());
         empleado.setGeneroEmpleado(comboGenero.getValue());
-        empleado.setSalarioMensual(Double.parseDouble(textSalario.getText().trim()));
+        empleado.setSalarioMensual(Double.valueOf(textSalario.getText().trim()));
         empleado.setTipoEmpleado(textTipoDeEmpleado.getText());
         empleado.setNombreUsuario(textID.getText().trim());
 
@@ -182,6 +194,10 @@ public class EmpleadoRegistroController implements Initializable{
         this.textSalario.setText(Double.toString(empleadoEditar.getSalarioMensual()));
         this.textTipoDeEmpleado.setText(empleadoEditar.getTipoEmpleado());
         
+        textNombre.setDisable(modoEdicion);
+        dateFechaNacimiento.setDisable(modoEdicion);
+        comboGenero.setDisable(modoEdicion);
+        
         String columnaUno = null;
         String columnaDos = null;
         
@@ -191,6 +207,7 @@ public class EmpleadoRegistroController implements Initializable{
         }else if(empleadoEditar instanceof Ejecutivo){
             columnaUno = ((Ejecutivo) empleadoEditar).getEspecializacionEjecutivo();
             columnaDos = ((Ejecutivo) empleadoEditar).getNumeroClientesAsignados().toString();
+            
         }else if(empleadoEditar instanceof Gerente){
             columnaUno = ((Gerente) empleadoEditar).getNivelAcceso();
             columnaDos = ((Gerente) empleadoEditar).getAniosExperiencia().toString();

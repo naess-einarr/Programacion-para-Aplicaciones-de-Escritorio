@@ -55,6 +55,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
                   </Button>
+<<<<<<< HEAD
                   <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#exportar" prefHeight="29.0" prefWidth="124.0" text="Exportar" VBox.vgrow="ALWAYS">
                      <opaqueInsets>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -69,6 +70,13 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
+=======
+                  <Button fx:id="botonExportar" mnemonicParsing="false" onAction="#accionExportar" prefWidth="125.0" text="Button">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+>>>>>>> 7c9a583868200f29bdc1d7f0927252af3098bcab
                </children>
                <BorderPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

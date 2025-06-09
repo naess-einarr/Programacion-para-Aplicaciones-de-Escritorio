@@ -14,7 +14,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="textSucursal" layoutX="397.0" layoutY="46.0" text="Label" />
+      <Label fx:id="textSucursal" alignment="CENTER" contentDisplay="CENTER" layoutX="311.0" layoutY="45.0" text="Label" textAlignment="CENTER" />
       <TableView fx:id="tablaCuentasAsociadas" layoutX="21.0" layoutY="108.0" prefHeight="321.0" prefWidth="340.0">
          <columns>
             <TableColumn fx:id="columnaCuentaAsociada" prefWidth="75.0" text="Numero de cuenta" />

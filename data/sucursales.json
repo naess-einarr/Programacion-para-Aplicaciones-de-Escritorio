@@ -30,7 +30,36 @@
       "idEmpleado": "EMP005",
       "nombreCompleto": "Diana Patricia Morales Jiménez"
     },
+<<<<<<< HEAD
     "cuentasAsociadas": [],
+=======
+    "cuentasAsociadas": [
+      {
+        "numeroCuenta": "CTA001",
+        "cliente": {
+          "idCliente": "CLI-3H4B2OWN",
+          "nombreCompleto": "María",
+          "apellidosCompletos": "García"
+        }
+      },
+      {
+        "numeroCuenta": "CTA001",
+        "cliente": {
+          "idCliente": "CLI-3H4B2OWN",
+          "nombreCompleto": "María",
+          "apellidosCompletos": "García"
+        }
+      },
+      {
+        "numeroCuenta": "CTA001",
+        "cliente": {
+          "idCliente": "CLI-3H4B2OWN",
+          "nombreCompleto": "María",
+          "apellidosCompletos": "García"
+        }
+      }
+    ],
+>>>>>>> 7c9a583868200f29bdc1d7f0927252af3098bcab
     "empleadosAsociados": []
   },
   {
@@ -81,7 +110,20 @@
       "idEmpleado": "EMP013",
       "nombreCompleto": "Andrea Paola Medina Castro"
     },
+<<<<<<< HEAD
     "cuentasAsociadas": [],
+=======
+    "cuentasAsociadas": [
+      {
+        "numeroCuenta": "CTA001",
+        "cliente": {
+          "idCliente": "CLI-3H4B2OWN",
+          "nombreCompleto": "María",
+          "apellidosCompletos": "García"
+        }
+      }
+    ],
+>>>>>>> 7c9a583868200f29bdc1d7f0927252af3098bcab
     "empleadosAsociados": []
   },
   {
@@ -132,7 +174,16 @@
       "idEmpleado": "EMP005",
       "nombreCompleto": "Diana Patricia Morales Jiménez"
     },
-    "cuentasAsociadas": [],
+    "cuentasAsociadas": [
+      {
+        "numeroCuenta": "CTA001",
+        "cliente": {
+          "idCliente": "CLI-3H4B2OWN",
+          "nombreCompleto": "María",
+          "apellidosCompletos": "García"
+        }
+      }
+    ],
     "empleadosAsociados": []
   },
   {
@@ -150,6 +201,7 @@
       "nombreCompleto": "Miguel Ángel Ramírez Delgado"
     },
     "cuentasAsociadas": [],
+<<<<<<< HEAD
     "empleadosAsociados": []
   },
   {
@@ -168,5 +220,25 @@
     },
     "cuentasAsociadas": [],
     "empleadosAsociados": []
+=======
+    "empleadosAsociados": [
+      {
+        "idEmpleado": "EMP040",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP041",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP042",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP043",
+        "nombreCompleto": "Empleado No Encontrado"
+      }
+    ]
+>>>>>>> 7c9a583868200f29bdc1d7f0927252af3098bcab
   }
 ]

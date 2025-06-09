@@ -23,35 +23,28 @@
     </properties>
     
     <dependencies>
-        <!-- JavaFX Controls (ya incluido en Java 8) -->
-        
-        <!-- Gson para manejo de JSON -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
         </dependency>
         
-        <!-- JUnit para pruebas -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- Apache POI para archivos Excel -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>5.2.4</version>
         </dependency>
-        <!-- OpenCSV para archivos CSV -->
         <dependency>
             <groupId>com.opencsv</groupId>
             <artifactId>opencsv</artifactId>
             <version>5.7.1</version>
         </dependency>
-        <!-- Apache POI para archivos Excel -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>

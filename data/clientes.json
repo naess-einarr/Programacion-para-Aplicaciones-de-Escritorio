@@ -1,7 +1,7 @@
 [
   {
     "idCliente": "CLI-3H4B2OWN",
-    "nombreCompleto": "María",
+    "nombreCompleto": "Marcela",
     "apellidosCompletos": "García",
     "nacionalidadCliente": "mexicano",
     "fechaNacimiento": {
@@ -11,8 +11,8 @@
     },
     "rfcCliente": "DUFP981231H08",
     "curpCliente": "NYTY981231HVZNNR06",
-    "direccionCompleta": "Calle Ficticia 1",
-    "telefonoContacto": "228290000",
+    "direccionCompleta": "Calle Ficticia 12",
+    "telefonoContacto": "2282900020",
     "correoElectronico": "cliente1@correo.com"
   },
   {
@@ -28,7 +28,7 @@
     "rfcCliente": "YBEA981231H08",
     "curpCliente": "UFCL981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 2",
-    "telefonoContacto": "228290001",
+    "telefonoContacto": "2282902001",
     "correoElectronico": "cliente2@correo.com"
   },
   {
@@ -44,7 +44,7 @@
     "rfcCliente": "YPVO981231H08",
     "curpCliente": "CKRH981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 3",
-    "telefonoContacto": "228290002",
+    "telefonoContacto": "2282902002",
     "correoElectronico": "cliente3@correo.com"
   },
   {
@@ -60,7 +60,7 @@
     "rfcCliente": "ATVE981231H08",
     "curpCliente": "YOES981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 4",
-    "telefonoContacto": "228290003",
+    "telefonoContacto": "2282920003",
     "correoElectronico": "cliente4@correo.com"
   },
   {
@@ -76,7 +76,7 @@
     "rfcCliente": "UNVJ981231H08",
     "curpCliente": "PUTU981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 5",
-    "telefonoContacto": "228290004",
+    "telefonoContacto": "2282290004",
     "correoElectronico": "cliente5@correo.com"
   },
   {
@@ -92,7 +92,7 @@
     "rfcCliente": "BXKU981231H08",
     "curpCliente": "YIZH981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 6",
-    "telefonoContacto": "228290005",
+    "telefonoContacto": "2228290005",
     "correoElectronico": "cliente6@correo.com"
   },
   {
@@ -108,7 +108,7 @@
     "rfcCliente": "CROJ981231H08",
     "curpCliente": "VTFJ981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 7",
-    "telefonoContacto": "228290006",
+    "telefonoContacto": "2282290006",
     "correoElectronico": "cliente7@correo.com"
   },
   {
@@ -124,7 +124,7 @@
     "rfcCliente": "VWJM981231H08",
     "curpCliente": "PJCJ981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 8",
-    "telefonoContacto": "228290007",
+    "telefonoContacto": "2282290007",
     "correoElectronico": "cliente8@correo.com"
   },
   {
@@ -140,7 +140,7 @@
     "rfcCliente": "YIDW981231H08",
     "curpCliente": "CMBZ981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 9",
-    "telefonoContacto": "228290008",
+    "telefonoContacto": "2282390008",
     "correoElectronico": "cliente9@correo.com"
   },
   {
@@ -156,7 +156,7 @@
     "rfcCliente": "SBQW981231H08",
     "curpCliente": "PNVY981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 10",
-    "telefonoContacto": "228290009",
+    "telefonoContacto": "2282920009",
     "correoElectronico": "cliente10@correo.com"
   },
   {
@@ -172,7 +172,7 @@
     "rfcCliente": "REUN981231H08",
     "curpCliente": "EMWT981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 11",
-    "telefonoContacto": "228290010",
+    "telefonoContacto": "2282910010",
     "correoElectronico": "cliente11@correo.com"
   },
   {
@@ -188,7 +188,7 @@
     "rfcCliente": "YLLT981231H08",
     "curpCliente": "SMIM981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 12",
-    "telefonoContacto": "228290011",
+    "telefonoContacto": "2282900511",
     "correoElectronico": "cliente12@correo.com"
   },
   {
@@ -204,7 +204,7 @@
     "rfcCliente": "BWNY981231H08",
     "curpCliente": "OFFL981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 13",
-    "telefonoContacto": "228290012",
+    "telefonoContacto": "2282906012",
     "correoElectronico": "cliente13@correo.com"
   },
   {
@@ -220,7 +220,7 @@
     "rfcCliente": "LBMW981231H08",
     "curpCliente": "MYRG981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 14",
-    "telefonoContacto": "228290013",
+    "telefonoContacto": "2282900313",
     "correoElectronico": "cliente14@correo.com"
   },
   {
@@ -236,7 +236,7 @@
     "rfcCliente": "BPYW981231H08",
     "curpCliente": "KELC981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 15",
-    "telefonoContacto": "228290014",
+    "telefonoContacto": "2282910014",
     "correoElectronico": "cliente15@correo.com"
   },
   {
@@ -252,7 +252,7 @@
     "rfcCliente": "GEDG981231H08",
     "curpCliente": "EPHF981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 16",
-    "telefonoContacto": "228290015",
+    "telefonoContacto": "2282910015",
     "correoElectronico": "cliente16@correo.com"
   },
   {
@@ -268,7 +268,7 @@
     "rfcCliente": "EXDP981231H08",
     "curpCliente": "OQCV981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 17",
-    "telefonoContacto": "228290016",
+    "telefonoContacto": "2282901016",
     "correoElectronico": "cliente17@correo.com"
   },
   {
@@ -284,7 +284,7 @@
     "rfcCliente": "BRQF981231H08",
     "curpCliente": "YNCZ981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 18",
-    "telefonoContacto": "228290017",
+    "telefonoContacto": "2282901017",
     "correoElectronico": "cliente18@correo.com"
   },
   {
@@ -300,7 +300,7 @@
     "rfcCliente": "JMRL981231H08",
     "curpCliente": "ACXP981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 19",
-    "telefonoContacto": "228290018",
+    "telefonoContacto": "2282900118",
     "correoElectronico": "cliente19@correo.com"
   },
   {
@@ -316,7 +316,39 @@
     "rfcCliente": "NQVQ981231H08",
     "curpCliente": "BTPK981231HVZNNR06",
     "direccionCompleta": "Calle Ficticia 20",
-    "telefonoContacto": "228290019",
+    "telefonoContacto": "2282900149",
     "correoElectronico": "cliente20@correo.com"
+  },
+  {
+    "idCliente": "CLI-3H4B2OWN",
+    "nombreCompleto": "María",
+    "apellidosCompletos": "García",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 1990,
+      "month": 1,
+      "day": 1
+    },
+    "rfcCliente": "DUFP981231H03",
+    "curpCliente": "NYTY981231HVZNNR00",
+    "direccionCompleta": "Calle Ficticia 1",
+    "telefonoContacto": "2282900002",
+    "correoElectronico": "cliente1@correo.com"
+  },
+  {
+    "idCliente": "CLI-7C8EA5E3",
+    "nombreCompleto": "Petronilo",
+    "apellidosCompletos": "Pancracio",
+    "nacionalidadCliente": "Mexicano",
+    "fechaNacimiento": {
+      "year": 2003,
+      "month": 4,
+      "day": 10
+    },
+    "rfcCliente": "SAMM981231Y76",
+    "curpCliente": "SAMM981231HVZMMR12",
+    "direccionCompleta": "nuevo mexico 12",
+    "telefonoContacto": "2282929871",
+    "correoElectronico": "ejemplo@denuevo.com"
   }
 ]

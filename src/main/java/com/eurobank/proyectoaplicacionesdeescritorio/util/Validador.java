@@ -1,67 +1,49 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.util;
 
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cajero;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cliente;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Ejecutivo;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
 import java.time.LocalDate;
+import java.time.Period;
 
-/**
- * Clase utilitaria para validar datos de diferentes entidades del sistema.
- * Contiene métodos estáticos para validación de campos y objetos completos.
- */
 public class Validador {
 
     private Validador() {
         throw new UnsupportedOperationException("Clase de utilería");
     }
 
-    /**
-     * Valida el nombre de una persona.
-     * @param nombre Nombre a validar
-     * @throws IllegalArgumentException si el nombre no es válido
-     */
     public static void validarNombre(String nombre) {
-        if (nombre == null || nombre.trim().isEmpty()) {
+        if (nombre == null || nombre.isEmpty()) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_NOMBRE_OBLIGATORIO);
         }
 
-        String nombreLimpio = nombre.trim();
-
-        if (nombreLimpio.length() < ConstantesUtil.LONGITUD_NOMBRE_MIN || nombreLimpio.length() > ConstantesUtil.LONGITUD_NOMBRE_MAX) {
+        if (nombre.length() < ConstantesUtil.LONGITUD_NOMBRE_MIN || nombre.length() > ConstantesUtil.LONGITUD_NOMBRE_MAX) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_NOMBRE_LONGITUD);
         }
 
-        if (!nombreLimpio.matches(ConstantesUtil.REGEX_SOLO_LETRAS)) {
+        if (!nombre.matches(ConstantesUtil.REGEX_SOLO_LETRAS)) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_NOMBRE_FORMATO);
         }
     }
 
-    /**
-     * Valida el apellido de una persona.
-     * @param apellido Apellido a validar
-     * @throws IllegalArgumentException si el apellido no es válido
-     */
     public static void validarApellido(String apellido) {
-        if (apellido == null || apellido.trim().isEmpty()) {
+        if (apellido == null || apellido.isEmpty()) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_APELLIDO_OBLIGATORIO);
         }
 
-        String apellidoLimpio = apellido.trim();
-
-        if (apellidoLimpio.length() < ConstantesUtil.LONGITUD_NOMBRE_MIN || apellidoLimpio.length() > ConstantesUtil.LONGITUD_NOMBRE_MAX) {
+        if (apellido.length() < ConstantesUtil.LONGITUD_NOMBRE_MIN || apellido.length() > ConstantesUtil.LONGITUD_NOMBRE_MAX) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_APELLIDO_LONGITUD);
         }
 
-        if (!apellidoLimpio.matches(ConstantesUtil.REGEX_SOLO_LETRAS)) {
+        if (!apellido.matches(ConstantesUtil.REGEX_SOLO_LETRAS)) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_APELLIDO_FORMATO);
         }
     }
 
-    /**
-     * Valida la nacionalidad de una persona.
-     * @param nacionalidad Nacionalidad a validar
-     * @throws IllegalArgumentException si la nacionalidad no es válida
-     */
     public static void validarNacionalidad(String nacionalidad) {
-        if (nacionalidad == null || nacionalidad.trim().isEmpty()) {
+        if (nacionalidad == null || nacionalidad.isEmpty()) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_NACIONALIDAD_OBLIGATORIA);
         }
 
@@ -70,14 +52,13 @@ public class Validador {
         }
     }
 
-    /**
-     * Valida la fecha de nacimiento.
-     * @param fechaNacimiento Fecha a validar
-     * @throws IllegalArgumentException si la fecha no es válida
-     */
     public static void validarFechaNacimiento(LocalDate fechaNacimiento) {
         if (fechaNacimiento == null) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_FECHA_OBLIGATORIA);
+        }
+
+        if (Period.between(fechaNacimiento, LocalDate.now()).getYears() < 18) {
+            throw new IllegalArgumentException(ConstantesUtil.ERROR_MENOR_DE_EDAD);
         }
 
         if (fechaNacimiento.isAfter(LocalDate.now())) {
@@ -89,114 +70,170 @@ public class Validador {
         }
     }
 
-    /**
-     * Valida el RFC de una persona física.
-     * @param rfc RFC a validar
-     * @throws IllegalArgumentException si el RFC no es válido
-     */
     public static void validarRfc(String rfc) {
-        if (rfc == null || rfc.trim().isEmpty()) {
+        if (rfc == null || rfc.isEmpty()) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_RFC_OBLIGATORIO);
         }
 
-        String rfcLimpio = rfc.trim().toUpperCase();
-
-        if (rfcLimpio.length() < ConstantesUtil.LONGITUD_RFC_MIN || rfcLimpio.length() > ConstantesUtil.LONGITUD_RFC_MAX) {
+        if (rfc.length() != ConstantesUtil.LONGITUD_RFC) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_RFC_LONGITUD);
         }
 
-        // Validación básica de formato para persona física (4 letras + 6 números + 3 caracteres)
-        if (rfcLimpio.length() == 13 && !rfcLimpio.matches(ConstantesUtil.REGEX_RFC)) {
+        if (!rfc.matches(ConstantesUtil.REGEX_RFC)) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_RFC_FORMATO);
         }
     }
 
-    /**
-     * Valida el CURP.
-     * @param curp CURP a validar
-     * @throws IllegalArgumentException si el CURP no es válido
-     */
     public static void validarCurp(String curp) {
-        if (curp == null || curp.trim().isEmpty()) {
+        if (curp == null || curp.isEmpty()) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_CURP_OBLIGATORIO);
         }
 
-        String curpLimpio = curp.trim().toUpperCase();
-
-        if (curpLimpio.length() != ConstantesUtil.LONGITUD_CURP) {
+        if (curp.length() != ConstantesUtil.LONGITUD_CURP) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_CURP_LONGITUD);
         }
 
-        if (!curpLimpio.matches(ConstantesUtil.REGEX_CURP)) {
+        if (!curp.matches(ConstantesUtil.REGEX_CURP)) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_CURP_FORMATO);
         }
     }
 
-    /**
-     * Valida la dirección.
-     * @param direccion Dirección a validar
-     * @throws IllegalArgumentException si la dirección no es válida
-     */
-    public static void validarDireccion(String direccion) {
-        if (direccion == null || direccion.trim().isEmpty()) {
+    private static void validarDireccion(String direccion) {
+        if (direccion == null || direccion.isEmpty()) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_DIRECCION_OBLIGATORIA);
         }
 
-        String direccionLimpia = direccion.trim();
-
-        if (direccionLimpia.length() < ConstantesUtil.LONGITUD_DIRECCION_MIN || direccionLimpia.length() > ConstantesUtil.LONGITUD_DIRECCION_MAX) {
+        if (direccion.length() < ConstantesUtil.LONGITUD_DIRECCION_MIN || direccion.length() > ConstantesUtil.LONGITUD_DIRECCION_MAX) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_DIRECCION_LONGITUD);
         }
 
-        if (!direccionLimpia.matches(ConstantesUtil.REGEX_LETRAS_Y_NUMEROS)) {
+        if (!direccion.matches(ConstantesUtil.REGEX_LETRAS_Y_NUMEROS)) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_DIRECCION_FORMATO);
         }
     }
 
-    /**
-     * Valida el número de teléfono.
-     * @param telefono Teléfono a validar
-     * @throws IllegalArgumentException si el teléfono no es válido
-     */
-    public static void validarTelefono(String telefono) {
-        if (telefono == null || telefono.trim().isEmpty()) {
+    private static void validarTelefono(String telefono) {
+        if (telefono == null || telefono.isEmpty()) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_TELEFONO_OBLIGATORIO);
         }
 
-        String telefonoLimpio = telefono.trim();
-
-        // Contar solo los dígitos para validar longitud mínima
-        long cantidadDigitos = telefonoLimpio.chars()
-                .filter(Character::isDigit)
-                .count();
-
-        if (cantidadDigitos < ConstantesUtil.LONGITUD_TELEFONO_MIN) {
+        if (telefono.length() < ConstantesUtil.LONGITUD_TELEFONO_MIN) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_TELEFONO_LONGITUD);
         }
 
-        if (!telefonoLimpio.matches(ConstantesUtil.REGEX_TELEFONO)) {
+        if (!telefono.matches(ConstantesUtil.REGEX_TELEFONO)) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_TELEFONO_FORMATO);
         }
     }
 
-    public static void validarCorreo(String correo) {
-        if (correo == null || correo.trim().isEmpty()) {
+    private static void validarCorreo(String correo) {
+        if (correo == null || correo.isEmpty()) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_CORREO_OBLIGATORIO);
         }
 
-        if (!correo.trim().matches(ConstantesUtil.REGEX_EMAIL)) {
+        if (!correo.matches(ConstantesUtil.REGEX_EMAIL)) {
             throw new IllegalArgumentException(ConstantesUtil.ERROR_CORREO_FORMATO);
         }
     }
 
-    /**
-     * Valida todos los campos de un cliente.
-     * @param cliente Cliente a validar
-     * @throws IllegalArgumentException si algún campo no es válido
-     */
+    public static void validarIdEmpleado(String idEmpleado) {
+        if (idEmpleado == null || idEmpleado.isEmpty()) {
+            throw new IllegalArgumentException("El ID del empleado es obligatorio");
+        }
+    }
+
+    public static void validarGeneroEmpleado(String genero) {
+        if (genero == null || genero.isEmpty()) {
+            throw new IllegalArgumentException("El género es obligatorio");
+        }
+    }
+
+    public static void validarSalarioMensual(Double salario) {
+
+        if (salario == null) {
+            throw new IllegalArgumentException("El salario mensual es obligatorio");
+        }
+
+        if (salario <= 8300) {
+            throw new IllegalArgumentException("El salario debe ser el minimo al menos, no seas explotador");
+        }
+
+    }
+
+    public static void validarTipoEmpleado(String tipoEmpleado) {
+        if (tipoEmpleado == null || tipoEmpleado.isEmpty()) {
+            throw new IllegalArgumentException("El tipo de empleado es obligatorio");
+        }
+    }
+
+    private static void validarEspecializacion(String especializacion) {
+        if (especializacion == null || especializacion.isEmpty()){
+            throw new IllegalArgumentException ("La especializacion es obligatoria");
+        }
+        
+        
+    }
+    
+    private static void validarAniosExperiencia(Integer anios){
+        
+        if (anios == null){
+            throw new IllegalArgumentException("Los años de experiencia son obligatorios");
+        }
+        
+        if (anios < 0){
+            throw new IllegalArgumentException("Los años de experiencia no pueden ser negativos");
+        }
+    }
+    
+    private static void validarNivelAcceso(String nivelAcceso){
+        if (nivelAcceso == null|| nivelAcceso.isEmpty() ){
+            throw new IllegalArgumentException("El nivel de Acceso es obligatorio");
+        }
+        
+    }
+    
+    private static void validarHorario(String horario){
+        if (horario == null || horario.isEmpty()){
+            throw new IllegalArgumentException("El horario es obligatorio");
+        }
+    }
+    
+    private static void validarVentanilla (int ventanilla){
+        if (ventanilla < 1){
+            throw new IllegalArgumentException("No puede haber ventanillas negativas");
+        }
+        
+    }
+    
+
+    public static void validarEmpleado(Empleado empleado) {
+        if (empleado == null) {
+            throw new IllegalArgumentException("Todos los campos son obligatorios");
+        }
+
+        validarIdEmpleado(empleado.getIdEmpleado());
+        validarNombre(empleado.getNombreCompleto());
+        validarDireccion(empleado.getDireccionCompleta());
+        validarFechaNacimiento(empleado.getFechaNacimiento());
+        validarGeneroEmpleado(empleado.getGeneroEmpleado());
+        validarSalarioMensual(empleado.getSalarioMensual());
+        validarTipoEmpleado(empleado.getTipoEmpleado());
+
+        if (empleado instanceof Cajero) {
+            validarHorario(((Cajero) empleado).getHorarioTrabajo());
+            validarVentanilla(((Cajero) empleado).getNumeroVentanilla());
+        } else if (empleado instanceof Ejecutivo) {
+            validarEspecializacion(((Ejecutivo) empleado).getEspecializacionEjecutivo());
+        } else if (empleado instanceof Gerente) {
+            validarNivelAcceso(((Gerente) empleado).getNivelAcceso());
+            validarAniosExperiencia(((Gerente) empleado).getAniosExperiencia()); 
+        }
+
+    }
+
     public static void validarCliente(Cliente cliente) {
         if (cliente == null) {
-            throw new IllegalArgumentException("El cliente no puede ser nulo");
+            throw new IllegalArgumentException("Todos los campos son obligatorios");
         }
 
         validarNombre(cliente.getNombreCompleto());
@@ -209,4 +246,5 @@ public class Validador {
         validarTelefono(cliente.getTelefonoContacto());
         validarCorreo(cliente.getCorreoElectronico());
     }
+
 }

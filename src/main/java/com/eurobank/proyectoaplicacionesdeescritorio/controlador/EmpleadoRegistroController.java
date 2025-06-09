@@ -194,6 +194,10 @@ public class EmpleadoRegistroController implements Initializable{
         this.textSalario.setText(Double.toString(empleadoEditar.getSalarioMensual()));
         this.textTipoDeEmpleado.setText(empleadoEditar.getTipoEmpleado());
         
+        textNombre.setDisable(modoEdicion);
+        dateFechaNacimiento.setDisable(modoEdicion);
+        comboGenero.setDisable(modoEdicion);
+        
         String columnaUno = null;
         String columnaDos = null;
         
@@ -203,6 +207,7 @@ public class EmpleadoRegistroController implements Initializable{
         }else if(empleadoEditar instanceof Ejecutivo){
             columnaUno = ((Ejecutivo) empleadoEditar).getEspecializacionEjecutivo();
             columnaDos = ((Ejecutivo) empleadoEditar).getNumeroClientesAsignados().toString();
+            
         }else if(empleadoEditar instanceof Gerente){
             columnaUno = ((Gerente) empleadoEditar).getNivelAcceso();
             columnaDos = ((Gerente) empleadoEditar).getAniosExperiencia().toString();

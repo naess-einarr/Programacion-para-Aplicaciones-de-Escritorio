@@ -145,6 +145,14 @@ public class ClienteRegistroController implements Initializable {
         textDireccionCliente.setText(clienteEditar.getDireccionCompleta());
         textTelefonoCliente.setText(clienteEditar.getTelefonoContacto());
         textCorreoCliente.setText(clienteEditar.getCorreoElectronico());
+        
+        textRfcCliente.setDisable(modoEdicion);
+        textCurpCliente.setDisable(modoEdicion);
+        textNombreCliente.setDisable(modoEdicion);
+        textApellidoCliente.setDisable(modoEdicion);
+        textNacionalidadCliente.setDisable(modoEdicion);
+        dateFechaNacCliente.setDisable(modoEdicion);
+        
     }
     
 }

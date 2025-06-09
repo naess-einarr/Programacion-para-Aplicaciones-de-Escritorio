@@ -11,11 +11,8 @@ public class Sucursal {
     private String correoSucursal;
     private Gerente gerente;
     private Ejecutivo contacto;
-    private List<String> cuentasAsociadas;
-    private List<String> empleadosAsociados;
-
-    public Sucursal() {
-    }
+    private List<CuentaBancaria> cuentasAsociadas;
+    private List<Empleado> empleadosAsociados;
 
     public String getIdSucursal() {
         return idSucursal;
@@ -73,23 +70,23 @@ public class Sucursal {
         this.contacto = contacto;
     }
 
-    public List<String> getCuentasAsociadas() {
+    public List<CuentaBancaria> getCuentasAsociadas() {
         return cuentasAsociadas;
     }
 
-    public void setCuentasAsociadas(List<String> cuentasAsociadas) {
+    public void setCuentasAsociadas(List<CuentaBancaria> cuentasAsociadas) {
         this.cuentasAsociadas = cuentasAsociadas;
     }
 
-    public List<String> getEmpleadosAsociados() {
+    public List<Empleado> getEmpleadosAsociados() {
         return empleadosAsociados;
     }
 
-    public void setEmpleadosAsociados(List<String> empleadosAsociados) {
+    public void setEmpleadosAsociados(List<Empleado> empleadosAsociados) {
         this.empleadosAsociados = empleadosAsociados;
     }
-    
 
+   
     @Override
     public String toString() {
         return idSucursal + " - " + nombreSucursal;

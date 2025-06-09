@@ -96,12 +96,12 @@ public class SucursalController implements Initializable {
    
     @FXML
     void accionCuentas(ActionEvent event) {
-
+        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.SUCURSAL_CUENTAS);
     }
     
     @FXML
     void accionEmpleados(ActionEvent event) {
-
+        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.SUCURSAL_EMPLEADOS);
     }
     
     @FXML
@@ -114,7 +114,7 @@ public class SucursalController implements Initializable {
         try {
             tablaSucursales.setItems(FXCollections.observableArrayList(sucursalDAO.obtenerTodos()));
         } catch (Exception ex) {
-
+            LOG.error(ex);
         }
     }
 

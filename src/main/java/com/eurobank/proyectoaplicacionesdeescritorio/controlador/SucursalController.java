@@ -96,11 +96,33 @@ public class SucursalController implements Initializable {
    
     @FXML
     void accionCuentas(ActionEvent event) {
+        Sucursal sucursalSeleccionada = tablaSucursales.getSelectionModel().getSelectedItem();
+        if (Objects.isNull(sucursalSeleccionada)) {
+            AlertaUtil.mostrarAlerta("INFORACION", "Debe seleccionar un registro", Alert.AlertType.INFORMATION);
+            return;
+        }
+        try {
+            SucursalCuentaController sucursalCuentaController = ManejadorDeVistas.getInstancia().obtenerControlador(ManejadorDeVistas.Vista.SUCURSAL_CUENTAS);
+        } catch (IOException ex) {
+            LOG.error(ex);
+        }
+
         ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.SUCURSAL_CUENTAS);
     }
     
     @FXML
     void accionEmpleados(ActionEvent event) {
+        Sucursal sucursalSeleccionada = tablaSucursales.getSelectionModel().getSelectedItem();
+        if (Objects.isNull(sucursalSeleccionada)) {
+            AlertaUtil.mostrarAlerta("INFORACION", "Debe seleccionar un registro", Alert.AlertType.INFORMATION);
+            return;
+        }
+        try {
+            SucursalEmpleadoController sucursalEmpleadoController = ManejadorDeVistas.getInstancia().obtenerControlador(ManejadorDeVistas.Vista.SUCURSAL_EMPLEADOS);
+            sucursalEmpleadoController.administrarSucursal(sucursalSeleccionada);
+        } catch (IOException ex) {
+            LOG.error(ex);
+        }
         ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.SUCURSAL_EMPLEADOS);
     }
     

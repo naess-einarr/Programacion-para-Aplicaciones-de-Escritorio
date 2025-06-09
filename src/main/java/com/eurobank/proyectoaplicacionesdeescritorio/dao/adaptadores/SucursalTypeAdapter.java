@@ -41,6 +41,7 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
             for (CuentaBancaria cuenta : sucursal.getCuentasAsociadas()) {
                 JsonObject cuentaObj = new JsonObject();
                 cuentaObj.addProperty("numeroCuenta", cuenta.getNumeroCuenta());
+                cuentaObj.addProperty("idClienteAsociado", cuenta.getIdClienteAsociado());
                 cuentasArray.add(cuentaObj);
             }
             jsonObject.add("cuentasAsociadas", cuentasArray);
@@ -52,6 +53,7 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
             for (Empleado empleado : sucursal.getEmpleadosAsociados()) {
                 JsonObject empleadoObj = new JsonObject();
                 empleadoObj.addProperty("idEmpleado", empleado.getIdEmpleado());
+                empleadoObj.addProperty("nombreCompleto", empleado.getNombreCompleto());
                 empleadosArray.add(empleadoObj);
             }
             jsonObject.add("empleadosAsociados", empleadosArray);
@@ -95,6 +97,7 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
             JsonObject cuentaObj = cuentaElement.getAsJsonObject();
             CuentaBancaria cuenta = new CuentaBancaria();
             cuenta.setNumeroCuenta(cuentaObj.get("numeroCuenta").getAsString());
+            cuenta.setIdClienteAsociado(cuentaObj.get("idClienteAsociado").getAsString());
             // Los demás campos quedan como valores por defecto o null
             cuentas.add(cuenta);
         }
@@ -107,6 +110,7 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
             JsonObject empleadoObj = empleadoElement.getAsJsonObject();
             Empleado empleado = new Empleado(){};
             empleado.setIdEmpleado(empleadoObj.get("idEmpleado").getAsString());
+            empleado.setNombreCompleto(empleadoObj.get("nombreCompleto").getAsString());
             // Los demás campos quedan como valores por defecto o null
             empleados.add(empleado);
         }

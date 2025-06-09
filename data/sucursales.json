@@ -15,45 +15,30 @@
     },
     "cuentasAsociadas": [
       {
-        "numeroCuenta": "CTA001"
+        "numeroCuenta": "CTA001",
+        "idClienteAsociado": "CLI001"
       },
       {
-        "numeroCuenta": "CTA002"
+        "numeroCuenta": "CTA002",
+        "idClienteAsociado": "CLI002"
       },
       {
-        "numeroCuenta": "CTA003"
+        "numeroCuenta": "CTA003",
+        "idClienteAsociado": "CLI003"
       },
       {
-        "numeroCuenta": "CTA004"
+        "numeroCuenta": "CTA004",
+        "idClienteAsociado": "CLI004"
       },
       {
-        "numeroCuenta": "CTA005"
+        "numeroCuenta": "CTA005",
+        "idClienteAsociado": "CLI005"
       }
     ],
     "empleadosAsociados": [
       {
-        "idEmpleado": "EMP001"
-      },
-      {
-        "idEmpleado": "EMP002"
-      },
-      {
-        "idEmpleado": "EMP003"
-      },
-      {
-        "idEmpleado": "EMP009"
-      },
-      {
-        "idEmpleado": "EMP011"
-      },
-      {
-        "idEmpleado": "EMP014"
-      },
-      {
-        "idEmpleado": "EMP017"
-      },
-      {
-        "idEmpleado": "EMP018"
+        "idEmpleado": "EMP016",
+        "nombreCompleto": "Sebastián Mateo Díaz Herrera"
       }
     ]
   },
@@ -73,39 +58,50 @@
     },
     "cuentasAsociadas": [
       {
-        "numeroCuenta": "CTA006"
+        "numeroCuenta": "CTA006",
+        "idClienteAsociado": "CLI006"
       },
       {
-        "numeroCuenta": "CTA007"
+        "numeroCuenta": "CTA007",
+        "idClienteAsociado": "CLI007"
       },
       {
-        "numeroCuenta": "CTA008"
+        "numeroCuenta": "CTA008",
+        "idClienteAsociado": "CLI008"
       },
       {
-        "numeroCuenta": "CTA009"
+        "numeroCuenta": "CTA009",
+        "idClienteAsociado": "CLI009"
       },
       {
-        "numeroCuenta": "CTA010"
+        "numeroCuenta": "CTA010",
+        "idClienteAsociado": "CLI010"
       }
     ],
     "empleadosAsociados": [
       {
-        "idEmpleado": "EMP004"
+        "idEmpleado": "EMP004",
+        "nombreCompleto": "Roberto Jesús Vázquez Torres"
       },
       {
-        "idEmpleado": "EMP005"
+        "idEmpleado": "EMP005",
+        "nombreCompleto": "Diana Patricia Morales Jiménez"
       },
       {
-        "idEmpleado": "EMP006"
+        "idEmpleado": "EMP006",
+        "nombreCompleto": "Fernando Gabriel Castillo Ruiz"
       },
       {
-        "idEmpleado": "EMP012"
+        "idEmpleado": "EMP012",
+        "nombreCompleto": "Rodrigo Emilio Torres Aguilar"
       },
       {
-        "idEmpleado": "EMP013"
+        "idEmpleado": "EMP013",
+        "nombreCompleto": "Andrea Paola Medina Castro"
       },
       {
-        "idEmpleado": "EMP019"
+        "idEmpleado": "EMP019",
+        "nombreCompleto": "Empleado No Encontrado"
       }
     ]
   },
@@ -125,36 +121,46 @@
     },
     "cuentasAsociadas": [
       {
-        "numeroCuenta": "CTA011"
+        "numeroCuenta": "CTA011",
+        "idClienteAsociado": "CLI011"
       },
       {
-        "numeroCuenta": "CTA012"
+        "numeroCuenta": "CTA012",
+        "idClienteAsociado": "CLI012"
       },
       {
-        "numeroCuenta": "CTA013"
+        "numeroCuenta": "CTA013",
+        "idClienteAsociado": "CLI013"
       },
       {
-        "numeroCuenta": "CTA014"
+        "numeroCuenta": "CTA014",
+        "idClienteAsociado": "CLI014"
       },
       {
-        "numeroCuenta": "CTA015"
+        "numeroCuenta": "CTA015",
+        "idClienteAsociado": "CLI015"
       }
     ],
     "empleadosAsociados": [
       {
-        "idEmpleado": "EMP007"
+        "idEmpleado": "EMP007",
+        "nombreCompleto": "Laura Beatriz Sánchez Flores"
       },
       {
-        "idEmpleado": "EMP008"
+        "idEmpleado": "EMP008",
+        "nombreCompleto": "Miguel Ángel Ramírez Delgado"
       },
       {
-        "idEmpleado": "EMP010"
+        "idEmpleado": "EMP010",
+        "nombreCompleto": "Alejandro David Ortega Peña"
       },
       {
-        "idEmpleado": "EMP015"
+        "idEmpleado": "EMP015",
+        "nombreCompleto": "Carmen Lucía Ibarra Núñez"
       },
       {
-        "idEmpleado": "EMP016"
+        "idEmpleado": "EMP016",
+        "nombreCompleto": "Sebastián Mateo Díaz Herrera"
       }
     ]
   },
@@ -174,33 +180,42 @@
     },
     "cuentasAsociadas": [
       {
-        "numeroCuenta": "CTA016"
+        "numeroCuenta": "CTA016",
+        "idClienteAsociado": "CLI016"
       },
       {
-        "numeroCuenta": "CTA017"
+        "numeroCuenta": "CTA017",
+        "idClienteAsociado": "CLI017"
       },
       {
-        "numeroCuenta": "CTA018"
+        "numeroCuenta": "CTA018",
+        "idClienteAsociado": "CLI018"
       },
       {
-        "numeroCuenta": "CTA019"
+        "numeroCuenta": "CTA019",
+        "idClienteAsociado": "CLI019"
       },
       {
-        "numeroCuenta": "CTA020"
+        "numeroCuenta": "CTA020",
+        "idClienteAsociado": "CLI020"
       }
     ],
     "empleadosAsociados": [
       {
-        "idEmpleado": "EMP020"
+        "idEmpleado": "EMP020",
+        "nombreCompleto": "Empleado No Encontrado"
       },
       {
-        "idEmpleado": "EMP021"
+        "idEmpleado": "EMP021",
+        "nombreCompleto": "Empleado No Encontrado"
       },
       {
-        "idEmpleado": "EMP022"
+        "idEmpleado": "EMP022",
+        "nombreCompleto": "Empleado No Encontrado"
       },
       {
-        "idEmpleado": "EMP023"
+        "idEmpleado": "EMP023",
+        "nombreCompleto": "Empleado No Encontrado"
       }
     ]
   },
@@ -220,33 +235,42 @@
     },
     "cuentasAsociadas": [
       {
-        "numeroCuenta": "CTA021"
+        "numeroCuenta": "CTA021",
+        "idClienteAsociado": "CLI021"
       },
       {
-        "numeroCuenta": "CTA022"
+        "numeroCuenta": "CTA022",
+        "idClienteAsociado": "CLI022"
       },
       {
-        "numeroCuenta": "CTA023"
+        "numeroCuenta": "CTA023",
+        "idClienteAsociado": "CLI023"
       },
       {
-        "numeroCuenta": "CTA024"
+        "numeroCuenta": "CTA024",
+        "idClienteAsociado": "CLI024"
       },
       {
-        "numeroCuenta": "CTA025"
+        "numeroCuenta": "CTA025",
+        "idClienteAsociado": "CLI025"
       }
     ],
     "empleadosAsociados": [
       {
-        "idEmpleado": "EMP024"
+        "idEmpleado": "EMP024",
+        "nombreCompleto": "Empleado No Encontrado"
       },
       {
-        "idEmpleado": "EMP025"
+        "idEmpleado": "EMP025",
+        "nombreCompleto": "Empleado No Encontrado"
       },
       {
-        "idEmpleado": "EMP026"
+        "idEmpleado": "EMP026",
+        "nombreCompleto": "Empleado No Encontrado"
       },
       {
-        "idEmpleado": "EMP027"
+        "idEmpleado": "EMP027",
+        "nombreCompleto": "Empleado No Encontrado"
       }
     ]
   },
@@ -266,19 +290,24 @@
     },
     "cuentasAsociadas": [
       {
-        "numeroCuenta": "CTA026"
+        "numeroCuenta": "CTA026",
+        "idClienteAsociado": "CLI026"
       },
       {
-        "numeroCuenta": "CTA027"
+        "numeroCuenta": "CTA027",
+        "idClienteAsociado": "CLI027"
       },
       {
-        "numeroCuenta": "CTA028"
+        "numeroCuenta": "CTA028",
+        "idClienteAsociado": "CLI028"
       },
       {
-        "numeroCuenta": "CTA029"
+        "numeroCuenta": "CTA029",
+        "idClienteAsociado": "CLI029"
       },
       {
-        "numeroCuenta": "CTA030"
+        "numeroCuenta": "CTA030",
+        "idClienteAsociado": "CLI030"
       }
     ],
     "empleadosAsociados": []
@@ -299,33 +328,42 @@
     },
     "cuentasAsociadas": [
       {
-        "numeroCuenta": "CTA031"
+        "numeroCuenta": "CTA031",
+        "idClienteAsociado": "CLI031"
       },
       {
-        "numeroCuenta": "CTA032"
+        "numeroCuenta": "CTA032",
+        "idClienteAsociado": "CLI032"
       },
       {
-        "numeroCuenta": "CTA033"
+        "numeroCuenta": "CTA033",
+        "idClienteAsociado": "CLI033"
       },
       {
-        "numeroCuenta": "CTA034"
+        "numeroCuenta": "CTA034",
+        "idClienteAsociado": "CLI034"
       },
       {
-        "numeroCuenta": "CTA035"
+        "numeroCuenta": "CTA035",
+        "idClienteAsociado": "CLI035"
       }
     ],
     "empleadosAsociados": [
       {
-        "idEmpleado": "EMP032"
+        "idEmpleado": "EMP032",
+        "nombreCompleto": "Empleado No Encontrado"
       },
       {
-        "idEmpleado": "EMP033"
+        "idEmpleado": "EMP033",
+        "nombreCompleto": "Empleado No Encontrado"
       },
       {
-        "idEmpleado": "EMP034"
+        "idEmpleado": "EMP034",
+        "nombreCompleto": "Empleado No Encontrado"
       },
       {
-        "idEmpleado": "EMP035"
+        "idEmpleado": "EMP035",
+        "nombreCompleto": "Empleado No Encontrado"
       }
     ]
   },
@@ -345,19 +383,24 @@
     },
     "cuentasAsociadas": [
       {
-        "numeroCuenta": "CTA036"
+        "numeroCuenta": "CTA036",
+        "idClienteAsociado": "CLI036"
       },
       {
-        "numeroCuenta": "CTA037"
+        "numeroCuenta": "CTA037",
+        "idClienteAsociado": "CLI037"
       },
       {
-        "numeroCuenta": "CTA038"
+        "numeroCuenta": "CTA038",
+        "idClienteAsociado": "CLI038"
       },
       {
-        "numeroCuenta": "CTA039"
+        "numeroCuenta": "CTA039",
+        "idClienteAsociado": "CLI039"
       },
       {
-        "numeroCuenta": "CTA040"
+        "numeroCuenta": "CTA040",
+        "idClienteAsociado": "CLI040"
       }
     ],
     "empleadosAsociados": []
@@ -378,34 +421,60 @@
     },
     "cuentasAsociadas": [
       {
-        "numeroCuenta": "CTA041"
+        "numeroCuenta": "CTA041",
+        "idClienteAsociado": "CLI041"
       },
       {
-        "numeroCuenta": "CTA042"
+        "numeroCuenta": "CTA042",
+        "idClienteAsociado": "CLI042"
       },
       {
-        "numeroCuenta": "CTA043"
+        "numeroCuenta": "CTA043",
+        "idClienteAsociado": "CLI043"
       },
       {
-        "numeroCuenta": "CTA044"
+        "numeroCuenta": "CTA044",
+        "idClienteAsociado": "CLI044"
       },
       {
-        "numeroCuenta": "CTA045"
+        "numeroCuenta": "CTA045",
+        "idClienteAsociado": "CLI045"
       }
     ],
     "empleadosAsociados": [
       {
-        "idEmpleado": "EMP040"
+        "idEmpleado": "EMP040",
+        "nombreCompleto": "Empleado No Encontrado"
       },
       {
-        "idEmpleado": "EMP041"
+        "idEmpleado": "EMP041",
+        "nombreCompleto": "Empleado No Encontrado"
       },
       {
-        "idEmpleado": "EMP042"
+        "idEmpleado": "EMP042",
+        "nombreCompleto": "Empleado No Encontrado"
       },
       {
-        "idEmpleado": "EMP043"
+        "idEmpleado": "EMP043",
+        "nombreCompleto": "Empleado No Encontrado"
       }
     ]
+  },
+  {
+    "idSucursal": "SUC10",
+    "nombreSucursal": "asda",
+    "direccionSucursal": "asd",
+    "telefonoSucursal": "123",
+    "correoSucursal": "asdasd",
+    "gerente": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    },
+    "contacto": {
+      "idEmpleado": "EMP005",
+      "nombreCompleto": "Diana Patricia Morales Jiménez"
+    },
+    "cuentasAsociadas": [],
+    "empleadosAsociados": []
   }
 ]

@@ -9,18 +9,18 @@
 
 <AnchorPane id="AnchorPane" prefHeight="449.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.SucursalEmpleadoController">
    <children>
-      <TableView fx:id="tablaEmpleadosAsociados" layoutX="21.0" layoutY="77.0" prefHeight="321.0" prefWidth="340.0">
-        <columns>
-          <TableColumn fx:id="columnaIDAsociado" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="columnaNombreAsociado" prefWidth="75.0" text="Nombre" />
-        </columns>
-      </TableView>
-      <TableView fx:id="tablaEmpleadosDisponibles" layoutX="439.0" layoutY="77.0" prefHeight="321.0" prefWidth="340.0">
-        <columns>
-          <TableColumn fx:id="columnaID" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="columnaNombre" prefWidth="75.0" text="Nombre" />
-        </columns>
-      </TableView>
+        <TableView fx:id="tablaEmpleadosAsociados" layoutX="21.0" layoutY="77.0" prefHeight="321.0" prefWidth="340.0">
+          <columns>
+            <TableColumn fx:id="columnaIDAsociado" prefWidth="100.0" text="ID" />
+            <TableColumn fx:id="columnaNombreAsociado" prefWidth="240.0" text="Nombre" />
+          </columns>
+        </TableView>
+        <TableView fx:id="tablaEmpleadosDisponibles" layoutX="439.0" layoutY="77.0" prefHeight="321.0" prefWidth="340.0">
+          <columns>
+            <TableColumn fx:id="columnaID" prefWidth="100.0" text="ID" />
+            <TableColumn fx:id="columnaNombre" prefWidth="240.0" text="Nombre" />
+          </columns>
+        </TableView>
       <Button layoutX="373.0" layoutY="153.0" mnemonicParsing="false" onAction="#accionRegresarUno" prefHeight="25.0" prefWidth="47.0" text="&gt;">
          <font>
             <Font size="14.0" />

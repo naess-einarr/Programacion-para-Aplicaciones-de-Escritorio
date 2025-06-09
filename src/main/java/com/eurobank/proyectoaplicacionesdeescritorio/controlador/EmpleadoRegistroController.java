@@ -53,7 +53,6 @@ public class EmpleadoRegistroController implements Initializable{
     private ComboBox<Integer> comboColumnaDos;
     
     private EmpleadoDAO empleadoDAO;
-    private SucursalDAO sucursalDAO;
     private boolean modoEdicion;
     private String tipoEmpleado;
     private Empleado empleadoEditar;
@@ -61,7 +60,6 @@ public class EmpleadoRegistroController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         empleadoDAO = new EmpleadoDAO();
-        sucursalDAO = new SucursalDAO();
         cargarComboGenero();
         llenarCampoIdEmpleado();
     }

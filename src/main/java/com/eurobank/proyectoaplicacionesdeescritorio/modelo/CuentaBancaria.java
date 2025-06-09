@@ -3,10 +3,6 @@ package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 import java.time.LocalDateTime;
 import java.util.List;
 
-/**
- * Clase que representa una cuenta bancaria en el sistema EuroBank.
- * Contiene información sobre saldo, límite de crédito y tipo de cuenta.
- */
 public class CuentaBancaria {
     
     private String numeroCuenta;
@@ -36,8 +32,6 @@ public class CuentaBancaria {
         this.cuentaActiva = true;
     }
     
-    // Getters y Setters
-
     public String getNumeroCuenta() {
         return numeroCuenta;
     }
@@ -110,31 +104,16 @@ public class CuentaBancaria {
         this.listaTransaccionesAsociadas = listaTransaccionesAsociadas;
     }
     
-    
-    /**
-     * Método para verificar si la cuenta tiene saldo suficiente para una operación.
-     * @param montoRequerido Monto que se desea debitar
-     * @return true si tiene saldo suficiente, false en caso contrario
-     */
     public boolean tieneSaldoSuficiente(double montoRequerido) {
         return (saldoActual + limiteCredito) >= montoRequerido;
     }
     
-    /**
-     * Método para realizar un depósito en la cuenta.
-     * @param montoDeposito Cantidad a depositar
-     */
     public void realizarDeposito(double montoDeposito) {
         if (montoDeposito > 0) {
             this.saldoActual += montoDeposito;
         }
     }
     
-    /**
-     * Método para realizar un retiro de la cuenta.
-     * @param montoRetiro Cantidad a retirar
-     * @return true si el retiro fue exitoso, false si no hay saldo suficiente
-     */
     public boolean realizarRetiro(double montoRetiro) {
         if (tieneSaldoSuficiente(montoRetiro)) {
             this.saldoActual -= montoRetiro;

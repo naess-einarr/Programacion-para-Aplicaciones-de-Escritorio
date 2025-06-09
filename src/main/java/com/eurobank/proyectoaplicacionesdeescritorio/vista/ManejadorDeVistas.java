@@ -19,6 +19,7 @@ public class ManejadorDeVistas {
         EMPLEADO("/vistas/empleado.fxml", true),
         SUCURSAL("/vistas/sucursal.fxml", true),
         TRANSACCION("/vistas/transaccion.fxml", true),
+        TRANSACCION_REGISTRO("/vistas/transaccionregistro.fxml",false),
         CLIENTE_REGISTRO("/vistas/clienteregistro.fxml", false),
         EMPLEADO_REGISTRO("/vistas/empleadoregistro.fxml", false),
         SUCURSAL_SELECCION("/vistas/sucursalseleccion.fxml", true);

@@ -7,7 +7,6 @@ import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.HashSet;
 import java.util.Objects;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;

@@ -40,7 +40,7 @@
             </VBox>
          </right>
          <center>
-            <TableView fx:id="tablaClientes" prefHeight="372.0" prefWidth="555.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="tablaTransacciones" prefHeight="372.0" prefWidth="555.0" BorderPane.alignment="CENTER">
                <columns>
                   <TableColumn fx:id="columnaID" prefWidth="75.0" text="ID" />
                   <TableColumn fx:id="columnaMonto" prefWidth="75.0" text="Monto" />

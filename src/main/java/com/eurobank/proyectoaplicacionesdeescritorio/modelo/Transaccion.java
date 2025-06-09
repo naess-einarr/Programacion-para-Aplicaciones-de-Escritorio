@@ -12,7 +12,6 @@ public class Transaccion {
     private CuentaBancaria cuentaDestino;
     private Sucursal sucursal;
     private Empleado empleadoResponsable;
-    private String referenciaTransaccion;
     
     public Transaccion() {
     }
@@ -72,46 +71,40 @@ public class Transaccion {
     public void setTipoTransaccion(String tipoTransaccion) {
         this.tipoTransaccion = tipoTransaccion;
     }
-
-    public String getNumeroCuentaOrigen() {
-        return numeroCuentaOrigen;
+    
+    public CuentaBancaria getCuentaOrigen() {
+        return cuentaOrigen;
     }
 
-    public void setNumeroCuentaOrigen(String numeroCuentaOrigen) {
-        this.numeroCuentaOrigen = numeroCuentaOrigen;
+    public void setCuentaOrigen(CuentaBancaria cuentaOrigen) {
+        this.cuentaOrigen = cuentaOrigen;
     }
 
-    public String getNumeroCuentaDestino() {
-        return numeroCuentaDestino;
+    public CuentaBancaria getCuentaDestino() {
+        return cuentaDestino;
     }
 
-    public void setNumeroCuentaDestino(String numeroCuentaDestino) {
-        this.numeroCuentaDestino = numeroCuentaDestino;
+    public void setCuentaDestino(CuentaBancaria cuentaDestino) {
+        this.cuentaDestino = cuentaDestino;
     }
 
-    public String getIdSucursalTransaccion() {
-        return idSucursalTransaccion;
+    public Sucursal getSucursal() {
+        return sucursal;
     }
 
-    public void setIdSucursalTransaccion(String idSucursalTransaccion) {
-        this.idSucursalTransaccion = idSucursalTransaccion;
+    public void setSucursal(Sucursal sucursal) {
+        this.sucursal = sucursal;
     }
 
-    public String getIdEmpleadoResponsable() {
-        return idEmpleadoResponsable;
+    public Empleado getEmpleadoResponsable() {
+        return empleadoResponsable;
     }
 
-    public void setIdEmpleadoResponsable(String idEmpleadoResponsable) {
-        this.idEmpleadoResponsable = idEmpleadoResponsable;
+    public void setEmpleadoResponsable(Empleado empleadoResponsable) {
+        this.empleadoResponsable = empleadoResponsable;
     }
+    
 
-    public String getReferenciaTransaccion() {
-        return referenciaTransaccion;
-    }
-
-    public void setReferenciaTransaccion(String referenciaTransaccion) {
-        this.referenciaTransaccion = referenciaTransaccion;
-    }
     
     public boolean esTransferencia() {
         return "TRANSFERENCIA".equals(tipoTransaccion);

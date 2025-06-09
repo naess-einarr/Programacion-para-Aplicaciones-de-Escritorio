@@ -7,8 +7,12 @@ import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ConstantesUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoDatosUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoTablaUtil;
+
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ExportadorGenerico;
+
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeSesion;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.io.IOException;
@@ -74,13 +78,14 @@ public class EmpleadoController implements Initializable {
 
     @FXML
     void accionEditar(ActionEvent event) {
+        
         String tipoEmpleado = comboTipoEmpleado.getSelectionModel().getSelectedItem();
         Empleado empleadoSeleccionado = tablaEmpleados.getSelectionModel().getSelectedItem();
 
         try {
 
             if (Objects.isNull(empleadoSeleccionado)) {
-                AlertaUtil.mostrarAlerta("INFORACION", "Debe seleccionar un registro", Alert.AlertType.INFORMATION);
+                AlertaUtil.mostrarAlerta(AlertaUtil.ADVERTENCIA, "Debe seleccionar un registro", Alert.AlertType.INFORMATION);
                 return;
             }
 
@@ -134,7 +139,8 @@ public class EmpleadoController implements Initializable {
             empleadoRegistroController.configurarLabelDinamicos();
             ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO_REGISTRO);
         } catch (IOException ex) {
-            LOG.error(ex);
+            LOG.error(ConstantesUtil.LOG_ERROR_ARCHIVO);
+            AlertaUtil.mostrarAlertaRegistroFallido();
         }
 
     }
@@ -250,4 +256,17 @@ public class EmpleadoController implements Initializable {
                 .map(emp -> (Cajero) emp)
                 .collect(Collectors.toList());
     }
+    
+    public void accionExportar() {
+        String tipoEmpleado = ManejadorDeSesion.obtenerEmpleado().getTipoEmpleado();
+
+        configurarTablaEmpleados();
+        tablaEmpleados.refresh();
+
+        ExportadorGenerico.exportar(tablaEmpleados.getItems(),
+                ExportadorGenerico.TipoExportacion.EXCEL_XLS,
+                ManejadorDeVistas.getInstancia().obtenerEscenarioPrincipal(),
+                "empleados_" + tipoEmpleado + LocalDate.now() + ".xls");
+    }
+
 }

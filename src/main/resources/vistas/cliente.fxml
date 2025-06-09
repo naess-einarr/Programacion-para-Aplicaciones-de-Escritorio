@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
@@ -21,27 +23,42 @@
             </Label>
          </top>
          <right>
-            <VBox maxWidth="88.0" prefHeight="362.0" prefWidth="88.0" BorderPane.alignment="TOP_RIGHT">
+            <VBox maxWidth="98.0" prefHeight="341.0" prefWidth="98.0" BorderPane.alignment="TOP_RIGHT">
                <children>
-                  <Button fx:id="botonRegistrar" mnemonicParsing="false" onAction="#accionRegistrar" prefHeight="25.0" prefWidth="81.0" text="Registrar">
+                  <Button fx:id="botonRegistrar" mnemonicParsing="false" onAction="#accionRegistrar" prefHeight="25.0" prefWidth="123.0" text="Registrar">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="botonEditar" mnemonicParsing="false" onAction="#accionEditar" prefHeight="25.0" prefWidth="81.0" text="Editar">
+                  <Button fx:id="botonEditar" mnemonicParsing="false" onAction="#accionEditar" prefHeight="25.0" prefWidth="113.0" text="Editar">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="botonEliminar" mnemonicParsing="false" onAction="#accionEliminar" prefHeight="25.0" prefWidth="81.0" text="Eliminar">
+                  <Button fx:id="botonEliminar" mnemonicParsing="false" onAction="#accionEliminar" prefHeight="25.0" prefWidth="97.0" text="Eliminar">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="botonCancelar" mnemonicParsing="false" onAction="#accionCancelar" prefHeight="25.0" prefWidth="81.0" text="Cancelar">
+                  <Button fx:id="botonCancelar" mnemonicParsing="false" onAction="#accionCancelar" prefHeight="25.0" prefWidth="93.0" text="Cancelar">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
+                  </Button>
+                  <Button fx:id="botonExportar" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#accionExportar" prefHeight="29.0" prefWidth="124.0" text="Exportar" VBox.vgrow="ALWAYS">
+                     <opaqueInsets>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="80.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/excel-ico.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                </children>
                <BorderPane.margin>
@@ -50,7 +67,7 @@
             </VBox>
          </right>
          <center>
-            <TableView fx:id="tablaClientes" prefHeight="372.0" prefWidth="555.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="tablaClientes" prefHeight="351.0" prefWidth="657.0" BorderPane.alignment="CENTER">
                <columns>
                   <TableColumn fx:id="columnaID" prefWidth="75.0" text="ID" />
                   <TableColumn fx:id="columnaRFC" prefWidth="75.0" text="RFC" />

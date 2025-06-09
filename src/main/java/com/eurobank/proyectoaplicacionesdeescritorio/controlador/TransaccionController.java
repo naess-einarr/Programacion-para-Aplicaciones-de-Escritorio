@@ -4,6 +4,7 @@ import com.eurobank.proyectoaplicacionesdeescritorio.dao.TransaccionDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Transaccion;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.ConstantesUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ExportadorGenerico;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
 import java.time.LocalDate;
@@ -87,6 +88,13 @@ public class TransaccionController implements Initializable {
         columnaDestino.setCellValueFactory(new PropertyValueFactory<>("cuentaDestino"));
         columnaSucursal.setCellValueFactory(new PropertyValueFactory<>("sucursal"));
         
+    }
+    
+    public void accionExportar(){
+        ExportadorGenerico.exportar(tablaTransacciones.getItems(), 
+                ExportadorGenerico.TipoExportacion.EXCEL_XLS, 
+                ManejadorDeVistas.getInstancia().obtenerEscenarioPrincipal(), 
+                "Transacciones"+LocalDate.now()+".xls");
     }
     
 }

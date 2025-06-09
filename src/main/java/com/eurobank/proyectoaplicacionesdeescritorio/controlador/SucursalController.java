@@ -174,4 +174,12 @@ public class SucursalController implements Initializable {
         columnaNombre.setCellValueFactory(new PropertyValueFactory<>("nombreSucursal"));
     }
     
+    @FXML
+    public void accionExportar(){
+        ExportadorGenerico.exportar(tablaSucursales.getItems(), 
+                ExportadorGenerico.TipoExportacion.EXCEL_XLS, 
+                ManejadorDeVistas.getInstancia().obtenerEscenarioPrincipal(), 
+                "sucursales"+LocalDate.now()+".xls");
+    }
+    
 }

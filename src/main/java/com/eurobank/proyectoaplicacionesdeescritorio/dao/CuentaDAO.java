@@ -107,7 +107,7 @@ public class CuentaDAO implements GenericDAO<CuentaBancaria> {
         List<CuentaBancaria> cuentasDelCliente = new ArrayList<>();
         
         for (CuentaBancaria cuenta : todasLasCuentas) {
-            if (cuenta.getIdClienteAsociado().equals(idCliente)) {
+            if (cuenta.getCliente().getIdCliente().equals(idCliente)) {
                 cuentasDelCliente.add(cuenta);
             }
         }
@@ -126,7 +126,7 @@ public class CuentaDAO implements GenericDAO<CuentaBancaria> {
         List<CuentaBancaria> cuentasDeLaSucursal = new ArrayList<>();
         
         for (CuentaBancaria cuenta : todasLasCuentas) {
-            if (cuenta.getIdSucursalAsociada().equals(idSucursal)) {
+            if (cuenta.getSucursal().getIdSucursal().equals(idSucursal)) {
                 cuentasDeLaSucursal.add(cuenta);
             }
         }

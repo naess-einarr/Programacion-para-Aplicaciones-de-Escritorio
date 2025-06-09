@@ -3,13 +3,16 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.SucursalDAO;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.CuentaBancaria;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Ejecutivo;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.SucursalDatosUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -127,6 +130,9 @@ public class SucursalRegistroController implements Initializable {
         if(modoEdicion){
             sucursal.setEmpleadosAsociados(sucursalEdicion.getEmpleadosAsociados());
             sucursal.setCuentasAsociadas(sucursalEdicion.getCuentasAsociadas());
+        }else{
+            sucursal.setEmpleadosAsociados(new ArrayList<Empleado>());
+            sucursal.setCuentasAsociadas(new ArrayList<CuentaBancaria>());
         }
         return sucursal;
     }

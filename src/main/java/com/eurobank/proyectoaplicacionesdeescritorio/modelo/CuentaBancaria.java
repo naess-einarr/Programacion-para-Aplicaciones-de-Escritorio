@@ -6,32 +6,31 @@ import java.util.List;
 public class CuentaBancaria {
     
     private String numeroCuenta;
-    private String tipoCuenta; // "CORRIENTE", "AHORROS", "EMPRESARIAL"
+    private String tipoCuenta;
     private double saldoActual;
     private double limiteCredito;
     private LocalDateTime fechaApertura;
-    private String idClienteAsociado;
-    private String idSucursalAsociada;
     private boolean cuentaActiva;
-    private List<String> listaTransaccionesAsociadas;
+    private Cliente cliente;
+    private Sucursal sucursal;
+    private List<Transaccion> listaTransaccionesAsociadas;
     
     public CuentaBancaria() {
-    }
-    
-    public CuentaBancaria(String numeroCuenta, String tipoCuenta, double saldoActual,
-                         double limiteCredito, LocalDateTime fechaApertura, 
-                         String idClienteAsociado, String idSucursalAsociada) {
         
+    }
+
+    public CuentaBancaria(String numeroCuenta, String tipoCuenta, double saldoActual, double limiteCredito, LocalDateTime fechaApertura, boolean cuentaActiva, Cliente cliente, Sucursal sucursal, List<Transaccion> listaTransaccionesAsociadas) {
         this.numeroCuenta = numeroCuenta;
         this.tipoCuenta = tipoCuenta;
         this.saldoActual = saldoActual;
         this.limiteCredito = limiteCredito;
         this.fechaApertura = fechaApertura;
-        this.idClienteAsociado = idClienteAsociado;
-        this.idSucursalAsociada = idSucursalAsociada;
-        this.cuentaActiva = true;
+        this.cuentaActiva = cuentaActiva;
+        this.cliente = cliente;
+        this.sucursal = sucursal;
+        this.listaTransaccionesAsociadas = listaTransaccionesAsociadas;
     }
-    
+
     public String getNumeroCuenta() {
         return numeroCuenta;
     }
@@ -72,22 +71,6 @@ public class CuentaBancaria {
         this.fechaApertura = fechaApertura;
     }
 
-    public String getIdClienteAsociado() {
-        return idClienteAsociado;
-    }
-
-    public void setIdClienteAsociado(String idClienteAsociado) {
-        this.idClienteAsociado = idClienteAsociado;
-    }
-
-    public String getIdSucursalAsociada() {
-        return idSucursalAsociada;
-    }
-
-    public void setIdSucursalAsociada(String idSucursalAsociada) {
-        this.idSucursalAsociada = idSucursalAsociada;
-    }
-
     public boolean isCuentaActiva() {
         return cuentaActiva;
     }
@@ -96,39 +79,33 @@ public class CuentaBancaria {
         this.cuentaActiva = cuentaActiva;
     }
 
-    public List<String> getListaTransaccionesAsociadas() {
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Sucursal getSucursal() {
+        return sucursal;
+    }
+
+    public void setSucursal(Sucursal sucursal) {
+        this.sucursal = sucursal;
+    }
+
+    public List<Transaccion> getListaTransaccionesAsociadas() {
         return listaTransaccionesAsociadas;
     }
 
-    public void setListaTransaccionesAsociadas(List<String> listaTransaccionesAsociadas) {
+    public void setListaTransaccionesAsociadas(List<Transaccion> listaTransaccionesAsociadas) {
         this.listaTransaccionesAsociadas = listaTransaccionesAsociadas;
     }
-    
-    public boolean tieneSaldoSuficiente(double montoRequerido) {
-        return (saldoActual + limiteCredito) >= montoRequerido;
-    }
-    
-    public void realizarDeposito(double montoDeposito) {
-        if (montoDeposito > 0) {
-            this.saldoActual += montoDeposito;
-        }
-    }
-    
-    public boolean realizarRetiro(double montoRetiro) {
-        if (tieneSaldoSuficiente(montoRetiro)) {
-            this.saldoActual -= montoRetiro;
-            return true;
-        }
-        return false;
-    }
-    
+
     @Override
     public String toString() {
-        return "CuentaBancaria{" +
-               "numeroCuenta='" + numeroCuenta + '\'' +
-               ", tipoCuenta='" + tipoCuenta + '\'' +
-               ", saldoActual=" + saldoActual +
-               ", cuentaActiva=" + cuentaActiva +
-               '}';
+        return numeroCuenta + " - " + cliente.getNombreCompleto() + " " + cliente.getApellidosCompletos();
     }
+    
 }

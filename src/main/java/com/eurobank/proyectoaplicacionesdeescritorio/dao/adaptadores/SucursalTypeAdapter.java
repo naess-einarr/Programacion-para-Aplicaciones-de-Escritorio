@@ -40,8 +40,11 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
             JsonArray cuentasArray = new JsonArray();
             for (CuentaBancaria cuenta : sucursal.getCuentasAsociadas()) {
                 JsonObject cuentaObj = new JsonObject();
-                cuentaObj.addProperty("numeroCuenta", cuenta.getNumeroCuenta());
-                cuentasArray.add(cuentaObj);
+                    cuentaObj.addProperty("numeroCuenta", cuenta.getNumeroCuenta());
+                    JsonObject clienteObj = new JsonObject();
+                    clienteObj.addProperty("idCliente", cuenta.getCliente().getIdCliente());
+                    clienteObj.addProperty("nombreCompleto", cuenta.getCliente().getNombreCompleto());
+                    cuentaObj.add("cliente", clienteObj);
             }
             jsonObject.add("cuentasAsociadas", cuentasArray);
         }
@@ -52,6 +55,7 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
             for (Empleado empleado : sucursal.getEmpleadosAsociados()) {
                 JsonObject empleadoObj = new JsonObject();
                 empleadoObj.addProperty("idEmpleado", empleado.getIdEmpleado());
+                empleadoObj.addProperty("nombreCompleto", empleado.getNombreCompleto());
                 empleadosArray.add(empleadoObj);
             }
             jsonObject.add("empleadosAsociados", empleadosArray);
@@ -93,9 +97,13 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
         List<CuentaBancaria> cuentas = new ArrayList<>();
         for (JsonElement cuentaElement : cuentasArray) {
             JsonObject cuentaObj = cuentaElement.getAsJsonObject();
-            CuentaBancaria cuenta = new CuentaBancaria();
-            cuenta.setNumeroCuenta(cuentaObj.get("numeroCuenta").getAsString());
-            // Los demás campos quedan como valores por defecto o null
+                CuentaBancaria cuenta = new CuentaBancaria();
+                cuenta.setNumeroCuenta(cuentaObj.get("numeroCuenta").getAsString());
+                JsonObject clienteObj = cuentaObj.getAsJsonObject("cliente");
+                Cliente cliente = new Cliente();
+                cliente.setIdCliente(clienteObj.get("idCliente").getAsString());
+                cliente.setNombreCompleto(clienteObj.get("nombreCompleto").getAsString());
+                cuenta.setCliente(cliente);
             cuentas.add(cuenta);
         }
         sucursal.setCuentasAsociadas(cuentas);
@@ -107,6 +115,7 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
             JsonObject empleadoObj = empleadoElement.getAsJsonObject();
             Empleado empleado = new Empleado(){};
             empleado.setIdEmpleado(empleadoObj.get("idEmpleado").getAsString());
+            empleado.setNombreCompleto(empleadoObj.get("nombreCompleto").getAsString());
             // Los demás campos quedan como valores por defecto o null
             empleados.add(empleado);
         }

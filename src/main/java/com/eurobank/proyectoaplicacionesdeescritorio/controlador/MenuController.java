@@ -43,7 +43,7 @@ public class MenuController implements Initializable {
 
     @FXML
     void abrirVentanaAdministrarSucursales(ActionEvent event) {
-
+        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.SUCURSAL);
     }
 
     @FXML

@@ -25,8 +25,7 @@ public class EmpleadoTablaUtil {
                                                TableColumn<Empleado, String> columnaDireccion,
                                                TableColumn<Empleado, LocalDate> columnaFechaNacimiento,
                                                TableColumn<Empleado, String> columnaGenero,
-                                               TableColumn<Empleado, Double> columnaSalario,
-                                               TableColumn<Empleado, Sucursal> columnaSucursal) {
+                                               TableColumn<Empleado, Double> columnaSalario) {
         
         columnTipoEmpleado.setCellValueFactory(new PropertyValueFactory<>("tipoEmpleado"));
         columnaID.setCellValueFactory(new PropertyValueFactory<>("idEmpleado"));
@@ -35,13 +34,6 @@ public class EmpleadoTablaUtil {
         columnaFechaNacimiento.setCellValueFactory(new PropertyValueFactory<>("fechaNacimiento"));
         columnaGenero.setCellValueFactory(new PropertyValueFactory<>("generoEmpleado"));
         columnaSalario.setCellValueFactory(new PropertyValueFactory<>("salarioMensual"));
-        columnaSucursal.setCellValueFactory(cellData -> {
-            Sucursal sucursal = cellData.getValue().getSucursal();
-            if (sucursal != null) {
-                return new SimpleObjectProperty<>(sucursal);
-            }
-            return new SimpleObjectProperty<>(null);
-        });
     }
     
     public static void configurarColumnasDinamicas(TableColumn<Empleado, String> columnaUno,

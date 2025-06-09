@@ -6,13 +6,10 @@ import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cajero;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Ejecutivo;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
-import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoDatosUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -43,8 +40,6 @@ public class EmpleadoRegistroController implements Initializable{
     @FXML
     private ComboBox<String> comboGenero;
     @FXML
-    private ComboBox<Sucursal> comboSucursal;
-    @FXML
     private TextField textTipoDeEmpleado;
     @FXML
     private DatePicker dateFechaNacimiento;
@@ -67,7 +62,6 @@ public class EmpleadoRegistroController implements Initializable{
     public void initialize(URL url, ResourceBundle rb) {
         empleadoDAO = new EmpleadoDAO();
         sucursalDAO = new SucursalDAO();
-        cargarSucursal();
         cargarComboGenero();
         llenarCampoIdEmpleado();
     }
@@ -124,14 +118,6 @@ public class EmpleadoRegistroController implements Initializable{
         }
     }
     
-    private void cargarSucursal() {
-        try {
-            comboSucursal.setItems(FXCollections.observableArrayList(sucursalDAO.obtenerTodos()));
-        } catch (Exception ex) {
-                LOG.error(ex);
-        }
-    }
-    
     public void setTipoEmpleado(String tipoEmpleado) {
         this.tipoEmpleado = tipoEmpleado;
     }  
@@ -158,7 +144,6 @@ public class EmpleadoRegistroController implements Initializable{
         empleado.setDireccionCompleta(textDireccion.getText().trim());
         empleado.setFechaNacimiento(dateFechaNacimiento.getValue());
         empleado.setGeneroEmpleado(comboGenero.getValue());
-        empleado.setSucursal(obtenerDatosSucursal(comboSucursal.getSelectionModel().getSelectedItem()));
         empleado.setSalarioMensual(Double.parseDouble(textSalario.getText().trim()));
         empleado.setTipoEmpleado(textTipoDeEmpleado.getText());
         empleado.setNombreUsuario(textID.getText().trim());
@@ -196,7 +181,6 @@ public class EmpleadoRegistroController implements Initializable{
         this.comboGenero.getSelectionModel().select(empleadoEditar.getGeneroEmpleado());
         this.textSalario.setText(Double.toString(empleadoEditar.getSalarioMensual()));
         this.textTipoDeEmpleado.setText(empleadoEditar.getTipoEmpleado());
-        this.comboSucursal.getSelectionModel().select(empleadoEditar.getSucursal());
         
         String columnaUno = null;
         String columnaDos = null;
@@ -251,13 +235,6 @@ public class EmpleadoRegistroController implements Initializable{
                 LOG.error(ex);
             }
         }
-    }
-    
-    private Sucursal obtenerDatosSucursal(Sucursal sucursal){
-        Sucursal sucursalDatos = new Sucursal();
-        sucursalDatos.setIdSucursal(sucursal.getIdSucursal());
-        sucursalDatos.setNombreSucursal(sucursal.getNombreSucursal());
-        return sucursalDatos;
     }
         
 }

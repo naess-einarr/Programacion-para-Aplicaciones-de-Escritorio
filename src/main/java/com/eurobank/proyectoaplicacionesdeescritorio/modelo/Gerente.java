@@ -38,12 +38,10 @@ public class Gerente extends Empleado {
     public void setTipoEmpleado(String tipoEmpleado) {
         this.tipoEmpleado = tipoEmpleado;
     }
-    
-    
 
     @Override
     public String toString() {
-        return getNombreUsuario();
+        return getIdEmpleado() +" - "+getNombreCompleto();
     }
     
     

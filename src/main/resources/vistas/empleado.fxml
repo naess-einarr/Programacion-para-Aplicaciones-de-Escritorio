@@ -56,7 +56,6 @@
                   <TableColumn fx:id="columnaGenero" prefWidth="62.0" text="Género" />
                   <TableColumn fx:id="columnaSalario" prefWidth="72.0" text="Salario" />
                   <TableColumn fx:id="columnTipoEmpleado" prefWidth="124.0" text="Tipo de empleado" />
-                  <TableColumn fx:id="columnaSucursal" prefWidth="75.0" text="Sucursal" />
                   <TableColumn fx:id="columnaUno" prefWidth="50.0" />
                   <TableColumn fx:id="columnaDos" prefWidth="65.0" />
                </columns>

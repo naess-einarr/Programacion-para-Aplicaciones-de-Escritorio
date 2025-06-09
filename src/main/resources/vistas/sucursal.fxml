@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.ClienteController">
+<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.SucursalController">
    <children>
       <BorderPane layoutX="9.0" layoutY="8.0" maxHeight="800.0" maxWidth="1000.0" prefHeight="405.0" prefWidth="887.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -21,24 +21,34 @@
             </Label>
          </top>
          <right>
-            <VBox maxWidth="88.0" prefHeight="362.0" prefWidth="88.0" BorderPane.alignment="TOP_RIGHT">
+            <VBox maxWidth="131.0" prefHeight="341.0" prefWidth="131.0" BorderPane.alignment="TOP_RIGHT">
                <children>
-                  <Button fx:id="botonRegistrar" mnemonicParsing="false" onAction="#accionRegistrar" prefHeight="25.0" prefWidth="81.0" text="Registrar">
+                  <Button fx:id="botonRegistrar" mnemonicParsing="false" onAction="#accionRegistrar" prefHeight="25.0" prefWidth="129.0" text="Registrar">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="botonEditar" mnemonicParsing="false" onAction="#accionEditar" prefHeight="25.0" prefWidth="81.0" text="Editar">
+                  <Button fx:id="botonEditar" mnemonicParsing="false" onAction="#accionEditar" prefHeight="25.0" prefWidth="129.0" text="Editar">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="botonEliminar" mnemonicParsing="false" onAction="#accionEliminar" prefHeight="25.0" prefWidth="81.0" text="Eliminar">
+                  <Button fx:id="botonEmpleados" contentDisplay="CENTER" mnemonicParsing="false" onAction="#accionEmpleados" prefHeight="25.0" prefWidth="145.0" text="Empleados">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="botonCancelar" mnemonicParsing="false" onAction="#accionCancelar" prefHeight="25.0" prefWidth="81.0" text="Cancelar">
+                  <Button fx:id="botonCuentas" mnemonicParsing="false" onAction="#accionCuentas" prefHeight="25.0" prefWidth="133.0" text="Cuentas">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="botonEliminar" mnemonicParsing="false" onAction="#accionEliminar" prefHeight="25.0" prefWidth="123.0" text="Eliminar">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="botonCancelar" mnemonicParsing="false" onAction="#accionCancelar" prefHeight="25.0" prefWidth="144.0" text="Cancelar">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
@@ -50,15 +60,15 @@
             </VBox>
          </right>
          <center>
-            <TableView fx:id="tablaSucursales" prefHeight="372.0" prefWidth="555.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="tablaSucursales" prefHeight="304.0" prefWidth="328.0" BorderPane.alignment="CENTER">
                <columns>
                   <TableColumn fx:id="columnaID" prefWidth="75.0" text="ID" />
                   <TableColumn fx:id="columnaNombre" prefWidth="75.0" text="Nombre" />
                   <TableColumn fx:id="columnaDireccion" prefWidth="75.0" text="Dirección" />
-                  <TableColumn fx:id="columnaCorreo" prefWidth="75.0" text="Teléfono" />
-                  <TableColumn fx:id="columnaGerente" prefWidth="75.0" text="Correo" />
-                  <TableColumn prefWidth="75.0" text="Gerente" />
-                  <TableColumn prefWidth="75.0" text="Contacto" />
+                  <TableColumn fx:id="columnaTelefono" prefWidth="75.0" text="Teléfono" />
+                  <TableColumn fx:id="columnaCorreo" prefWidth="75.0" text="Correo" />
+                  <TableColumn fx:id="columnaGerente" prefWidth="75.0" text="Gerente" />
+                  <TableColumn fx:id="columnaContacto" prefWidth="75.0" text="Contacto" />
                </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

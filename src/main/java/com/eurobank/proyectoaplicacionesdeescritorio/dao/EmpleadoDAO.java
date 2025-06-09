@@ -146,17 +146,6 @@ public class EmpleadoDAO implements GenericDAO<Empleado> {
                 .collect(Collectors.toList());
     }
 
-    public List<Empleado> buscarPorSucursal(String idSucursal) throws Exception {
-        if (idSucursal == null || idSucursal.trim().isEmpty()) {
-            throw new IllegalArgumentException("El ID de sucursal no puede ser nulo o vacío");
-        }
-        List<Empleado> todosLosEmpleados = obtenerTodos();
-        return todosLosEmpleados.stream()
-                .filter(empleado -> empleado.getSucursal() != null 
-                        && empleado.getSucursal().getIdSucursal().equals(idSucursal))
-                .collect(Collectors.toList());
-    }
-
     // Métodos específicos para obtener instancias tipadas
     public List<Gerente> obtenerGerentes() throws Exception {
         return obtenerTodos().stream()

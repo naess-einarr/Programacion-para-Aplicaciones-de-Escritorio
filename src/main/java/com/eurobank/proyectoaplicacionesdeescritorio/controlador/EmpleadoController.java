@@ -2,7 +2,6 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
-import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoDatosUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoTablaUtil;
@@ -41,8 +40,6 @@ public class EmpleadoController implements Initializable {
     private TableColumn<Empleado, String> columnaNombre;
     @FXML
     private TableColumn<Empleado, Double> columnaSalario;
-    @FXML
-    private TableColumn<Empleado, Sucursal> columnaSucursal;
     @FXML
     private TableColumn<Empleado, String> columnaUno;
     @FXML
@@ -161,7 +158,7 @@ public class EmpleadoController implements Initializable {
     private void configurarTablaEmpleados() {
         EmpleadoTablaUtil.configurarColumnasBasicas(columnTipoEmpleado, columnaID, columnaNombre,
                 columnaDireccion, columnaFechaNacimiento,
-                columnaGenero, columnaSalario, columnaSucursal);
+                columnaGenero, columnaSalario);
 
         EmpleadoTablaUtil.configurarColumnasDinamicas(columnaUno, columnaDos);
     }

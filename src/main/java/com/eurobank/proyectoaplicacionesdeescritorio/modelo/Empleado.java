@@ -13,13 +13,12 @@ public class Empleado {
     private String nombreUsuario;
     private String contrasenaAcceso;
     protected String tipoEmpleado;
-    private Sucursal sucursal;
     
     protected Empleado() {
 
     }
 
-    public Empleado(String idEmpleado, String nombreCompleto, String direccionCompleta, LocalDate fechaNacimiento, String generoEmpleado, double salarioMensual, String nombreUsuario, String contrasenaAcceso, String tipoEmpleado, Sucursal sucursal) {
+    public Empleado(String idEmpleado, String nombreCompleto, String direccionCompleta, LocalDate fechaNacimiento, String generoEmpleado, double salarioMensual, String nombreUsuario, String contrasenaAcceso, String tipoEmpleado) {
         this.idEmpleado = idEmpleado;
         this.nombreCompleto = nombreCompleto;
         this.direccionCompleta = direccionCompleta;
@@ -29,7 +28,6 @@ public class Empleado {
         this.nombreUsuario = nombreUsuario;
         this.contrasenaAcceso = contrasenaAcceso;
         this.tipoEmpleado = tipoEmpleado;
-        this.sucursal = sucursal;
     }
 
     public String getIdEmpleado() {
@@ -103,21 +101,7 @@ public class Empleado {
     public void setTipoEmpleado(String tipoEmpleado) {
         this.tipoEmpleado = tipoEmpleado;
     }
+    
+    
 
-    public Sucursal getSucursal() {
-        return sucursal;
-    }
-
-    public void setSucursal(Sucursal sucursal) {
-        this.sucursal = sucursal;
-    }
-
-    @Override
-    public String toString() {
-        return "Empleado{" +
-               "idEmpleado='" + idEmpleado + '\'' +
-               ", nombreCompleto='" + nombreCompleto + '\'' +
-               ", tipoEmpleado='" + tipoEmpleado + '\'' +
-               '}';
-    }
 }

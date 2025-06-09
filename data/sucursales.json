@@ -7,11 +7,12 @@
     "correoSucursal": "centro.xalapa@banco.com",
     "gerente": {
       "idEmpleado": "EMP001",
-      "nombreCompleto": "María Elena Rodríguez García",
-      "nivelAcceso": "ALTO",
-      "aniosExperiencia": 12
+      "nombreCompleto": "María Elena Rodríguez García"
     },
-    "contacto": "María Elena Rodríguez García",
+    "contacto": {
+      "idEmpleado": "EMP002",
+      "nombreCompleto": "Carlos Alberto Mendoza López"
+    },
     "cuentasAsociadas": ["CTA001", "CTA002", "CTA003", "CTA004", "CTA005"],
     "empleadosAsociados": ["EMP001", "EMP002", "EMP003", "EMP009", "EMP011", "EMP014", "EMP017", "EMP018"]
   },
@@ -23,11 +24,12 @@
     "correoSucursal": "obrero.campesina@banco.com",
     "gerente": {
       "idEmpleado": "EMP006",
-      "nombreCompleto": "Fernando Gabriel Castillo Ruiz",
-      "nivelAcceso": "MEDIO",
-      "aniosExperiencia": 15
+      "nombreCompleto": "Fernando Gabriel Castillo Ruiz"
     },
-    "contacto": "Fernando Gabriel Castillo Ruiz",
+    "contacto": {
+      "idEmpleado": "EMP005",
+      "nombreCompleto": "Diana Patricia Morales Jiménez"
+    },
     "cuentasAsociadas": ["CTA006", "CTA007", "CTA008", "CTA009", "CTA010"],
     "empleadosAsociados": ["EMP004", "EMP005", "EMP006", "EMP012", "EMP013", "EMP019"]
   },
@@ -39,11 +41,12 @@
     "correoSucursal": "progreso.macuiltepetl@banco.com",
     "gerente": {
       "idEmpleado": "EMP010",
-      "nombreCompleto": "Alejandro David Ortega Peña",
-      "nivelAcceso": "ALTO",
-      "aniosExperiencia": 18
+      "nombreCompleto": "Alejandro David Ortega Peña"
     },
-    "contacto": "Alejandro David Ortega Peña",
+    "contacto": {
+      "idEmpleado": "EMP008",
+      "nombreCompleto": "Miguel Ángel Ramírez Delgado"
+    },
     "cuentasAsociadas": ["CTA011", "CTA012", "CTA013", "CTA014", "CTA015"],
     "empleadosAsociados": ["EMP007", "EMP008", "EMP010", "EMP015", "EMP016"]
   },
@@ -55,11 +58,12 @@
     "correoSucursal": "universidad@banco.com",
     "gerente": {
       "idEmpleado": "EMP020",
-      "nombreCompleto": "Ana Cristina Morales Vega",
-      "nivelAcceso": "ALTO",
-      "aniosExperiencia": 16
+      "nombreCompleto": "Ana Cristina Morales Vega"
     },
-    "contacto": "Ana Cristina Morales Vega",
+    "contacto": {
+      "idEmpleado": "EMP011",
+      "nombreCompleto": "Valeria Isabella Guerrero Silva"
+    },
     "cuentasAsociadas": ["CTA016", "CTA017", "CTA018", "CTA019", "CTA020"],
     "empleadosAsociados": ["EMP020", "EMP021", "EMP022", "EMP023"]
   },
@@ -71,11 +75,12 @@
     "correoSucursal": "jardines.xalapa@banco.com",
     "gerente": {
       "idEmpleado": "EMP024",
-      "nombreCompleto": "Roberto Carlos Mendoza Torres",
-      "nivelAcceso": "MEDIO",
-      "aniosExperiencia": 13
+      "nombreCompleto": "Roberto Carlos Mendoza Torres"
     },
-    "contacto": "Roberto Carlos Mendoza Torres",
+    "contacto": {
+      "idEmpleado": "EMP013",
+      "nombreCompleto": "Andrea Paola Medina Castro"
+    },
     "cuentasAsociadas": ["CTA021", "CTA022", "CTA023", "CTA024", "CTA025"],
     "empleadosAsociados": ["EMP024", "EMP025", "EMP026", "EMP027"]
   },
@@ -87,13 +92,14 @@
     "correoSucursal": "lomas.estadio@banco.com",
     "gerente": {
       "idEmpleado": "EMP028",
-      "nombreCompleto": "Patricia Isabel Ramírez Cruz",
-      "nivelAcceso": "ALTO",
-      "aniosExperiencia": 19
+      "nombreCompleto": "Patricia Isabel Ramírez Cruz"
     },
-    "contacto": "Patricia Isabel Ramírez Cruz",
+    "contacto": {
+      "idEmpleado": "EMP016",
+      "nombreCompleto": "Sebastián Mateo Díaz Herrera"
+    },
     "cuentasAsociadas": ["CTA026", "CTA027", "CTA028", "CTA029", "CTA030"],
-    "empleadosAsociados": ["EMP028", "EMP029", "EMP030", "EMP031"]
+    "empleadosAsociadas": ["EMP028", "EMP029", "EMP030", "EMP031"]
   },
   {
     "idSucursal": "SUC007",
@@ -103,11 +109,12 @@
     "correoSucursal": "emiliano.zapata@banco.com",
     "gerente": {
       "idEmpleado": "EMP032",
-      "nombreCompleto": "Luis Fernando Díaz Herrera",
-      "nivelAcceso": "MEDIO",
-      "aniosExperiencia": 11
+      "nombreCompleto": "Luis Fernando Díaz Herrera"
     },
-    "contacto": "Luis Fernando Díaz Herrera",
+    "contacto": {
+      "idEmpleado": "EMP002",
+      "nombreCompleto": "Carlos Alberto Mendoza López"
+    },
     "cuentasAsociadas": ["CTA031", "CTA032", "CTA033", "CTA034", "CTA035"],
     "empleadosAsociados": ["EMP032", "EMP033", "EMP034", "EMP035"]
   },
@@ -119,13 +126,14 @@
     "correoSucursal": "casa.blanca@banco.com",
     "gerente": {
       "idEmpleado": "EMP036",
-      "nombreCompleto": "Carmen Alejandra Vázquez Silva",
-      "nivelAcceso": "ALTO",
-      "aniosExperiencia": 17
+      "nombreCompleto": "Carmen Alejandra Vázquez Silva"
     },
-    "contacto": "Carmen Alejandra Vázquez Silva",
+    "contacto": {
+      "idEmpleado": "EMP005",
+      "nombreCompleto": "Diana Patricia Morales Jiménez"
+    },
     "cuentasAsociadas": ["CTA036", "CTA037", "CTA038", "CTA039", "CTA040"],
-    "empleadosAsociados": ["EMP036", "EMP037", "EMP038", "EMP039"]
+    "empleadosAsociadas": ["EMP036", "EMP037", "EMP038", "EMP039"]
   },
   {
     "idSucursal": "SUC009",
@@ -135,11 +143,12 @@
     "correoSucursal": "revolucion@banco.com",
     "gerente": {
       "idEmpleado": "EMP040",
-      "nombreCompleto": "Eduardo Javier Campos Morales",
-      "nivelAcceso": "MEDIO",
-      "aniosExperiencia": 14
+      "nombreCompleto": "Eduardo Javier Campos Morales"
     },
-    "contacto": "Eduardo Javier Campos Morales",
+    "contacto": {
+      "idEmpleado": "EMP008",
+      "nombreCompleto": "Miguel Ángel Ramírez Delgado"
+    },
     "cuentasAsociadas": ["CTA041", "CTA042", "CTA043", "CTA044", "CTA045"],
     "empleadosAsociados": ["EMP040", "EMP041", "EMP042", "EMP043"]
   },
@@ -151,11 +160,12 @@
     "correoSucursal": "maestros.veracruzanos@banco.com",
     "gerente": {
       "idEmpleado": "EMP044",
-      "nombreCompleto": "Gabriela Monserrat Torres Aguilar",
-      "nivelAcceso": "ALTO",
-      "aniosExperiencia": 15
+      "nombreCompleto": "Gabriela Monserrat Torres Aguilar"
     },
-    "contacto": "Gabriela Monserrat Torres Aguilar",
+    "contacto": {
+      "idEmpleado": "EMP011",
+      "nombreCompleto": "Valeria Isabella Guerrero Silva"
+    },
     "cuentasAsociadas": ["CTA046", "CTA047", "CTA048", "CTA049", "CTA050"],
     "empleadosAsociados": ["EMP044", "EMP045", "EMP046", "EMP047"]
   }

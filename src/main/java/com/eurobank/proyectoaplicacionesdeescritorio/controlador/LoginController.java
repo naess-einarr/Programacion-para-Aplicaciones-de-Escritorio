@@ -1,8 +1,10 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
+import com.eurobank.proyectoaplicacionesdeescritorio.dao.SucursalDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeSesion;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
 import java.util.Objects;
@@ -33,16 +35,18 @@ public class LoginController implements Initializable {
         private Button botonIniciarSesion;
         
         private EmpleadoDAO empleadoDAO;
+        private SucursalDAO sucursalDAO;
 
         @Override
         public void initialize(URL url, ResourceBundle rb) {
             empleadoDAO = new EmpleadoDAO();
+            sucursalDAO = new SucursalDAO();
             botonIniciarSesion.setDefaultButton(true);
         }
 
         @FXML
         void cancelarInicioSesion(ActionEvent event) {
-            
+            ManejadorDeSesion.cerrarSesion();
             Stage escenarioPrincipal = (Stage) ((Node) event.getSource()).getScene().getWindow();
             ManejadorDeVistas.getInstancia().setEscenarioPrincipal(escenarioPrincipal);
             ManejadorDeVistas.getInstancia().cerrarAplicacion();
@@ -57,8 +61,9 @@ public class LoginController implements Initializable {
             try {
                 empleado = empleadoDAO.validarCredenciales(usuario, contrasena);
                 if(Objects.nonNull(empleado)){
+                    ManejadorDeSesion.iniciarSesion(empleado);
+                    ManejadorDeSesion.setSucursalActual(sucursalDAO.buscarSucursalPorIdEmpleado(empleado.getIdEmpleado()));
                     MenuController menuController = ManejadorDeVistas.getInstancia().obtenerControlador(ManejadorDeVistas.Vista.MENU);
-                    menuController.setEmpleado(empleado);
                     menuController.cargarDatosMenuEmpleado();
                     ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.MENU);
 

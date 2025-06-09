@@ -100,7 +100,7 @@ public class TransaccionRegistroController implements Initializable {
         try {
             MenuController menuController = ManejadorDeVistas.getInstancia().obtenerControlador(ManejadorDeVistas.Vista.MENU);
             if (menuController != null) {
-                this.empleadoActual = menuController.getEmpleado();
+//                this.empleadoActual = menuController.getEmpleado();
             }
         } catch (Exception ex) {
             LOG.error("Error al obtener empleado actual", ex);

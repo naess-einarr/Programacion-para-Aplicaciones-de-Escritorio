@@ -21,12 +21,28 @@
           "nombreCompleto": "Carlos",
           "apellidosCompletos": "Mendoza"
         }
+      },
+      {
+        "numeroCuenta": "CTA003",
+        "cliente": {
+          "idCliente": "CLI-GWH06IAU",
+          "nombreCompleto": "Ana",
+          "apellidosCompletos": "Hernández"
+        }
       }
     ],
     "empleadosAsociados": [
       {
         "idEmpleado": "EMP003",
         "nombreCompleto": "Ana Sofía Herrera Martínez"
+      },
+      {
+        "idEmpleado": "EMP001",
+        "nombreCompleto": "María Elena Rodríguez García"
+      },
+      {
+        "idEmpleado": "EMP006",
+        "nombreCompleto": "Fernando Gabriel Castillo Ruiz"
       }
     ]
   },

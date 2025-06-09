@@ -3,10 +3,17 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.CuentaDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cliente;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cuenta;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoDatosUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeSesion;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 import javafx.beans.property.SimpleObjectProperty;
@@ -97,10 +104,31 @@ public class CuentaController implements Initializable {
     
     private void cargarDatosTabla() {
         try {
-            tablaCuentas.setItems(FXCollections.observableArrayList(cuentaDAO.obtenerTodos()));
+            List<Cuenta> items;
+            Empleado empleado = ManejadorDeSesion.obtenerEmpleado();
+            Sucursal sucursal = ManejadorDeSesion.getSucursalActual();
+            if(empleado instanceof Gerente){
+                if(EmpleadoDatosUtil.NIVEL_NACIONAL.equals(((Gerente) empleado).getNivelAcceso())){
+                    items = cuentaDAO.obtenerTodos();
+                }else{
+                    items = complementarLista(sucursal.getCuentasAsociadas());
+                }
+            }else{
+                items = complementarLista(sucursal.getCuentasAsociadas());
+            }
+
+            tablaCuentas.setItems(FXCollections.observableArrayList(items));
         } catch (Exception ex) {
             LOG.error(ex);
         }
+    }
+    
+    private List<Cuenta> complementarLista(List<Cuenta> lista) throws Exception{
+        List<Cuenta> complementada = new ArrayList<>();
+        for(Cuenta cuenta : lista){
+            complementada.add(cuentaDAO.buscarPorId(cuenta.getNumeroCuenta()));
+        }
+        return complementada;
     }
     
     private void configurarTabla() {

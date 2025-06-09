@@ -4,6 +4,7 @@ import com.eurobank.proyectoaplicacionesdeescritorio.dao.CuentaDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.SucursalDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.TransaccionDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cuenta;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.ConstantesUtil;
@@ -31,10 +32,10 @@ public class TransaccionRegistroController implements Initializable {
     ComboBox comboTipoTransaccion;
     
     @FXML
-    ComboBox<CuentaBancaria>comboCuentaOrigen;
+    ComboBox<Cuenta>comboCuentaOrigen;
     
     @FXML
-    ComboBox<CuentaBancaria> comboCuentaDestino;
+    ComboBox<Cuenta> comboCuentaDestino;
     
     @FXML
     TextField textSucursal;

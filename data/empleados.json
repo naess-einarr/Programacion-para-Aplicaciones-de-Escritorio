@@ -1,7 +1,7 @@
 [
   {
     "nivelAcceso": "NACIONAL",
-    "aniosExperiencia": 12,
+    "aniosExperiencia": 123,
     "idEmpleado": "EMP001",
     "nombreCompleto": "María Elena Rodríguez García",
     "direccionCompleta": "Av. Revolución #234, Col. Centro, Xalapa, Veracruz",
@@ -12,13 +12,9 @@
     },
     "generoEmpleado": "FEMENINO",
     "salarioMensual": 25000.0,
-    "nombreUsuario": "admin",
+    "nombreUsuario": "EMP001",
     "contrasenaAcceso": "admin",
-    "tipoEmpleado": "GERENTE",
-    "sucursal": {
-      "idSucursal": "SUC001",
-      "nombreSucursal": "Sucursal Centro Xalapa"
-    }
+    "tipoEmpleado": "GERENTE"
   },
   {
     "especializacionEjecutivo": "PYMES",
@@ -35,11 +31,7 @@
     "salarioMensual": 18000.0,
     "nombreUsuario": "EMP002",
     "contrasenaAcceso": "CAR220790",
-    "tipoEmpleado": "EJECUTIVO",
-    "sucursal": {
-      "idSucursal": "SUC001",
-      "nombreSucursal": "Sucursal Centro Xalapa"
-    }
+    "tipoEmpleado": "EJECUTIVO"
   },
   {
     "horarioTrabajo": "MATUTINO 8:00 - 14:00",
@@ -56,11 +48,7 @@
     "salarioMensual": 15000.0,
     "nombreUsuario": "EMP003",
     "contrasenaAcceso": "ANA081192",
-    "tipoEmpleado": "CAJERO",
-    "sucursal": {
-      "idSucursal": "SUC001",
-      "nombreSucursal": "Sucursal Centro Xalapa"
-    }
+    "tipoEmpleado": "CAJERO"
   },
   {
     "horarioTrabajo": "COMPLETO  8:00 - 17:00",
@@ -77,11 +65,7 @@
     "salarioMensual": 15500.0,
     "nombreUsuario": "EMP004",
     "contrasenaAcceso": "ROB120488",
-    "tipoEmpleado": "CAJERO",
-    "sucursal": {
-      "idSucursal": "SUC002",
-      "nombreSucursal": "Sucursal Obrero Campesina"
-    }
+    "tipoEmpleado": "CAJERO"
   },
   {
     "especializacionEjecutivo": "CORPORATIVO",
@@ -98,11 +82,7 @@
     "salarioMensual": 19500.0,
     "nombreUsuario": "EMP005",
     "contrasenaAcceso": "DIA300987",
-    "tipoEmpleado": "EJECUTIVO",
-    "sucursal": {
-      "idSucursal": "SUC002",
-      "nombreSucursal": "Sucursal Obrero Campesina"
-    }
+    "tipoEmpleado": "EJECUTIVO"
   },
   {
     "nivelAcceso": "REGIONAL",
@@ -119,11 +99,7 @@
     "salarioMensual": 28000.0,
     "nombreUsuario": "EMP006",
     "contrasenaAcceso": "FER031283",
-    "tipoEmpleado": "GERENTE",
-    "sucursal": {
-      "idSucursal": "SUC002",
-      "nombreSucursal": "Sucursal Obrero Campesina"
-    }
+    "tipoEmpleado": "GERENTE"
   },
   {
     "horarioTrabajo": "VESPERTINO 14:00 - 20:00",
@@ -140,11 +116,7 @@
     "salarioMensual": 14800.0,
     "nombreUsuario": "EMP007",
     "contrasenaAcceso": "LAU180691",
-    "tipoEmpleado": "CAJERO",
-    "sucursal": {
-      "idSucursal": "SUC003",
-      "nombreSucursal": "Sucursal Progreso Macuiltépetl"
-    }
+    "tipoEmpleado": "CAJERO"
   },
   {
     "especializacionEjecutivo": "CORPORATIVO",
@@ -161,11 +133,7 @@
     "salarioMensual": 20500.0,
     "nombreUsuario": "EMP008",
     "contrasenaAcceso": "MIG250186",
-    "tipoEmpleado": "EJECUTIVO",
-    "sucursal": {
-      "idSucursal": "SUC003",
-      "nombreSucursal": "Sucursal Progreso Macuiltépetl"
-    }
+    "tipoEmpleado": "EJECUTIVO"
   },
   {
     "horarioTrabajo": "MATUTINO 8:00 - 14:00",
@@ -182,11 +150,7 @@
     "salarioMensual": 16200.0,
     "nombreUsuario": "EMP009",
     "contrasenaAcceso": "GAB140889",
-    "tipoEmpleado": "CAJERO",
-    "sucursal": {
-      "idSucursal": "SUC001",
-      "nombreSucursal": "Sucursal Centro Xalapa"
-    }
+    "tipoEmpleado": "CAJERO"
   },
   {
     "nivelAcceso": "NACIONAL",
@@ -203,11 +167,7 @@
     "salarioMensual": 26500.0,
     "nombreUsuario": "EMP010",
     "contrasenaAcceso": "ALE070584",
-    "tipoEmpleado": "GERENTE",
-    "sucursal": {
-      "idSucursal": "SUC003",
-      "nombreSucursal": "Sucursal Progreso Macuiltépetl"
-    }
+    "tipoEmpleado": "GERENTE"
   },
   {
     "especializacionEjecutivo": "PYMES",
@@ -224,11 +184,7 @@
     "salarioMensual": 17800.0,
     "nombreUsuario": "EMP011",
     "contrasenaAcceso": "VAL280293",
-    "tipoEmpleado": "EJECUTIVO",
-    "sucursal": {
-      "idSucursal": "SUC001",
-      "nombreSucursal": "Sucursal Centro Xalapa"
-    }
+    "tipoEmpleado": "EJECUTIVO"
   },
   {
     "horarioTrabajo": "VESPERTINO 14:00 - 20:00",
@@ -245,11 +201,7 @@
     "salarioMensual": 15800.0,
     "nombreUsuario": "EMP012",
     "contrasenaAcceso": "ROD111090",
-    "tipoEmpleado": "CAJERO",
-    "sucursal": {
-      "idSucursal": "SUC002",
-      "nombreSucursal": "Sucursal Obrero Campesina"
-    }
+    "tipoEmpleado": "CAJERO"
   },
   {
     "especializacionEjecutivo": "PYMES",
@@ -266,11 +218,7 @@
     "salarioMensual": 21200.0,
     "nombreUsuario": "EMP013",
     "contrasenaAcceso": "AND050788",
-    "tipoEmpleado": "EJECUTIVO",
-    "sucursal": {
-      "idSucursal": "SUC002",
-      "nombreSucursal": "Sucursal Obrero Campesina"
-    }
+    "tipoEmpleado": "EJECUTIVO"
   },
   {
     "nivelAcceso": "NACIONAL",
@@ -287,11 +235,7 @@
     "salarioMensual": 29500.0,
     "nombreUsuario": "EMP014",
     "contrasenaAcceso": "JAV201185",
-    "tipoEmpleado": "GERENTE",
-    "sucursal": {
-      "idSucursal": "SUC001",
-      "nombreSucursal": "Sucursal Centro Xalapa"
-    }
+    "tipoEmpleado": "GERENTE"
   },
   {
     "horarioTrabajo": "SABADOS 9:00 - 13:00",
@@ -308,11 +252,7 @@
     "salarioMensual": 14500.0,
     "nombreUsuario": "EMP015",
     "contrasenaAcceso": "CAR160492",
-    "tipoEmpleado": "CAJERO",
-    "sucursal": {
-      "idSucursal": "SUC003",
-      "nombreSucursal": "Sucursal Progreso Macuiltépetl"
-    }
+    "tipoEmpleado": "CAJERO"
   },
   {
     "especializacionEjecutivo": "CORPORATIVO",
@@ -329,53 +269,23 @@
     "salarioMensual": 19800.0,
     "nombreUsuario": "EMP016",
     "contrasenaAcceso": "SEB120987",
-    "tipoEmpleado": "EJECUTIVO",
-    "sucursal": {
-      "idSucursal": "SUC003",
-      "nombreSucursal": "Sucursal Progreso Macuiltépetl"
-    }
+    "tipoEmpleado": "EJECUTIVO"
   },
   {
     "nivelAcceso": "SUCURSAL",
-    "aniosExperiencia": 14,
-    "idEmpleado": "EMP019",
-    "nombreCompleto": "Paola Fernanda Jiménez Sandoval",
-    "direccionCompleta": "Av. Lázaro Cárdenas #369, Col. Lomas del Estadio, Xalapa, Veracruz",
+    "aniosExperiencia": 1,
+    "idEmpleado": "EMP17",
+    "nombreCompleto": "asd",
+    "direccionCompleta": "asd",
     "fechaNacimiento": {
-      "year": 1989,
-      "month": 3,
-      "day": 27
+      "year": 2025,
+      "month": 6,
+      "day": 1
     },
-    "generoEmpleado": "FEMENINO",
-    "salarioMensual": 27200.0,
-    "nombreUsuario": "EMP019",
-    "contrasenaAcceso": "PAO270389",
-    "tipoEmpleado": "GERENTE",
-<<<<<<< HEAD
-    "idSucursal": "SUC002"
-  },
-  {
-    "horarioTrabajo": "horas",
-    "numeroVentanilla": 2,
-    "idEmpleado": "EMP20",
-    "nombreCompleto": "María Elena Rodríguez García",
-    "direccionCompleta": "Av. Revolución #234, Col. Centro, Xalapa, Veracruz",
-    "fechaNacimiento": {
-      "year": 1985,
-      "month": 3,
-      "day": 15
-    },
-    "generoEmpleado": "FEMENINO",
-    "salarioMensual": 25000.0,
-    "nombreUsuario": "empleadon",
-    "contrasenaAcceso": "empleadon",
-    "tipoEmpleado": "GERENTE",
-    "idSucursal": "suc01"
-=======
-    "sucursal": {
-      "idSucursal": "SUC002",
-      "nombreSucursal": "Sucursal Obrero Campesina"
-    }
->>>>>>> 537c9b4ce9c822a6f7f24afb623236e347602324
+    "generoEmpleado": "MASCULINO",
+    "salarioMensual": 12.0,
+    "nombreUsuario": "EMP17",
+    "contrasenaAcceso": "ASD010625",
+    "tipoEmpleado": "GERENTE"
   }
 ]

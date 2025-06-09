@@ -41,8 +41,6 @@ public class EmpleadoController implements Initializable {
     @FXML
     private TableColumn<Empleado, Double> columnaSalario;
     @FXML
-    private TableColumn<Empleado, String> columnaSucursal;
-    @FXML
     private TableColumn<Empleado, String> columnaUno;
     @FXML
     private TableColumn<Empleado, Integer> columnaDos;
@@ -158,7 +156,7 @@ public class EmpleadoController implements Initializable {
     private void configurarTablaEmpleados() {
         EmpleadoTablaUtil.configurarColumnasBasicas(columnTipoEmpleado, columnaID, columnaNombre,
                 columnaDireccion, columnaFechaNacimiento,
-                columnaGenero, columnaSalario, columnaSucursal);
+                columnaGenero, columnaSalario);
 
         EmpleadoTablaUtil.configurarColumnasDinamicas(columnaUno, columnaDos);
     }

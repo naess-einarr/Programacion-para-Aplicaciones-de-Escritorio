@@ -2,10 +2,6 @@ package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
 import java.util.List;
 
-/**
- * Clase que representa una sucursal bancaria.
- * Contiene información de identificación y contacto de la sucursal.
- */
 public class Sucursal {
     
     private String idSucursal;
@@ -14,10 +10,10 @@ public class Sucursal {
     private String telefonoSucursal;
     private String correoSucursal;
     private Gerente gerente;
-    private String contacto;
+    private Ejecutivo contacto;
     private List<String> cuentasAsociadas;
     private List<String> empleadosAsociados;
-    
+
     public Sucursal() {
     }
 
@@ -69,11 +65,11 @@ public class Sucursal {
         this.gerente = gerente;
     }
 
-    public String getContacto() {
+    public Ejecutivo getContacto() {
         return contacto;
     }
 
-    public void setContacto(String contacto) {
+    public void setContacto(Ejecutivo contacto) {
         this.contacto = contacto;
     }
 
@@ -93,7 +89,6 @@ public class Sucursal {
         this.empleadosAsociados = empleadosAsociados;
     }
     
-
 
     @Override
     public String toString() {

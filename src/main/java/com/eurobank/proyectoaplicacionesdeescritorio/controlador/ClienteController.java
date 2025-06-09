@@ -3,6 +3,7 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.ClienteDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cliente;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ExportadorGenerico;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.io.IOException;
 import java.net.URL;
@@ -130,5 +131,12 @@ public class ClienteController implements Initializable {
 
     }
     
+    @FXML
+    public void accionExportar(){
+        ExportadorGenerico.exportar(tablaClientes.getItems(), 
+                ExportadorGenerico.TipoExportacion.EXCEL_XLS, 
+                ManejadorDeVistas.getInstancia().obtenerEscenarioPrincipal(), 
+                "clientes"+LocalDate.now()+".xls");
+    }
     
 }

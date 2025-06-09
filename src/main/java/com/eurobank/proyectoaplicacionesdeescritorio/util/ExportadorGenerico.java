@@ -86,7 +86,7 @@ public class ExportadorGenerico {
                     default:
                         return false;
                 }
-            } catch (Exception e) {
+            } catch (IOException e) {
                 LOG.error("Error al exportar archivo", e);
                 AlertaUtil.mostrarAlerta("Error", "Error al exportar el archivo: " + e.getMessage(),
                         Alert.AlertType.ERROR);

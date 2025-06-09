@@ -73,28 +73,7 @@
       "nombreCompleto": "Miguel Ángel Ramírez Delgado"
     },
     "cuentasAsociadas": [],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP007",
-        "nombreCompleto": "Laura Beatriz Sánchez Flores"
-      },
-      {
-        "idEmpleado": "EMP008",
-        "nombreCompleto": "Miguel Ángel Ramírez Delgado"
-      },
-      {
-        "idEmpleado": "EMP010",
-        "nombreCompleto": "Alejandro David Ortega Peña"
-      },
-      {
-        "idEmpleado": "EMP015",
-        "nombreCompleto": "Carmen Lucía Ibarra Núñez"
-      },
-      {
-        "idEmpleado": "EMP016",
-        "nombreCompleto": "Sebastián Mateo Díaz Herrera"
-      }
-    ]
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC004",
@@ -171,24 +150,7 @@
       "nombreCompleto": "Carlos Alberto Mendoza López"
     },
     "cuentasAsociadas": [],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP032",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP033",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP034",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP035",
-        "nombreCompleto": "Empleado No Encontrado"
-      }
-    ]
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC008",
@@ -231,23 +193,6 @@
       "nombreCompleto": "Miguel Ángel Ramírez Delgado"
     },
     "cuentasAsociadas": [],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP040",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP041",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP042",
-        "nombreCompleto": "Empleado No Encontrado"
-      },
-      {
-        "idEmpleado": "EMP043",
-        "nombreCompleto": "Empleado No Encontrado"
-      }
-    ]
+    "empleadosAsociados": []
   }
 ]

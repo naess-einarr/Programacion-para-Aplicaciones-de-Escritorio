@@ -2,6 +2,7 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.SucursalDAO;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cuenta;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
@@ -11,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
+import java.util.Set;
+import java.util.stream.Collectors;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -134,8 +137,21 @@ public class SucursalEmpleadoController implements Initializable {
     
     private void cargarListaEmpleadosDisponibles(){
         try {
-            ObservableList<Empleado> empleadosDisponibles = FXCollections.observableArrayList(empleadoDAO.obtenerTodos());
-            tablaEmpleadosDisponibles.setItems(empleadosDisponibles);
+            List<Empleado> universoTotal = empleadoDAO.obtenerTodos();
+            List<Sucursal> empleadosSucursales = sucursalDAO.obtenerTodos();
+            
+            Set<String> empleadosYaAsociados = empleadosSucursales.stream()
+                .filter(sucursal -> sucursal.getEmpleadosAsociados()!= null)
+                .flatMap(sucursal -> sucursal.getEmpleadosAsociados().stream())
+                .map(Empleado::getIdEmpleado)
+                .collect(Collectors.toSet());
+
+            List<Empleado> empleadosDisponibles = universoTotal.stream()
+                .filter(empleado -> !empleadosYaAsociados.contains(empleado.getIdEmpleado()))
+                .collect(Collectors.toList());
+            
+            ObservableList<Empleado> empleadosFinales = FXCollections.observableArrayList(empleadosDisponibles);
+            tablaEmpleadosDisponibles.setItems(empleadosFinales);
         } catch (Exception ex) {
             LOG.error(ex);
         }

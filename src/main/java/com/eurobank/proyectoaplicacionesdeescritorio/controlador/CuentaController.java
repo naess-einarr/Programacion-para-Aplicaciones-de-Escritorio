@@ -4,9 +4,11 @@ import com.eurobank.proyectoaplicacionesdeescritorio.dao.CuentaDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cliente;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cuenta;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ExportadorGenerico;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.Objects;
 import java.util.ResourceBundle;
 import javafx.beans.property.SimpleObjectProperty;
@@ -115,5 +117,13 @@ public class CuentaController implements Initializable {
         columnaLimiteCredito.setCellValueFactory(new PropertyValueFactory<>("limiteCredito"));
         columnaSaldoActual.setCellValueFactory(new PropertyValueFactory<>("saldoActual"));
         columnaTipo.setCellValueFactory(new PropertyValueFactory<>("tipo"));
+    }
+    
+    @FXML
+    public void accionExportar(){
+        ExportadorGenerico.exportar(tablaCuentas.getItems(), 
+                ExportadorGenerico.TipoExportacion.EXCEL_XLS, 
+                ManejadorDeVistas.getInstancia().obtenerEscenarioPrincipal(), 
+                "cuentas"+LocalDate.now()+".xls");
     }
 }

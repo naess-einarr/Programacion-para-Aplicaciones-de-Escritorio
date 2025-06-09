@@ -85,6 +85,7 @@ public class EmpleadoRegistroController implements Initializable{
         try {
             
             Cajero empleado = new Cajero();
+            
             String nuevoId = String.valueOf(empleadoDAO.obtenerSiguienteId());
             empleado.setIdEmpleado(PREFIJO_EMPLEADO.concat(nuevoId));
             empleado.setNombreCompleto(textNombre.getText().trim());

@@ -1,7 +1,6 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.vista;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
-import com.eurobank.proyectoaplicacionesdeescritorio.util.ConstantesUtil;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -9,7 +8,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import javafx.scene.control.Alert;
 
 public class ManejadorDeVistas {
 
@@ -47,13 +45,11 @@ public class ManejadorDeVistas {
     private Map<Vista, Parent> vistasCache;
     private Map<Vista, Object> controladoresCache;
 
-    // Constructor privado para patrón Singleton
     private ManejadorDeVistas() {
         this.vistasCache = new HashMap<>();
         this.controladoresCache = new HashMap<>();
     }
 
-    // Método para obtener la instancia única
     public static ManejadorDeVistas getInstancia() {
         if (instancia == null) {
             instancia = new ManejadorDeVistas();
@@ -61,12 +57,10 @@ public class ManejadorDeVistas {
         return instancia;
     }
 
-    // Establecer el escenario principal
     public void setEscenarioPrincipal(Stage escenario) {
         this.escenarioPrincipal = escenario;
     }
 
-    // Cargar una vista FXML
     public Parent cargarVista(Vista vista) throws IOException {
         if (vistasCache.containsKey(vista)) {
             return vistasCache.get(vista);
@@ -76,14 +70,14 @@ public class ManejadorDeVistas {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(vista.getRutaFXML()));
             Parent root = loader.load();
 
-            // Guardar tanto la vista como el controlador
             vistasCache.put(vista, root);
             controladoresCache.put(vista, loader.getController());
 
             return root;
         } catch (IOException e) {
-            System.err.println("Error al cargar la vista: " + vista.name());
-            throw e;
+            AlertaUtil.mostrarAlertaVentana();
+            
+            return null;
         }
     }
 
@@ -98,8 +92,6 @@ public class ManejadorDeVistas {
             
             if (escenarioPrincipal != null) {
                 
-                // Restaurar ventana a su estado original antes del cambio
-                // Ocultar ventana temporalmente
                 escenarioPrincipal.hide();
                 if (escenarioPrincipal.isMaximized()) {
                     escenarioPrincipal.setMaximized(false);
@@ -116,8 +108,7 @@ public class ManejadorDeVistas {
                 escenarioPrincipal.show();
             }
         } catch (IOException e) {
-            System.err.println("Error al cambiar a la vista: " + vista.name());
-            e.printStackTrace();
+            AlertaUtil.mostrarAlertaVentana();
         }
     }
 
@@ -176,7 +167,7 @@ public class ManejadorDeVistas {
 
             return nuevaVentana;
         } catch (IOException ioe) {
-            AlertaUtil.mostrarAlerta(ConstantesUtil.ERROR, "No se pudo abrir la ventana", Alert.AlertType.ERROR);
+            AlertaUtil.mostrarAlertaVentana();
 
             return null;
         }

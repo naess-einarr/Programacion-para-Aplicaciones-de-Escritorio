@@ -20,7 +20,6 @@ public class ComboDatosUtil {
         throw new IllegalStateException("Clase de utileria.");
     }
 
-// Métodos usando las constantes
     public static final ObservableList<String> listaTipoEmpleado() {
         return FXCollections.observableArrayList(
                 TIPO_GERENTE,

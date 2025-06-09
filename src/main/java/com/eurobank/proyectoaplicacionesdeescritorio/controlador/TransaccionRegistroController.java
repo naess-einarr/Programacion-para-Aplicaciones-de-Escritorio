@@ -5,8 +5,10 @@ import com.eurobank.proyectoaplicacionesdeescritorio.dao.TransaccionDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.CuentaBancaria;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ConstantesUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.TransaccionDatosUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.UUID;
@@ -27,10 +29,10 @@ public class TransaccionRegistroController implements Initializable {
     ComboBox comboTipoTransaccion;
     
     @FXML
-    ComboBox comboCuentaOrigen;
+    ComboBox<CuentaBancaria>comboCuentaOrigen;
     
     @FXML
-    ComboBox comboCuentaDestino;
+    ComboBox<CuentaBancaria> comboCuentaDestino;
     
     @FXML
     TextField textSucursal;
@@ -45,6 +47,7 @@ public class TransaccionRegistroController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        cuentabancariaDAO = new CuentaDAO();
         transaccionDAO = new TransaccionDAO();
         comboTipoTransaccion.setItems(TransaccionDatosUtil.listaTipoTransaccion());
         cargarComboCuentas();
@@ -64,7 +67,9 @@ public class TransaccionRegistroController implements Initializable {
             ObservableList<CuentaBancaria> items = FXCollections.observableArrayList(cuentabancariaDAO.obtenerTodos());
             comboCuentaOrigen.setItems(items);
             comboCuentaDestino.setItems(items);
-        } catch (Exception ex) {
+        } catch (IOException ioe){
+            LOG.error(ConstantesUtil.ERROR_CARGAR_INFORMACION, ioe);
+        } catch (Exception e) {
             AlertaUtil.mostrarAlertaVentana();
         }
     }

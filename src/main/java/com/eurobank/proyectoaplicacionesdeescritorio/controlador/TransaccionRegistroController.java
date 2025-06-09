@@ -16,6 +16,8 @@ import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.UUID;
 import java.util.logging.Level;
@@ -195,15 +197,20 @@ public class TransaccionRegistroController implements Initializable {
     }
 
     private void cargarComboCuentas() {
-        try {
-            ObservableList<Cuenta> items = FXCollections.observableArrayList(cuentaDAO.obtenerTodos());
+            List<Cuenta> cuentasDisponiblesSucursal = ManejadorDeSesion.getSucursalActual() != null ? 
+                    ManejadorDeSesion.getSucursalActual().getCuentasAsociadas() :
+                    new ArrayList<>();
+            List<Cuenta> cuentasComplementadas = new ArrayList<>();
+            for(Cuenta cuenta : cuentasDisponiblesSucursal){
+                try {
+                    cuentasComplementadas.add(cuentaDAO.buscarPorId(cuenta.getNumeroCuenta()));
+                } catch (Exception ex) {
+                    LOG.error(ex);
+                }
+            }
+            ObservableList<Cuenta> items = FXCollections.observableArrayList(cuentasComplementadas);
             comboCuentaOrigen.setItems(items);
             comboCuentaDestino.setItems(items);
-        } catch (IOException ioe) {
-            LOG.error(ConstantesUtil.ERROR_CARGAR_INFORMACION, ioe);
-        } catch (Exception e) {
-            AlertaUtil.mostrarAlertaVentana();
-        }
     }
 
     private void generarIDTransaccion() {

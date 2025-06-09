@@ -13,8 +13,22 @@
       "idEmpleado": "EMP002",
       "nombreCompleto": "Carlos Alberto Mendoza López"
     },
-    "cuentasAsociadas": [],
-    "empleadosAsociados": []
+    "cuentasAsociadas": [
+      {
+        "numeroCuenta": "CTA002",
+        "cliente": {
+          "idCliente": "CLI-WSN99PIB",
+          "nombreCompleto": "Carlos",
+          "apellidosCompletos": "Mendoza"
+        }
+      }
+    ],
+    "empleadosAsociados": [
+      {
+        "idEmpleado": "EMP003",
+        "nombreCompleto": "Ana Sofía Herrera Martínez"
+      }
+    ]
   },
   {
     "idSucursal": "SUC002",
@@ -30,6 +44,7 @@
       "idEmpleado": "EMP005",
       "nombreCompleto": "Diana Patricia Morales Jiménez"
     },
+<<<<<<< HEAD
     "cuentasAsociadas": [
       {
         "numeroCuenta": "CTA001",
@@ -56,6 +71,9 @@
         }
       }
     ],
+=======
+    "cuentasAsociadas": [],
+>>>>>>> d425cf5684ec37840e2e8fc51792203cdd92521c
     "empleadosAsociados": []
   },
   {
@@ -106,6 +124,7 @@
       "idEmpleado": "EMP013",
       "nombreCompleto": "Andrea Paola Medina Castro"
     },
+<<<<<<< HEAD
     "cuentasAsociadas": [
       {
         "numeroCuenta": "CTA001",
@@ -116,6 +135,9 @@
         }
       }
     ],
+=======
+    "cuentasAsociadas": [],
+>>>>>>> d425cf5684ec37840e2e8fc51792203cdd92521c
     "empleadosAsociados": []
   },
   {
@@ -194,5 +216,25 @@
     },
     "cuentasAsociadas": [],
     "empleadosAsociados": []
+<<<<<<< HEAD
+=======
+  },
+  {
+    "idSucursal": "SUC10",
+    "nombreSucursal": "asda",
+    "direccionSucursal": "asd",
+    "telefonoSucursal": "123",
+    "correoSucursal": "asdasd",
+    "gerente": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    },
+    "contacto": {
+      "idEmpleado": "EMP005",
+      "nombreCompleto": "Diana Patricia Morales Jiménez"
+    },
+    "cuentasAsociadas": [],
+    "empleadosAsociados": []
+>>>>>>> d425cf5684ec37840e2e8fc51792203cdd92521c
   }
 ]

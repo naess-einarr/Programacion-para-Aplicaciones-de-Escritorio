@@ -1,6 +1,7 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.dao;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cliente;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cuenta;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.JsonUtil;
 import java.util.List;
 import java.util.ArrayList;
@@ -47,7 +48,8 @@ public class ClienteDAO implements GenericDAO<Cliente> {
     @Override
     public List<Cliente> obtenerTodos() throws Exception {
         try {
-            return jsonUtil.cargarLista(ARCHIVO_CLIENTES, Cliente.class);
+            List<Cliente> resultado = jsonUtil.cargarLista(ARCHIVO_CLIENTES, Cliente.class);
+            return resultado != null ? resultado : new ArrayList<>();
         } catch (Exception e) {
             // Si el archivo no existe, retornar lista vacía
             return new ArrayList<>();

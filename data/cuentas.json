@@ -2,7 +2,7 @@
   {
     "numeroCuenta": "CTA001",
     "tipo": "AHORROS",
-    "saldoActual": 3665.9,
+    "saldoActual": 3900.0,
     "limiteCredito": 0.0,
     "cliente": {
       "idCliente": "CLI-3H4B2OWN",
@@ -13,7 +13,7 @@
   {
     "numeroCuenta": "CTA002",
     "tipo": "CORRIENTE",
-    "saldoActual": 2409.18,
+    "saldoActual": 1700.0,
     "limiteCredito": 56237.41,
     "cliente": {
       "idCliente": "CLI-WSN99PIB",
@@ -24,7 +24,7 @@
   {
     "numeroCuenta": "CTA003",
     "tipo": "AHORROS",
-    "saldoActual": 31647.22,
+    "saldoActual": 31747.22,
     "limiteCredito": 88233.07,
     "cliente": {
       "idCliente": "CLI-GWH06IAU",

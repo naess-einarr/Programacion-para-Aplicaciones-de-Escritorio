@@ -1,11 +1,11 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
-import com.eurobank.proyectoaplicacionesdeescritorio.dao.SucursalDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cajero;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Ejecutivo;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoDatosUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
@@ -53,7 +53,6 @@ public class EmpleadoRegistroController implements Initializable{
     private ComboBox<Integer> comboColumnaDos;
     
     private EmpleadoDAO empleadoDAO;
-    private SucursalDAO sucursalDAO;
     private boolean modoEdicion;
     private String tipoEmpleado;
     private Empleado empleadoEditar;
@@ -61,15 +60,16 @@ public class EmpleadoRegistroController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         empleadoDAO = new EmpleadoDAO();
-        sucursalDAO = new SucursalDAO();
         cargarComboGenero();
         llenarCampoIdEmpleado();
     }
     
     @FXML
     void cancelarRegistro(ActionEvent event) {
-        ManejadorDeVistas.getInstancia().limpiarCache();
-        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO);
+        if(AlertaUtil.mostrarAlertaCancelarGuardado()){
+           ManejadorDeVistas.getInstancia().limpiarCache();
+           ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO);
+        }
     }
 
     @FXML

@@ -1,6 +1,7 @@
 
 package com.eurobank.proyectoaplicacionesdeescritorio.dao;
 
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.JsonUtil;
 import java.util.List;
@@ -114,5 +115,30 @@ public class SucursalDAO implements GenericDAO<Sucursal> {
         }
         
         return resultados;
+    }
+    
+    public int obtenerSiguienteId() throws Exception {
+        List<Sucursal> sucursales = obtenerTodos();
+
+        if (sucursales.isEmpty()) {
+            return 1;
+        }
+
+        int maxNumero = sucursales.stream()
+                .mapToInt(sucursal -> {
+                    String id = sucursal.getIdSucursal();
+                    if (id != null && id.startsWith("SUC")) {
+                        try {
+                            return Integer.parseInt(id.substring(3));
+                        } catch (NumberFormatException e) {
+                            return 0;
+                        }
+                    }
+                    return 0;
+                })
+                .max()
+                .orElse(0);
+
+        return maxNumero + 1;
     }
 }

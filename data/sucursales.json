@@ -13,8 +13,23 @@
       "idEmpleado": "EMP002",
       "nombreCompleto": "Carlos Alberto Mendoza López"
     },
-    "cuentasAsociadas": ["CTA001", "CTA002", "CTA003", "CTA004", "CTA005"],
-    "empleadosAsociados": ["EMP001", "EMP002", "EMP003", "EMP009", "EMP011", "EMP014", "EMP017", "EMP018"]
+    "cuentasAsociadas": [
+      "CTA001",
+      "CTA002",
+      "CTA003",
+      "CTA004",
+      "CTA005"
+    ],
+    "empleadosAsociados": [
+      "EMP001",
+      "EMP002",
+      "EMP003",
+      "EMP009",
+      "EMP011",
+      "EMP014",
+      "EMP017",
+      "EMP018"
+    ]
   },
   {
     "idSucursal": "SUC002",
@@ -24,14 +39,29 @@
     "correoSucursal": "obrero.campesina@banco.com",
     "gerente": {
       "idEmpleado": "EMP006",
-      "nombreCompleto": "Fernando Gabriel Castillo Ruiz"
+      "nombreCompleto": "Fernando Gabriel Castillo Ruiz",
+      "salarioMensual": 0.0
     },
     "contacto": {
       "idEmpleado": "EMP005",
-      "nombreCompleto": "Diana Patricia Morales Jiménez"
+      "nombreCompleto": "Diana Patricia Morales Jiménez",
+      "salarioMensual": 0.0
     },
-    "cuentasAsociadas": ["CTA006", "CTA007", "CTA008", "CTA009", "CTA010"],
-    "empleadosAsociados": ["EMP004", "EMP005", "EMP006", "EMP012", "EMP013", "EMP019"]
+    "cuentasAsociadas": [
+      "CTA006",
+      "CTA007",
+      "CTA008",
+      "CTA009",
+      "CTA010"
+    ],
+    "empleadosAsociados": [
+      "EMP004",
+      "EMP005",
+      "EMP006",
+      "EMP012",
+      "EMP013",
+      "EMP019"
+    ]
   },
   {
     "idSucursal": "SUC003",
@@ -41,14 +71,28 @@
     "correoSucursal": "progreso.macuiltepetl@banco.com",
     "gerente": {
       "idEmpleado": "EMP010",
-      "nombreCompleto": "Alejandro David Ortega Peña"
+      "nombreCompleto": "Alejandro David Ortega Peña",
+      "salarioMensual": 0.0
     },
     "contacto": {
       "idEmpleado": "EMP008",
-      "nombreCompleto": "Miguel Ángel Ramírez Delgado"
+      "nombreCompleto": "Miguel Ángel Ramírez Delgado",
+      "salarioMensual": 0.0
     },
-    "cuentasAsociadas": ["CTA011", "CTA012", "CTA013", "CTA014", "CTA015"],
-    "empleadosAsociados": ["EMP007", "EMP008", "EMP010", "EMP015", "EMP016"]
+    "cuentasAsociadas": [
+      "CTA011",
+      "CTA012",
+      "CTA013",
+      "CTA014",
+      "CTA015"
+    ],
+    "empleadosAsociados": [
+      "EMP007",
+      "EMP008",
+      "EMP010",
+      "EMP015",
+      "EMP016"
+    ]
   },
   {
     "idSucursal": "SUC004",
@@ -58,14 +102,27 @@
     "correoSucursal": "universidad@banco.com",
     "gerente": {
       "idEmpleado": "EMP020",
-      "nombreCompleto": "Ana Cristina Morales Vega"
+      "nombreCompleto": "Ana Cristina Morales Vega",
+      "salarioMensual": 0.0
     },
     "contacto": {
       "idEmpleado": "EMP011",
-      "nombreCompleto": "Valeria Isabella Guerrero Silva"
+      "nombreCompleto": "Valeria Isabella Guerrero Silva",
+      "salarioMensual": 0.0
     },
-    "cuentasAsociadas": ["CTA016", "CTA017", "CTA018", "CTA019", "CTA020"],
-    "empleadosAsociados": ["EMP020", "EMP021", "EMP022", "EMP023"]
+    "cuentasAsociadas": [
+      "CTA016",
+      "CTA017",
+      "CTA018",
+      "CTA019",
+      "CTA020"
+    ],
+    "empleadosAsociados": [
+      "EMP020",
+      "EMP021",
+      "EMP022",
+      "EMP023"
+    ]
   },
   {
     "idSucursal": "SUC005",
@@ -75,14 +132,27 @@
     "correoSucursal": "jardines.xalapa@banco.com",
     "gerente": {
       "idEmpleado": "EMP024",
-      "nombreCompleto": "Roberto Carlos Mendoza Torres"
+      "nombreCompleto": "Roberto Carlos Mendoza Torres",
+      "salarioMensual": 0.0
     },
     "contacto": {
       "idEmpleado": "EMP013",
-      "nombreCompleto": "Andrea Paola Medina Castro"
+      "nombreCompleto": "Andrea Paola Medina Castro",
+      "salarioMensual": 0.0
     },
-    "cuentasAsociadas": ["CTA021", "CTA022", "CTA023", "CTA024", "CTA025"],
-    "empleadosAsociados": ["EMP024", "EMP025", "EMP026", "EMP027"]
+    "cuentasAsociadas": [
+      "CTA021",
+      "CTA022",
+      "CTA023",
+      "CTA024",
+      "CTA025"
+    ],
+    "empleadosAsociados": [
+      "EMP024",
+      "EMP025",
+      "EMP026",
+      "EMP027"
+    ]
   },
   {
     "idSucursal": "SUC006",
@@ -92,14 +162,21 @@
     "correoSucursal": "lomas.estadio@banco.com",
     "gerente": {
       "idEmpleado": "EMP028",
-      "nombreCompleto": "Patricia Isabel Ramírez Cruz"
+      "nombreCompleto": "Patricia Isabel Ramírez Cruz",
+      "salarioMensual": 0.0
     },
     "contacto": {
       "idEmpleado": "EMP016",
-      "nombreCompleto": "Sebastián Mateo Díaz Herrera"
+      "nombreCompleto": "Sebastián Mateo Díaz Herrera",
+      "salarioMensual": 0.0
     },
-    "cuentasAsociadas": ["CTA026", "CTA027", "CTA028", "CTA029", "CTA030"],
-    "empleadosAsociadas": ["EMP028", "EMP029", "EMP030", "EMP031"]
+    "cuentasAsociadas": [
+      "CTA026",
+      "CTA027",
+      "CTA028",
+      "CTA029",
+      "CTA030"
+    ]
   },
   {
     "idSucursal": "SUC007",
@@ -109,14 +186,27 @@
     "correoSucursal": "emiliano.zapata@banco.com",
     "gerente": {
       "idEmpleado": "EMP032",
-      "nombreCompleto": "Luis Fernando Díaz Herrera"
+      "nombreCompleto": "Luis Fernando Díaz Herrera",
+      "salarioMensual": 0.0
     },
     "contacto": {
       "idEmpleado": "EMP002",
-      "nombreCompleto": "Carlos Alberto Mendoza López"
+      "nombreCompleto": "Carlos Alberto Mendoza López",
+      "salarioMensual": 0.0
     },
-    "cuentasAsociadas": ["CTA031", "CTA032", "CTA033", "CTA034", "CTA035"],
-    "empleadosAsociados": ["EMP032", "EMP033", "EMP034", "EMP035"]
+    "cuentasAsociadas": [
+      "CTA031",
+      "CTA032",
+      "CTA033",
+      "CTA034",
+      "CTA035"
+    ],
+    "empleadosAsociados": [
+      "EMP032",
+      "EMP033",
+      "EMP034",
+      "EMP035"
+    ]
   },
   {
     "idSucursal": "SUC008",
@@ -126,14 +216,21 @@
     "correoSucursal": "casa.blanca@banco.com",
     "gerente": {
       "idEmpleado": "EMP036",
-      "nombreCompleto": "Carmen Alejandra Vázquez Silva"
+      "nombreCompleto": "Carmen Alejandra Vázquez Silva",
+      "salarioMensual": 0.0
     },
     "contacto": {
       "idEmpleado": "EMP005",
-      "nombreCompleto": "Diana Patricia Morales Jiménez"
+      "nombreCompleto": "Diana Patricia Morales Jiménez",
+      "salarioMensual": 0.0
     },
-    "cuentasAsociadas": ["CTA036", "CTA037", "CTA038", "CTA039", "CTA040"],
-    "empleadosAsociadas": ["EMP036", "EMP037", "EMP038", "EMP039"]
+    "cuentasAsociadas": [
+      "CTA036",
+      "CTA037",
+      "CTA038",
+      "CTA039",
+      "CTA040"
+    ]
   },
   {
     "idSucursal": "SUC009",
@@ -143,30 +240,26 @@
     "correoSucursal": "revolucion@banco.com",
     "gerente": {
       "idEmpleado": "EMP040",
-      "nombreCompleto": "Eduardo Javier Campos Morales"
+      "nombreCompleto": "Eduardo Javier Campos Morales",
+      "salarioMensual": 0.0
     },
     "contacto": {
       "idEmpleado": "EMP008",
-      "nombreCompleto": "Miguel Ángel Ramírez Delgado"
+      "nombreCompleto": "Miguel Ángel Ramírez Delgado",
+      "salarioMensual": 0.0
     },
-    "cuentasAsociadas": ["CTA041", "CTA042", "CTA043", "CTA044", "CTA045"],
-    "empleadosAsociados": ["EMP040", "EMP041", "EMP042", "EMP043"]
-  },
-  {
-    "idSucursal": "SUC010",
-    "nombreSucursal": "Sucursal Maestros Veracruzanos",
-    "direccionSucursal": "Av. Maestros Veracruzanos #678, Col. Maestros, Xalapa, Veracruz",
-    "telefonoSucursal": "228-815-1010",
-    "correoSucursal": "maestros.veracruzanos@banco.com",
-    "gerente": {
-      "idEmpleado": "EMP044",
-      "nombreCompleto": "Gabriela Monserrat Torres Aguilar"
-    },
-    "contacto": {
-      "idEmpleado": "EMP011",
-      "nombreCompleto": "Valeria Isabella Guerrero Silva"
-    },
-    "cuentasAsociadas": ["CTA046", "CTA047", "CTA048", "CTA049", "CTA050"],
-    "empleadosAsociados": ["EMP044", "EMP045", "EMP046", "EMP047"]
+    "cuentasAsociadas": [
+      "CTA041",
+      "CTA042",
+      "CTA043",
+      "CTA044",
+      "CTA045"
+    ],
+    "empleadosAsociados": [
+      "EMP040",
+      "EMP041",
+      "EMP042",
+      "EMP043"
+    ]
   }
 ]

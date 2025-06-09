@@ -71,7 +71,7 @@ public class EmpleadoController implements Initializable {
         String tipoEmpleado = comboTipoEmpleado.getSelectionModel().getSelectedItem();
         try {
             if (Objects.isNull(tipoEmpleado)) {
-                AlertaUtil.mostrarAlerta("INFORACION", "Debe seleccionar un registro", Alert.AlertType.INFORMATION);
+                AlertaUtil.mostrarAlerta(AlertaUtil.INFORMACION, "Debe seleccionar un registro", Alert.AlertType.INFORMATION);
                 return;
             }
 
@@ -136,11 +136,9 @@ public class EmpleadoController implements Initializable {
         try {
             String tipoSeleccionado = comboTipoEmpleado.getSelectionModel().getSelectedItem();
 
-            // Configurar labels según el tipo seleccionado
             EmpleadoTablaUtil.configurarLabelsSegunTipo(tipoSeleccionado, columnaUno, columnaDos);
             EmpleadoTablaUtil.restablecerTabla(tablaEmpleados);
 
-            // Cargar datos según el tipo
             if (EmpleadoDatosUtil.TIPO_GERENTE.equals(tipoSeleccionado)) {
                 tablaEmpleados.setItems(FXCollections.observableArrayList(empleadoDAO.obtenerGerentes()));
             } else if (EmpleadoDatosUtil.TIPO_EJECUTIVO.equals(tipoSeleccionado)) {

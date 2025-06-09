@@ -7,12 +7,11 @@ public class Transaccion {
     private String idTransaccion;
     private double montoTransaccion;
     private LocalDateTime fechaHoraTransaccion;
-    private String tipoTransaccion; // "DEPOSITO", "RETIRO", "TRANSFERENCIA"
-    private String numeroCuentaOrigen;
-    private String numeroCuentaDestino;
-    private String idSucursalTransaccion;
-    private String idEmpleadoResponsable;
-    private String estadoTransaccion; // "COMPLETADA", "PENDIENTE", "FALLIDA"
+    private String tipoTransaccion; 
+    private CuentaBancaria cuentaOrigen;
+    private CuentaBancaria cuentaDestino;
+    private Sucursal sucursal;
+    private Empleado empleadoResponsable;
     private String referenciaTransaccion;
     
     public Transaccion() {
@@ -20,27 +19,26 @@ public class Transaccion {
     
     public Transaccion(String idTransaccion, double montoTransaccion, 
                       LocalDateTime fechaHoraTransaccion, String tipoTransaccion,
-                      String numeroCuentaOrigen, String idSucursalTransaccion,
-                      String idEmpleadoResponsable) {
+                      CuentaBancaria cuentaOrigen, Sucursal sucursal,
+                      Empleado empleadoResponsable) {
         
         this.idTransaccion = idTransaccion;
         this.montoTransaccion = montoTransaccion;
         this.fechaHoraTransaccion = fechaHoraTransaccion;
         this.tipoTransaccion = tipoTransaccion;
-        this.numeroCuentaOrigen = numeroCuentaOrigen;
-        this.idSucursalTransaccion = idSucursalTransaccion;
-        this.idEmpleadoResponsable = idEmpleadoResponsable;
-        this.estadoTransaccion = "PENDIENTE";
+        this.cuentaOrigen = cuentaOrigen;
+        this.sucursal = sucursal;
+        this.empleadoResponsable = empleadoResponsable;
     }
     
     public Transaccion(String idTransaccion, double montoTransaccion,
                       LocalDateTime fechaHoraTransaccion, String tipoTransaccion,
-                      String numeroCuentaOrigen, String numeroCuentaDestino,
-                      String idSucursalTransaccion, String idEmpleadoResponsable) {
+                      CuentaBancaria cuentaOrigen, CuentaBancaria cuentaDestino,
+                      Sucursal sucursal, Empleado empleadoResponsable) {
         
         this(idTransaccion, montoTransaccion, fechaHoraTransaccion, tipoTransaccion,
-             numeroCuentaOrigen, idSucursalTransaccion, idEmpleadoResponsable);
-        this.numeroCuentaDestino = numeroCuentaDestino;
+             cuentaOrigen, sucursal, empleadoResponsable);
+        this.cuentaDestino = cuentaDestino;
     }
     
     public String getIdTransaccion() {
@@ -107,14 +105,6 @@ public class Transaccion {
         this.idEmpleadoResponsable = idEmpleadoResponsable;
     }
 
-    public String getEstadoTransaccion() {
-        return estadoTransaccion;
-    }
-
-    public void setEstadoTransaccion(String estadoTransaccion) {
-        this.estadoTransaccion = estadoTransaccion;
-    }
-
     public String getReferenciaTransaccion() {
         return referenciaTransaccion;
     }
@@ -127,21 +117,12 @@ public class Transaccion {
         return "TRANSFERENCIA".equals(tipoTransaccion);
     }
     
-    public void marcarComoCompletada() {
-        this.estadoTransaccion = "COMPLETADA";
-    }
-    
-    public void marcarComoFallida() {
-        this.estadoTransaccion = "FALLIDA";
-    }
-    
     @Override
     public String toString() {
         return "Transaccion{" +
                "idTransaccion='" + idTransaccion + '\'' +
                ", montoTransaccion=" + montoTransaccion +
                ", tipoTransaccion='" + tipoTransaccion + '\'' +
-               ", estadoTransaccion='" + estadoTransaccion + '\'' +
                '}';
     }
 }

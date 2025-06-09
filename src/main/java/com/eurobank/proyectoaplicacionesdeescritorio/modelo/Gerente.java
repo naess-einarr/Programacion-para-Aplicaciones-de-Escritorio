@@ -1,11 +1,5 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
-import java.time.LocalDate;
-
-/**
- * Clase que representa un gerente del banco.
- * Hereda de Empleado y anade atributos específicos del rol de gerente.
- */
 public class Gerente extends Empleado {
     
     private String nivelAcceso;

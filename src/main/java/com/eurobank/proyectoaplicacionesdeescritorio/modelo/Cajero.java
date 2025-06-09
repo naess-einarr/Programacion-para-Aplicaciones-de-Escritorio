@@ -2,10 +2,6 @@ package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
 import java.time.LocalDate;
 
-/**
- * Clase que representa un cajero del banco.
- * Hereda de Empleado y anade atributos específicos del rol de cajero.
- */
 public class Cajero extends Empleado {
     
     private String horarioTrabajo;

@@ -7,40 +7,37 @@ public class Transaccion {
     private String idTransaccion;
     private double montoTransaccion;
     private LocalDateTime fechaHoraTransaccion;
-    private String tipoTransaccion; // "DEPOSITO", "RETIRO", "TRANSFERENCIA"
-    private String numeroCuentaOrigen;
-    private String numeroCuentaDestino;
-    private String idSucursalTransaccion;
-    private String idEmpleadoResponsable;
-    private String estadoTransaccion; // "COMPLETADA", "PENDIENTE", "FALLIDA"
-    private String referenciaTransaccion;
+    private String tipoTransaccion; 
+    private CuentaBancaria cuentaOrigen;
+    private CuentaBancaria cuentaDestino;
+    private Sucursal sucursal;
+    private Empleado empleadoResponsable;
     
     public Transaccion() {
     }
     
     public Transaccion(String idTransaccion, double montoTransaccion, 
                       LocalDateTime fechaHoraTransaccion, String tipoTransaccion,
-                      String numeroCuentaOrigen, String idSucursalTransaccion,
-                      String idEmpleadoResponsable) {
+                      CuentaBancaria cuentaOrigen, Sucursal sucursal,
+                      Empleado empleadoResponsable) {
         
         this.idTransaccion = idTransaccion;
         this.montoTransaccion = montoTransaccion;
         this.fechaHoraTransaccion = fechaHoraTransaccion;
         this.tipoTransaccion = tipoTransaccion;
-        this.numeroCuentaOrigen = numeroCuentaOrigen;
-        this.idSucursalTransaccion = idSucursalTransaccion;
-        this.idEmpleadoResponsable = idEmpleadoResponsable;
-        this.estadoTransaccion = "PENDIENTE";
+        this.cuentaOrigen = cuentaOrigen;
+        this.sucursal = sucursal;
+        this.empleadoResponsable = empleadoResponsable;
     }
     
     public Transaccion(String idTransaccion, double montoTransaccion,
                       LocalDateTime fechaHoraTransaccion, String tipoTransaccion,
-                      String numeroCuentaOrigen, String numeroCuentaDestino,
-                      String idSucursalTransaccion, String idEmpleadoResponsable) {
+                      CuentaBancaria cuentaOrigen, CuentaBancaria cuentaDestino,
+                      Sucursal sucursal, Empleado empleadoResponsable) {
         
         this(idTransaccion, montoTransaccion, fechaHoraTransaccion, tipoTransaccion,
-             numeroCuentaOrigen, idSucursalTransaccion, idEmpleadoResponsable);
-        this.numeroCuentaDestino = numeroCuentaDestino;
+             cuentaOrigen, sucursal, empleadoResponsable);
+        this.cuentaDestino = cuentaDestino;
     }
     
     public String getIdTransaccion() {
@@ -74,65 +71,43 @@ public class Transaccion {
     public void setTipoTransaccion(String tipoTransaccion) {
         this.tipoTransaccion = tipoTransaccion;
     }
-
-    public String getNumeroCuentaOrigen() {
-        return numeroCuentaOrigen;
+    
+    public CuentaBancaria getCuentaOrigen() {
+        return cuentaOrigen;
     }
 
-    public void setNumeroCuentaOrigen(String numeroCuentaOrigen) {
-        this.numeroCuentaOrigen = numeroCuentaOrigen;
+    public void setCuentaOrigen(CuentaBancaria cuentaOrigen) {
+        this.cuentaOrigen = cuentaOrigen;
     }
 
-    public String getNumeroCuentaDestino() {
-        return numeroCuentaDestino;
+    public CuentaBancaria getCuentaDestino() {
+        return cuentaDestino;
     }
 
-    public void setNumeroCuentaDestino(String numeroCuentaDestino) {
-        this.numeroCuentaDestino = numeroCuentaDestino;
+    public void setCuentaDestino(CuentaBancaria cuentaDestino) {
+        this.cuentaDestino = cuentaDestino;
     }
 
-    public String getIdSucursalTransaccion() {
-        return idSucursalTransaccion;
+    public Sucursal getSucursal() {
+        return sucursal;
     }
 
-    public void setIdSucursalTransaccion(String idSucursalTransaccion) {
-        this.idSucursalTransaccion = idSucursalTransaccion;
+    public void setSucursal(Sucursal sucursal) {
+        this.sucursal = sucursal;
     }
 
-    public String getIdEmpleadoResponsable() {
-        return idEmpleadoResponsable;
+    public Empleado getEmpleadoResponsable() {
+        return empleadoResponsable;
     }
 
-    public void setIdEmpleadoResponsable(String idEmpleadoResponsable) {
-        this.idEmpleadoResponsable = idEmpleadoResponsable;
+    public void setEmpleadoResponsable(Empleado empleadoResponsable) {
+        this.empleadoResponsable = empleadoResponsable;
     }
+    
 
-    public String getEstadoTransaccion() {
-        return estadoTransaccion;
-    }
-
-    public void setEstadoTransaccion(String estadoTransaccion) {
-        this.estadoTransaccion = estadoTransaccion;
-    }
-
-    public String getReferenciaTransaccion() {
-        return referenciaTransaccion;
-    }
-
-    public void setReferenciaTransaccion(String referenciaTransaccion) {
-        this.referenciaTransaccion = referenciaTransaccion;
-    }
     
     public boolean esTransferencia() {
         return "TRANSFERENCIA".equals(tipoTransaccion);
-    }
-    
-    public void marcarComoCompletada() {
-        this.estadoTransaccion = "COMPLETADA";
-    }
-    
-    public void marcarComoFallida() {
-        this.estadoTransaccion = "FALLIDA";
     }
     
     @Override
@@ -141,7 +116,6 @@ public class Transaccion {
                "idTransaccion='" + idTransaccion + '\'' +
                ", montoTransaccion=" + montoTransaccion +
                ", tipoTransaccion='" + tipoTransaccion + '\'' +
-               ", estadoTransaccion='" + estadoTransaccion + '\'' +
                '}';
     }
 }

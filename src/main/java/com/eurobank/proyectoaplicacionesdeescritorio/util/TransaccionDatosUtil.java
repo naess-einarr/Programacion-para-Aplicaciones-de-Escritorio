@@ -5,12 +5,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 
-public class ComboDatosTransaccion {
+public class TransaccionDatosUtil {
     public static final String TIPO_DEPOSITO = "DEPOSITO";
     public static final String TIPO_RETIRO = "RETIRO";
     public static final String TIPO_TRANSFERENCIA = "TRANSFERENCIA";
     
-    private ComboDatosTransaccion(){
+    private TransaccionDatosUtil(){
         throw new IllegalStateException(ConstantesUtil.ALERTA_CLASE_UTILERIA);
     }
     

@@ -1,11 +1,5 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
-import java.time.LocalDate;
-
-/**
- * Clase que representa un ejecutivo de cuenta del banco.
- * Hereda de Empleado y anade atributos específicos del rol de ejecutivo.
- */
 public class Ejecutivo extends Empleado {
     
     private String especializacionEjecutivo;

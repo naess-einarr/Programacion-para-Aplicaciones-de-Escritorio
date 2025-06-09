@@ -48,7 +48,8 @@ public class MenuController implements Initializable {
 
     @FXML
     void abrirVentanaAdministrarTransacciones(ActionEvent event) {
-
+        ManejadorDeVistas.getInstancia().limpiarCache();
+        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.TRANSACCION);
     }
     
     @FXML

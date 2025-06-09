@@ -67,9 +67,12 @@ public class EmpleadoController implements Initializable {
     @FXML
     void accionEditar(ActionEvent event) {
         String tipoEmpleado = comboTipoEmpleado.getSelectionModel().getSelectedItem();
+        Empleado empleadoSeleccionado = tablaEmpleados.getSelectionModel().getSelectedItem();
+
         try {
-            if (Objects.isNull(tipoEmpleado)) {
-                AlertaUtil.mostrarAlerta(AlertaUtil.INFORMACION, "Debe seleccionar un registro", Alert.AlertType.INFORMATION);
+
+            if (Objects.isNull(empleadoSeleccionado)) {
+                AlertaUtil.mostrarAlerta("INFORACION", "Debe seleccionar un registro", Alert.AlertType.INFORMATION);
                 return;
             }
 

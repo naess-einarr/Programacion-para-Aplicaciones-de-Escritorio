@@ -9,7 +9,7 @@ public class Empleado {
     private String direccionCompleta;
     private LocalDate fechaNacimiento;
     private String generoEmpleado;
-    private double salarioMensual;
+    private Double salarioMensual;
     private String nombreUsuario;
     private String contrasenaAcceso;
     protected String tipoEmpleado;
@@ -18,7 +18,7 @@ public class Empleado {
 
     }
 
-    public Empleado(String idEmpleado, String nombreCompleto, String direccionCompleta, LocalDate fechaNacimiento, String generoEmpleado, double salarioMensual, String nombreUsuario, String contrasenaAcceso, String tipoEmpleado) {
+    public Empleado(String idEmpleado, String nombreCompleto, String direccionCompleta, LocalDate fechaNacimiento, String generoEmpleado, Double salarioMensual, String nombreUsuario, String contrasenaAcceso, String tipoEmpleado) {
         this.idEmpleado = idEmpleado;
         this.nombreCompleto = nombreCompleto;
         this.direccionCompleta = direccionCompleta;
@@ -70,11 +70,11 @@ public class Empleado {
         this.generoEmpleado = generoEmpleado;
     }
 
-    public double getSalarioMensual() {
+    public Double getSalarioMensual() {
         return salarioMensual;
     }
 
-    public void setSalarioMensual(double salarioMensual) {
+    public void setSalarioMensual(Double salarioMensual) {
         this.salarioMensual = salarioMensual;
     }
 

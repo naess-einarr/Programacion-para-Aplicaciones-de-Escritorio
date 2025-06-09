@@ -1,11 +1,11 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
-import com.eurobank.proyectoaplicacionesdeescritorio.dao.SucursalDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cajero;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Ejecutivo;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Gerente;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoDatosUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
@@ -66,8 +66,10 @@ public class EmpleadoRegistroController implements Initializable{
     
     @FXML
     void cancelarRegistro(ActionEvent event) {
-        ManejadorDeVistas.getInstancia().limpiarCache();
-        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO);
+        if(AlertaUtil.mostrarAlertaCancelarGuardado()){
+           ManejadorDeVistas.getInstancia().limpiarCache();
+           ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.EMPLEADO);
+        }
     }
 
     @FXML

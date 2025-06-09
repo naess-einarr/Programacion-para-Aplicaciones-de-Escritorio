@@ -1,46 +1,222 @@
 [
   {
-    "numeroCuenta": "4001-2024-0001",
+    "numeroCuenta": "CTA001",
     "tipo": "AHORROS",
-    "saldoActual": 15030.5,
+    "saldoActual": 3665.9,
     "limiteCredito": 0.0,
     "cliente": {
-      "idCliente": "CLI001",
-      "nombreCompleto": "María Elena",
-      "apellidosCompletos": "García Rodríguez"
+      "idCliente": "CLI-3H4B2OWN",
+      "nombreCompleto": "María",
+      "apellidosCompletos": "García"
     }
   },
   {
-    "numeroCuenta": "4001-2024-0002",
+    "numeroCuenta": "CTA002",
     "tipo": "CORRIENTE",
-    "saldoActual": 8750.25,
-    "limiteCredito": 50000.0,
+    "saldoActual": 2409.18,
+    "limiteCredito": 56237.41,
     "cliente": {
-      "idCliente": "CLI002",
-      "nombreCompleto": "Carlos Alberto",
-      "apellidosCompletos": "Mendoza López"
+      "idCliente": "CLI-WSN99PIB",
+      "nombreCompleto": "Carlos",
+      "apellidosCompletos": "Mendoza"
     }
   },
   {
-    "numeroCuenta": "4001-2024-0003",
-    "tipo": "CREDITO",
-    "saldoActual": -2500.0,
-    "limiteCredito": 100000.0,
-    "cliente": {
-      "idCliente": "CLI003",
-      "nombreCompleto": "Ana Patricia",
-      "apellidosCompletos": "Hernández Morales"
-    }
-  },
-  {
-    "numeroCuenta": "4001-2024-0004",
+    "numeroCuenta": "CTA003",
     "tipo": "AHORROS",
-    "saldoActual": 45000.75,
+    "saldoActual": 31647.22,
+    "limiteCredito": 88233.07,
+    "cliente": {
+      "idCliente": "CLI-GWH06IAU",
+      "nombreCompleto": "Ana",
+      "apellidosCompletos": "Hernández"
+    }
+  },
+  {
+    "numeroCuenta": "CTA004",
+    "tipo": "CORRIENTE",
+    "saldoActual": 40254.93,
     "limiteCredito": 0.0,
     "cliente": {
-      "idCliente": "CLI004",
-      "nombreCompleto": "José Miguel",
-      "apellidosCompletos": "Torres Vázquez"
+      "idCliente": "CLI-IIW68ECE",
+      "nombreCompleto": "José",
+      "apellidosCompletos": "Torres"
+    }
+  },
+  {
+    "numeroCuenta": "CTA005",
+    "tipo": "CORRIENTE",
+    "saldoActual": 42415.51,
+    "limiteCredito": 0.0,
+    "cliente": {
+      "idCliente": "CLI-HR7VA5E8",
+      "nombreCompleto": "Lucía",
+      "apellidosCompletos": "López"
+    }
+  },
+  {
+    "numeroCuenta": "CTA006",
+    "tipo": "CREDITO",
+    "saldoActual": 36881.81,
+    "limiteCredito": 68769.48,
+    "cliente": {
+      "idCliente": "CLI-IXJM2V7L",
+      "nombreCompleto": "Juan",
+      "apellidosCompletos": "Martínez"
+    }
+  },
+  {
+    "numeroCuenta": "CTA007",
+    "tipo": "AHORROS",
+    "saldoActual": 5102.68,
+    "limiteCredito": 0.0,
+    "cliente": {
+      "idCliente": "CLI-MMAFIF54",
+      "nombreCompleto": "Sofía",
+      "apellidosCompletos": "Ramírez"
+    }
+  },
+  {
+    "numeroCuenta": "CTA008",
+    "tipo": "AHORROS",
+    "saldoActual": 1542.85,
+    "limiteCredito": 0.0,
+    "cliente": {
+      "idCliente": "CLI-HN5RN13M",
+      "nombreCompleto": "Luis",
+      "apellidosCompletos": "Sánchez"
+    }
+  },
+  {
+    "numeroCuenta": "CTA009",
+    "tipo": "CORRIENTE",
+    "saldoActual": 44214.09,
+    "limiteCredito": 83929.73,
+    "cliente": {
+      "idCliente": "CLI-GQWQLNK8",
+      "nombreCompleto": "Camila",
+      "apellidosCompletos": "Castro"
+    }
+  },
+  {
+    "numeroCuenta": "CTA010",
+    "tipo": "AHORROS",
+    "saldoActual": 42607.3,
+    "limiteCredito": 80460.53,
+    "cliente": {
+      "idCliente": "CLI-RD3LTZUD",
+      "nombreCompleto": "Miguel",
+      "apellidosCompletos": "Ortega"
+    }
+  },
+  {
+    "numeroCuenta": "CTA011",
+    "tipo": "AHORROS",
+    "saldoActual": 15006.34,
+    "limiteCredito": 89051.9,
+    "cliente": {
+      "idCliente": "CLI-G8S1K9UY",
+      "nombreCompleto": "Valentina",
+      "apellidosCompletos": "Ríos"
+    }
+  },
+  {
+    "numeroCuenta": "CTA012",
+    "tipo": "CREDITO",
+    "saldoActual": 19516.52,
+    "limiteCredito": 60177.88,
+    "cliente": {
+      "idCliente": "CLI-6HNWDMFS",
+      "nombreCompleto": "Diego",
+      "apellidosCompletos": "Cortés"
+    }
+  },
+  {
+    "numeroCuenta": "CTA013",
+    "tipo": "CREDITO",
+    "saldoActual": 34377.0,
+    "limiteCredito": 91889.56,
+    "cliente": {
+      "idCliente": "CLI-909GCM0D",
+      "nombreCompleto": "Fernanda",
+      "apellidosCompletos": "Flores"
+    }
+  },
+  {
+    "numeroCuenta": "CTA014",
+    "tipo": "CORRIENTE",
+    "saldoActual": 24947.81,
+    "limiteCredito": 44736.65,
+    "cliente": {
+      "idCliente": "CLI-VNIM19OG",
+      "nombreCompleto": "Andrés",
+      "apellidosCompletos": "Paredes"
+    }
+  },
+  {
+    "numeroCuenta": "CTA015",
+    "tipo": "CORRIENTE",
+    "saldoActual": 33376.26,
+    "limiteCredito": 92933.52,
+    "cliente": {
+      "idCliente": "CLI-2KB60365",
+      "nombreCompleto": "Paola",
+      "apellidosCompletos": "Silva"
+    }
+  },
+  {
+    "numeroCuenta": "CTA016",
+    "tipo": "CORRIENTE",
+    "saldoActual": 31375.93,
+    "limiteCredito": 0.0,
+    "cliente": {
+      "idCliente": "CLI-BZI33Z2V",
+      "nombreCompleto": "Emilio",
+      "apellidosCompletos": "Romero"
+    }
+  },
+  {
+    "numeroCuenta": "CTA017",
+    "tipo": "CORRIENTE",
+    "saldoActual": 23814.3,
+    "limiteCredito": 44063.58,
+    "cliente": {
+      "idCliente": "CLI-JC7GF38R",
+      "nombreCompleto": "Daniela",
+      "apellidosCompletos": "Delgado"
+    }
+  },
+  {
+    "numeroCuenta": "CTA018",
+    "tipo": "AHORROS",
+    "saldoActual": 3817.54,
+    "limiteCredito": 0.0,
+    "cliente": {
+      "idCliente": "CLI-J7U8CBXS",
+      "nombreCompleto": "Jorge",
+      "apellidosCompletos": "Guzmán"
+    }
+  },
+  {
+    "numeroCuenta": "CTA019",
+    "tipo": "CORRIENTE",
+    "saldoActual": 33353.57,
+    "limiteCredito": 62254.23,
+    "cliente": {
+      "idCliente": "CLI-PJC9YLOP",
+      "nombreCompleto": "Isabel",
+      "apellidosCompletos": "Peña"
+    }
+  },
+  {
+    "numeroCuenta": "CTA020",
+    "tipo": "CREDITO",
+    "saldoActual": 45592.45,
+    "limiteCredito": 25822.57,
+    "cliente": {
+      "idCliente": "CLI-KP0NQCE4",
+      "nombreCompleto": "Ricardo",
+      "apellidosCompletos": "Morales"
     }
   }
 ]

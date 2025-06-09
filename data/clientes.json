@@ -1,18 +1,322 @@
 [
   {
-    "idCliente": "CLI-FDFE59EB",
-    "nombreCompleto": "Marcos",
-    "apellidosCompletos": "zenon",
+    "idCliente": "CLI-3H4B2OWN",
+    "nombreCompleto": "María",
+    "apellidosCompletos": "García",
     "nacionalidadCliente": "mexicano",
     "fechaNacimiento": {
-      "year": 2025,
+      "year": 1990,
+      "month": 1,
+      "day": 1
+    },
+    "rfcCliente": "DUFP981231H08",
+    "curpCliente": "NYTY981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 1",
+    "telefonoContacto": "228290000",
+    "correoElectronico": "cliente1@correo.com"
+  },
+  {
+    "idCliente": "CLI-WSN99PIB",
+    "nombreCompleto": "Carlos",
+    "apellidosCompletos": "Mendoza",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 1991,
+      "month": 2,
+      "day": 2
+    },
+    "rfcCliente": "YBEA981231H08",
+    "curpCliente": "UFCL981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 2",
+    "telefonoContacto": "228290001",
+    "correoElectronico": "cliente2@correo.com"
+  },
+  {
+    "idCliente": "CLI-GWH06IAU",
+    "nombreCompleto": "Ana",
+    "apellidosCompletos": "Hernández",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 1992,
+      "month": 3,
+      "day": 3
+    },
+    "rfcCliente": "YPVO981231H08",
+    "curpCliente": "CKRH981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 3",
+    "telefonoContacto": "228290002",
+    "correoElectronico": "cliente3@correo.com"
+  },
+  {
+    "idCliente": "CLI-IIW68ECE",
+    "nombreCompleto": "José",
+    "apellidosCompletos": "Torres",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 1993,
+      "month": 4,
+      "day": 4
+    },
+    "rfcCliente": "ATVE981231H08",
+    "curpCliente": "YOES981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 4",
+    "telefonoContacto": "228290003",
+    "correoElectronico": "cliente4@correo.com"
+  },
+  {
+    "idCliente": "CLI-HR7VA5E8",
+    "nombreCompleto": "Lucía",
+    "apellidosCompletos": "López",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 1994,
       "month": 5,
+      "day": 5
+    },
+    "rfcCliente": "UNVJ981231H08",
+    "curpCliente": "PUTU981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 5",
+    "telefonoContacto": "228290004",
+    "correoElectronico": "cliente5@correo.com"
+  },
+  {
+    "idCliente": "CLI-IXJM2V7L",
+    "nombreCompleto": "Juan",
+    "apellidosCompletos": "Martínez",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 1995,
+      "month": 6,
+      "day": 6
+    },
+    "rfcCliente": "BXKU981231H08",
+    "curpCliente": "YIZH981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 6",
+    "telefonoContacto": "228290005",
+    "correoElectronico": "cliente6@correo.com"
+  },
+  {
+    "idCliente": "CLI-MMAFIF54",
+    "nombreCompleto": "Sofía",
+    "apellidosCompletos": "Ramírez",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 1996,
+      "month": 7,
+      "day": 7
+    },
+    "rfcCliente": "CROJ981231H08",
+    "curpCliente": "VTFJ981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 7",
+    "telefonoContacto": "228290006",
+    "correoElectronico": "cliente7@correo.com"
+  },
+  {
+    "idCliente": "CLI-HN5RN13M",
+    "nombreCompleto": "Luis",
+    "apellidosCompletos": "Sánchez",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 1997,
+      "month": 8,
+      "day": 8
+    },
+    "rfcCliente": "VWJM981231H08",
+    "curpCliente": "PJCJ981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 8",
+    "telefonoContacto": "228290007",
+    "correoElectronico": "cliente8@correo.com"
+  },
+  {
+    "idCliente": "CLI-GQWQLNK8",
+    "nombreCompleto": "Camila",
+    "apellidosCompletos": "Castro",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 1998,
+      "month": 9,
+      "day": 9
+    },
+    "rfcCliente": "YIDW981231H08",
+    "curpCliente": "CMBZ981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 9",
+    "telefonoContacto": "228290008",
+    "correoElectronico": "cliente9@correo.com"
+  },
+  {
+    "idCliente": "CLI-RD3LTZUD",
+    "nombreCompleto": "Miguel",
+    "apellidosCompletos": "Ortega",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 1999,
+      "month": 10,
+      "day": 10
+    },
+    "rfcCliente": "SBQW981231H08",
+    "curpCliente": "PNVY981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 10",
+    "telefonoContacto": "228290009",
+    "correoElectronico": "cliente10@correo.com"
+  },
+  {
+    "idCliente": "CLI-G8S1K9UY",
+    "nombreCompleto": "Valentina",
+    "apellidosCompletos": "Ríos",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 2000,
+      "month": 11,
+      "day": 11
+    },
+    "rfcCliente": "REUN981231H08",
+    "curpCliente": "EMWT981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 11",
+    "telefonoContacto": "228290010",
+    "correoElectronico": "cliente11@correo.com"
+  },
+  {
+    "idCliente": "CLI-6HNWDMFS",
+    "nombreCompleto": "Diego",
+    "apellidosCompletos": "Cortés",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 2001,
+      "month": 12,
+      "day": 12
+    },
+    "rfcCliente": "YLLT981231H08",
+    "curpCliente": "SMIM981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 12",
+    "telefonoContacto": "228290011",
+    "correoElectronico": "cliente12@correo.com"
+  },
+  {
+    "idCliente": "CLI-909GCM0D",
+    "nombreCompleto": "Fernanda",
+    "apellidosCompletos": "Flores",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 2002,
+      "month": 1,
       "day": 13
     },
-    "rfcCliente": "SAMM981231H08",
-    "curpCliente": "SAMM981231HVZNNR06",
-    "direccionCompleta": "cipres 143213213",
-    "telefonoContacto": "2282929871",
-    "correoElectronico": "ejemplo@correo.com"
+    "rfcCliente": "BWNY981231H08",
+    "curpCliente": "OFFL981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 13",
+    "telefonoContacto": "228290012",
+    "correoElectronico": "cliente13@correo.com"
+  },
+  {
+    "idCliente": "CLI-VNIM19OG",
+    "nombreCompleto": "Andrés",
+    "apellidosCompletos": "Paredes",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 2003,
+      "month": 2,
+      "day": 14
+    },
+    "rfcCliente": "LBMW981231H08",
+    "curpCliente": "MYRG981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 14",
+    "telefonoContacto": "228290013",
+    "correoElectronico": "cliente14@correo.com"
+  },
+  {
+    "idCliente": "CLI-2KB60365",
+    "nombreCompleto": "Paola",
+    "apellidosCompletos": "Silva",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 2004,
+      "month": 3,
+      "day": 15
+    },
+    "rfcCliente": "BPYW981231H08",
+    "curpCliente": "KELC981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 15",
+    "telefonoContacto": "228290014",
+    "correoElectronico": "cliente15@correo.com"
+  },
+  {
+    "idCliente": "CLI-BZI33Z2V",
+    "nombreCompleto": "Emilio",
+    "apellidosCompletos": "Romero",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 2005,
+      "month": 4,
+      "day": 16
+    },
+    "rfcCliente": "GEDG981231H08",
+    "curpCliente": "EPHF981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 16",
+    "telefonoContacto": "228290015",
+    "correoElectronico": "cliente16@correo.com"
+  },
+  {
+    "idCliente": "CLI-JC7GF38R",
+    "nombreCompleto": "Daniela",
+    "apellidosCompletos": "Delgado",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 2006,
+      "month": 5,
+      "day": 17
+    },
+    "rfcCliente": "EXDP981231H08",
+    "curpCliente": "OQCV981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 17",
+    "telefonoContacto": "228290016",
+    "correoElectronico": "cliente17@correo.com"
+  },
+  {
+    "idCliente": "CLI-J7U8CBXS",
+    "nombreCompleto": "Jorge",
+    "apellidosCompletos": "Guzmán",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 2007,
+      "month": 6,
+      "day": 18
+    },
+    "rfcCliente": "BRQF981231H08",
+    "curpCliente": "YNCZ981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 18",
+    "telefonoContacto": "228290017",
+    "correoElectronico": "cliente18@correo.com"
+  },
+  {
+    "idCliente": "CLI-PJC9YLOP",
+    "nombreCompleto": "Isabel",
+    "apellidosCompletos": "Peña",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 2008,
+      "month": 7,
+      "day": 19
+    },
+    "rfcCliente": "JMRL981231H08",
+    "curpCliente": "ACXP981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 19",
+    "telefonoContacto": "228290018",
+    "correoElectronico": "cliente19@correo.com"
+  },
+  {
+    "idCliente": "CLI-KP0NQCE4",
+    "nombreCompleto": "Ricardo",
+    "apellidosCompletos": "Morales",
+    "nacionalidadCliente": "mexicano",
+    "fechaNacimiento": {
+      "year": 2009,
+      "month": 8,
+      "day": 20
+    },
+    "rfcCliente": "NQVQ981231H08",
+    "curpCliente": "BTPK981231HVZNNR06",
+    "direccionCompleta": "Calle Ficticia 20",
+    "telefonoContacto": "228290019",
+    "correoElectronico": "cliente20@correo.com"
   }
 ]

@@ -2,10 +2,6 @@ package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
 import java.util.List;
 
-/**
- * Clase que representa una sucursal bancaria.
- * Contiene información de identificación y contacto de la sucursal.
- */
 public class Sucursal {
     
     private String idSucursal;
@@ -13,28 +9,10 @@ public class Sucursal {
     private String direccionSucursal;
     private String telefonoSucursal;
     private String correoSucursal;
-    private String nombreGerente;
-    private String personaContacto;
-    private List<String> listaCuentasAsociadas;
-    private List<String> listaEmpleadosAsociados;
-    
-    public Sucursal() {
-    }
-    
-    public Sucursal(String idSucursal, String nombreSucursal, String direccionSucursal,
-                    String telefonoSucursal, String correoSucursal, String nombreGerente,
-                    String personaContacto) {
-        
-        this.idSucursal = idSucursal;
-        this.nombreSucursal = nombreSucursal;
-        this.direccionSucursal = direccionSucursal;
-        this.telefonoSucursal = telefonoSucursal;
-        this.correoSucursal = correoSucursal;
-        this.nombreGerente = nombreGerente;
-        this.personaContacto = personaContacto;
-    }
-    
-    // Getters y Setters
+    private Gerente gerente;
+    private Ejecutivo contacto;
+    private List<Cuenta> cuentasAsociadas;
+    private List<Empleado> empleadosAsociados;
 
     public String getIdSucursal() {
         return idSucursal;
@@ -76,45 +54,41 @@ public class Sucursal {
         this.correoSucursal = correoSucursal;
     }
 
-    public String getNombreGerente() {
-        return nombreGerente;
+    public Gerente getGerente() {
+        return gerente;
     }
 
-    public void setNombreGerente(String nombreGerente) {
-        this.nombreGerente = nombreGerente;
+    public void setGerente(Gerente gerente) {
+        this.gerente = gerente;
     }
 
-    public String getPersonaContacto() {
-        return personaContacto;
+    public Ejecutivo getContacto() {
+        return contacto;
     }
 
-    public void setPersonaContacto(String personaContacto) {
-        this.personaContacto = personaContacto;
+    public void setContacto(Ejecutivo contacto) {
+        this.contacto = contacto;
     }
 
-    public List<String> getListaCuentasAsociadas() {
-        return listaCuentasAsociadas;
+    public List<Cuenta> getCuentasAsociadas() {
+        return cuentasAsociadas;
     }
 
-    public void setListaCuentasAsociadas(List<String> listaCuentasAsociadas) {
-        this.listaCuentasAsociadas = listaCuentasAsociadas;
+    public void setCuentasAsociadas(List<Cuenta> cuentasAsociadas) {
+        this.cuentasAsociadas = cuentasAsociadas;
     }
 
-    public List<String> getListaEmpleadosAsociados() {
-        return listaEmpleadosAsociados;
+    public List<Empleado> getEmpleadosAsociados() {
+        return empleadosAsociados;
     }
 
-    public void setListaEmpleadosAsociados(List<String> listaEmpleadosAsociados) {
-        this.listaEmpleadosAsociados = listaEmpleadosAsociados;
+    public void setEmpleadosAsociados(List<Empleado> empleadosAsociados) {
+        this.empleadosAsociados = empleadosAsociados;
     }
-    
-    
+
+   
     @Override
     public String toString() {
-        return "Sucursal{" +
-               "idSucursal='" + idSucursal + '\'' +
-               ", nombreSucursal='" + nombreSucursal + '\'' +
-               ", direccionSucursal='" + direccionSucursal + '\'' +
-               '}';
+        return idSucursal + " - " + nombreSucursal;
     }
 }

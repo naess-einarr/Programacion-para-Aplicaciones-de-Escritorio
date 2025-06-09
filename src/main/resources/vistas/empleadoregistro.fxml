@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPaneRegistroEmpleado" maxHeight="527.0" maxWidth="424.0" minHeight="447.0" minWidth="424.0" prefHeight="490.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.EmpleadoRegistroController">
+   <children>
+      <Label fx:id="labelTitulo" layoutX="143.0" layoutY="6.0" prefHeight="33.0" prefWidth="139.0" text="Registro empleados">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="18.0" layoutY="47.0" prefHeight="401.0" prefWidth="382.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="NEVER" maxWidth="183.0" minWidth="10.0" prefWidth="107.0" />
+          <ColumnConstraints hgrow="NEVER" maxWidth="269.0" minWidth="10.0" prefWidth="269.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints fx:id="gridFormulario" maxHeight="39.0" minHeight="0.0" prefHeight="32.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="32.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="88.0" minHeight="10.0" prefHeight="38.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="81.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="81.0" minHeight="0.0" prefHeight="37.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="36.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="91.0" minHeight="6.0" prefHeight="35.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="36.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="92.0" minHeight="0.0" prefHeight="34.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="labelNombre" text="Nombre:" GridPane.rowIndex="2" />
+            <TextField fx:id="textNombre" prefHeight="25.0" prefWidth="312.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="labelDireccion" text="Dirección:" GridPane.rowIndex="3" />
+            <TextArea fx:id="textDireccion" prefHeight="52.0" prefWidth="312.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="labelFechaNacimiento" text="Fecha nacimiento:" GridPane.rowIndex="4" />
+            <DatePicker fx:id="dateFechaNacimiento" prefHeight="25.0" prefWidth="306.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="labelGenero" text="Género:" GridPane.rowIndex="5" />
+            <ComboBox fx:id="comboGenero" prefHeight="25.0" prefWidth="306.0" promptText="Seleccione un género" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="labelSalario" text="Salario:" GridPane.rowIndex="6" />
+            <TextField fx:id="textSalario" prefHeight="25.0" prefWidth="306.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="labelTipoEmpleado" text="Tipo de empleado:" GridPane.rowIndex="1" />
+            <Label fx:id="labelID" text="ID:" />
+            <TextField fx:id="textID" disable="true" editable="false" GridPane.columnIndex="1" />
+            <Label fx:id="labelColumnaUno" text="Columna 1:" GridPane.rowIndex="7" />
+            <Label fx:id="labelColumnaDos" text="Columna 2:" GridPane.rowIndex="8" />
+            <TextField fx:id="textColumnaDos" prefHeight="8.0" prefWidth="266.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="textTipoDeEmpleado" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="comboColumnaUno" prefHeight="25.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <ComboBox fx:id="comboColumnaDos" prefHeight="25.0" prefWidth="275.0" promptText="Seleccione una ventanilla" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="40.0" layoutY="448.0" prefHeight="30.0" prefWidth="345.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="NEVER" maxWidth="163.0" minWidth="10.0" prefWidth="163.0" />
+          <ColumnConstraints hgrow="NEVER" maxWidth="123.0" minWidth="10.0" prefWidth="57.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="169.0" minWidth="10.0" prefWidth="169.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="botonGuardar" mnemonicParsing="false" onAction="#guardarRegistro" prefHeight="25.0" prefWidth="160.0" text="Guardar" />
+            <Button fx:id="botonCancelar" mnemonicParsing="false" onAction="#cancelarRegistro" prefHeight="25.0" prefWidth="160.0" text="Cancelar" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

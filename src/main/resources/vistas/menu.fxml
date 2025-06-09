@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="395.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.MenuController">
+<AnchorPane id="AnchorPane" prefHeight="459.0" prefWidth="395.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.MenuController">
    <children>
       <Label fx:id="labelTitulo" layoutX="158.0" layoutY="14.0" text="Eurobank">
          <font>
@@ -15,14 +15,28 @@
       </Label>
       <Label fx:id="labelSubtitulo" layoutX="28.0" layoutY="52.0" text="Sistema de administración de transacciones y clientes">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="botonAdministrarSucursales" layoutX="109.0" layoutY="150.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarSucursales" prefHeight="25.0" prefWidth="177.0" text="Sucursales" />
-      <Button fx:id="botonAdministrarCuentasBancarias" layoutX="109.0" layoutY="198.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarCuentasBancarias" prefHeight="25.0" prefWidth="177.0" text="Cuentas Bancarias" />
-      <Button fx:id="botonAdministrarEmpleados" layoutX="109.0" layoutY="245.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarEmpleados" prefHeight="25.0" prefWidth="177.0" text="Empleados" />
-      <Button fx:id="botonAdministrarClientes" layoutX="109.0" layoutY="289.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarClientes" prefHeight="25.0" prefWidth="177.0" text="Clientes" />
-      <Button fx:id="botonAdministrarTransacciones" layoutX="109.0" layoutY="333.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarTransacciones" prefHeight="25.0" prefWidth="177.0" text="Transacciones" />
-      <Label fx:id="labelAdministrar" layoutX="168.0" layoutY="113.0" text="Administrar" />
+      <Button fx:id="botonAdministrarSucursales" layoutX="109.0" layoutY="199.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarSucursales" prefHeight="25.0" prefWidth="177.0" text="Sucursales" />
+      <Button fx:id="botonAdministrarCuentasBancarias" layoutX="109.0" layoutY="247.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarCuentasBancarias" prefHeight="25.0" prefWidth="177.0" text="Cuentas Bancarias" />
+      <Button fx:id="botonAdministrarEmpleados" layoutX="109.0" layoutY="294.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarEmpleados" prefHeight="25.0" prefWidth="177.0" text="Empleados" />
+      <Button fx:id="botonAdministrarClientes" layoutX="109.0" layoutY="338.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarClientes" prefHeight="25.0" prefWidth="177.0" text="Clientes" />
+      <Button fx:id="botonAdministrarTransacciones" layoutX="109.0" layoutY="382.0" mnemonicParsing="false" onAction="#abrirVentanaAdministrarTransacciones" prefHeight="25.0" prefWidth="177.0" text="Transacciones" />
+      <Label fx:id="labelAdministrar" layoutX="167.0" layoutY="174.0" text="Administrar" />
+      <Label fx:id="labelCerrarSesion" layoutX="307.0" layoutY="428.0" onMouseClicked="#cerrarSesion" text="Cerrar sesión" textFill="#0095ff" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="labelBienvenido" layoutX="28.0" layoutY="82.0" text="Bienvenido:" />
+      <Label fx:id="labelPuesto" layoutX="28.0" layoutY="107.0" text="Puesto:" />
+      <Label fx:id="textNombre" layoutX="96.0" layoutY="82.0" text="nombre" />
+      <Label fx:id="textPuesto" layoutX="96.0" layoutY="107.0" text="puesto" />
+      <Label layoutX="28.0" layoutY="133.0" text="Sucursal:" />
+      <Label fx:id="textSucursal" layoutX="98.0" layoutY="133.0" text="Label" />
    </children>
 </AnchorPane>

@@ -1,0 +1,368 @@
+[
+  {
+    "idSucursal": "SUC001",
+    "nombreSucursal": "Sucursal Centro Xalapa",
+    "direccionSucursal": "Av. Revolución #234, Col. Centro, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1001",
+    "correoSucursal": "centro.xalapa@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    },
+    "contacto": {
+      "idEmpleado": "EMP002",
+      "nombreCompleto": "Carlos Alberto Mendoza López"
+    },
+    "cuentasAsociadas": [
+      {
+        "numeroCuenta": "CTA002",
+        "cliente": {
+          "idCliente": "CLI-WSN99PIB",
+          "nombreCompleto": "Carlos",
+          "apellidosCompletos": "Mendoza"
+        }
+      }
+    ],
+    "empleadosAsociados": [
+      {
+        "idEmpleado": "EMP001",
+        "nombreCompleto": "María Elena Rodríguez García"
+      },
+      {
+        "idEmpleado": "EMP001",
+        "nombreCompleto": "María Elena Rodríguez García"
+      },
+      {
+        "idEmpleado": "EMP002",
+        "nombreCompleto": "Carlos Alberto Mendoza López"
+      },
+      {
+        "idEmpleado": "EMP003",
+        "nombreCompleto": "Ana Sofía Herrera Martínez"
+      },
+      {
+        "idEmpleado": "EMP004",
+        "nombreCompleto": "Roberto Jesús Vázquez Torres"
+      },
+      {
+        "idEmpleado": "EMP005",
+        "nombreCompleto": "Diana Patricia Morales Jiménez"
+      },
+      {
+        "idEmpleado": "EMP006",
+        "nombreCompleto": "Fernando Gabriel Castillo Ruiz"
+      },
+      {
+        "idEmpleado": "EMP007",
+        "nombreCompleto": "Laura Beatriz Sánchez Flores"
+      },
+      {
+        "idEmpleado": "EMP008",
+        "nombreCompleto": "Miguel Ángel Ramírez Delgado"
+      },
+      {
+        "idEmpleado": "EMP009",
+        "nombreCompleto": "Gabriela Monserrat Cruz Moreno"
+      },
+      {
+        "idEmpleado": "EMP010",
+        "nombreCompleto": "Alejandro David Ortega Peña"
+      },
+      {
+        "idEmpleado": "EMP011",
+        "nombreCompleto": "Valeria Isabella Guerrero Silva"
+      },
+      {
+        "idEmpleado": "EMP012",
+        "nombreCompleto": "Rodrigo Emilio Torres Aguilar"
+      },
+      {
+        "idEmpleado": "EMP013",
+        "nombreCompleto": "Andrea Paola Medina Castro"
+      },
+      {
+        "idEmpleado": "EMP014",
+        "nombreCompleto": "Javier Antonio Ramos Vega"
+      },
+      {
+        "idEmpleado": "EMP015",
+        "nombreCompleto": "Carmen Lucía Ibarra Núñez"
+      },
+      {
+        "idEmpleado": "EMP016",
+        "nombreCompleto": "Sebastián Mateo Díaz Herrera"
+      },
+      {
+        "idEmpleado": "EMP17",
+        "nombreCompleto": "asd"
+      }
+    ]
+  },
+  {
+    "idSucursal": "SUC002",
+    "nombreSucursal": "Sucursal Obrero Campesina",
+    "direccionSucursal": "Calle Hidalgo #456, Col. Obrero Campesina, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1002",
+    "correoSucursal": "obrero.campesina@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP006",
+      "nombreCompleto": "Fernando Gabriel Castillo Ruiz"
+    },
+    "contacto": {
+      "idEmpleado": "EMP005",
+      "nombreCompleto": "Diana Patricia Morales Jiménez"
+    },
+    "cuentasAsociadas": [],
+    "empleadosAsociados": [
+      {
+        "idEmpleado": "EMP004",
+        "nombreCompleto": "Roberto Jesús Vázquez Torres"
+      },
+      {
+        "idEmpleado": "EMP005",
+        "nombreCompleto": "Diana Patricia Morales Jiménez"
+      },
+      {
+        "idEmpleado": "EMP006",
+        "nombreCompleto": "Fernando Gabriel Castillo Ruiz"
+      },
+      {
+        "idEmpleado": "EMP012",
+        "nombreCompleto": "Rodrigo Emilio Torres Aguilar"
+      },
+      {
+        "idEmpleado": "EMP013",
+        "nombreCompleto": "Andrea Paola Medina Castro"
+      },
+      {
+        "idEmpleado": "EMP019",
+        "nombreCompleto": "Empleado No Encontrado"
+      }
+    ]
+  },
+  {
+    "idSucursal": "SUC003",
+    "nombreSucursal": "Sucursal Progreso Macuiltépetl",
+    "direccionSucursal": "Calle Murillo Vidal #445, Col. Progreso Macuiltépetl, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1003",
+    "correoSucursal": "progreso.macuiltepetl@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP010",
+      "nombreCompleto": "Alejandro David Ortega Peña"
+    },
+    "contacto": {
+      "idEmpleado": "EMP008",
+      "nombreCompleto": "Miguel Ángel Ramírez Delgado"
+    },
+    "cuentasAsociadas": [],
+    "empleadosAsociados": [
+      {
+        "idEmpleado": "EMP007",
+        "nombreCompleto": "Laura Beatriz Sánchez Flores"
+      },
+      {
+        "idEmpleado": "EMP008",
+        "nombreCompleto": "Miguel Ángel Ramírez Delgado"
+      },
+      {
+        "idEmpleado": "EMP010",
+        "nombreCompleto": "Alejandro David Ortega Peña"
+      },
+      {
+        "idEmpleado": "EMP015",
+        "nombreCompleto": "Carmen Lucía Ibarra Núñez"
+      },
+      {
+        "idEmpleado": "EMP016",
+        "nombreCompleto": "Sebastián Mateo Díaz Herrera"
+      }
+    ]
+  },
+  {
+    "idSucursal": "SUC004",
+    "nombreSucursal": "Sucursal Universidad",
+    "direccionSucursal": "Av. Universidad #567, Col. Universitaria, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1004",
+    "correoSucursal": "universidad@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP020",
+      "nombreCompleto": "Ana Cristina Morales Vega"
+    },
+    "contacto": {
+      "idEmpleado": "EMP011",
+      "nombreCompleto": "Valeria Isabella Guerrero Silva"
+    },
+    "cuentasAsociadas": [],
+    "empleadosAsociados": [
+      {
+        "idEmpleado": "EMP020",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP021",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP022",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP023",
+        "nombreCompleto": "Empleado No Encontrado"
+      }
+    ]
+  },
+  {
+    "idSucursal": "SUC005",
+    "nombreSucursal": "Sucursal Jardines de Xalapa",
+    "direccionSucursal": "Av. Araucarias #234, Col. Jardines de Xalapa, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1005",
+    "correoSucursal": "jardines.xalapa@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP024",
+      "nombreCompleto": "Roberto Carlos Mendoza Torres"
+    },
+    "contacto": {
+      "idEmpleado": "EMP013",
+      "nombreCompleto": "Andrea Paola Medina Castro"
+    },
+    "cuentasAsociadas": [],
+    "empleadosAsociados": [
+      {
+        "idEmpleado": "EMP024",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP025",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP026",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP027",
+        "nombreCompleto": "Empleado No Encontrado"
+      }
+    ]
+  },
+  {
+    "idSucursal": "SUC006",
+    "nombreSucursal": "Sucursal Lomas del Estadio",
+    "direccionSucursal": "Av. Lázaro Cárdenas #369, Col. Lomas del Estadio, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1006",
+    "correoSucursal": "lomas.estadio@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP028",
+      "nombreCompleto": "Patricia Isabel Ramírez Cruz"
+    },
+    "contacto": {
+      "idEmpleado": "EMP016",
+      "nombreCompleto": "Sebastián Mateo Díaz Herrera"
+    },
+    "cuentasAsociadas": [],
+    "empleadosAsociados": []
+  },
+  {
+    "idSucursal": "SUC007",
+    "nombreSucursal": "Sucursal Emiliano Zapata",
+    "direccionSucursal": "Av. 20 de Noviembre #123, Col. Emiliano Zapata, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1007",
+    "correoSucursal": "emiliano.zapata@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP032",
+      "nombreCompleto": "Luis Fernando Díaz Herrera"
+    },
+    "contacto": {
+      "idEmpleado": "EMP002",
+      "nombreCompleto": "Carlos Alberto Mendoza López"
+    },
+    "cuentasAsociadas": [],
+    "empleadosAsociados": [
+      {
+        "idEmpleado": "EMP032",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP033",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP034",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP035",
+        "nombreCompleto": "Empleado No Encontrado"
+      }
+    ]
+  },
+  {
+    "idSucursal": "SUC008",
+    "nombreSucursal": "Sucursal Casa Blanca",
+    "direccionSucursal": "Av. Circunvalación #654, Col. Casa Blanca, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1008",
+    "correoSucursal": "casa.blanca@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP036",
+      "nombreCompleto": "Carmen Alejandra Vázquez Silva"
+    },
+    "contacto": {
+      "idEmpleado": "EMP005",
+      "nombreCompleto": "Diana Patricia Morales Jiménez"
+    },
+    "cuentasAsociadas": [],
+    "empleadosAsociados": []
+  },
+  {
+    "idSucursal": "SUC009",
+    "nombreSucursal": "Sucursal Revolución",
+    "direccionSucursal": "Calle Zaragoza #258, Col. Revolución, Xalapa, Veracruz",
+    "telefonoSucursal": "228-815-1009",
+    "correoSucursal": "revolucion@banco.com",
+    "gerente": {
+      "idEmpleado": "EMP040",
+      "nombreCompleto": "Eduardo Javier Campos Morales"
+    },
+    "contacto": {
+      "idEmpleado": "EMP008",
+      "nombreCompleto": "Miguel Ángel Ramírez Delgado"
+    },
+    "cuentasAsociadas": [],
+    "empleadosAsociados": [
+      {
+        "idEmpleado": "EMP040",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP041",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP042",
+        "nombreCompleto": "Empleado No Encontrado"
+      },
+      {
+        "idEmpleado": "EMP043",
+        "nombreCompleto": "Empleado No Encontrado"
+      }
+    ]
+  },
+  {
+    "idSucursal": "SUC10",
+    "nombreSucursal": "asda",
+    "direccionSucursal": "asd",
+    "telefonoSucursal": "123",
+    "correoSucursal": "asdasd",
+    "gerente": {
+      "idEmpleado": "EMP001",
+      "nombreCompleto": "María Elena Rodríguez García"
+    },
+    "contacto": {
+      "idEmpleado": "EMP005",
+      "nombreCompleto": "Diana Patricia Morales Jiménez"
+    },
+    "cuentasAsociadas": [],
+    "empleadosAsociados": []
+  }
+]

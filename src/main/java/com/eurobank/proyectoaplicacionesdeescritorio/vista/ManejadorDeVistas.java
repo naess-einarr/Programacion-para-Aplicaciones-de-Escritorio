@@ -1,5 +1,6 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.vista;
 
+import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -9,143 +10,171 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ManejadorDeVistas {
-    
-    // Enum para definir las vistas disponibles
+
     public enum Vista {
-        LOGIN("/vistas/login.fxml"),
-        MENU("/vistas/menu.fxml"),
-        CLIENTE("/vistas/cliente.fxml"),
-        CUENTA("/vistas/cuenta.fxml"),
-        EMPLEADO("/vistas/empleado.fxml"),
-        SUCURSAL("/vistas/sucursal.fxml"),
-        TRANSACCION("/vistas/transaccion.fxml");
-        
+        LOGIN("/vistas/login.fxml", false),
+        MENU("/vistas/menu.fxml", false),
+        CLIENTE("/vistas/cliente.fxml", true),
+        CUENTA("/vistas/cuenta.fxml", true),
+        EMPLEADO("/vistas/empleado.fxml", true),
+        SUCURSAL("/vistas/sucursal.fxml", true),
+        TRANSACCION("/vistas/transaccion.fxml", true),
+        TRANSACCION_REGISTRO("/vistas/transaccionregistro.fxml",false),
+        CLIENTE_REGISTRO("/vistas/clienteregistro.fxml", false),
+        EMPLEADO_REGISTRO("/vistas/empleadoregistro.fxml", false),
+        SUCURSAL_REGISTRO("/vistas/sucursalregistro.fxml", false),
+        SUCURSAL_EMPLEADOS("/vistas/sucursalempleado.fxml", false),
+        SUCURSAL_CUENTAS("/vistas/sucursalcuenta.fxml", false),
+        CUENTA_REGISTRO("/vistas/cuentaregistro.fxml", true);
+
         private final String rutaFXML;
-        
-        Vista(String rutaFXML) {
+        private final boolean resizable;
+
+        Vista(String rutaFXML, boolean resizable) {
             this.rutaFXML = rutaFXML;
+            this.resizable = resizable;
         }
-        
+
         public String getRutaFXML() {
             return rutaFXML;
         }
+
+        public boolean isResizable() {
+            return resizable;
+        }
     }
-    
+
     private static ManejadorDeVistas instancia;
     private Stage escenarioPrincipal;
     private Map<Vista, Parent> vistasCache;
-    
-    // Constructor privado para patrón Singleton
+    private Map<Vista, Object> controladoresCache;
+
     private ManejadorDeVistas() {
         this.vistasCache = new HashMap<>();
+        this.controladoresCache = new HashMap<>();
     }
-    
-    // Método para obtener la instancia única
-    public static ManejadorDeVistas obtenerInstancia() {
+
+    public static ManejadorDeVistas getInstancia() {
         if (instancia == null) {
             instancia = new ManejadorDeVistas();
         }
         return instancia;
     }
-    
-    // Establecer el escenario principal
-    public void establecerEscenarioPrincipal(Stage escenario) {
+
+    public void setEscenarioPrincipal(Stage escenario) {
         this.escenarioPrincipal = escenario;
     }
-    
-    // Cargar una vista FXML
+
     public Parent cargarVista(Vista vista) throws IOException {
-        // Verificar si la vista ya está en caché
         if (vistasCache.containsKey(vista)) {
             return vistasCache.get(vista);
         }
-        
+
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(vista.getRutaFXML()));
             Parent root = loader.load();
-            
-            // Guardar en caché para futuras cargas
+
             vistasCache.put(vista, root);
-            
+            controladoresCache.put(vista, loader.getController());
+
             return root;
         } catch (IOException e) {
-            System.err.println("Error al cargar la vista: " + vista.name());
-            throw e;
+            AlertaUtil.mostrarAlertaVentana();
+            
+            return null;
         }
     }
-    
-    // Cambiar a una vista específica
+
     public void cambiarVista(Vista vista) {
         cambiarVista(vista, "EuroBank - " + vista.name());
     }
-    
-    // Cambiar a una vista específica con título personalizado
+
     public void cambiarVista(Vista vista, String titulo) {
         try {
             Parent root = cargarVista(vista);
             Scene escena = new Scene(root);
             
             if (escenarioPrincipal != null) {
+                
+                escenarioPrincipal.hide();
+                if (escenarioPrincipal.isMaximized()) {
+                    escenarioPrincipal.setMaximized(false);
+                }
+                escenarioPrincipal.sizeToScene();
+                // Se asignan valores para la siguiente ventana
                 escenarioPrincipal.setScene(escena);
                 escenarioPrincipal.setTitle(titulo);
+                escenarioPrincipal.setResizable(vista.isResizable());
+                
+                // Centrar la ventana en la pantalla
+                escenarioPrincipal.centerOnScreen();
+                
                 escenarioPrincipal.show();
             }
         } catch (IOException e) {
-            System.err.println("Error al cambiar a la vista: " + vista.name());
-            e.printStackTrace();
+            AlertaUtil.mostrarAlertaVentana();
         }
     }
-    
-    // Abrir una vista en una nueva ventana
-    public Stage abrirVistaEnNuevaVentana(Vista vista, String titulo) {
-        try {
-            Parent root = cargarVista(vista);
-            Scene escena = new Scene(root);
-            
-            Stage nuevaVentana = new Stage();
-            nuevaVentana.setScene(escena);
-            nuevaVentana.setTitle(titulo);
-            nuevaVentana.show();
-            
-            return nuevaVentana;
-        } catch (IOException e) {
-            System.err.println("Error al abrir nueva ventana para la vista: " + vista.name());
-            e.printStackTrace();
-            return null;
-        }
-    }
-    
+
     // Obtener el controlador de una vista específica
     public <T> T obtenerControlador(Vista vista) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(vista.getRutaFXML()));
-        loader.load();
-        return loader.getController();
+        // Si ya está en caché, devolver el controlador cacheado
+        if (controladoresCache.containsKey(vista)) {
+            return (T) controladoresCache.get(vista);
+        }
+
+        // Si no está en caché, cargar la vista (esto también guardará el controlador)
+        cargarVista(vista);
+        return (T) controladoresCache.get(vista);
     }
-    
+
     // Limpiar caché de vistas
     public void limpiarCache() {
         vistasCache.clear();
+        controladoresCache.clear();
     }
-    
+
     // Limpiar caché de una vista específica
     public void limpiarCacheVista(Vista vista) {
         vistasCache.remove(vista);
+        controladoresCache.remove(vista);
     }
-    
+
     // Verificar si una vista está en caché
     public boolean estaEnCache(Vista vista) {
         return vistasCache.containsKey(vista);
     }
-    
+
     // Cerrar la aplicación
     public void cerrarAplicacion() {
         if (escenarioPrincipal != null) {
             escenarioPrincipal.close();
         }
     }
-    
+
     // Obtener el escenario principal
     public Stage obtenerEscenarioPrincipal() {
         return escenarioPrincipal;
     }
+    
+        // Abrir una vista en una nueva ventana
+    public Stage abrirVistaEnNuevaVentana(Vista vista) {
+        try {
+            Parent root = cargarVista(vista);
+            Scene escena = new Scene(root);
+
+            Stage nuevaVentana = new Stage();
+            nuevaVentana.setScene(escena);
+            nuevaVentana.setTitle("EuroBank - " + vista.name());
+            nuevaVentana.setResizable(vista.isResizable());
+            nuevaVentana.showAndWait();
+
+            return nuevaVentana;
+        } catch (IOException ioe) {
+            AlertaUtil.mostrarAlertaVentana();
+
+            return null;
+        }
+    }
+
 }

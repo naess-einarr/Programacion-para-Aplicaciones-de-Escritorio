@@ -1,8 +1,10 @@
 package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
+import com.eurobank.proyectoaplicacionesdeescritorio.dao.SucursalDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeSesion;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
 import java.util.Objects;
@@ -12,17 +14,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-/**
- * FXML Controller class
- *
- * @author User
- */
+
 public class LoginController implements Initializable {
         private static final Logger LOG = LogManager.getLogger(LoginController.class);
         
@@ -32,18 +31,26 @@ public class LoginController implements Initializable {
         @FXML
         private TextField textUsuario;
         
+        @FXML
+        private Button botonIniciarSesion;
+        
         private EmpleadoDAO empleadoDAO;
+        private SucursalDAO sucursalDAO;
 
         @Override
         public void initialize(URL url, ResourceBundle rb) {
             empleadoDAO = new EmpleadoDAO();
+            sucursalDAO = new SucursalDAO();
+            botonIniciarSesion.setDefaultButton(true);
         }
 
         @FXML
         void cancelarInicioSesion(ActionEvent event) {
+            ManejadorDeSesion.cerrarSesion();
             Stage escenarioPrincipal = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            ManejadorDeVistas.obtenerInstancia().establecerEscenarioPrincipal(escenarioPrincipal);
-            ManejadorDeVistas.obtenerInstancia().cerrarAplicacion();
+            ManejadorDeVistas.getInstancia().setEscenarioPrincipal(escenarioPrincipal);
+            ManejadorDeVistas.getInstancia().cerrarAplicacion();
+
         }
 
         @FXML
@@ -54,9 +61,12 @@ public class LoginController implements Initializable {
             try {
                 empleado = empleadoDAO.validarCredenciales(usuario, contrasena);
                 if(Objects.nonNull(empleado)){
-                    Stage escenarioPrincipal = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    ManejadorDeVistas.obtenerInstancia().establecerEscenarioPrincipal(escenarioPrincipal);
-                    ManejadorDeVistas.obtenerInstancia().cambiarVista(ManejadorDeVistas.Vista.MENU);
+                    ManejadorDeSesion.iniciarSesion(empleado);
+                    ManejadorDeSesion.setSucursalActual(sucursalDAO.buscarSucursalPorIdEmpleado(empleado.getIdEmpleado()));
+                    MenuController menuController = ManejadorDeVistas.getInstancia().obtenerControlador(ManejadorDeVistas.Vista.MENU);
+                    menuController.cargarDatosMenuEmpleado();
+                    ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.MENU);
+
                 }else{
                     AlertaUtil.mostrarAlerta("Error", "Datos inválidos", Alert.AlertType.ERROR);
                 }

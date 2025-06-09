@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.ClienteController">
+<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eurobank.proyectoaplicacionesdeescritorio.controlador.CuentaController">
    <children>
       <BorderPane layoutX="9.0" layoutY="8.0" maxHeight="800.0" maxWidth="1000.0" prefHeight="405.0" prefWidth="887.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -53,10 +53,10 @@
             <TableView fx:id="tablaCuentas" prefHeight="372.0" prefWidth="555.0" BorderPane.alignment="CENTER">
                <columns>
                   <TableColumn fx:id="columnaID" prefWidth="75.0" text="Cuenta" />
-                  <TableColumn fx:id="columnaNombre" prefWidth="75.0" text="Tipo" />
-                  <TableColumn fx:id="columnaDireccion" prefWidth="75.0" text="Saldo actual" />
-                  <TableColumn fx:id="columnaCorreo" prefWidth="75.0" text="Limite de crédito" />
-                  <TableColumn fx:id="columnaGerente" prefWidth="75.0" text="Cliente asociado" />
+                  <TableColumn fx:id="columnaTipo" prefWidth="75.0" text="Tipo" />
+                  <TableColumn fx:id="columnaSaldoActual" prefWidth="75.0" text="Saldo actual" />
+                  <TableColumn fx:id="columnaLimiteCredito" prefWidth="75.0" text="Limite de crédito" />
+                  <TableColumn fx:id="columnaClienteAsociado" prefWidth="75.0" text="Cliente asociado" />
                </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

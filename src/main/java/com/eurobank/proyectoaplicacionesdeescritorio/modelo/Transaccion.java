@@ -2,54 +2,44 @@ package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
 import java.time.LocalDateTime;
 
-/**
- * Clase que representa una transacción bancaria en el sistema EuroBank.
- * Contiene información sobre el tipo, monto y cuentas involucradas.
- */
 public class Transaccion {
     
     private String idTransaccion;
     private double montoTransaccion;
     private LocalDateTime fechaHoraTransaccion;
-    private String tipoTransaccion; // "DEPOSITO", "RETIRO", "TRANSFERENCIA"
-    private String numeroCuentaOrigen;
-    private String numeroCuentaDestino;
-    private String idSucursalTransaccion;
-    private String idEmpleadoResponsable;
-    private String descripcionTransaccion;
-    private String estadoTransaccion; // "COMPLETADA", "PENDIENTE", "FALLIDA"
-    private String referenciaTransaccion;
+    private String tipoTransaccion; 
+    private Cuenta cuentaOrigen;
+    private Cuenta cuentaDestino;
+    private Sucursal sucursal;
+    private Empleado empleadoResponsable;
     
     public Transaccion() {
     }
     
     public Transaccion(String idTransaccion, double montoTransaccion, 
                       LocalDateTime fechaHoraTransaccion, String tipoTransaccion,
-                      String numeroCuentaOrigen, String idSucursalTransaccion,
-                      String idEmpleadoResponsable) {
+                      Cuenta cuentaOrigen, Sucursal sucursal,
+                      Empleado empleadoResponsable) {
         
         this.idTransaccion = idTransaccion;
         this.montoTransaccion = montoTransaccion;
         this.fechaHoraTransaccion = fechaHoraTransaccion;
         this.tipoTransaccion = tipoTransaccion;
-        this.numeroCuentaOrigen = numeroCuentaOrigen;
-        this.idSucursalTransaccion = idSucursalTransaccion;
-        this.idEmpleadoResponsable = idEmpleadoResponsable;
-        this.estadoTransaccion = "PENDIENTE";
+        this.cuentaOrigen = cuentaOrigen;
+        this.sucursal = sucursal;
+        this.empleadoResponsable = empleadoResponsable;
     }
     
-    // Constructor para transferencias (incluye cuenta destino)
     public Transaccion(String idTransaccion, double montoTransaccion,
                       LocalDateTime fechaHoraTransaccion, String tipoTransaccion,
-                      String numeroCuentaOrigen, String numeroCuentaDestino,
-                      String idSucursalTransaccion, String idEmpleadoResponsable) {
+                      Cuenta cuentaOrigen, Cuenta cuentaDestino,
+                      Sucursal sucursal, Empleado empleadoResponsable) {
         
         this(idTransaccion, montoTransaccion, fechaHoraTransaccion, tipoTransaccion,
-             numeroCuentaOrigen, idSucursalTransaccion, idEmpleadoResponsable);
-        this.numeroCuentaDestino = numeroCuentaDestino;
+             cuentaOrigen, sucursal, empleadoResponsable);
+        this.cuentaDestino = cuentaDestino;
     }
     
-    // Getters y Setters
     public String getIdTransaccion() {
         return idTransaccion;
     }
@@ -81,85 +71,43 @@ public class Transaccion {
     public void setTipoTransaccion(String tipoTransaccion) {
         this.tipoTransaccion = tipoTransaccion;
     }
-
-    public String getNumeroCuentaOrigen() {
-        return numeroCuentaOrigen;
+    
+    public Cuenta getCuentaOrigen() {
+        return cuentaOrigen;
     }
 
-    public void setNumeroCuentaOrigen(String numeroCuentaOrigen) {
-        this.numeroCuentaOrigen = numeroCuentaOrigen;
+    public void setCuentaOrigen(Cuenta cuentaOrigen) {
+        this.cuentaOrigen = cuentaOrigen;
     }
 
-    public String getNumeroCuentaDestino() {
-        return numeroCuentaDestino;
+    public Cuenta getCuentaDestino() {
+        return cuentaDestino;
     }
 
-    public void setNumeroCuentaDestino(String numeroCuentaDestino) {
-        this.numeroCuentaDestino = numeroCuentaDestino;
+    public void setCuentaDestino(Cuenta cuentaDestino) {
+        this.cuentaDestino = cuentaDestino;
     }
 
-    public String getIdSucursalTransaccion() {
-        return idSucursalTransaccion;
+    public Sucursal getSucursal() {
+        return sucursal;
     }
 
-    public void setIdSucursalTransaccion(String idSucursalTransaccion) {
-        this.idSucursalTransaccion = idSucursalTransaccion;
+    public void setSucursal(Sucursal sucursal) {
+        this.sucursal = sucursal;
     }
 
-    public String getIdEmpleadoResponsable() {
-        return idEmpleadoResponsable;
+    public Empleado getEmpleadoResponsable() {
+        return empleadoResponsable;
     }
 
-    public void setIdEmpleadoResponsable(String idEmpleadoResponsable) {
-        this.idEmpleadoResponsable = idEmpleadoResponsable;
-    }
-
-    public String getDescripcionTransaccion() {
-        return descripcionTransaccion;
-    }
-
-    public void setDescripcionTransaccion(String descripcionTransaccion) {
-        this.descripcionTransaccion = descripcionTransaccion;
-    }
-
-    public String getEstadoTransaccion() {
-        return estadoTransaccion;
-    }
-
-    public void setEstadoTransaccion(String estadoTransaccion) {
-        this.estadoTransaccion = estadoTransaccion;
-    }
-
-    public String getReferenciaTransaccion() {
-        return referenciaTransaccion;
-    }
-
-    public void setReferenciaTransaccion(String referenciaTransaccion) {
-        this.referenciaTransaccion = referenciaTransaccion;
+    public void setEmpleadoResponsable(Empleado empleadoResponsable) {
+        this.empleadoResponsable = empleadoResponsable;
     }
     
+
     
-    
-    /**
-     * Método para verificar si la transacción es una transferencia.
-     * @return true si es transferencia, false en caso contrario
-     */
     public boolean esTransferencia() {
         return "TRANSFERENCIA".equals(tipoTransaccion);
-    }
-    
-    /**
-     * Método para marcar la transacción como completada.
-     */
-    public void marcarComoCompletada() {
-        this.estadoTransaccion = "COMPLETADA";
-    }
-    
-    /**
-     * Método para marcar la transacción como fallida.
-     */
-    public void marcarComoFallida() {
-        this.estadoTransaccion = "FALLIDA";
     }
     
     @Override
@@ -168,7 +116,6 @@ public class Transaccion {
                "idTransaccion='" + idTransaccion + '\'' +
                ", montoTransaccion=" + montoTransaccion +
                ", tipoTransaccion='" + tipoTransaccion + '\'' +
-               ", estadoTransaccion='" + estadoTransaccion + '\'' +
                '}';
     }
 }

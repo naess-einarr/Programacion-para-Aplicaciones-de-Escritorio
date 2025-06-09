@@ -115,4 +115,60 @@ public class SucursalDAO implements GenericDAO<Sucursal> {
         
         return resultados;
     }
+    
+    public int obtenerSiguienteId() throws Exception {
+        List<Sucursal> sucursales = obtenerTodos();
+
+        if (sucursales.isEmpty()) {
+            return 1;
+        }
+
+        int maxNumero = sucursales.stream()
+                .mapToInt(sucursal -> {
+                    String id = sucursal.getIdSucursal();
+                    if (id != null && id.startsWith("SUC")) {
+                        try {
+                            return Integer.parseInt(id.substring(3));
+                        } catch (NumberFormatException e) {
+                            return 0;
+                        }
+                    }
+                    return 0;
+                })
+                .max()
+                .orElse(0);
+
+        return maxNumero + 1;
+    }
+
+    public Sucursal buscarSucursalPorIdEmpleado(String idEmpleado) throws Exception {
+    List<Sucursal> todasLasSucursales = obtenerTodos(); // tu método actual que trae todas las sucursales
+
+    for (Sucursal sucursal : todasLasSucursales) {
+        // Comparar con el gerente
+        if (sucursal.getGerente() != null && 
+            idEmpleado.equalsIgnoreCase(sucursal.getGerente().getIdEmpleado())) {
+            return sucursal;
+        }
+
+        // Comparar con el contacto
+        if (sucursal.getContacto() != null && 
+            idEmpleado.equalsIgnoreCase(sucursal.getContacto().getIdEmpleado())) {
+            return sucursal;
+        }
+
+        // Buscar en empleados asociados
+        if (sucursal.getEmpleadosAsociados() != null) {
+            boolean estaAsociado = sucursal.getEmpleadosAsociados().stream()
+                .anyMatch(e -> idEmpleado.equalsIgnoreCase(e.getIdEmpleado()));
+
+            if (estaAsociado) {
+                return sucursal;
+            }
+        }
+    }
+
+    return null; 
+}
+
 }

@@ -25,7 +25,7 @@ public class ConstantesUtil {
     public static final String REGEX_TELEFONO = "^[0-9]{10}$";
     public static final String REGEX_NUMERO_CUENTA = "^ACC[0-9]{6}$";
     public static final String REGEX_RFC = "^[A-Z]{4}[0-9]{6}[A-Z0-9]{3}$";
-    public static final String REGEX_CURP = "^[A-Z]{4}\\d{6}[HM][A-Z]{3}[A-Z0-9]\\d$";
+    public static final String REGEX_CURP = "^[A-Z]{4}\\d{6}[A-Z]{6}\\d{2}$$";
     public static final String REGEX_SOLO_LETRAS = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$";
     public static final String REGEX_LETRAS_Y_NUMEROS = "^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ\\s.,#-]+$";
     
@@ -44,12 +44,6 @@ public class ConstantesUtil {
     public static final String LOG_ERROR_ARCHIVO = "Error al acceder al archivo: ";
     public static final String LOG_CLIENTE_REGISTRADO = "Nuevo cliente registrado";
     public static final String LOG_ACTUALIZACION_FALLIDA = "Falló la actualizacion de un registro";
-    
-    public static final String ERROR = "Error";
-    public static final String EXITO = "Éxito";
-    public static final String CONFIRMACION = "Confirmación";
-    public static final String INFORMACION = "Información";
-    public static final String ADVERTENCIA = "Advertencia";
     
     public static final String ERROR_NOMBRE_OBLIGATORIO = "El nombre es obligatorio";
     public static final String ERROR_NOMBRE_FORMATO = "El nombre solo puede contener letras y espacios";

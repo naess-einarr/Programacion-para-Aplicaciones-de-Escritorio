@@ -1,18 +1,18 @@
 [
   {
-    "idCliente": "CLI-D1AE43DD",
-    "nombreCompleto": "Victor",
-    "apellidosCompletos": "Sanchez",
-    "nacionalidadCliente": "Peruano",
+    "idCliente": "CLI-FDFE59EB",
+    "nombreCompleto": "Marcos",
+    "apellidosCompletos": "zenon",
+    "nacionalidadCliente": "mexicano",
     "fechaNacimiento": {
       "year": 2025,
       "month": 5,
-      "day": 22
+      "day": 13
     },
-    "rfcCliente": "SAMM981231H06",
+    "rfcCliente": "SAMM981231H08",
     "curpCliente": "SAMM981231HVZNNR06",
-    "direccionCompleta": "sdjaljdslaksjdlsakjd",
-    "telefonoContacto": "1234567890",
-    "correoElectronico": "usuario@ejemplo.com"
+    "direccionCompleta": "cipres 143213213",
+    "telefonoContacto": "2282929871",
+    "correoElectronico": "ejemplo@correo.com"
   }
 ]

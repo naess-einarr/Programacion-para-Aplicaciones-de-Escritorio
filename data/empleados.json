@@ -351,6 +351,27 @@
     "nombreUsuario": "EMP019",
     "contrasenaAcceso": "PAO270389",
     "tipoEmpleado": "GERENTE",
+<<<<<<< HEAD
+    "idSucursal": "SUC002"
+  },
+  {
+    "horarioTrabajo": "horas",
+    "numeroVentanilla": 2,
+    "idEmpleado": "EMP20",
+    "nombreCompleto": "María Elena Rodríguez García",
+    "direccionCompleta": "Av. Revolución #234, Col. Centro, Xalapa, Veracruz",
+    "fechaNacimiento": {
+      "year": 1985,
+      "month": 3,
+      "day": 15
+    },
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 25000.0,
+    "nombreUsuario": "empleadon",
+    "contrasenaAcceso": "empleadon",
+    "tipoEmpleado": "GERENTE",
+    "idSucursal": "suc01"
+=======
     "sucursal": {
       "idSucursal": "SUC009",
       "nombreSucursal": "Sucursal Revolución"
@@ -376,5 +397,6 @@
       "idSucursal": "SUC002",
       "nombreSucursal": "Sucursal Obrero Campesina"
     }
+>>>>>>> 537c9b4ce9c822a6f7f24afb623236e347602324
   }
 ]

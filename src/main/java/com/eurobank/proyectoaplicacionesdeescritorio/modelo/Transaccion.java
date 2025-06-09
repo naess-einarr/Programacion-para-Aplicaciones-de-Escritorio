@@ -2,10 +2,6 @@ package com.eurobank.proyectoaplicacionesdeescritorio.modelo;
 
 import java.time.LocalDateTime;
 
-/**
- * Clase que representa una transacción bancaria en el sistema EuroBank.
- * Contiene información sobre el tipo, monto y cuentas involucradas.
- */
 public class Transaccion {
     
     private String idTransaccion;
@@ -16,7 +12,6 @@ public class Transaccion {
     private String numeroCuentaDestino;
     private String idSucursalTransaccion;
     private String idEmpleadoResponsable;
-    private String descripcionTransaccion;
     private String estadoTransaccion; // "COMPLETADA", "PENDIENTE", "FALLIDA"
     private String referenciaTransaccion;
     
@@ -38,7 +33,6 @@ public class Transaccion {
         this.estadoTransaccion = "PENDIENTE";
     }
     
-    // Constructor para transferencias (incluye cuenta destino)
     public Transaccion(String idTransaccion, double montoTransaccion,
                       LocalDateTime fechaHoraTransaccion, String tipoTransaccion,
                       String numeroCuentaOrigen, String numeroCuentaDestino,
@@ -49,7 +43,6 @@ public class Transaccion {
         this.numeroCuentaDestino = numeroCuentaDestino;
     }
     
-    // Getters y Setters
     public String getIdTransaccion() {
         return idTransaccion;
     }
@@ -114,14 +107,6 @@ public class Transaccion {
         this.idEmpleadoResponsable = idEmpleadoResponsable;
     }
 
-    public String getDescripcionTransaccion() {
-        return descripcionTransaccion;
-    }
-
-    public void setDescripcionTransaccion(String descripcionTransaccion) {
-        this.descripcionTransaccion = descripcionTransaccion;
-    }
-
     public String getEstadoTransaccion() {
         return estadoTransaccion;
     }
@@ -138,26 +123,14 @@ public class Transaccion {
         this.referenciaTransaccion = referenciaTransaccion;
     }
     
-    
-    
-    /**
-     * Método para verificar si la transacción es una transferencia.
-     * @return true si es transferencia, false en caso contrario
-     */
     public boolean esTransferencia() {
         return "TRANSFERENCIA".equals(tipoTransaccion);
     }
     
-    /**
-     * Método para marcar la transacción como completada.
-     */
     public void marcarComoCompletada() {
         this.estadoTransaccion = "COMPLETADA";
     }
     
-    /**
-     * Método para marcar la transacción como fallida.
-     */
     public void marcarComoFallida() {
         this.estadoTransaccion = "FALLIDA";
     }

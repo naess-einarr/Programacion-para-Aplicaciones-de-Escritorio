@@ -93,8 +93,10 @@ public class EmpleadoController implements Initializable {
 
     @FXML
     void accionEliminar(ActionEvent event) {
+        
         if (Objects.isNull(tablaEmpleados.getSelectionModel().getSelectedItem())) {
-            AlertaUtil.mostrarAlerta("INFORMACION", "Debe seleccionar un registro", Alert.AlertType.INFORMATION);
+            
+            AlertaUtil.mostrarAlerta(AlertaUtil.INFORMACION, "Debe seleccionar un registro", Alert.AlertType.INFORMATION);
             return;
         }
         Empleado empleado = tablaEmpleados.getSelectionModel().getSelectedItem();
@@ -131,6 +133,7 @@ public class EmpleadoController implements Initializable {
 
     @FXML
     void cargarListaEmpleadosPorTipo(ActionEvent event) {
+        
         try {
             String tipoSeleccionado = comboTipoEmpleado.getSelectionModel().getSelectedItem();
 

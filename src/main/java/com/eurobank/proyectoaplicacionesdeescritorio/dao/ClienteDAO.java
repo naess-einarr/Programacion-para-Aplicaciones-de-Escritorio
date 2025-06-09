@@ -26,12 +26,6 @@ public class ClienteDAO implements GenericDAO<Cliente> {
         
         List<Cliente> clientes = obtenerTodos();
         
-        // Verificar si ya existe un cliente con el mismo ID
-        if (buscarPorId(cliente.getIdCliente()) != null) {
-            throw new Exception("Ya existe un cliente con el ID: " + cliente.getIdCliente());
-        }
-        
-        // Verificar si ya existe un cliente con el mismo RFC
         if (buscarPorRfc(cliente.getRfcCliente()) != null) {
             throw new Exception("Ya existe un cliente con el RFC: " + cliente.getRfcCliente());
         }
@@ -85,12 +79,13 @@ public class ClienteDAO implements GenericDAO<Cliente> {
     }
     
     @Override
-    public void eliminar(String idCliente) throws Exception {
+    public void eliminar(String clienteID) throws Exception {
+        
         List<Cliente> clientes = obtenerTodos();
-        boolean eliminado = clientes.removeIf(cliente -> cliente.getIdCliente().equals(idCliente));
+        boolean eliminado = clientes.removeIf(cliente -> cliente.getIdCliente().equals(clienteID));
         
         if (!eliminado) {
-            throw new Exception("No se encontró el cliente con ID: " + idCliente);
+            throw new Exception("No se encontró el cliente el ID:" + clienteID);
         }
         
         jsonUtil.guardarLista(clientes, ARCHIVO_CLIENTES);

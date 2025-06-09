@@ -2,7 +2,10 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.ClienteDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Cliente;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ConstantesUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.Validador;
+import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -72,40 +75,33 @@ public class ClienteRegistroController implements Initializable {
     @FXML
     public void accionRegistrar() {
         
-        LOG.info("Iniciando proceso de registro de cliente");
-        
         try {
             
             Cliente nuevoCliente = crearClienteDesdeFormulario();
             Validador.validarCliente(nuevoCliente);
             clienteDAO.guardar(nuevoCliente);
-            mostrarMensaje("Éxito", "Cliente registrado correctamente", Alert.AlertType.INFORMATION);
-            limpiarFormulario();
             
+            AlertaUtil.mostrarAlertaRegistroExitoso();
+            limpiarFormulario();
         } catch (IllegalArgumentException e) {
-            LOG.warn("Error de validación: {}", e.getMessage());
-            mostrarMensaje("Error de Validación", e.getMessage(), Alert.AlertType.WARNING);
+            
+            LOG.warn(ConstantesUtil.ALERTA_DATOS_INVALIDOS, e);
+            AlertaUtil.mostrarAlerta(AlertaUtil.ADVERTENCIA, e.getMessage(), Alert.AlertType.WARNING);
         } catch (Exception e) {
-            LOG.error("Error al registrar cliente: {}", e.getMessage(), e);
-            mostrarMensaje("Error", "Error al registrar el cliente: " + e.getMessage(), Alert.AlertType.ERROR);
+            
+            AlertaUtil.mostrarAlerta(AlertaUtil.ERROR, e.getMessage(), Alert.AlertType.ERROR);
         }
     }
     
     @FXML
     public void accionCancelar() {
-        LOG.info("Cancelando registro de cliente");
         
-        Alert confirmacion = new Alert(Alert.AlertType.CONFIRMATION);
-        confirmacion.setTitle("Confirmar");
-        confirmacion.setHeaderText("¿Está seguro que desea cancelar?");
-        confirmacion.setContentText("Se perderán todos los datos ingresados.");
-        
-        if (confirmacion.showAndWait().orElse(ButtonType.CANCEL) == ButtonType.OK) {
-            cerrarVentana();
-        }
+        ManejadorDeVistas.getInstancia().limpiarCache();
+        ManejadorDeVistas.getInstancia().cambiarVista(ManejadorDeVistas.Vista.CLIENTE);
     }
     
     private Cliente crearClienteDesdeFormulario() {
+        
         Cliente cliente = new Cliente();
         
         cliente.setIdCliente(textIdCliente.getText().trim());
@@ -122,6 +118,21 @@ public class ClienteRegistroController implements Initializable {
         return cliente;
     }
     
+    public void setEditarCliente(Cliente clienteEditar){
+        
+        this.textIdCliente.setText(clienteEditar.getIdCliente());
+        this.textNombreCliente.setText(clienteEditar.getNombreCompleto());
+        this.textApellidoCliente.setText(clienteEditar.getApellidosCompletos());
+        this.textNacionalidadCliente.setText(clienteEditar.getNacionalidadCliente());
+        this.dateFechaNacCliente.setValue(clienteEditar.getFechaNacimiento());
+        this.textRfcCliente.setText(clienteEditar.getRfcCliente());
+        this.textCurpCliente.setText(clienteEditar.getCurpCliente());
+        this.textDireccionCliente.setText(clienteEditar.getDireccionCompleta());
+        this.textTelefonoCliente.setText(clienteEditar.getTelefonoContacto());
+        this.textCorreoCliente.setText(clienteEditar.getCorreoElectronico());
+        
+    }
+    
     private void limpiarFormulario() {
         textNombreCliente.clear();
         textApellidoCliente.clear();
@@ -134,20 +145,5 @@ public class ClienteRegistroController implements Initializable {
         textCorreoCliente.clear();
         
         generarIdUnico();
-        
-        LOG.debug("Formulario limpiado y listo para nuevo registro");
-    }
-    
-    private void mostrarMensaje(String titulo, String mensaje, Alert.AlertType tipo) {
-        Alert alerta = new Alert(tipo);
-        alerta.setTitle(titulo);
-        alerta.setHeaderText(null);
-        alerta.setContentText(mensaje);
-        alerta.showAndWait();
-    }
-    
-    private void cerrarVentana() {
-        Stage stage = (Stage) botonCancelar.getScene().getWindow();
-        stage.close();
     }
 }

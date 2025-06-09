@@ -3,6 +3,7 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.TransaccionDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Transaccion;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
+import com.eurobank.proyectoaplicacionesdeescritorio.util.ConstantesUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.vista.ManejadorDeVistas;
 import java.net.URL;
 import java.time.LocalDate;
@@ -10,11 +11,17 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class TransaccionController implements Initializable {
+    
+    private static final Logger LOG = LogManager.getLogger(TransaccionController.class);
     
     @FXML
     private TableColumn<Transaccion, String> columnaID;
@@ -66,7 +73,8 @@ public class TransaccionController implements Initializable {
             tablaTransacciones.setItems(FXCollections.observableList(transaccionDAO.obtenerTodos()));
             
         } catch (Exception e){
-            AlertaUtil.mostrarAlertaVentana();
+            LOG.error(ConstantesUtil.ERROR_CARGAR_INFORMACION, e);
+            AlertaUtil.mostrarAlerta(AlertaUtil.ERROR, ConstantesUtil.ERROR_CARGAR_INFORMACION, Alert.AlertType.ERROR);
         }
     }
     

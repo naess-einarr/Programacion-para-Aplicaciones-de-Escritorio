@@ -70,5 +70,6 @@ public class ConstantesUtil {
     public static final String ERROR_TELEFONO_FORMATO = "El teléfono solo puede contener números, espacios, guiones, paréntesis y el símbolo +";
     public static final String ERROR_CORREO_OBLIGATORIO = "El correo electrónico es obligatorio";
     public static final String ERROR_CORREO_FORMATO = "El formato del correo electrónico no es válido";
+    public static final String ERROR_CARGAR_INFORMACION = "Error al cargar la informacion";
 
 }

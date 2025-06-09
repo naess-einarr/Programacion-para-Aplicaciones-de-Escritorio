@@ -336,20 +336,41 @@
     }
   },
   {
-    "nivelAcceso": "SUCURSAL",
-    "aniosExperiencia": 14,
+    "nivelAcceso": "REGIONAL",
+    "aniosExperiencia": 1000,
     "idEmpleado": "EMP019",
-    "nombreCompleto": "Paola Fernanda Jiménez Sandoval",
+    "nombreCompleto": "El Marcos El Zenón Sánchez Mendizábal",
     "direccionCompleta": "Av. Lázaro Cárdenas #369, Col. Lomas del Estadio, Xalapa, Veracruz",
     "fechaNacimiento": {
-      "year": 1989,
-      "month": 3,
-      "day": 27
+      "year": 1998,
+      "month": 12,
+      "day": 31
     },
-    "generoEmpleado": "FEMENINO",
-    "salarioMensual": 27200.0,
+    "generoEmpleado": "MASCULINO",
+    "salarioMensual": 1200.0,
     "nombreUsuario": "EMP019",
     "contrasenaAcceso": "PAO270389",
+    "tipoEmpleado": "GERENTE",
+    "sucursal": {
+      "idSucursal": "SUC009",
+      "nombreSucursal": "Sucursal Revolución"
+    }
+  },
+  {
+    "nivelAcceso": "SUCURSAL",
+    "aniosExperiencia": 17,
+    "idEmpleado": "EMP20",
+    "nombreCompleto": "Victoria Edith",
+    "direccionCompleta": "El moral",
+    "fechaNacimiento": {
+      "year": 2025,
+      "month": 6,
+      "day": 13
+    },
+    "generoEmpleado": "FEMENINO",
+    "salarioMensual": 100.0,
+    "nombreUsuario": "EMP20",
+    "contrasenaAcceso": "VIC130625",
     "tipoEmpleado": "GERENTE",
     "sucursal": {
       "idSucursal": "SUC002",

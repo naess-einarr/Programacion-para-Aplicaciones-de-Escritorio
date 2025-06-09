@@ -26,7 +26,7 @@ public class EmpleadoTablaUtil {
                                                TableColumn<Empleado, LocalDate> columnaFechaNacimiento,
                                                TableColumn<Empleado, String> columnaGenero,
                                                TableColumn<Empleado, Double> columnaSalario,
-                                               TableColumn<Empleado, String> columnaSucursal) {
+                                               TableColumn<Empleado, Sucursal> columnaSucursal) {
         
         columnTipoEmpleado.setCellValueFactory(new PropertyValueFactory<>("tipoEmpleado"));
         columnaID.setCellValueFactory(new PropertyValueFactory<>("idEmpleado"));
@@ -36,11 +36,11 @@ public class EmpleadoTablaUtil {
         columnaGenero.setCellValueFactory(new PropertyValueFactory<>("generoEmpleado"));
         columnaSalario.setCellValueFactory(new PropertyValueFactory<>("salarioMensual"));
         columnaSucursal.setCellValueFactory(cellData -> {
-            Sucursal gerenteObj = cellData.getValue().getSucursal();
-            if (gerenteObj != null) {
-                return new SimpleStringProperty(gerenteObj.getIdSucursal());
+            Sucursal sucursal = cellData.getValue().getSucursal();
+            if (sucursal != null) {
+                return new SimpleObjectProperty<>(sucursal);
             }
-            return new SimpleStringProperty("");
+            return new SimpleObjectProperty<>(null);
         });
     }
     

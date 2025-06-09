@@ -83,7 +83,7 @@ public class EmpleadoRegistroController implements Initializable{
         try {
                 Empleado empleado = llenarObjetoEmpleado();
 
-                if(Objects.nonNull(modoEdicion)){
+                if(modoEdicion){
                     empleadoDAO.actualizar(empleado);
                 }else{
                     empleadoDAO.guardar(empleado);
@@ -158,7 +158,7 @@ public class EmpleadoRegistroController implements Initializable{
         empleado.setDireccionCompleta(textDireccion.getText().trim());
         empleado.setFechaNacimiento(dateFechaNacimiento.getValue());
         empleado.setGeneroEmpleado(comboGenero.getValue());
-        empleado.setSucursal(comboSucursal.getSelectionModel().getSelectedItem());
+        empleado.setSucursal(obtenerDatosSucursal(comboSucursal.getSelectionModel().getSelectedItem()));
         empleado.setSalarioMensual(Double.parseDouble(textSalario.getText().trim()));
         empleado.setTipoEmpleado(textTipoDeEmpleado.getText());
         empleado.setNombreUsuario(textID.getText().trim());
@@ -196,6 +196,7 @@ public class EmpleadoRegistroController implements Initializable{
         this.comboGenero.getSelectionModel().select(empleadoEditar.getGeneroEmpleado());
         this.textSalario.setText(Double.toString(empleadoEditar.getSalarioMensual()));
         this.textTipoDeEmpleado.setText(empleadoEditar.getTipoEmpleado());
+        this.comboSucursal.getSelectionModel().select(empleadoEditar.getSucursal());
         
         String columnaUno = null;
         String columnaDos = null;
@@ -250,6 +251,13 @@ public class EmpleadoRegistroController implements Initializable{
                 LOG.error(ex);
             }
         }
+    }
+    
+    private Sucursal obtenerDatosSucursal(Sucursal sucursal){
+        Sucursal sucursalDatos = new Sucursal();
+        sucursalDatos.setIdSucursal(sucursal.getIdSucursal());
+        sucursalDatos.setNombreSucursal(sucursal.getNombreSucursal());
+        return sucursalDatos;
     }
         
 }

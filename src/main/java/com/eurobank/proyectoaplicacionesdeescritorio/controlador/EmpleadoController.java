@@ -2,6 +2,7 @@ package com.eurobank.proyectoaplicacionesdeescritorio.controlador;
 
 import com.eurobank.proyectoaplicacionesdeescritorio.dao.EmpleadoDAO;
 import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Empleado;
+import com.eurobank.proyectoaplicacionesdeescritorio.modelo.Sucursal;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.AlertaUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoDatosUtil;
 import com.eurobank.proyectoaplicacionesdeescritorio.util.EmpleadoTablaUtil;
@@ -41,7 +42,7 @@ public class EmpleadoController implements Initializable {
     @FXML
     private TableColumn<Empleado, Double> columnaSalario;
     @FXML
-    private TableColumn<Empleado, String> columnaSucursal;
+    private TableColumn<Empleado, Sucursal> columnaSucursal;
     @FXML
     private TableColumn<Empleado, String> columnaUno;
     @FXML

@@ -13,34 +13,8 @@
       "idEmpleado": "EMP002",
       "nombreCompleto": "Carlos Alberto Mendoza López"
     },
-    "cuentasAsociadas": [
-      {
-        "numeroCuenta": "CTA001",
-        "idClienteAsociado": "CLI001"
-      },
-      {
-        "numeroCuenta": "CTA002",
-        "idClienteAsociado": "CLI002"
-      },
-      {
-        "numeroCuenta": "CTA003",
-        "idClienteAsociado": "CLI003"
-      },
-      {
-        "numeroCuenta": "CTA004",
-        "idClienteAsociado": "CLI004"
-      },
-      {
-        "numeroCuenta": "CTA005",
-        "idClienteAsociado": "CLI005"
-      }
-    ],
-    "empleadosAsociados": [
-      {
-        "idEmpleado": "EMP016",
-        "nombreCompleto": "Sebastián Mateo Díaz Herrera"
-      }
-    ]
+    "cuentasAsociadas": [],
+    "empleadosAsociados": []
   },
   {
     "idSucursal": "SUC002",
@@ -56,28 +30,7 @@
       "idEmpleado": "EMP005",
       "nombreCompleto": "Diana Patricia Morales Jiménez"
     },
-    "cuentasAsociadas": [
-      {
-        "numeroCuenta": "CTA006",
-        "idClienteAsociado": "CLI006"
-      },
-      {
-        "numeroCuenta": "CTA007",
-        "idClienteAsociado": "CLI007"
-      },
-      {
-        "numeroCuenta": "CTA008",
-        "idClienteAsociado": "CLI008"
-      },
-      {
-        "numeroCuenta": "CTA009",
-        "idClienteAsociado": "CLI009"
-      },
-      {
-        "numeroCuenta": "CTA010",
-        "idClienteAsociado": "CLI010"
-      }
-    ],
+    "cuentasAsociadas": [],
     "empleadosAsociados": [
       {
         "idEmpleado": "EMP004",
@@ -119,28 +72,7 @@
       "idEmpleado": "EMP008",
       "nombreCompleto": "Miguel Ángel Ramírez Delgado"
     },
-    "cuentasAsociadas": [
-      {
-        "numeroCuenta": "CTA011",
-        "idClienteAsociado": "CLI011"
-      },
-      {
-        "numeroCuenta": "CTA012",
-        "idClienteAsociado": "CLI012"
-      },
-      {
-        "numeroCuenta": "CTA013",
-        "idClienteAsociado": "CLI013"
-      },
-      {
-        "numeroCuenta": "CTA014",
-        "idClienteAsociado": "CLI014"
-      },
-      {
-        "numeroCuenta": "CTA015",
-        "idClienteAsociado": "CLI015"
-      }
-    ],
+    "cuentasAsociadas": [],
     "empleadosAsociados": [
       {
         "idEmpleado": "EMP007",
@@ -178,28 +110,7 @@
       "idEmpleado": "EMP011",
       "nombreCompleto": "Valeria Isabella Guerrero Silva"
     },
-    "cuentasAsociadas": [
-      {
-        "numeroCuenta": "CTA016",
-        "idClienteAsociado": "CLI016"
-      },
-      {
-        "numeroCuenta": "CTA017",
-        "idClienteAsociado": "CLI017"
-      },
-      {
-        "numeroCuenta": "CTA018",
-        "idClienteAsociado": "CLI018"
-      },
-      {
-        "numeroCuenta": "CTA019",
-        "idClienteAsociado": "CLI019"
-      },
-      {
-        "numeroCuenta": "CTA020",
-        "idClienteAsociado": "CLI020"
-      }
-    ],
+    "cuentasAsociadas": [],
     "empleadosAsociados": [
       {
         "idEmpleado": "EMP020",
@@ -233,28 +144,7 @@
       "idEmpleado": "EMP013",
       "nombreCompleto": "Andrea Paola Medina Castro"
     },
-    "cuentasAsociadas": [
-      {
-        "numeroCuenta": "CTA021",
-        "idClienteAsociado": "CLI021"
-      },
-      {
-        "numeroCuenta": "CTA022",
-        "idClienteAsociado": "CLI022"
-      },
-      {
-        "numeroCuenta": "CTA023",
-        "idClienteAsociado": "CLI023"
-      },
-      {
-        "numeroCuenta": "CTA024",
-        "idClienteAsociado": "CLI024"
-      },
-      {
-        "numeroCuenta": "CTA025",
-        "idClienteAsociado": "CLI025"
-      }
-    ],
+    "cuentasAsociadas": [],
     "empleadosAsociados": [
       {
         "idEmpleado": "EMP024",
@@ -288,28 +178,7 @@
       "idEmpleado": "EMP016",
       "nombreCompleto": "Sebastián Mateo Díaz Herrera"
     },
-    "cuentasAsociadas": [
-      {
-        "numeroCuenta": "CTA026",
-        "idClienteAsociado": "CLI026"
-      },
-      {
-        "numeroCuenta": "CTA027",
-        "idClienteAsociado": "CLI027"
-      },
-      {
-        "numeroCuenta": "CTA028",
-        "idClienteAsociado": "CLI028"
-      },
-      {
-        "numeroCuenta": "CTA029",
-        "idClienteAsociado": "CLI029"
-      },
-      {
-        "numeroCuenta": "CTA030",
-        "idClienteAsociado": "CLI030"
-      }
-    ],
+    "cuentasAsociadas": [],
     "empleadosAsociados": []
   },
   {
@@ -326,28 +195,7 @@
       "idEmpleado": "EMP002",
       "nombreCompleto": "Carlos Alberto Mendoza López"
     },
-    "cuentasAsociadas": [
-      {
-        "numeroCuenta": "CTA031",
-        "idClienteAsociado": "CLI031"
-      },
-      {
-        "numeroCuenta": "CTA032",
-        "idClienteAsociado": "CLI032"
-      },
-      {
-        "numeroCuenta": "CTA033",
-        "idClienteAsociado": "CLI033"
-      },
-      {
-        "numeroCuenta": "CTA034",
-        "idClienteAsociado": "CLI034"
-      },
-      {
-        "numeroCuenta": "CTA035",
-        "idClienteAsociado": "CLI035"
-      }
-    ],
+    "cuentasAsociadas": [],
     "empleadosAsociados": [
       {
         "idEmpleado": "EMP032",
@@ -381,28 +229,7 @@
       "idEmpleado": "EMP005",
       "nombreCompleto": "Diana Patricia Morales Jiménez"
     },
-    "cuentasAsociadas": [
-      {
-        "numeroCuenta": "CTA036",
-        "idClienteAsociado": "CLI036"
-      },
-      {
-        "numeroCuenta": "CTA037",
-        "idClienteAsociado": "CLI037"
-      },
-      {
-        "numeroCuenta": "CTA038",
-        "idClienteAsociado": "CLI038"
-      },
-      {
-        "numeroCuenta": "CTA039",
-        "idClienteAsociado": "CLI039"
-      },
-      {
-        "numeroCuenta": "CTA040",
-        "idClienteAsociado": "CLI040"
-      }
-    ],
+    "cuentasAsociadas": [],
     "empleadosAsociados": []
   },
   {
@@ -419,28 +246,7 @@
       "idEmpleado": "EMP008",
       "nombreCompleto": "Miguel Ángel Ramírez Delgado"
     },
-    "cuentasAsociadas": [
-      {
-        "numeroCuenta": "CTA041",
-        "idClienteAsociado": "CLI041"
-      },
-      {
-        "numeroCuenta": "CTA042",
-        "idClienteAsociado": "CLI042"
-      },
-      {
-        "numeroCuenta": "CTA043",
-        "idClienteAsociado": "CLI043"
-      },
-      {
-        "numeroCuenta": "CTA044",
-        "idClienteAsociado": "CLI044"
-      },
-      {
-        "numeroCuenta": "CTA045",
-        "idClienteAsociado": "CLI045"
-      }
-    ],
+    "cuentasAsociadas": [],
     "empleadosAsociados": [
       {
         "idEmpleado": "EMP040",

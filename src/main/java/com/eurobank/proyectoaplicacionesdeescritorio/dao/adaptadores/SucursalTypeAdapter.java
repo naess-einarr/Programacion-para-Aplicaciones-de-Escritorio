@@ -40,9 +40,11 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
             JsonArray cuentasArray = new JsonArray();
             for (CuentaBancaria cuenta : sucursal.getCuentasAsociadas()) {
                 JsonObject cuentaObj = new JsonObject();
-                cuentaObj.addProperty("numeroCuenta", cuenta.getNumeroCuenta());
-                cuentaObj.addProperty("idClienteAsociado", cuenta.getIdClienteAsociado());
-                cuentasArray.add(cuentaObj);
+                    cuentaObj.addProperty("numeroCuenta", cuenta.getNumeroCuenta());
+                    JsonObject clienteObj = new JsonObject();
+                    clienteObj.addProperty("idCliente", cuenta.getCliente().getIdCliente());
+                    clienteObj.addProperty("nombreCompleto", cuenta.getCliente().getNombreCompleto());
+                    cuentaObj.add("cliente", clienteObj);
             }
             jsonObject.add("cuentasAsociadas", cuentasArray);
         }
@@ -95,10 +97,13 @@ public class SucursalTypeAdapter implements JsonSerializer<Sucursal>, JsonDeseri
         List<CuentaBancaria> cuentas = new ArrayList<>();
         for (JsonElement cuentaElement : cuentasArray) {
             JsonObject cuentaObj = cuentaElement.getAsJsonObject();
-            CuentaBancaria cuenta = new CuentaBancaria();
-            cuenta.setNumeroCuenta(cuentaObj.get("numeroCuenta").getAsString());
-            cuenta.setIdClienteAsociado(cuentaObj.get("idClienteAsociado").getAsString());
-            // Los demás campos quedan como valores por defecto o null
+                CuentaBancaria cuenta = new CuentaBancaria();
+                cuenta.setNumeroCuenta(cuentaObj.get("numeroCuenta").getAsString());
+                JsonObject clienteObj = cuentaObj.getAsJsonObject("cliente");
+                Cliente cliente = new Cliente();
+                cliente.setIdCliente(clienteObj.get("idCliente").getAsString());
+                cliente.setNombreCompleto(clienteObj.get("nombreCompleto").getAsString());
+                cuenta.setCliente(cliente);
             cuentas.add(cuenta);
         }
         sucursal.setCuentasAsociadas(cuentas);
